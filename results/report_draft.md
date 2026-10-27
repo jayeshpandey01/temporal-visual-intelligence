@@ -44,9 +44,9 @@ We identify three distinct underlying mechanisms of sequential vision:
 ┌───────────────────────┬───────────────────────────────┬───────────────────┬─────────────────────────────────┐
 │ Architecture          │ Input Formulation             │ Parameters        │ Temporal Order Encoding         │
 ├───────────────────────┼───────────────────────────────┼───────────────────┼─────────────────────────────────┤
-│ Model A: Baseline MLP │ Single observation e_t        │ 98,836 params     │ None (Order blind)              │
-│ Model B: Mean-Pooling │ Permutation-pooled e_bar      │ 98,836 params     │ None (Symmetric sum)            │
-│ Model C: Temporal GRU │ Chronological sequence e_1:T  │ 492,052 params    │ Recurrent hidden state h_t      │
+│ Model A: Baseline MLP │ Single observation e_t        │ 103,700 params    │ None (Order blind)              │
+│ Model B: Mean-Pooling │ Permutation-pooled e_bar      │ 103,700 params    │ None (Symmetric sum)            │
+│ Model C: Temporal GRU │ Chronological sequence e_1:T  │ 498,452 params    │ Recurrent hidden state h_t      │
 └───────────────────────┴───────────────────────────────┴───────────────────┴─────────────────────────────────┘
 ```
 **Parameter Parity Guarantee:** Model A and Model B share exact classification layer parameter parity:

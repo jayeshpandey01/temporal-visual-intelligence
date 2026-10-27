@@ -632,7 +632,7 @@ All 24 required deliverables from `docs/milestone/M-2.md` have been fully audite
 ├───────────────────────┼───────────────────────────────┼───────────────────┼─────────────────────────────────┤
 │ Model A: Baseline MLP │ Single observation e_t        │ 103,700 params    │ None (Order blind)              │
 │ Model B: Mean-Pooling │ Permutation-pooled e_bar      │ 103,700 params    │ None (Symmetric sum)            │
-│ Model C: Temporal GRU │ Chronological sequence e_1:T  │ 492,052 params    │ Recurrent hidden state h_t      │
+│ Model C: Temporal GRU │ Chronological sequence e_1:T  │ 498,452 params    │ Recurrent hidden state h_t      │
 └───────────────────────┴───────────────────────────────┴───────────────────┴─────────────────────────────────┘
 ```
 
@@ -725,7 +725,7 @@ Temporal information provided zero marginal benefit in **scene-dominated static 
 
 ### C. How can you determine whether a temporal model is actually using temporal relationships rather than simply receiving more visual information?
 We formulated and executed the definitive mathematical test:
-1. **Implement Model B (Order-Invariant Multi-Frame Mean-Pooling):** Hold parameter count and classification layers strictly identical to Model A ($98,836$ params). If performance improvements were solely due to "receiving more visual information", Model B would achieve the same accuracy as Model C.
+1. **Implement Model B (Order-Invariant Multi-Frame Mean-Pooling):** Hold parameter count and classification layers strictly identical to Model A ($103,700$ params). If performance improvements were solely due to "receiving more visual information", Model B would achieve the same accuracy as Model C.
 2. **Execute Temporal Order Shuffling ($\pi_{\text{shuffle}}$):** Randomly permute the chronological order of frame embeddings during inference. If the model relies on temporal relationships, accuracy collapses ($\text{OrderDrop} = 78.33\%$). If the model relies on static set accumulation, $\text{OrderDrop} \approx 0.0\%$.
 3. **Execute Repeated-Frame Control:** Feed $K$ duplicates of a single frame $(E_1, E_1, \dots, E_1)$. The GRU kinetic energy collapses to zero ($\mathcal{E}_k = 0$), proving the model responds strictly to inter-frame transition vectors $\vec{v}_t = E_{t+1} - E_t$.
 
