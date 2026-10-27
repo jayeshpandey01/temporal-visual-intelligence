@@ -168,13 +168,16 @@ class EmbeddingExtractor:
 
         embs = self.extract_frame_batch(frame_tensors)
 
+        encoder_family = "dinov2" if "dinov2" in self.encoder_name else "clip"
         seq_out = SequenceEmbeddingOutput(
             sequence_id=seq_input.sequence_id,
             frame_indices=seq_input.frame_indices,
             embeddings=embs,
             label=seq_input.label,
             encoder_version=self.encoder_name,
-            preprocessing_version="v1_imagenet_224x224_center"
+            preprocessing_version="v1_imagenet_224x224_center",
+            sampling_strategy="uniform",
+            encoder=encoder_family
         )
         if save_to_cache and split:
             self.cache.put(seq_out, split=split, save_manifest=True)
@@ -231,13 +234,16 @@ class EmbeddingExtractor:
             embeddings = raw_out.cpu().numpy()
 
         # Step 6 & 7: Store embeddings and record metadata
+        encoder_family = "dinov2" if "dinov2" in self.encoder_name else "clip"
         seq_out = SequenceEmbeddingOutput(
             sequence_id=sequence_id,
             frame_indices=sample_indices,
             embeddings=embeddings,
             label=label,
             encoder_version=self.encoder_name,
-            preprocessing_version="v1_imagenet_224x224_center"
+            preprocessing_version="v1_imagenet_224x224_center",
+            sampling_strategy="uniform",
+            encoder=encoder_family
         )
         if save_to_cache:
             self.cache.put(seq_out, split=split, save_manifest=True)
@@ -321,13 +327,16 @@ class EmbeddingExtractor:
                 sequence_embeddings = np.concatenate(frame_embeddings, axis=0)
 
             # Contract output and cache registration
+            encoder_family = "dinov2" if "dinov2" in self.encoder_name else "clip"
             seq_out = SequenceEmbeddingOutput(
                 sequence_id=video_id,
                 frame_indices=list(range(len(all_frames))),
                 embeddings=sequence_embeddings,
                 label=str(label),
                 encoder_version=self.encoder_name,
-                preprocessing_version="v1_imagenet_224x224_center"
+                preprocessing_version="v1_imagenet_224x224_center",
+                sampling_strategy="uniform",
+                encoder=encoder_family
             )
             self.cache.put(seq_out, split=split, save_manifest=False)
 
@@ -372,13 +381,16 @@ class EmbeddingExtractor:
             frame_batch.append(self.transform(img))
 
         embs = self.extract_frame_batch(frame_batch)
+        encoder_family = "dinov2" if "dinov2" in self.encoder_name else "clip"
         seq_out = SequenceEmbeddingOutput(
             sequence_id=sequence_id,
             frame_indices=list(range(len(frame_files))),
             embeddings=embs,
             label=label,
             encoder_version=self.encoder_name,
-            preprocessing_version="v1_imagenet_224x224_center"
+            preprocessing_version="v1_imagenet_224x224_center",
+            sampling_strategy="continuous_dense",
+            encoder=encoder_family
         )
         self.cache.put(seq_out, split=split, save_manifest=True)
         return seq_out

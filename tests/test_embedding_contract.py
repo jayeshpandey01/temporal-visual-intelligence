@@ -188,3 +188,45 @@ def test_validate_embedding_cache(tmp_path):
     assert rep["leakage_check"]["status"] == "PASS"
     assert rep["splits_audited"]["train"]["error_count"] == 0
 
+
+def test_m2_9_cache_metadata_exact_fields(tmp_path):
+    """
+    Verify M2.9 specification: Cache metadata contains all required provenance fields:
+    sequence_id, frame_indices, label, encoder, encoder_version,
+    embedding_dimension, preprocessing_version, sampling_strategy, created_at.
+    """
+    arr = np.random.randn(4, 768).astype(np.float32)
+    output = SequenceEmbeddingOutput(
+        sequence_id="sequence_001",
+        frame_indices=[1, 8, 15, 22],
+        embeddings=arr,
+        label="class_a",
+        encoder_version="dinov2_vitb14@lvd142m",
+        preprocessing_version="v1",
+        sampling_strategy="uniform",
+        encoder="dinov2"
+    )
+
+    npy_p, json_p = output.save(tmp_path)
+    with open(json_p) as f:
+        meta = json.load(f)
+
+    # Assert exact M2.9 fields
+    assert meta["sequence_id"] == "sequence_001"
+    assert meta["frame_indices"] == [1, 8, 15, 22]
+    assert meta["label"] == "class_a"
+    assert meta["encoder"] == "dinov2"
+    assert meta["encoder_version"] == "dinov2_vitb14@lvd142m"
+    assert meta["embedding_dimension"] == 768
+    assert meta["preprocessing_version"] == "v1"
+    assert meta["sampling_strategy"] == "uniform"
+    assert "created_at" in meta
+    assert meta["checksum"] == output.checksum
+
+    # Verify reloading
+    loaded = SequenceEmbeddingOutput.load(npy_p, json_p)
+    assert loaded.encoder == "dinov2"
+    assert loaded.sampling_strategy == "uniform"
+    assert loaded.embed_dim == 768
+
+

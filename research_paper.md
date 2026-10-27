@@ -360,7 +360,43 @@ To enable zero-overhead ingestion during downstream modeling, `EmbeddingCache` p
 **The Deterministic Manifold Invariance Guarantee:**
 Beyond raw computational throughput, caching guarantees absolute bit-level numerical reproducibility (Pearl, 2009; Kapoor & Narayanan, 2023). In multi-threaded online loaders, nondeterministic GPU floating-point reduction order in spatial patch projection can cause micro-variations ($\epsilon \approx 10^{-7}$) in visual features between runs. By freezing and serializing representations $\mathbf{E} \in \mathbb{R}^{T \times D}$ into immutable IEEE-754 32-bit arrays guarded by SHA-256 checksums, Models A, B, and C evaluate against identical observation matrices. Any observed variation in downstream accuracy is strictly attributable to temporal architecture and optimizer dynamics.
 
-### 4.7 Automated Cache Validation & Integrity Audit (M2.9, M2.10)
+### 4.7 M2.9: Cache Metadata Schema & Cryptographic Provenance Architecture
+A critical vulnerability in machine learning benchmark engineering is the "orphan representation" failure mode (Gebru et al., 2021; Mitchell et al., 2019; Kapoor & Narayanan, 2023): binary tensor files (e.g. `sequence_001.npy`) saved to disk without machine-readable provenance metadata. When downstream researchers evaluate such tensors, they cannot verify what encoder weights, normalization parameters, or sampling indices produced the representations.
+
+To ensure total experimental transparency and scientific reproducibility, each serialized `.npy` embedding array is coupled with an atomic companion JSON manifest (`sequence_id_meta.json`) and registered in the root `manifest.json`:
+
+```json
+{
+  "sequence_id": "sequence_001",
+  "frame_indices": [1, 8, 15, 22],
+  "label": "class_a",
+  "encoder": "dinov2",
+  "encoder_version": "dinov2_vits14@lvd142m",
+  "embedding_dimension": 384,
+  "preprocessing_version": "v1_imagenet_224x224_center",
+  "sampling_strategy": "uniform",
+  "created_at": "2026-10-27T21:18:55.214715+00:00",
+  "num_frames": 4,
+  "embedding_shape": [4, 384],
+  "checksum": "3f88775bd26402017bd0323c08c80838a88c52acc471893350005add1fde5bb3",
+  "mean_vector_norm": 10.95519,
+  "std_vector_norm": 0.42183
+}
+```
+
+**Epistemic Principles of the M2.9 Metadata Schema:**
+1. **Model & Architecture Disambiguation (`encoder`, `encoder_version`, `embedding_dimension`):**
+   Explicitly distinguishes between model architectures (`dinov2` vs. `clip`) and scales (`vits14` [384-d], `vitb14` [768-d], `vitl14` [1024-d]). If an experimenter inadvertently points a 768-d GRU model to a 384-d cache, the pipeline detects dimension incompatibility prior to tensor loading, preventing cryptic matrix multiplication runtime crashes.
+2. **Transform & Normalization Traceability (`preprocessing_version`):**
+   Records the exact transform pipeline version (e.g. `v1_imagenet_224x224_center`). If image resizing or normalization policies are altered, downstream jobs detect the version mismatch and request re-extraction rather than training on contaminated perceptual manifolds.
+3. **Temporal Sampling Reconstruction (`sampling_strategy`, `frame_indices`):**
+   Documents the exact temporal coordinates $i_k \in \{0, \dots, L-1\}$ sampled from the source video container. This enables researchers to map latent trajectory inflections back to exact physical timestamps in the raw video stream.
+4. **Cryptographic Tamper-Proofing (`checksum`):**
+   Computes a SHA-256 hash of the exact binary payload bytes: $\text{Checksum} = \text{SHA256}(\text{bytes}(\mathbf{E}))$. If bitrot, silent disk corruption, or accidental modification alters a single float32 value, the loader immediately aborts execution.
+5. **Statistical Distribution Bounds (`mean_vector_norm`, `std_vector_norm`):**
+   Stores the first and second moments of the Euclidean vector norms $\|\mathbf{e}_t\|_2$. This enables rapid sanity auditing across thousands of cached sequences without loading multi-gigabyte tensor arrays into memory.
+
+### 4.8 Automated Cache Validation & Integrity Audit (M2.10)
 Our automated validator (`src/embeddings/validate.py`) executes automated integrity checks across all cached sequences:
 1. Shape check: $\text{dim}(\mathbf{E}) = [N, 384]$.
 2. Finiteness check: $\sum \text{isnan}(\mathbf{E}) = 0$ and $\sum \text{isinf}(\mathbf{E}) = 0$.
@@ -386,7 +422,7 @@ Our automated validator (`src/embeddings/validate.py`) executes automated integr
 └───────────────────────────────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
 ```
 
-### 4.8 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
+### 4.9 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
 - **Equine Locomotion (`dense_horse_50`):** Captures $1.7$ complete stride cycles at $00:30$. The latent drift $\Delta(t) = 1 - \cos(\mathbf{e}_1, \mathbf{e}_t)$ diverges smoothly to $0.0342$. Average latent velocity is $\|\vec{v}_t\|_2 = 0.5905$, reflecting oscillatory biological articulation.
 - **Vehicular Drift (`dense_bmw_50`):** Captures continuous high-speed cornering at $t = 42.80\text{s} \to 44.47\text{s}$. Latent drift diverges to $0.0894$. Due to translational velocity and camera tracking, average velocity is $\|\vec{v}_t\|_2 = 0.8494$, with kinetic energy $\mathcal{E}_k = 35.35$ ($2\times$ higher than equine locomotion).
 
@@ -602,7 +638,7 @@ temporal-visual-intelligence/
 └── real_process.ipynb         # Tier 2 Executed Notebook (0 comments, {} metadata)
 ```
 
-All 51 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 51 passed in 12.86s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, M2.2/M2.3 deterministic sampling rules, M2.4 official preprocessing transforms, M2.5/M2.6 frozen encoder invariance, M2.7 zero-grad 8-step extraction mechanics, and M2.8 numerical embedding cache & PyTorch tensor streaming.
+All 52 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 52 passed in 12.60s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, M2.2/M2.3 deterministic sampling rules, M2.4 official preprocessing transforms, M2.5/M2.6 frozen encoder invariance, M2.7 zero-grad 8-step extraction mechanics, M2.8 numerical embedding cache & PyTorch tensor streaming, and M2.9 cache metadata provenance schema.
 
 ---
 
@@ -630,20 +666,22 @@ By creating a Two-Tier Benchmark combining a mathematically controlled synthetic
 8. Dean, J., & Ghemawat, S. (2004). MapReduce: Simplified Data Processing on Large Clusters. *OSDI*, 137-150.
 9. Dosovitskiy, A., et al. (2021). An Image is Worth 16x16 Words. *ICLR*.
 10. Feichtenhofer, C., et al. (2019). SlowFast Networks for Video Recognition. *ICCV*, 6202-6211.
-11. Goyal, R., et al. (2017). The "Something Something" Video Database. *ICCV*, 5842-5850.
-12. He, K., et al. (2022). Masked Autoencoders Are Scalable Vision Learners. *CVPR*, 16000-16009.
-13. Huang, D. A., et al. (2018). What Makes a Video a Video? *ECCV*, 35-51.
-14. Kapoor, S., & Narayanan, A. (2023). Leakage and the Reproducibility Crisis in Machine-learning-based Science. *Patterns*, 100804.
-15. Li, Y., et al. (2020). TEA: Temporal Excitation and Aggregation. *CVPR*, 909-918.
-16. Ma, Z., et al. (2023). Are Large Vision-Language Models Temporally Blind? *CVPR*.
-17. Misra, I., et al. (2016). Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification. *ECCV*.
-18. Nyquist, H. (1928). Certain Topics in Telegraph Transmission Theory. *Trans. AIEE*, 47, 617-644.
-19. Oquab, M., et al. (2024). DINOv2: Learning Robust Visual Features without Supervision. *TMLR*.
-20. Paszke, A., et al. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. *NeurIPS*, 8024-8035.
-21. Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.
-22. Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. *ICML*, 8748-8763.
-23. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
-24. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
-25. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
-26. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
-27. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.
+11. Gebru, T., et al. (2021). Datasheets for Datasets. *Communications of the ACM*, 64(12), 86-92.
+12. Goyal, R., et al. (2017). The "Something Something" Video Database. *ICCV*, 5842-5850.
+13. He, K., et al. (2022). Masked Autoencoders Are Scalable Vision Learners. *CVPR*, 16000-16009.
+14. Huang, D. A., et al. (2018). What Makes a Video a Video? *ECCV*, 35-51.
+15. Kapoor, S., & Narayanan, A. (2023). Leakage and the Reproducibility Crisis in Machine-learning-based Science. *Patterns*, 100804.
+16. Li, Y., et al. (2020). TEA: Temporal Excitation and Aggregation. *CVPR*, 909-918.
+17. Ma, Z., et al. (2023). Are Large Vision-Language Models Temporally Blind? *CVPR*.
+18. Misra, I., et al. (2016). Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification. *ECCV*.
+19. Mitchell, M., et al. (2019). Model Cards for Model Reporting. *FAT\**, 220-229.
+20. Nyquist, H. (1928). Certain Topics in Telegraph Transmission Theory. *Trans. AIEE*, 47, 617-644.
+21. Oquab, M., et al. (2024). DINOv2: Learning Robust Visual Features without Supervision. *TMLR*.
+22. Paszke, A., et al. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. *NeurIPS*, 8024-8035.
+23. Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.
+24. Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. *ICML*, 8748-8763.
+25. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
+26. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
+27. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
+28. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
+29. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.

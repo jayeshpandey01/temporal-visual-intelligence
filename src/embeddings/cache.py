@@ -92,10 +92,16 @@ class EmbeddingCache:
         meta_dict["json_relpath"] = str(json_path.relative_to(self.root))
 
         self.manifest["splits"][split][output.sequence_id] = meta_dict
-        if not self.manifest["encoder_version"]:
+        if not self.manifest.get("encoder"):
+            self.manifest["encoder"] = output.encoder
+        if not self.manifest.get("encoder_version"):
             self.manifest["encoder_version"] = output.encoder_version
-        if not self.manifest["preprocessing_version"]:
+        if not self.manifest.get("embedding_dimension"):
+            self.manifest["embedding_dimension"] = output.embed_dim
+        if not self.manifest.get("preprocessing_version"):
             self.manifest["preprocessing_version"] = output.preprocessing_version
+        if not self.manifest.get("sampling_strategy"):
+            self.manifest["sampling_strategy"] = output.sampling_strategy
 
         if save_manifest:
             self.save_manifest()

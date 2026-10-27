@@ -96,6 +96,8 @@ class SequenceEmbeddingOutput:
     label: str
     encoder_version: str
     preprocessing_version: str
+    sampling_strategy: str = "uniform"
+    encoder: str = "dinov2"
     created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     checksum: str = field(default="")
 
@@ -160,17 +162,26 @@ class SequenceEmbeddingOutput:
             )
 
     def to_metadata_dict(self) -> Dict[str, Any]:
-        """Export manifest metadata excluding heavy embedding bytes."""
+        """
+        Export manifest metadata conforming strictly to M2.9 specification.
+        Guarantees that downstream researchers know exactly what generated the representation.
+        """
         return {
             "sequence_id": self.sequence_id,
             "frame_indices": self.frame_indices,
-            "embedding_shape": list(self.embedding_shape),
             "label": self.label,
+            "encoder": self.encoder,
             "encoder_version": self.encoder_version,
+            "embedding_dimension": self.embed_dim,
             "preprocessing_version": self.preprocessing_version,
+            "sampling_strategy": self.sampling_strategy,
             "created_at": self.created_at,
+            # Scientific audit and hardware verification metadata
+            "num_frames": self.num_frames,
+            "embedding_shape": list(self.embedding_shape),
             "checksum": self.checksum,
             "mean_vector_norm": float(np.mean(np.linalg.norm(self.embeddings, axis=1))),
+            "std_vector_norm": float(np.std(np.linalg.norm(self.embeddings, axis=1))),
         }
 
     def save(self, output_dir: Union[str, Path]) -> Tuple[Path, Path]:
@@ -220,6 +231,8 @@ class SequenceEmbeddingOutput:
             label=meta["label"],
             encoder_version=meta["encoder_version"],
             preprocessing_version=meta["preprocessing_version"],
+            sampling_strategy=meta.get("sampling_strategy", "uniform"),
+            encoder=meta.get("encoder", "dinov2"),
             created_at=meta.get("created_at", ""),
             checksum=meta.get("checksum", "")
         )
