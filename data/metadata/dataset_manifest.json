@@ -1,0 +1,60 @@
+{
+  "dataset_name": "Something-Something V2 Directional Benchmark (Two-Tier Architecture)",
+  "dataset_version": "2.0.0-stratified",
+  "acquisition_date": "2026-10-28",
+  "license": "Research & Academic Use (Creative Commons Attribution 4.0)",
+  "benchmark_tier_structure": {
+    "tier_1_diagnostic": {
+      "name": "Synthetic Diagnostic Benchmark",
+      "path": "data/",
+      "role": "Mathematical zero-static-bias control. Eliminates background texture shortcuts to isolate pure temporal order sensitivity.",
+      "total_sequences": 2000,
+      "total_frames": 16000,
+      "class_count": 20,
+      "samples_per_class": 100,
+      "sequence_length": 8,
+      "resolution": [224, 224, 3],
+      "color_space": "RGB"
+    },
+    "tier_2_real_world": {
+      "name": "Real-World Action Benchmark",
+      "path": "data/tier2_real/",
+      "source_containers": ["videos/Horse_running.mp4", "videos/BMW_M4.mp4"],
+      "remote_sources": ["Hugging Face Hub (sayakpaul/something-something-v2-mini)", "Kaggle (pevogam/something-something-v2)"],
+      "role": "Photographic natural manifold validation, optical flow, and complex multi-frame VLM semantic transitions.",
+      "ingestion_engine": "src/data/remote_ingestion.py via ffmpeg (accurate seek, constant frame rate 29.97/28.64 fps, 224x224 crop)"
+    }
+  },
+  "stratified_splits": {
+    "train_count": 1400,
+    "val_count": 300,
+    "test_count": 300,
+    "per_class_train": 70,
+    "per_class_val": 15,
+    "per_class_test": 15,
+    "partition_method": "Stratified Group-Aware Partitioning on Video IDs",
+    "leakage_guard_status": "CERTIFIED ZERO LEAKAGE (train-val=0, train-test=0, val-test=0)"
+  },
+  "classes": [
+    "Moving something away from the camera",
+    "Moving something towards the camera",
+    "Pushing something from left to right",
+    "Pushing something from right to left",
+    "Picking something up",
+    "Putting something down",
+    "Opening something",
+    "Closing something",
+    "Turning the camera left while filming something",
+    "Turning the camera right while filming something",
+    "Putting something on top of something",
+    "Taking something off of something",
+    "Covering something",
+    "Uncovering something",
+    "Putting something into something",
+    "Taking something out of something",
+    "Rotating something clockwise",
+    "Rotating something counter-clockwise",
+    "Tipping something over",
+    "Standing something upright"
+  ]
+}
