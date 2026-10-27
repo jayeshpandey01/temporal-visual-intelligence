@@ -139,3 +139,4 @@ def test_validate_catches_cross_split_leakage(tmp_path):
     assert rep["global_status"] == "FAIL"
     assert rep["leakage_check"]["status"] == "FAIL"
     assert rep["leakage_check"]["train_test_overlap"] == 1
+
