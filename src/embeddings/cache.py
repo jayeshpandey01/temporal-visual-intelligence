@@ -60,7 +60,7 @@ class EmbeddingCache:
             "preprocessing_version": None,
         }
 
-    def _save_manifest(self) -> None:
+    def save_manifest(self) -> None:
         """Write manifest atomically."""
         self.manifest["total_sequences"] = sum(
             len(s) for s in self.manifest["splits"].values()
@@ -68,7 +68,12 @@ class EmbeddingCache:
         with open(self.manifest_path, "w") as f:
             json.dump(self.manifest, f, indent=2)
 
-    def put(self, output: SequenceEmbeddingOutput, split: str = "train") -> Tuple[Path, Path]:
+    def put(
+        self,
+        output: SequenceEmbeddingOutput,
+        split: str = "train",
+        save_manifest: bool = True
+    ) -> Tuple[Path, Path]:
         """
         Store a validated sequence embedding in the cache under the specified split.
         """
@@ -90,7 +95,8 @@ class EmbeddingCache:
         if not self.manifest["preprocessing_version"]:
             self.manifest["preprocessing_version"] = output.preprocessing_version
 
-        self._save_manifest()
+        if save_manifest:
+            self.save_manifest()
         return npy_path, json_path
 
     def get(self, sequence_id: str, split: str = "train") -> Optional[SequenceEmbeddingOutput]:
@@ -173,3 +179,4 @@ class EmbeddingCache:
             }
         summary["total_sequences"] = sum(s["count"] for s in summary["splits"].values())
         return summary
+

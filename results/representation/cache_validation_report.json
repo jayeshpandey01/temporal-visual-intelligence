@@ -1,0 +1,52 @@
+{
+  "cache_root": "embeddings",
+  "expected_dim": 384,
+  "expected_frames": 8,
+  "splits_audited": {
+    "train": {
+      "total_sequences": 1400,
+      "error_count": 0,
+      "errors": [],
+      "mean_norm": 10.870555776187352,
+      "min_norm": 9.500024795532227,
+      "max_norm": 11.225285530090332,
+      "status": "PASS"
+    },
+    "val": {
+      "total_sequences": 300,
+      "error_count": 0,
+      "errors": [],
+      "mean_norm": 10.85478120803833,
+      "min_norm": 9.553418159484863,
+      "max_norm": 11.233460426330566,
+      "status": "PASS"
+    },
+    "test": {
+      "total_sequences": 300,
+      "error_count": 0,
+      "errors": [],
+      "mean_norm": 10.867524452606837,
+      "min_norm": 9.834924697875977,
+      "max_norm": 11.21733570098877,
+      "status": "PASS"
+    },
+    "real": {
+      "total_sequences": 2,
+      "error_count": 0,
+      "errors": [],
+      "mean_norm": 3.9557214188575744,
+      "min_norm": 2.256114959716797,
+      "max_norm": 7.128872871398926,
+      "status": "PASS"
+    }
+  },
+  "global_status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "leakage_check": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "status": "PASS"
+  }
+}

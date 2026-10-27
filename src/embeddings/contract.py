@@ -223,3 +223,4 @@ class SequenceEmbeddingOutput:
             created_at=meta.get("created_at", ""),
             checksum=meta.get("checksum", "")
         )
+

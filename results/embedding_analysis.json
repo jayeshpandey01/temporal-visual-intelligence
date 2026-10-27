@@ -1,0 +1,91 @@
+{
+  "class_separability": {
+    "intra_class_similarity": 0.9967024922370911,
+    "inter_class_similarity": 0.9995133280754089,
+    "separability_gap": -0.002810835838317871,
+    "interpretation": "Low separability gap \u2192 temporal context likely needed for disambiguation."
+  },
+  "temporal_variance_by_class": {
+    "0": {
+      "mean_temporal_variance": 0.04687373349443078,
+      "std_temporal_variance": 0.023834727239298633
+    },
+    "1": {
+      "mean_temporal_variance": 0.03787714010104537,
+      "std_temporal_variance": 0.011844072713566184
+    },
+    "2": {
+      "mean_temporal_variance": 0.03829969223588705,
+      "std_temporal_variance": 0.017805759986326417
+    },
+    "3": {
+      "mean_temporal_variance": 0.03761330964043737,
+      "std_temporal_variance": 0.024489446153801744
+    },
+    "4": {
+      "mean_temporal_variance": 0.05273759169504046,
+      "std_temporal_variance": 0.02436804963403146
+    },
+    "5": {
+      "mean_temporal_variance": 0.003356519469525665,
+      "std_temporal_variance": 0.0018486502589896913
+    },
+    "6": {
+      "mean_temporal_variance": 0.00496668488776777,
+      "std_temporal_variance": 0.003560226404639752
+    },
+    "7": {
+      "mean_temporal_variance": 0.003039165970403701,
+      "std_temporal_variance": 0.0017190459476594151
+    },
+    "8": {
+      "mean_temporal_variance": 0.0035063127521425485,
+      "std_temporal_variance": 0.00197205614604388
+    },
+    "9": {
+      "mean_temporal_variance": 0.001978236943250522,
+      "std_temporal_variance": 0.0005097912051668362
+    },
+    "10": {
+      "mean_temporal_variance": 0.004396916797850281,
+      "std_temporal_variance": 0.0011966358600674829
+    },
+    "11": {
+      "mean_temporal_variance": 0.004748459975235164,
+      "std_temporal_variance": 0.0021833228932995586
+    },
+    "12": {
+      "mean_temporal_variance": 0.004624800151214003,
+      "std_temporal_variance": 0.0022162003392676203
+    },
+    "13": {
+      "mean_temporal_variance": 0.007144366030115634,
+      "std_temporal_variance": 0.004605555873929287
+    },
+    "14": {
+      "mean_temporal_variance": 0.004584425699431449,
+      "std_temporal_variance": 0.001284283575696188
+    },
+    "15": {
+      "mean_temporal_variance": 0.002030151151120663,
+      "std_temporal_variance": 0.0005050222186180237
+    },
+    "16": {
+      "mean_temporal_variance": 0.005292851413832978,
+      "std_temporal_variance": 0.002238430077519361
+    },
+    "17": {
+      "mean_temporal_variance": 0.0035747544781770555,
+      "std_temporal_variance": 0.0015612474464842777
+    },
+    "18": {
+      "mean_temporal_variance": 0.0038111553789349274,
+      "std_temporal_variance": 0.0026566996821646115
+    },
+    "19": {
+      "mean_temporal_variance": 0.03194515467621386,
+      "std_temporal_variance": 0.011562548217591036
+    }
+  },
+  "n_classes": 20
+}

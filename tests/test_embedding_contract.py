@@ -187,3 +187,4 @@ def test_validate_embedding_cache(tmp_path):
     assert rep["global_status"] == "PASS"
     assert rep["leakage_check"]["status"] == "PASS"
     assert rep["splits_audited"]["train"]["error_count"] == 0
+

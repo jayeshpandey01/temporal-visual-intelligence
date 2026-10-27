@@ -1,0 +1,23 @@
+{
+  "sequence_id": "vid_11_0020",
+  "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "embedding_shape": [
+    8,
+    384
+  ],
+  "label": "14",
+  "encoder_version": "dinov2_vits14",
+  "preprocessing_version": "v1_imagenet_224x224_center",
+  "created_at": "2026-10-27T21:19:03.788756+00:00",
+  "checksum": "db4d1c55166e00a6f8c75eb9e99e00958fe93255f077f63b1108c7485c8bf318",
+  "mean_vector_norm": 10.800371170043945
+}

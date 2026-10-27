@@ -45,6 +45,28 @@ def main(config_path: str, force: bool = False):
         all_metadata.extend(metadata)
 
     extractor.save_metadata(all_metadata)
+
+    # Extract dense continuous real sequences (Tier 2 Real Actions: M1.6 & M2.13)
+    dense_real_horse = Path("data/tier2_real/dense_horse_50")
+    if dense_real_horse.exists():
+        print("\nExtracting dense real sequence: horse_running_gallop_50")
+        extractor.extract_directory(
+            frame_dir=dense_real_horse,
+            sequence_id="horse_running_gallop_50",
+            label="horse_galloping",
+            split="real"
+        )
+
+    dense_real_bmw = Path("data/tier2_real/dense_bmw_50")
+    if dense_real_bmw.exists():
+        print("Extracting dense real sequence: bmw_m4_drift_50")
+        extractor.extract_directory(
+            frame_dir=dense_real_bmw,
+            sequence_id="bmw_m4_drift_50",
+            label="car_drifting",
+            split="real"
+        )
+
     print("\nExtraction complete.")
     print(f"Total sequences: {len(all_metadata)}")
 

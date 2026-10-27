@@ -19,6 +19,8 @@ from PIL import Image
 from sklearn.model_selection import GroupKFold
 import torchvision.transforms as T
 
+from src.data.sampling import uniform_sample, first_n, last_n, sparse_sample, segment_sample
+
 
 # ---------------------------------------------------------------------------
 # ImageNet normalization (required for DINOv2 / CLIP)
@@ -247,28 +249,30 @@ class TemporalSequenceDataset(Dataset):
         """
         Sample max_frames from the full sequence.
         Modes:
-          - uniform: evenly spaced (preserves temporal structure)
+          - uniform: evenly spaced via M2.2 floor formula i_k = floor(k*(L-1)/(N-1))
           - first_n: take first N frames
           - last_n:  take last N frames
-          - sparse:  stride-2 sampling
+          - sparse:  stride-based sampling
+          - segment_center: TSN segment center sampling
         """
         n = len(frames)
         T = self.max_frames
 
         if n <= T:
-            return frames  # Return all if sequence is short
+            return frames
 
         if mode == 'uniform':
-            indices = np.linspace(0, n - 1, T, dtype=int)
+            indices = uniform_sample(n, T)
         elif mode == 'first_n':
-            indices = list(range(T))
+            indices = first_n(n, T)
         elif mode == 'last_n':
-            indices = list(range(n - T, n))
+            indices = last_n(n, T)
         elif mode == 'sparse':
-            stride = max(1, n // T)
-            indices = list(range(0, n, stride))[:T]
+            indices = sparse_sample(n, T)
+        elif mode == 'segment_center':
+            indices = segment_sample(n, T, mode='center')
         else:
-            indices = np.linspace(0, n - 1, T, dtype=int)
+            indices = uniform_sample(n, T)
 
         return [frames[i] for i in indices]
 
@@ -278,8 +282,12 @@ class TemporalSequenceDataset(Dataset):
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
         video_id, all_frames, label = self.samples[idx]
 
-        # Sample frames according to configured strategy
-        sampling_mode = self.config["sequence"].get("sampling", "uniform")
+        # M2.3 Rule: Validation and Test splits must ALWAYS be deterministic.
+        # Random / stochastic sampling is strictly confined to training data augmentation.
+        if self.split in ('val', 'test'):
+            sampling_mode = 'uniform'
+        else:
+            sampling_mode = self.config["sequence"].get("sampling", "uniform")
         frames = self._sample_frames(all_frames, mode=sampling_mode)
 
         # Load and transform

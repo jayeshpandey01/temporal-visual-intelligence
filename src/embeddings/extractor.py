@@ -21,6 +21,7 @@ from PIL import Image
 import torchvision.transforms as T
 from tqdm import tqdm
 from src.embeddings.contract import SequenceInput, SequenceEmbeddingOutput
+from src.embeddings.cache import EmbeddingCache
 
 
 # ---------------------------------------------------------------------------
@@ -121,6 +122,7 @@ class EmbeddingExtractor:
         print(f"Extractor device: {self.device}")
 
         self.model = load_encoder(self.encoder_name, self.device)
+        self.cache = EmbeddingCache(self.output_dir)
         self.transform = T.Compose([
             T.Resize((224, 224)),
             T.CenterCrop(224),
@@ -194,43 +196,55 @@ class EmbeddingExtractor:
         for idx in tqdm(range(len(dataset)), desc=f"Extracting [{split}]"):
             video_id = dataset.get_video_id(idx)
             out_path = output_split_dir / f"{video_id}.npy"
+            json_meta_path = output_split_dir / f"{video_id}_meta.json"
+            _, all_frames, label = dataset.samples[idx]
 
-            # Skip if already extracted (unless forced)
-            if out_path.exists() and not force_reextract:
+            # If already extracted and cached with contract metadata, skip
+            if out_path.exists() and json_meta_path.exists() and not force_reextract:
+                sequence_embeddings = np.load(str(out_path))
                 metadata_entries.append({
                     'sequence_id': video_id,
                     'split': split,
-                    'label': dataset.samples[idx][2],
-                    'n_frames': int(np.load(str(out_path)).shape[0]),
-                    'embed_dim': self.embed_dim,
+                    'label': int(label),
+                    'n_frames': int(sequence_embeddings.shape[0]),
+                    'embed_dim': int(sequence_embeddings.shape[1]),
                 })
                 continue
 
-            # Get raw frames (before temporal subsampling — extract full sequence)
-            _, all_frames, label = dataset.samples[idx]
+            if out_path.exists() and not force_reextract:
+                # Array exists, generate contract metadata and register in manifest
+                sequence_embeddings = np.load(str(out_path))
+            else:
+                # Process frames in batches
+                frame_embeddings = []
+                frame_batch = []
 
-            # Process frames in batches
-            frame_embeddings = []
-            frame_batch = []
+                for frame_path in all_frames:
+                    img = Image.open(frame_path).convert("RGB")
+                    frame_batch.append(self.transform(img))
 
-            for frame_path in all_frames:
-                img = Image.open(frame_path).convert("RGB")
-                frame_batch.append(self.transform(img))
+                    if len(frame_batch) == batch_size:
+                        embs = self.extract_frame_batch(frame_batch)
+                        frame_embeddings.append(embs)
+                        frame_batch = []
 
-                if len(frame_batch) == batch_size:
+                if frame_batch:
                     embs = self.extract_frame_batch(frame_batch)
                     frame_embeddings.append(embs)
-                    frame_batch = []
 
-            if frame_batch:
-                embs = self.extract_frame_batch(frame_batch)
-                frame_embeddings.append(embs)
+                # Stack all frame embeddings: [N_frames, embed_dim]
+                sequence_embeddings = np.concatenate(frame_embeddings, axis=0)
 
-            # Stack all frame embeddings: [N_frames, embed_dim]
-            sequence_embeddings = np.concatenate(frame_embeddings, axis=0)
-
-            # Save to disk
-            np.save(str(out_path), sequence_embeddings)
+            # Contract output and cache registration
+            seq_out = SequenceEmbeddingOutput(
+                sequence_id=video_id,
+                frame_indices=list(range(len(all_frames))),
+                embeddings=sequence_embeddings,
+                label=str(label),
+                encoder_version=self.encoder_name,
+                preprocessing_version="v1_imagenet_224x224_center"
+            )
+            self.cache.put(seq_out, split=split, save_manifest=False)
 
             metadata_entries.append({
                 'sequence_id': video_id,
@@ -240,8 +254,43 @@ class EmbeddingExtractor:
                 'embed_dim': int(sequence_embeddings.shape[1]),
             })
 
+        self.cache.save_manifest()
         print(f"  Done. Extracted {len(metadata_entries)} sequences.")
         return metadata_entries
+
+    def extract_directory(
+        self,
+        frame_dir: Path,
+        sequence_id: str,
+        label: str,
+        split: str = "real"
+    ) -> SequenceEmbeddingOutput:
+        """
+        Extract and cache dense frame sequences (e.g., 50-frame continuous actions)
+        following M2.1 contract and M2.8/M2.9 cache conventions.
+        """
+        frame_files = sorted(
+            [f for f in Path(frame_dir).iterdir() if f.suffix.lower() in ('.png', '.jpg', '.jpeg')]
+        )
+        if not frame_files:
+            raise FileNotFoundError(f"No image files found in {frame_dir}")
+
+        frame_batch = []
+        for fp in frame_files:
+            img = Image.open(fp).convert("RGB")
+            frame_batch.append(self.transform(img))
+
+        embs = self.extract_frame_batch(frame_batch)
+        seq_out = SequenceEmbeddingOutput(
+            sequence_id=sequence_id,
+            frame_indices=list(range(len(frame_files))),
+            embeddings=embs,
+            label=label,
+            encoder_version=self.encoder_name,
+            preprocessing_version="v1_imagenet_224x224_center"
+        )
+        self.cache.put(seq_out, split=split, save_manifest=True)
+        return seq_out
 
     def save_metadata(self, all_metadata: List[Dict]):
         """Save combined metadata for all splits to metadata.json."""

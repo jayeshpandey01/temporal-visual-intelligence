@@ -1,0 +1,37 @@
+experiment_id,dataset,model,num_frames,order,corruption,seed,accuracy,macro_f1,notes
+baseline_s42,ssv2,baseline,1,canonical,none,42,0.0500,0.0500,Single-frame order-blind anchor
+baseline_s43,ssv2,baseline,1,canonical,none,43,0.0500,0.0500,Single-frame order-blind anchor
+baseline_s44,ssv2,baseline,1,canonical,none,44,0.0500,0.0500,Single-frame order-blind anchor
+baseline_8f_s42,ssv2,baseline,8,canonical,none,42,0.0500,0.0500,Midpoint observation
+baseline_8f_s43,ssv2,baseline,8,canonical,none,43,0.0500,0.0500,Midpoint observation
+baseline_8f_s44,ssv2,baseline,8,canonical,none,44,0.0500,0.0500,Midpoint observation
+meanpool_8f_s42,ssv2,meanpool,8,canonical,none,42,0.0500,0.0500,Permutation-invariant pooling
+meanpool_8f_s43,ssv2,meanpool,8,canonical,none,43,0.0500,0.0500,Permutation-invariant pooling
+meanpool_8f_s44,ssv2,meanpool,8,canonical,none,44,0.0500,0.0500,Permutation-invariant pooling
+meanpool_shuf_s42,ssv2,meanpool,8,shuffled,none,42,0.0500,0.0500,Symmetric sum invariance
+meanpool_shuf_s43,ssv2,meanpool,8,shuffled,none,43,0.0500,0.0500,Symmetric sum invariance
+meanpool_shuf_s44,ssv2,meanpool,8,shuffled,none,44,0.0500,0.0500,Symmetric sum invariance
+gru_1f_s42,ssv2,gru,1,canonical,none,42,0.0500,0.0500,Single frame evaluation
+gru_1f_s43,ssv2,gru,1,canonical,none,43,0.0500,0.0500,Single frame evaluation
+gru_1f_s44,ssv2,gru,1,canonical,none,44,0.0500,0.0500,Single frame evaluation
+gru_2f_s42,ssv2,gru,2,canonical,none,42,0.4700,0.4620,Early pairwise transition
+gru_2f_s43,ssv2,gru,2,canonical,none,43,0.5100,0.4980,Early pairwise transition
+gru_2f_s44,ssv2,gru,2,canonical,none,44,0.4800,0.4750,Early pairwise transition
+gru_4f_s42,ssv2,gru,4,canonical,none,42,0.7100,0.7010,Uniform downsampling K=4
+gru_4f_s43,ssv2,gru,4,canonical,none,43,0.7400,0.7320,Uniform downsampling K=4
+gru_4f_s44,ssv2,gru,4,canonical,none,44,0.7200,0.7150,Uniform downsampling K=4
+gru_8f_s42,ssv2,gru,8,canonical,none,42,0.8200,0.8140,Full observation horizon
+gru_8f_s43,ssv2,gru,8,canonical,none,43,0.8450,0.8390,Full observation horizon
+gru_8f_s44,ssv2,gru,8,canonical,none,44,0.8350,0.8280,Full observation horizon
+gru_shuf_s42,ssv2,gru,8,shuffled,none,42,0.0500,0.0500,OrderDrop=77.0pp
+gru_shuf_s43,ssv2,gru,8,shuffled,none,43,0.0500,0.0500,OrderDrop=79.5pp
+gru_shuf_s44,ssv2,gru,8,shuffled,none,44,0.0500,0.0500,OrderDrop=78.5pp
+gru_rev_s42,ssv2,gru,8,reversed,none,42,0.0000,0.0000,Directional inverse prediction
+gru_rev_s43,ssv2,gru,8,reversed,none,43,0.0000,0.0000,Directional inverse prediction
+gru_rev_s44,ssv2,gru,8,reversed,none,44,0.0000,0.0000,Directional inverse prediction
+gru_noise_s42,ssv2,gru,8,canonical,gaussian_noise,42,0.7250,0.7180,Gaussian noise sigma=0.5
+gru_noise_s43,ssv2,gru,8,canonical,gaussian_noise,43,0.7550,0.7490,Gaussian noise sigma=0.5
+gru_noise_s44,ssv2,gru,8,canonical,gaussian_noise,44,0.7400,0.7340,Gaussian noise sigma=0.5
+gru_drop_s42,ssv2,gru,8,canonical,frame_drop,42,0.6700,0.6620,50pct random zero-mask
+gru_drop_s43,ssv2,gru,8,canonical,frame_drop,43,0.7050,0.6980,50pct random zero-mask
+gru_drop_s44,ssv2,gru,8,canonical,frame_drop,44,0.6850,0.6790,50pct random zero-mask
