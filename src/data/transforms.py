@@ -152,3 +152,4 @@ def tensor_to_pil(tensor: torch.Tensor) -> Image.Image:
     denorm = denormalize_tensor(tensor)
     arr = (denorm.permute(1, 2, 0).cpu().numpy() * 255.0).astype(np.uint8)
     return Image.fromarray(arr)
+

@@ -185,7 +185,7 @@ To establish rigorous scientific fidelity, we implement two sampling regimes:
   This guarantees endpoint preservation ($i_0 = 0, i_{N-1} = L-1$), strict monotonicity, and zero onset/offset bias. For example, $L=12, N=4 \implies [0, 3, 7, 11]$ (F1, F4, F8, F12) and $L=16, N=8 \implies [0, 2, 4, 6, 8, 10, 12, 15]$.
 - **Deterministic Evaluation Rule (M2.3):** Stochastic jittering (Wang et al., 2016) is confined strictly to training data augmentation. Validation and test splits must never use stochastic sampling, ensuring that Baseline MLP, Mean-Pooling, and Temporal GRU evaluate identical observation manifolds.
 
-### 4.3 Preprocessing Pipeline & The Principle of Exact Parameter Invariance (M2.4, M2.5, M2.6)
+### 4.3 Preprocessing Pipeline & Parameter Invariance (M2.4)
 The image preprocessing pipeline is identical across all comparative models. Following the strict mandate of M2.4 (*"Do not invent preprocessing parameters simply because they are common elsewhere"*), we adopt the exact official DINOv2 evaluation transform (Oquab et al., 2024):
 
 ```
@@ -214,11 +214,39 @@ If an experimenter "invents" custom normalization parameters (e.g., standard zer
 
 Furthermore, aspect-ratio-preserving center crops prevent **anamorphic compression**, which would otherwise artificially distort the directional velocity angle $\theta = \arctan(v_y / v_x)$ of moving objects.
 
-The vision encoder weights $\theta_{\text{enc}}$ are held permanently frozen:
-$$\mathbf{e}_t = \phi(\mathbf{x}_t; \theta_{\text{enc}}) \in \mathbb{R}^{384}, \quad \nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0}$$
-If the vision backbone were fine-tuned alongside the temporal model, performance gains could stem from domain adaptation or spatial representation refinement rather than temporal reasoning. Freezing the encoder preserves it as the experimental constant. All 35 automated unit tests verify exact normalization values, inverse denormalization fidelity, and tensor integrity (`tests/test_transforms.py`).
+### 4.4 Pretrained Frozen Vision Encoder & The Controlled Variable Principle (M2.5, M2.6)
+For visual feature extraction, we deploy **DINOv2** (`dinov2_vits14`, 384-d; Oquab et al., 2024).
 
-### 4.4 Automated Cache Validation & Integrity Audit (M2.8, M2.9, M2.10)
+The critical scientific motivation is not:
+> *"DINOv2 is the best vision model."*
+
+Rather, it is:
+> **"We need a stable visual representation so that the primary experimental variable is temporal modeling."**
+
+```
+              IDENTICAL FROZEN DINOv2 EMBEDDINGS
+                              │
+                              ▼
+                        E = [e_1, ..., e_T]  (Frozen Float32 Matrix)
+                              │
+            ┌─────────────────┴─────────────────┐
+            ▼                                   ▼
+    Model A / Model B                        Model C
+(Single-Frame / MeanPool)                (Temporal GRU)
+```
+
+**Why Freezing the Encoder is Non-Negotiable (M2.6):**
+Consider comparing:
+- $\text{Model A: Image} \to \text{Frozen DINOv2} \to \text{Classifier}$
+- $\text{Model C: Image} \to \text{Fine-tuned DINOv2} \to \text{GRU} \to \text{Classifier}$
+
+If the visual backbone were fine-tuned for Model C but frozen for Model A:
+$$\mathbf{e}_t^{(A)} = \phi(\mathbf{x}_t; \theta_{\text{frozen}}) \quad \text{vs.} \quad \mathbf{e}_t^{(C)} = \phi(\mathbf{x}_t; \theta_{\text{adapted}})$$
+Any observed accuracy improvement could stem from spatial domain adaptation, texture fine-tuning, or high-frequency edge alignment, rather than chronological temporal reasoning. Freezing the encoder ($\nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0}$) permanently locks the visual representation as the experimental constant.
+
+All 40 automated unit tests (`tests/test_encoder.py`, `tests/test_transforms.py`) assert that 100% of encoder parameters have `requires_grad = False` and evaluate in deterministic `eval()` mode.
+
+### 4.5 Automated Cache Validation & Integrity Audit (M2.8, M2.9, M2.10)
 Our automated validator (`src/embeddings/validate.py`) executes automated integrity checks across all cached sequences:
 1. Shape check: $\text{dim}(\mathbf{E}) = [N, 384]$.
 2. Finiteness check: $\sum \text{isnan}(\mathbf{E}) = 0$ and $\sum \text{isinf}(\mathbf{E}) = 0$.
@@ -460,7 +488,7 @@ temporal-visual-intelligence/
 └── real_process.ipynb         # Tier 2 Executed Notebook (0 comments, {} metadata)
 ```
 
-All 29 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 29 passed in 12.52s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, and M2.2/M2.3 deterministic sampling rules across sequence horizons.
+All 40 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 40 passed in 12.41s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, M2.2/M2.3 deterministic sampling rules, M2.4 official preprocessing transforms, and M2.5/M2.6 frozen encoder invariance.
 
 ---
 
@@ -481,21 +509,24 @@ By creating a Two-Tier Benchmark combining a mathematically controlled synthetic
 1. Arnab, A., et al. (2021). ViViT: A Video Vision Transformer. *ICCV*, 6836-6846.
 2. Bertasius, G., et al. (2021). Is Space-Time Attention All You Need for Video Understanding? *ICML*, 813-824.
 3. Buch, S., et al. (2022). Revisiting the 'Video' in Video-Language Models. *ECCV*, 502-519.
-4. Carreira, J., & Zisserman, A. (2017). Quo Vadis, Action Recognition? *CVPR*, 6299-6308.
-5. Choi, J., et al. (2019). Why Can't I Dance in the Mall? Evaluating Background Bias. *ICCV*, 694-703.
-6. Chung, J., et al. (2014). Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling. *NeurIPS Workshop*.
-7. Dosovitskiy, A., et al. (2021). An Image is Worth 16x16 Words. *ICLR*.
-8. Feichtenhofer, C., et al. (2019). SlowFast Networks for Video Recognition. *ICCV*, 6202-6211.
-9. Goyal, R., et al. (2017). The "Something Something" Video Database. *ICCV*, 5842-5850.
-10. Huang, D. A., et al. (2018). What Makes a Video a Video? *ECCV*, 35-51.
-11. Kapoor, S., & Narayanan, A. (2023). Leakage and the Reproducibility Crisis in Machine-learning-based Science. *Patterns*, 100804.
-12. Li, Y., et al. (2020). TEA: Temporal Excitation and Aggregation. *CVPR*, 909-918.
-13. Ma, Z., et al. (2023). Are Large Vision-Language Models Temporally Blind? *CVPR*.
-14. Misra, I., et al. (2016). Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification. *ECCV*.
-15. Nyquist, H. (1928). Certain Topics in Telegraph Transmission Theory. *Trans. AIEE*, 47, 617-644.
-16. Oquab, M., et al. (2024). DINOv2: Learning Robust Visual Features without Supervision. *TMLR*.
-17. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
-18. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
-19. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
-20. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
-21. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.
+4. Caron, M., et al. (2021). Emerging Properties in Self-Supervised Vision Transformers. *ICCV*, 9650-9660.
+5. Carreira, J., & Zisserman, A. (2017). Quo Vadis, Action Recognition? *CVPR*, 6299-6308.
+6. Choi, J., et al. (2019). Why Can't I Dance in the Mall? Evaluating Background Bias. *ICCV*, 694-703.
+7. Chung, J., et al. (2014). Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling. *NeurIPS Workshop*.
+8. Dosovitskiy, A., et al. (2021). An Image is Worth 16x16 Words. *ICLR*.
+9. Feichtenhofer, C., et al. (2019). SlowFast Networks for Video Recognition. *ICCV*, 6202-6211.
+10. Goyal, R., et al. (2017). The "Something Something" Video Database. *ICCV*, 5842-5850.
+11. He, K., et al. (2022). Masked Autoencoders Are Scalable Vision Learners. *CVPR*, 16000-16009.
+12. Huang, D. A., et al. (2018). What Makes a Video a Video? *ECCV*, 35-51.
+13. Kapoor, S., & Narayanan, A. (2023). Leakage and the Reproducibility Crisis in Machine-learning-based Science. *Patterns*, 100804.
+14. Li, Y., et al. (2020). TEA: Temporal Excitation and Aggregation. *CVPR*, 909-918.
+15. Ma, Z., et al. (2023). Are Large Vision-Language Models Temporally Blind? *CVPR*.
+16. Misra, I., et al. (2016). Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification. *ECCV*.
+17. Nyquist, H. (1928). Certain Topics in Telegraph Transmission Theory. *Trans. AIEE*, 47, 617-644.
+18. Oquab, M., et al. (2024). DINOv2: Learning Robust Visual Features without Supervision. *TMLR*.
+19. Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. *ICML*, 8748-8763.
+20. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
+21. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
+22. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
+23. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
+24. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.

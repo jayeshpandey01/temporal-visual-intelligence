@@ -98,3 +98,4 @@ def test_clip_transform_shape():
 
     assert tensor.shape == (3, 224, 224)
     assert tensor.dtype == torch.float32
+
