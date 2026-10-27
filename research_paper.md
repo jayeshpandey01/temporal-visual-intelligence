@@ -141,10 +141,58 @@ Where $\tau_{\min}$ is the minimum timescale of physical state change ($\approx 
 
 ---
 
-## 4. Visual Representations & Frozen Embeddings
+## 4. Visual Representations & Frozen Embedding Pipeline (Milestone 2)
 
-Each frame $\mathbf{x}_t$ is mapped into latent space using frozen DINOv2 ViT-S/14:
-$$\mathbf{e}_t = \phi(\mathbf{x}_t) \in \mathbb{R}^{384}, \quad \nabla_\phi \mathcal{L} = \mathbf{0}$$
+### 4.1 M2.1: The Frozen Experimental Interface Contract
+To eliminate experimental confounds and guarantee that downstream temporal models operate on strictly identical perceptual manifolds, we formalize the experimental interface contract prior to model construction:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                              M2.1 FROZEN EXPERIMENTAL INTERFACE CONTRACT                               │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ INPUT CONTRACT (SequenceInput):                                                                        │
+│   • sequence_id: str                      - Deterministic unique sequence identifier                   │
+│   • frame_paths: List[Path]               - Chronologically ordered file paths to extracted frames     │
+│   • label: str                            - Categorical action class label                             │
+│   • frame_indices: List[int]              - Strictly increasing natural frame indices in source video  │
+│   • metadata: Dict[str, Any]              - Frame rate, resolution, container provenance               │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ OUTPUT CONTRACT (SequenceEmbeddingOutput):                                                             │
+│   • sequence_id: str                      - Identical sequence identifier matching input               │
+│   • frame_indices: List[int]              - Preserved natural frame timestamps                         │
+│   • embeddings: np.ndarray [N, D]         - Float32 matrix (N frames x 384 dimensions)                 │
+│   • label: str                            - Preserved ground-truth action class label                  │
+│   • encoder_version: str                  - Immutable model tag ('dinov2_vits14@lvd142m')              │
+│   • preprocessing_version: str            - Immutable transform tag ('v1_imagenet_224x224_center')     │
+│   • created_at: str                       - ISO 8601 UTC extraction timestamp                         │
+│   • checksum: str                         - SHA-256 cryptographic digest of raw embedding bytes        │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Immutability Guarantee:** The output embedding matrix $\mathbf{E} \in \mathbb{R}^{N \times D}$ is serialized to disk as an immutable `.npy` binary alongside an atomic JSON manifest. Each sequence is fingerprinted with a SHA-256 hash:
+$$\text{Checksum} = \text{SHA256}(\text{bytes}(\mathbf{E}))$$
+Downstream models (Single-Frame MLP, Mean-Pooling, GRU, Transformer) read directly from this verified cache. If an embedding array is tampered with or corrupted, the pipeline traps the discrepancy and terminates immediately.
+
+### 4.2 Deterministic Frame Sampling Protocol (M2.2, M2.3)
+To eliminate sampling variance across comparative models, frame sampling is strictly deterministic for all validation and test splits:
+$$i_k = \left\lfloor \frac{k(L-1)}{N-1} \right\rfloor, \quad k \in \{0, \dots, N-1\}$$
+For example, for a sequence of length $L=16$ sampled to $N=8$, the deterministic index sequence is $[0, 2, 4, 6, 8, 10, 12, 15]$. This guarantees that the Baseline MLP, Multi-Frame Mean-Pooling, Temporal GRU, Shuffled, and Corrupted evaluations are presented with the exact same visual observations.
+
+### 4.3 Preprocessing & Frozen Encoder Design Rationale (M2.4, M2.5, M2.6)
+Each sampled frame $\mathbf{x}_t$ is preprocessed according to official DINOv2 specifications:
+$$\mathbf{x}_t \xrightarrow{\text{Resize}} 224 \times 224 \xrightarrow{\text{CenterCrop}} 224 \times 224 \xrightarrow{\text{Normalize}} \frac{\mathbf{x}_t - \boldsymbol{\mu}}{\boldsymbol{\sigma}}$$
+where $\boldsymbol{\mu} = [0.485, 0.456, 0.406]$ and $\boldsymbol{\sigma} = [0.229, 0.224, 0.225]$.
+
+The vision encoder weights $\theta_{\text{enc}}$ are held permanently frozen:
+$$\mathbf{e}_t = \phi(\mathbf{x}_t; \theta_{\text{enc}}) \in \mathbb{R}^{384}, \quad \nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0}$$
+If the vision backbone were fine-tuned alongside the temporal model, performance gains could stem from domain adaptation or spatial representation refinement rather than temporal reasoning. Freezing the encoder preserves it as the experimental constant.
+
+### 4.4 Automated Cache Validation & Integrity Audit (M2.8, M2.9, M2.10)
+Our automated validator (`src/embeddings/validate.py`) executes automated integrity checks across all cached sequences:
+1. Shape check: $\text{dim}(\mathbf{E}) = [N, 384]$.
+2. Finiteness check: $\sum \text{isnan}(\mathbf{E}) = 0$ and $\sum \text{isinf}(\mathbf{E}) = 0$.
+3. Non-degeneracy check: $\min \|\mathbf{e}_t\|_2 > 10^{-5}$ (zero collapsed vectors).
+4. Cross-split isolation: $\mathcal{S}_{\text{train}} \cap \mathcal{S}_{\text{val}} \cap \mathcal{S}_{\text{test}} = \emptyset$ (zero sequence ID leakage).
 
 ```
                                   50-FRAME TRAJECTORY METRICS COMPARISON
@@ -165,7 +213,7 @@ $$\mathbf{e}_t = \phi(\mathbf{x}_t) \in \mathbb{R}^{384}, \quad \nabla_\phi \mat
 └───────────────────────────────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
 ```
 
-### 4.1 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
+### 4.5 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
 - **Equine Locomotion (`dense_horse_50`):** Captures $1.7$ complete stride cycles at $00:30$. The latent drift $\Delta(t) = 1 - \cos(\mathbf{e}_1, \mathbf{e}_t)$ diverges smoothly to $0.0342$. Average latent velocity is $\|\vec{v}_t\|_2 = 0.5905$, reflecting oscillatory biological articulation.
 - **Vehicular Drift (`dense_bmw_50`):** Captures continuous high-speed cornering at $t = 42.80\text{s} \to 44.47\text{s}$. Latent drift diverges to $0.0894$. Due to translational velocity and camera tracking, average velocity is $\|\vec{v}_t\|_2 = 0.8494$, with kinetic energy $\mathcal{E}_k = 35.35$ ($2\times$ higher than equine locomotion).
 

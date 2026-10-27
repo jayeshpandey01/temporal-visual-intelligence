@@ -20,6 +20,7 @@ from torch.utils.data import DataLoader
 from PIL import Image
 import torchvision.transforms as T
 from tqdm import tqdm
+from src.embeddings.contract import SequenceInput, SequenceEmbeddingOutput
 
 
 # ---------------------------------------------------------------------------
@@ -140,6 +141,27 @@ class EmbeddingExtractor:
             embeddings = embeddings[:, 0, :]  # CLS token
 
         return embeddings.cpu().numpy()
+
+    @torch.no_grad()
+    def extract_sequence(self, seq_input: SequenceInput) -> SequenceEmbeddingOutput:
+        """
+        Extract embeddings for an immutable SequenceInput contract instance.
+        """
+        frame_tensors = []
+        for fpath in seq_input.frame_paths:
+            img = Image.open(fpath).convert("RGB")
+            frame_tensors.append(self.transform(img))
+
+        embs = self.extract_frame_batch(frame_tensors)
+
+        return SequenceEmbeddingOutput(
+            sequence_id=seq_input.sequence_id,
+            frame_indices=seq_input.frame_indices,
+            embeddings=embs,
+            label=seq_input.label,
+            encoder_version=self.encoder_name,
+            preprocessing_version="v1_imagenet_224x224_center"
+        )
 
     def extract(
         self,

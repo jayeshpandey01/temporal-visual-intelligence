@@ -1,0 +1,175 @@
+"""
+M2.8 / M2.9: Embedding Cache Manager and Metadata Manifest.
+
+Provides high-throughput persistent storage and indexed retrieval of frozen frame embeddings.
+Ensures M3/M4 models load directly from validated numpy arrays without re-running vision models.
+"""
+
+from __future__ import annotations
+
+import os
+import json
+from pathlib import Path
+from typing import Dict, Any, List, Tuple, Optional, Union
+
+import numpy as np
+
+from src.embeddings.contract import SequenceEmbeddingOutput
+
+
+class EmbeddingCache:
+    """
+    Manages persistent caching of frozen sequence embeddings partitioned by split.
+
+    Directory structure:
+        {cache_root}/
+            manifest.json
+            train/
+                {seq_id}.npy
+                {seq_id}_meta.json
+            val/
+                ...
+            test/
+                ...
+    """
+
+    def __init__(self, cache_root: Union[str, Path] = "embeddings"):
+        self.root = Path(cache_root)
+        self.manifest_path = self.root / "manifest.json"
+        self._ensure_directories()
+        self.manifest = self._load_manifest()
+
+    def _ensure_directories(self) -> None:
+        """Create split directories."""
+        for split in ["train", "val", "test", "real"]:
+            (self.root / split).mkdir(parents=True, exist_ok=True)
+
+    def _load_manifest(self) -> Dict[str, Any]:
+        """Load or initialize master cache manifest."""
+        if self.manifest_path.exists():
+            try:
+                with open(self.manifest_path) as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        return {
+            "version": "2.0.0",
+            "splits": {"train": {}, "val": {}, "test": {}, "real": {}},
+            "total_sequences": 0,
+            "encoder_version": None,
+            "preprocessing_version": None,
+        }
+
+    def _save_manifest(self) -> None:
+        """Write manifest atomically."""
+        self.manifest["total_sequences"] = sum(
+            len(s) for s in self.manifest["splits"].values()
+        )
+        with open(self.manifest_path, "w") as f:
+            json.dump(self.manifest, f, indent=2)
+
+    def put(self, output: SequenceEmbeddingOutput, split: str = "train") -> Tuple[Path, Path]:
+        """
+        Store a validated sequence embedding in the cache under the specified split.
+        """
+        if split not in self.manifest["splits"]:
+            self.manifest["splits"][split] = {}
+            (self.root / split).mkdir(parents=True, exist_ok=True)
+
+        split_dir = self.root / split
+        npy_path, json_path = output.save(split_dir)
+
+        # Update manifest record
+        meta_dict = output.to_metadata_dict()
+        meta_dict["npy_relpath"] = str(npy_path.relative_to(self.root))
+        meta_dict["json_relpath"] = str(json_path.relative_to(self.root))
+
+        self.manifest["splits"][split][output.sequence_id] = meta_dict
+        if not self.manifest["encoder_version"]:
+            self.manifest["encoder_version"] = output.encoder_version
+        if not self.manifest["preprocessing_version"]:
+            self.manifest["preprocessing_version"] = output.preprocessing_version
+
+        self._save_manifest()
+        return npy_path, json_path
+
+    def get(self, sequence_id: str, split: str = "train") -> Optional[SequenceEmbeddingOutput]:
+        """
+        Retrieve a sequence embedding from cache. Returns None if not found.
+        """
+        if split not in self.manifest["splits"] or sequence_id not in self.manifest["splits"][split]:
+            return None
+
+        meta_dict = self.manifest["splits"][split][sequence_id]
+        npy_path = self.root / meta_dict["npy_relpath"]
+        json_path = self.root / meta_dict["json_relpath"]
+
+        return SequenceEmbeddingOutput.load(npy_path, json_path)
+
+    def exists(self, sequence_id: str, split: str = "train") -> bool:
+        """Check if sequence embedding is present and valid in cache."""
+        if split not in self.manifest["splits"] or sequence_id not in self.manifest["splits"][split]:
+            return False
+        meta_dict = self.manifest["splits"][split][sequence_id]
+        npy_p = self.root / meta_dict.get("npy_relpath", "")
+        return npy_p.exists()
+
+    def get_split_tensor_dataset(
+        self,
+        split: str,
+        class_to_idx: Optional[Dict[str, int]] = None
+    ) -> Tuple[np.ndarray, np.ndarray, List[str]]:
+        """
+        Load all cached sequences in a split into stacked numpy arrays:
+            X: [N_sequences, T, D]
+            Y: [N_sequences] integer class indices
+            sequence_ids: List of N_sequences string IDs
+
+        Guarantees deterministic order by natural sorting of sequence_ids.
+        """
+        if split not in self.manifest["splits"]:
+            raise ValueError(f"Unknown split: {split}. Available: {list(self.manifest['splits'].keys())}")
+
+        split_dict = self.manifest["splits"][split]
+        if not split_dict:
+            raise ValueError(f"Cache split '{split}' is empty.")
+
+        sorted_seq_ids = sorted(list(split_dict.keys()))
+
+        if class_to_idx is None:
+            # Build natural class index mapping
+            unique_labels = sorted(list(set(split_dict[s]["label"] for s in sorted_seq_ids)))
+            class_to_idx = {lbl: i for i, lbl in enumerate(unique_labels)}
+
+        embeddings_list = []
+        labels_list = []
+        valid_ids = []
+
+        for s_id in sorted_seq_ids:
+            item = self.get(s_id, split=split)
+            if item is None:
+                continue
+            embeddings_list.append(item.embeddings)
+            labels_list.append(class_to_idx[item.label])
+            valid_ids.append(s_id)
+
+        X = np.stack(embeddings_list, axis=0).astype(np.float32)
+        Y = np.array(labels_list, dtype=np.int64)
+
+        return X, Y, valid_ids
+
+    def summarize(self) -> Dict[str, Any]:
+        """Return high-level cache summary statistics."""
+        summary = {
+            "cache_root": str(self.root),
+            "encoder_version": self.manifest.get("encoder_version"),
+            "preprocessing_version": self.manifest.get("preprocessing_version"),
+            "splits": {}
+        }
+        for split, records in self.manifest["splits"].items():
+            summary["splits"][split] = {
+                "count": len(records),
+                "labels": len(set(r["label"] for r in records.values())) if records else 0
+            }
+        summary["total_sequences"] = sum(s["count"] for s in summary["splits"].values())
+        return summary

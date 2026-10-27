@@ -1,0 +1,42 @@
+# =============================================================================
+# Milestone 2: Visual Representation & Embedding Pipeline Configuration
+# Contract & Specification: docs/milestone/M-2.md (§M2.1 - §M2.16)
+# =============================================================================
+
+encoder:
+  name: dinov2_vits14           # Vision Transformer Small with patch size 14
+  version: "dinov2_vits14@lvd142m"
+  embed_dim: 384               # 384-dimensional latent embedding vector
+  freeze: true                 # CRITICAL: Always true. Encoder is the experimental constant.
+  device: auto                 # cuda | mps | cpu | auto
+
+preprocessing:
+  version: "v1_imagenet_224x224_center"
+  resize_size: 224
+  crop_size: 224
+  interpolation: bicubic
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+
+sampling:
+  default_strategy: uniform    # uniform | first_n | last_n | sparse
+  target_frames: 8             # Default sequence length for Tier-1 benchmark
+  dense_real_frames: 50        # Dense sequence length for Tier-2 real video dynamics
+  deterministic_eval: true     # Never apply stochastic sampling during validation/test
+
+cache:
+  root: embeddings/
+  manifest: embeddings/manifest.json
+  compression: false           # Store as uncompressed float32 .npy for maximum throughput
+  format: numpy_array
+
+data:
+  dataset_root: data/
+  split_manifest: data/metadata/split_manifest.json
+  real_root: data/real_data/
+  dense_real_horse: data/tier2_real/dense_horse_50/
+  dense_real_bmw: data/tier2_real/dense_bmw_50/
+
+outputs:
+  reports: results/representation/
+  figures: results/figures/
