@@ -99,3 +99,4 @@ def test_encoder_rejection_invalid_name():
     device = torch.device('cpu')
     with pytest.raises(ValueError):
         load_encoder('unsupported_vision_model_xyz', device)
+

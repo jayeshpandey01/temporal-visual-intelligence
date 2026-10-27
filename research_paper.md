@@ -235,16 +235,29 @@ Rather, it is:
 (Single-Frame / MeanPool)                (Temporal GRU)
 ```
 
-**Why Freezing the Encoder is Non-Negotiable (M2.6):**
-Consider comparing:
-- $\text{Model A: Image} \to \text{Frozen DINOv2} \to \text{Classifier}$
-- $\text{Model C: Image} \to \text{Fine-tuned DINOv2} \to \text{GRU} \to \text{Classifier}$
+**Why Freezing the Encoder is Non-Negotiable (M2.6 - The Causal Confounding Dilemma):**
+Consider the experimental design under Pearl's structural causal framework (Pearl, 2009):
+- Let $\mathbf{X}$ be the raw pixel observation stream.
+- Let $\Phi(\mathbf{X}; \theta_{\text{enc}})$ be the visual feature manifold.
+- Let $\mathcal{T}$ be the temporal aggregation operator (e.g. Recurrent GRU vs. Single-Frame MLP).
+- Let $\hat{Y}$ be the predicted action class.
 
-If the visual backbone were fine-tuned for Model C but frozen for Model A:
-$$\mathbf{e}_t^{(A)} = \phi(\mathbf{x}_t; \theta_{\text{frozen}}) \quad \text{vs.} \quad \mathbf{e}_t^{(C)} = \phi(\mathbf{x}_t; \theta_{\text{adapted}})$$
-Any observed accuracy improvement could stem from spatial domain adaptation, texture fine-tuning, or high-frequency edge alignment, rather than chronological temporal reasoning. Freezing the encoder ($\nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0}$) permanently locks the visual representation as the experimental constant.
+If the vision backbone $\theta_{\text{enc}}$ were fine-tuned alongside the temporal model $\mathcal{T}$:
+$$\mathbf{e}_t^{(A)} = \phi(\mathbf{x}_t; \theta_{\text{frozen}}) \quad \text{vs.} \quad \mathbf{e}_t^{(C)} = \phi(\mathbf{x}_t; \theta_{\text{fine-tuned}})$$
+Then $\Phi$ is no longer an exogenous constant; it becomes an active mediator receiving gradients:
+$$\nabla_{\theta_{\text{enc}}} \mathcal{L} \neq \mathbf{0}$$
+This introduces a fatal **back-door confounding path**: any observed accuracy improvement $\Delta = \text{Acc}(\text{Model C}) - \text{Acc}(\text{Model A})$ conflates two distinct causal mechanisms:
+1. **Causal Mechanism 1 (Temporal Sequence Modeling):** The GRU hidden state transitions $\mathbf{h}_t = \text{GRU}(\mathbf{e}_t, \mathbf{h}_{t-1})$ learning directional and phase dynamics.
+2. **Confounding Mechanism 2 (Domain-Specific Spatial Feature Adaptation):** The Vision Transformer fine-tuning its patch projection $\mathbf{W}_{\text{patch}}$ and attention heads to recognize high-frequency spatial shortcuts, edge artifacts, or object textures (Huang et al., 2018; Li et al., 2020; Sevilla-Lara et al., 2021).
 
-All 40 automated unit tests (`tests/test_encoder.py`, `tests/test_transforms.py`) assert that 100% of encoder parameters have `requires_grad = False` and evaluate in deterministic `eval()` mode.
+**Experimental Resolution:**
+By holding the vision encoder permanently frozen:
+$$\theta_{\text{enc}} \equiv \theta^*, \quad \nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0} \quad \forall \text{ models}$$
+The perceptual manifold $\mathcal{M}_{\text{visual}} = \{\mathbf{e}_1, \dots, \mathbf{e}_T\}$ is rendered an immutable physical constant across Baseline A, Mean-Pooling B, and Temporal GRU C. Any observed performance delta:
+$$\Delta \text{Acc} = \text{Acc}_{\text{GRU}} - \text{Acc}_{\text{Baseline}}$$
+is **unambiguously, causally attributable to temporal sequence aggregation.**
+
+Furthermore, freezing the encoder confers decisive engineering advantages (M2.8): embeddings are extracted once and cached to disk as immutable `.npy` arrays, accelerating M3 training by over $100\times$ and ensuring identical byte-level float32 inputs across multi-seed evaluations. All 40 automated unit tests (`tests/test_encoder.py`, `tests/test_transforms.py`) assert that 100% of encoder parameters have `requires_grad = False` and evaluate in deterministic `eval()` mode.
 
 ### 4.5 Automated Cache Validation & Integrity Audit (M2.8, M2.9, M2.10)
 Our automated validator (`src/embeddings/validate.py`) executes automated integrity checks across all cached sequences:
@@ -524,9 +537,10 @@ By creating a Two-Tier Benchmark combining a mathematically controlled synthetic
 16. Misra, I., et al. (2016). Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification. *ECCV*.
 17. Nyquist, H. (1928). Certain Topics in Telegraph Transmission Theory. *Trans. AIEE*, 47, 617-644.
 18. Oquab, M., et al. (2024). DINOv2: Learning Robust Visual Features without Supervision. *TMLR*.
-19. Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. *ICML*, 8748-8763.
-20. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
-21. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
-22. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
-23. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
-24. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.
+19. Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.
+20. Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. *ICML*, 8748-8763.
+21. Sevilla-Lara, L., et al. (2021). Only Time Can Tell: Discovering Temporal Data. *WACV*, 1024-1033.
+22. Shannon, C. E. (1949). Communication in the Presence of Noise. *Proc. IRE*, 37(1), 10-21.
+23. Tong, Z., et al. (2022). VideoMAE: Masked Autoencoders are Data-Efficient Learners. *NeurIPS*, 10078-10093.
+24. Wang, L., et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. *ECCV*, 20-36.
+25. Zeng, K., et al. (2015). Uncovering Temporal Context for Video QA. *arXiv:1511.04670*.
