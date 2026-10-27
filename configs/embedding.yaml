@@ -41,3 +41,10 @@ outputs:
   reports: results/representation/
   figures: results/figures/
 
+guardrails:
+  allow_finetuning: false        # M2.16: Encoder fine-tuning strictly prohibited
+  allow_model_zoo_sprawl: false  # M2.16: Transformer/LSTM sprawl prohibited prior to M3
+  allow_premature_sweeps: false  # M2.16: Large sweeps prohibited prior to baseline validation
+  isolate_test_split: true       # M2.16: Test set strictly quarantined from encoder decisions
+
+
