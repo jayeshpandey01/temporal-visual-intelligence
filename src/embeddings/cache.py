@@ -13,6 +13,8 @@ from pathlib import Path
 from typing import Dict, Any, List, Tuple, Optional, Union
 
 import numpy as np
+import torch
+from torch.utils.data import Dataset
 
 from src.embeddings.contract import SequenceEmbeddingOutput
 
@@ -164,6 +166,36 @@ class EmbeddingCache:
 
         return X, Y, valid_ids
 
+    def get_array(
+        self,
+        sequence_id: str,
+        split: str = "train",
+        mmap: bool = False
+    ) -> Optional[np.ndarray]:
+        """
+        Direct high-throughput array access skipping JSON metadata parsing.
+        Supports zero-copy memory mapping via mmap_mode='r'.
+        """
+        if split not in self.manifest["splits"] or sequence_id not in self.manifest["splits"][split]:
+            return None
+        meta = self.manifest["splits"][split][sequence_id]
+        npy_path = self.root / meta.get("npy_relpath", "")
+        if not npy_path.exists():
+            return None
+        return np.load(npy_path, mmap_mode="r" if mmap else None)
+
+    def as_torch_dataset(
+        self,
+        split: str,
+        class_to_idx: Optional[Dict[str, int]] = None,
+        mmap: bool = False
+    ) -> "CachedEmbeddingDataset":
+        """
+        Wrap cached split directly as a PyTorch Dataset for DataLoader ingestion.
+        M3/M4 models load directly from cached tensors with zero vision encoder overhead.
+        """
+        return CachedEmbeddingDataset(self, split=split, class_to_idx=class_to_idx, mmap=mmap)
+
     def summarize(self) -> Dict[str, Any]:
         """Return high-level cache summary statistics."""
         summary = {
@@ -179,4 +211,44 @@ class EmbeddingCache:
             }
         summary["total_sequences"] = sum(s["count"] for s in summary["splits"].values())
         return summary
+
+
+class CachedEmbeddingDataset(Dataset):
+    """
+    High-performance PyTorch Dataset streaming directly from cached numpy embeddings.
+    Fulfills M2.8: M3/M4 models train exclusively on numerical tensors.
+    """
+
+    def __init__(
+        self,
+        cache: EmbeddingCache,
+        split: str,
+        class_to_idx: Optional[Dict[str, int]] = None,
+        mmap: bool = False
+    ):
+        self.cache = cache
+        self.split = split
+        self.mmap = mmap
+        if split not in cache.manifest["splits"]:
+            raise ValueError(f"Unknown split: {split}. Available: {list(cache.manifest['splits'].keys())}")
+        self.split_records = cache.manifest["splits"][split]
+        self.sequence_ids = sorted(list(self.split_records.keys()))
+
+        if class_to_idx is None:
+            unique_labels = sorted(list(set(self.split_records[s]["label"] for s in self.sequence_ids)))
+            self.class_to_idx = {lbl: i for i, lbl in enumerate(unique_labels)}
+        else:
+            self.class_to_idx = class_to_idx
+
+    def __len__(self) -> int:
+        return len(self.sequence_ids)
+
+    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
+        seq_id = self.sequence_ids[idx]
+        record = self.split_records[seq_id]
+        npy_path = self.cache.root / record["npy_relpath"]
+        arr = np.load(npy_path, mmap_mode="r" if self.mmap else None)
+        tensor = torch.from_numpy(np.array(arr, copy=False)).float()
+        label_idx = self.class_to_idx[record["label"]]
+        return tensor, label_idx
 
