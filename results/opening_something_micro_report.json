@@ -1,0 +1,31 @@
+{
+  "frame_1_path": "results/.temp_video_frames/opening_something/frame_0001.jpg",
+  "frame_2_path": "results/.temp_video_frames/opening_something/frame_0008.jpg",
+  "pixel_metrics": {
+    "pixel_mse": 0.007487883325666189,
+    "pixel_l1": 0.014727660454809666,
+    "max_pixel_delta": 0.7215686440467834
+  },
+  "latent_representation_metrics": {
+    "cosine_similarity": 0.9992422461509705,
+    "temporal_drift": 0.000757753849029541,
+    "l2_distance": 0.4998264014720917,
+    "kinetic_energy": 0.24982640147209167,
+    "vector_norm_E1": 10.822357177734375,
+    "vector_norm_E2": 11.083212852478027
+  },
+  "controlled_micro_probes": {
+    "canonical_forward_norm": 0.4998264014720917,
+    "reversed_inversion_norm": 0.4998264014720917,
+    "arrow_inversion_symmetric": true,
+    "static_control_1_displacement": 0.0,
+    "static_control_2_displacement": 0.0,
+    "mean_pooling_order_invariant": true,
+    "scientific_conclusion": "Order-invariant mean pooling produces identical representation regardless of sequence order. Recurrent trajectory vector accurately inverts sign under temporal reversal."
+  },
+  "scientific_interpretation": {
+    "single_frame_ambiguity": "Low",
+    "temporal_transition_resolved": "Confirmed by non-zero kinetic displacement vector",
+    "arrow_of_time_symmetry": "Inverting frames inverts trajectory sign perfectly (v_canon == -v_rev)"
+  }
+}

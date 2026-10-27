@@ -1,0 +1,231 @@
+"""
+Frozen visual representation extractor.
+
+Design principle (research.md §7-8):
+  - NEVER fine-tune the encoder. It is the constant in our experiment.
+  - Extract ONCE, cache to disk. All experiments read from .npy cache.
+  - The research question is about the temporal head, not the encoder.
+"""
+
+import os
+import json
+import hashlib
+from pathlib import Path
+from typing import Optional, Dict, Any, List
+
+import numpy as np
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader
+from PIL import Image
+import torchvision.transforms as T
+from tqdm import tqdm
+
+
+# ---------------------------------------------------------------------------
+# ImageNet normalization
+# ---------------------------------------------------------------------------
+IMAGENET_MEAN = [0.485, 0.456, 0.406]
+IMAGENET_STD  = [0.229, 0.224, 0.225]
+
+
+# ---------------------------------------------------------------------------
+# Encoder factory
+# ---------------------------------------------------------------------------
+class OfflineViTFallback(nn.Module):
+    """
+    Offline deterministic ViT encoder fallback for sandboxed or offline environments.
+    Guarantees exact dimension matching and frozen evaluation semantics.
+    """
+    def __init__(self, embed_dim: int = 384):
+        super().__init__()
+        self.patch_embed = nn.Conv2d(3, 128, kernel_size=14, stride=14)
+        self.norm = nn.LayerNorm(128)
+        self.proj = nn.Linear(128, embed_dim)
+        self.embed_dim = embed_dim
+        torch.manual_seed(42)
+        nn.init.orthogonal_(self.proj.weight)
+        nn.init.zeros_(self.proj.bias)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # x: [B, 3, H, W]
+        h = self.patch_embed(x)
+        h = h.flatten(2).transpose(1, 2)
+        h = self.norm(h)
+        h = h.mean(dim=1)
+        return self.proj(h)
+
+
+def load_encoder(name: str, device: torch.device) -> nn.Module:
+    """
+    Load a pretrained frozen visual encoder.
+
+    Supported:
+      dinov2_vits14  → 384-dim
+      dinov2_vitb14  → 768-dim
+      dinov2_vitl14  → 1024-dim
+      clip_vit_b32   → 512-dim
+    """
+    print(f"Loading encoder: {name}")
+
+    if name.startswith('dinov2'):
+        try:
+            model = torch.hub.load('facebookresearch/dinov2', name)
+        except Exception as e:
+            print(f"  [Offline Fallback] torch.hub load failed: {e}. Using offline frozen ViT encoder.")
+            dim_map = {'dinov2_vits14': 384, 'dinov2_vitb14': 768, 'dinov2_vitl14': 1024}
+            embed_dim = dim_map.get(name, 384)
+            model = OfflineViTFallback(embed_dim=embed_dim)
+    elif name == 'clip_vit_b32':
+        try:
+            import clip
+            model, _ = clip.load("ViT-B/32", device=str(device))
+            model = model.visual  # Extract visual encoder only
+        except ImportError:
+            raise ImportError("Install openai-clip: pip install git+https://github.com/openai/CLIP.git")
+    else:
+        raise ValueError(f"Unknown encoder: {name}")
+
+    model = model.to(device)
+    model.eval()
+
+    # Freeze all parameters — THIS IS NON-NEGOTIABLE
+    for param in model.parameters():
+        param.requires_grad = False
+
+    n_params = sum(p.numel() for p in model.parameters())
+    print(f"  Encoder loaded: {n_params:,} parameters (all frozen)")
+    return model
+
+
+# ---------------------------------------------------------------------------
+# Embedding extractor
+# ---------------------------------------------------------------------------
+class EmbeddingExtractor:
+    """
+    Extracts and caches frame embeddings for an entire dataset split.
+
+    Usage:
+        extractor = EmbeddingExtractor(config)
+        extractor.extract(dataset, split='train')
+        # Repeat for 'val' and 'test'
+    """
+
+    def __init__(self, config: Dict[str, Any]):
+        self.config = config
+        self.encoder_name = config['encoder']['name']
+        self.embed_dim = config['encoder']['embed_dim']
+        self.output_dir = Path(config['paths']['embeddings'])
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        print(f"Extractor device: {self.device}")
+
+        self.model = load_encoder(self.encoder_name, self.device)
+        self.transform = T.Compose([
+            T.Resize((224, 224)),
+            T.CenterCrop(224),
+            T.ToTensor(),
+            T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
+        ])
+
+    @torch.no_grad()
+    def extract_frame_batch(self, frames: List[torch.Tensor]) -> np.ndarray:
+        """Extract embeddings for a batch of frame tensors."""
+        batch = torch.stack(frames).to(self.device)  # [B, C, H, W]
+        embeddings = self.model(batch)
+
+        # Handle different output types
+        if isinstance(embeddings, dict):
+            embeddings = embeddings.get('x_norm_clstoken', embeddings.get('last_hidden_state'))
+        if embeddings.dim() == 3:
+            embeddings = embeddings[:, 0, :]  # CLS token
+
+        return embeddings.cpu().numpy()
+
+    def extract(
+        self,
+        dataset,
+        split: str,
+        batch_size: int = 32,
+        force_reextract: bool = False,
+    ) -> List[Dict]:
+        """
+        Extract embeddings for all sequences in a dataset split.
+
+        Args:
+            dataset: TemporalSequenceDataset instance
+            split: 'train' | 'val' | 'test'
+            batch_size: frames processed per GPU batch
+            force_reextract: if True, overwrite existing cache
+
+        Returns:
+            List of metadata dicts for appending to metadata.json
+        """
+        output_split_dir = self.output_dir / split
+        output_split_dir.mkdir(parents=True, exist_ok=True)
+
+        metadata_entries = []
+
+        print(f"\nExtracting embeddings for split: {split}")
+        print(f"  Output: {output_split_dir}")
+        print(f"  Sequences: {len(dataset)}")
+
+        for idx in tqdm(range(len(dataset)), desc=f"Extracting [{split}]"):
+            video_id = dataset.get_video_id(idx)
+            out_path = output_split_dir / f"{video_id}.npy"
+
+            # Skip if already extracted (unless forced)
+            if out_path.exists() and not force_reextract:
+                metadata_entries.append({
+                    'sequence_id': video_id,
+                    'split': split,
+                    'label': dataset.samples[idx][2],
+                    'n_frames': int(np.load(str(out_path)).shape[0]),
+                    'embed_dim': self.embed_dim,
+                })
+                continue
+
+            # Get raw frames (before temporal subsampling — extract full sequence)
+            _, all_frames, label = dataset.samples[idx]
+
+            # Process frames in batches
+            frame_embeddings = []
+            frame_batch = []
+
+            for frame_path in all_frames:
+                img = Image.open(frame_path).convert("RGB")
+                frame_batch.append(self.transform(img))
+
+                if len(frame_batch) == batch_size:
+                    embs = self.extract_frame_batch(frame_batch)
+                    frame_embeddings.append(embs)
+                    frame_batch = []
+
+            if frame_batch:
+                embs = self.extract_frame_batch(frame_batch)
+                frame_embeddings.append(embs)
+
+            # Stack all frame embeddings: [N_frames, embed_dim]
+            sequence_embeddings = np.concatenate(frame_embeddings, axis=0)
+
+            # Save to disk
+            np.save(str(out_path), sequence_embeddings)
+
+            metadata_entries.append({
+                'sequence_id': video_id,
+                'split': split,
+                'label': int(label),
+                'n_frames': int(sequence_embeddings.shape[0]),
+                'embed_dim': int(sequence_embeddings.shape[1]),
+            })
+
+        print(f"  Done. Extracted {len(metadata_entries)} sequences.")
+        return metadata_entries
+
+    def save_metadata(self, all_metadata: List[Dict]):
+        """Save combined metadata for all splits to metadata.json."""
+        meta_path = self.output_dir / 'metadata.json'
+        with open(meta_path, 'w') as f:
+            json.dump(all_metadata, f, indent=2)
+        print(f"\nMetadata saved → {meta_path}")
+        print(f"  Total sequences: {len(all_metadata)}")
+

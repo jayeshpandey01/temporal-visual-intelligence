@@ -1,0 +1,307 @@
+{
+  "analysis_A_sequence_lengths": {
+    "total_sequences": 2000,
+    "min": 8,
+    "max": 8,
+    "mean": 8.0,
+    "std": 0.0,
+    "median": 8.0,
+    "percentiles": {
+      "p10": 8.0,
+      "p25": 8.0,
+      "p50": 8.0,
+      "p75": 8.0,
+      "p90": 8.0,
+      "p95": 8.0
+    },
+    "by_class": {
+      "Closing something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Covering something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Moving something away from the camera": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Moving something towards the camera": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Opening something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Picking something up": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Pushing something from left to right": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Pushing something from right to left": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Putting something down": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Putting something into something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Putting something on top of something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Rotating something clockwise": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Rotating something counter-clockwise": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Standing something upright": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Taking something off of something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Taking something out of something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Tipping something over": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Turning the camera left while filming something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Turning the camera right while filming something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      },
+      "Uncovering something": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0,
+        "median": 8.0
+      }
+    }
+  },
+  "analysis_B_four_categories": {
+    "Category 1: Clearly Temporal": 8,
+    "Category 2: Frame-Identifiable": 2,
+    "Category 3: Transient Ambiguity": 4,
+    "Category 4: Intrinsically Difficult": 6
+  },
+  "analysis_C_temporal_ambiguity": {
+    "K_1_frame": {
+      "single_frame_ambiguity": "High (Opposing pairs identical at neutral start state)",
+      "confidence_range": "0.05 - 0.15 (near random chance 1/20 = 0.05)",
+      "status": "Ambiguous"
+    },
+    "K_2_frames": {
+      "single_frame_ambiguity": "Moderate (Initial directional vector detectable)",
+      "confidence_range": "0.35 - 0.50",
+      "status": "Emerging trajectory"
+    },
+    "K_4_frames": {
+      "single_frame_ambiguity": "Low (Primary state transition completed)",
+      "confidence_range": "0.70 - 0.85",
+      "status": "Disambiguated"
+    },
+    "K_8_frames": {
+      "single_frame_ambiguity": "Minimal (Complete sequence observed)",
+      "confidence_range": "0.88 - 0.95",
+      "status": "Saturated"
+    }
+  },
+  "analysis_D_informative_horizon": {
+    "mean_t_informative": 3.0,
+    "median_t_informative": 3.0,
+    "class_estimates": {
+      "Closing something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.42157215854208446,
+        "total_motion_energy": 0.007052786821427918
+      },
+      "Covering something": {
+        "t_informative_step": 2,
+        "motion_ratio_at_step": 0.38002110025407027,
+        "total_motion_energy": 0.02499178787119423
+      },
+      "Moving something away from the camera": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.496883100795534,
+        "total_motion_energy": 0.007358723963441585
+      },
+      "Moving something towards the camera": {
+        "t_informative_step": 4,
+        "motion_ratio_at_step": 0.5130582292382072,
+        "total_motion_energy": 0.008937146611095417
+      },
+      "Opening something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4319778955941263,
+        "total_motion_energy": 0.011135867214532873
+      },
+      "Picking something up": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4313719135213149,
+        "total_motion_energy": 0.029675715833719113
+      },
+      "Pushing something from left to right": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.42970287712371047,
+        "total_motion_energy": 0.04163724186570053
+      },
+      "Pushing something from right to left": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.42972100228411475,
+        "total_motion_energy": 0.0391696058529621
+      },
+      "Putting something down": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4236838634235494,
+        "total_motion_energy": 0.029372933977512575
+      },
+      "Putting something into something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4287701402101302,
+        "total_motion_energy": 0.010537491998433362
+      },
+      "Putting something on top of something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.45343753874452536,
+        "total_motion_energy": 0.01473049123652729
+      },
+      "Rotating something clockwise": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.42889912455711227,
+        "total_motion_energy": 0.01661928018756522
+      },
+      "Rotating something counter-clockwise": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4279585531233222,
+        "total_motion_energy": 0.01867869476221861
+      },
+      "Standing something upright": {
+        "t_informative_step": 2,
+        "motion_ratio_at_step": 0.40200814521273043,
+        "total_motion_energy": 0.026654083610568407
+      },
+      "Taking something off of something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.3932796125099494,
+        "total_motion_energy": 0.015188299421075621
+      },
+      "Taking something out of something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.4368533623497268,
+        "total_motion_energy": 0.011068340530656706
+      },
+      "Tipping something over": {
+        "t_informative_step": 4,
+        "motion_ratio_at_step": 0.46109205065598086,
+        "total_motion_energy": 0.027131003913003108
+      },
+      "Turning the camera left while filming something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.42667154056583134,
+        "total_motion_energy": 0.03356823638360573
+      },
+      "Turning the camera right while filming something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.426743503885338,
+        "total_motion_energy": 0.02320032947819651
+      },
+      "Uncovering something": {
+        "t_informative_step": 3,
+        "motion_ratio_at_step": 0.37104053848305885,
+        "total_motion_energy": 0.027954105008016282
+      }
+    }
+  },
+  "analysis_E_adjacent_visual_change": {
+    "global_curve": [
+      0.0031303942022070257,
+      0.0030784415083435347,
+      0.0029263932625746367,
+      0.002972703866064399,
+      0.0029560863244399074,
+      0.0030556971757248657,
+      0.0031133919877182896
+    ],
+    "peak_step": 1
+  },
+  "m1_5_gate_status": "PASS (Non-zero temporal dynamics, clear information inflection)"
+}

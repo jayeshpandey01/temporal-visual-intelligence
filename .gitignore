@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch checkpoints and heavy arrays
+checkpoints/
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Data directories (raw frames & videos)
+data/*/vid_*
+data/real_*
+data/.temp*
+data/raw_*
+videos/
+results/.temp*
+
+# Keep metadata manifests tracked
+!data/metadata/
+!data/metadata/*.json
+!data/metadata/*.csv
+
+# OS and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Testing and environments
+.pytest_cache/
+.coverage
+htmlcov/
+env/
+venv/
+.env
+
+# Antigravity agents
+.agents/

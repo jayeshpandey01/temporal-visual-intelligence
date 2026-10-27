@@ -1,0 +1,64 @@
+{
+  "dataset_root": "data/real_data",
+  "classes": {
+    "BMW_M4": {
+      "n_sequences": 10,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Horse_running": {
+      "n_sequences": 10,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 1,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    }
+  },
+  "global": {
+    "total_sequences": 20,
+    "total_classes": 2,
+    "class_imbalance_ratio": 1.0,
+    "frames_per_seq_global": {
+      "min": 8,
+      "max": 8,
+      "mean": 8.0
+    }
+  },
+  "checks": {
+    "1_missing_frame_continuity": "PASS",
+    "2_duplicate_frame_mse": "PASS",
+    "3_natural_ordering": "PASS",
+    "4_image_decode_health": "PASS",
+    "5_dimension_consistency": "PASS",
+    "6_label_integrity": "PASS",
+    "7_class_imbalance_ratio": "PASS"
+  }
+}

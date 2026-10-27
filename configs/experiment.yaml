@@ -1,0 +1,61 @@
+# =============================================================================
+# Temporal Visual Intelligence — Experiment Configuration
+# All experiments are config-driven. Change values here, not in code.
+# =============================================================================
+
+dataset:
+  name: ssv2              # ssv2 | ucf101 | hmdb51
+  root: data/
+  subset_classes: 20      # Use 20 most temporally ambiguous classes
+  n_per_class: 100        # ~2000 total sequences (train+val+test)
+  val_split: 0.15
+  test_split: 0.15
+  seed: 42
+
+sequence:
+  max_frames: 8           # T: number of frames per sequence
+  sampling: uniform       # uniform | first_n | sparse | last_n
+  frame_size: [224, 224]  # Resize all frames to this resolution
+
+encoder:
+  name: dinov2_vits14     # dinov2_vits14 | dinov2_vitb14 | clip_vit_b32
+  freeze: true            # NEVER set to false — encoder is the constant
+  embed_dim: 384          # 384 for vits14, 768 for vitb14
+
+temporal:
+  model: gru              # gru | transformer | mlp (baseline)
+  hidden_dim: 256
+  num_layers: 1
+  dropout: 0.1
+  num_heads: 4            # For transformer only
+
+training:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  epochs: 30
+  batch_size: 32
+  gradient_clip: 1.0
+  scheduler: cosine       # cosine | step | none
+  seeds: [42, 43, 44]
+  patience: 5             # Early stopping patience
+
+evaluation:
+  metrics: [accuracy, macro_f1, per_class_f1]
+  frame_counts: [1, 2, 3, 4, 6, 8]   # Progressive sweep
+  perturbations:
+    - canonical
+    - shuffled
+    - reversed
+    - repeated
+    - corrupted_25pct_blur
+    - corrupted_25pct_mask
+    - corrupted_25pct_drop
+  corruption_fraction: 0.25
+
+paths:
+  embeddings: embeddings/
+  checkpoints: results/checkpoints/
+  figures: results/figures/
+  tables: results/tables/
+  qualitative: results/qualitative/
+  experiments_csv: results/experiments.csv

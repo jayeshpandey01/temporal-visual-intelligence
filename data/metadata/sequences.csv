@@ -1,0 +1,2001 @@
+video_id,class_name,class_idx,n_frames,split
+vid_07_0042,Closing something,0,8,test
+vid_07_0041,Closing something,0,8,test
+vid_07_0091,Closing something,0,8,test
+vid_07_0009,Closing something,0,8,test
+vid_07_0065,Closing something,0,8,test
+vid_07_0050,Closing something,0,8,test
+vid_07_0001,Closing something,0,8,test
+vid_07_0070,Closing something,0,8,test
+vid_07_0015,Closing something,0,8,test
+vid_07_0078,Closing something,0,8,test
+vid_07_0073,Closing something,0,8,test
+vid_07_0010,Closing something,0,8,test
+vid_07_0055,Closing something,0,8,test
+vid_07_0056,Closing something,0,8,test
+vid_07_0072,Closing something,0,8,test
+vid_07_0045,Closing something,0,8,val
+vid_07_0048,Closing something,0,8,val
+vid_07_0092,Closing something,0,8,val
+vid_07_0076,Closing something,0,8,val
+vid_07_0037,Closing something,0,8,val
+vid_07_0030,Closing something,0,8,val
+vid_07_0021,Closing something,0,8,val
+vid_07_0032,Closing something,0,8,val
+vid_07_0096,Closing something,0,8,val
+vid_07_0080,Closing something,0,8,val
+vid_07_0049,Closing something,0,8,val
+vid_07_0083,Closing something,0,8,val
+vid_07_0026,Closing something,0,8,val
+vid_07_0087,Closing something,0,8,val
+vid_07_0033,Closing something,0,8,val
+vid_07_0008,Closing something,0,8,train
+vid_07_0047,Closing something,0,8,train
+vid_07_0059,Closing something,0,8,train
+vid_07_0063,Closing something,0,8,train
+vid_07_0074,Closing something,0,8,train
+vid_07_0044,Closing something,0,8,train
+vid_07_0098,Closing something,0,8,train
+vid_07_0052,Closing something,0,8,train
+vid_07_0085,Closing something,0,8,train
+vid_07_0012,Closing something,0,8,train
+vid_07_0036,Closing something,0,8,train
+vid_07_0023,Closing something,0,8,train
+vid_07_0039,Closing something,0,8,train
+vid_07_0040,Closing something,0,8,train
+vid_07_0018,Closing something,0,8,train
+vid_07_0066,Closing something,0,8,train
+vid_07_0061,Closing something,0,8,train
+vid_07_0060,Closing something,0,8,train
+vid_07_0007,Closing something,0,8,train
+vid_07_0034,Closing something,0,8,train
+vid_07_0099,Closing something,0,8,train
+vid_07_0046,Closing something,0,8,train
+vid_07_0002,Closing something,0,8,train
+vid_07_0051,Closing something,0,8,train
+vid_07_0016,Closing something,0,8,train
+vid_07_0038,Closing something,0,8,train
+vid_07_0058,Closing something,0,8,train
+vid_07_0068,Closing something,0,8,train
+vid_07_0022,Closing something,0,8,train
+vid_07_0062,Closing something,0,8,train
+vid_07_0024,Closing something,0,8,train
+vid_07_0005,Closing something,0,8,train
+vid_07_0006,Closing something,0,8,train
+vid_07_0067,Closing something,0,8,train
+vid_07_0082,Closing something,0,8,train
+vid_07_0019,Closing something,0,8,train
+vid_07_0079,Closing something,0,8,train
+vid_07_0043,Closing something,0,8,train
+vid_07_0090,Closing something,0,8,train
+vid_07_0020,Closing something,0,8,train
+vid_07_0000,Closing something,0,8,train
+vid_07_0095,Closing something,0,8,train
+vid_07_0057,Closing something,0,8,train
+vid_07_0093,Closing something,0,8,train
+vid_07_0053,Closing something,0,8,train
+vid_07_0089,Closing something,0,8,train
+vid_07_0025,Closing something,0,8,train
+vid_07_0071,Closing something,0,8,train
+vid_07_0084,Closing something,0,8,train
+vid_07_0077,Closing something,0,8,train
+vid_07_0064,Closing something,0,8,train
+vid_07_0029,Closing something,0,8,train
+vid_07_0027,Closing something,0,8,train
+vid_07_0088,Closing something,0,8,train
+vid_07_0097,Closing something,0,8,train
+vid_07_0004,Closing something,0,8,train
+vid_07_0054,Closing something,0,8,train
+vid_07_0075,Closing something,0,8,train
+vid_07_0011,Closing something,0,8,train
+vid_07_0069,Closing something,0,8,train
+vid_07_0086,Closing something,0,8,train
+vid_07_0013,Closing something,0,8,train
+vid_07_0017,Closing something,0,8,train
+vid_07_0028,Closing something,0,8,train
+vid_07_0031,Closing something,0,8,train
+vid_07_0035,Closing something,0,8,train
+vid_07_0094,Closing something,0,8,train
+vid_07_0003,Closing something,0,8,train
+vid_07_0014,Closing something,0,8,train
+vid_07_0081,Closing something,0,8,train
+vid_13_0035,Covering something,1,8,test
+vid_13_0067,Covering something,1,8,test
+vid_13_0030,Covering something,1,8,test
+vid_13_0032,Covering something,1,8,test
+vid_13_0000,Covering something,1,8,test
+vid_13_0014,Covering something,1,8,test
+vid_13_0051,Covering something,1,8,test
+vid_13_0071,Covering something,1,8,test
+vid_13_0062,Covering something,1,8,test
+vid_13_0087,Covering something,1,8,test
+vid_13_0025,Covering something,1,8,test
+vid_13_0040,Covering something,1,8,test
+vid_13_0026,Covering something,1,8,test
+vid_13_0042,Covering something,1,8,test
+vid_13_0092,Covering something,1,8,test
+vid_13_0001,Covering something,1,8,val
+vid_13_0075,Covering something,1,8,val
+vid_13_0027,Covering something,1,8,val
+vid_13_0074,Covering something,1,8,val
+vid_13_0009,Covering something,1,8,val
+vid_13_0031,Covering something,1,8,val
+vid_13_0052,Covering something,1,8,val
+vid_13_0086,Covering something,1,8,val
+vid_13_0072,Covering something,1,8,val
+vid_13_0038,Covering something,1,8,val
+vid_13_0082,Covering something,1,8,val
+vid_13_0068,Covering something,1,8,val
+vid_13_0057,Covering something,1,8,val
+vid_13_0069,Covering something,1,8,val
+vid_13_0081,Covering something,1,8,val
+vid_13_0098,Covering something,1,8,train
+vid_13_0044,Covering something,1,8,train
+vid_13_0080,Covering something,1,8,train
+vid_13_0005,Covering something,1,8,train
+vid_13_0008,Covering something,1,8,train
+vid_13_0054,Covering something,1,8,train
+vid_13_0028,Covering something,1,8,train
+vid_13_0078,Covering something,1,8,train
+vid_13_0045,Covering something,1,8,train
+vid_13_0021,Covering something,1,8,train
+vid_13_0029,Covering something,1,8,train
+vid_13_0066,Covering something,1,8,train
+vid_13_0083,Covering something,1,8,train
+vid_13_0056,Covering something,1,8,train
+vid_13_0043,Covering something,1,8,train
+vid_13_0046,Covering something,1,8,train
+vid_13_0041,Covering something,1,8,train
+vid_13_0095,Covering something,1,8,train
+vid_13_0006,Covering something,1,8,train
+vid_13_0039,Covering something,1,8,train
+vid_13_0033,Covering something,1,8,train
+vid_13_0061,Covering something,1,8,train
+vid_13_0017,Covering something,1,8,train
+vid_13_0096,Covering something,1,8,train
+vid_13_0010,Covering something,1,8,train
+vid_13_0053,Covering something,1,8,train
+vid_13_0090,Covering something,1,8,train
+vid_13_0011,Covering something,1,8,train
+vid_13_0060,Covering something,1,8,train
+vid_13_0037,Covering something,1,8,train
+vid_13_0003,Covering something,1,8,train
+vid_13_0099,Covering something,1,8,train
+vid_13_0024,Covering something,1,8,train
+vid_13_0023,Covering something,1,8,train
+vid_13_0034,Covering something,1,8,train
+vid_13_0064,Covering something,1,8,train
+vid_13_0049,Covering something,1,8,train
+vid_13_0016,Covering something,1,8,train
+vid_13_0088,Covering something,1,8,train
+vid_13_0093,Covering something,1,8,train
+vid_13_0020,Covering something,1,8,train
+vid_13_0091,Covering something,1,8,train
+vid_13_0019,Covering something,1,8,train
+vid_13_0048,Covering something,1,8,train
+vid_13_0015,Covering something,1,8,train
+vid_13_0013,Covering something,1,8,train
+vid_13_0007,Covering something,1,8,train
+vid_13_0022,Covering something,1,8,train
+vid_13_0050,Covering something,1,8,train
+vid_13_0084,Covering something,1,8,train
+vid_13_0070,Covering something,1,8,train
+vid_13_0079,Covering something,1,8,train
+vid_13_0094,Covering something,1,8,train
+vid_13_0073,Covering something,1,8,train
+vid_13_0055,Covering something,1,8,train
+vid_13_0065,Covering something,1,8,train
+vid_13_0002,Covering something,1,8,train
+vid_13_0077,Covering something,1,8,train
+vid_13_0063,Covering something,1,8,train
+vid_13_0076,Covering something,1,8,train
+vid_13_0058,Covering something,1,8,train
+vid_13_0012,Covering something,1,8,train
+vid_13_0097,Covering something,1,8,train
+vid_13_0085,Covering something,1,8,train
+vid_13_0047,Covering something,1,8,train
+vid_13_0059,Covering something,1,8,train
+vid_13_0018,Covering something,1,8,train
+vid_13_0089,Covering something,1,8,train
+vid_13_0036,Covering something,1,8,train
+vid_13_0004,Covering something,1,8,train
+vid_00_0054,Moving something away from the camera,2,8,test
+vid_00_0031,Moving something away from the camera,2,8,test
+vid_00_0082,Moving something away from the camera,2,8,test
+vid_00_0046,Moving something away from the camera,2,8,test
+vid_00_0025,Moving something away from the camera,2,8,test
+vid_00_0063,Moving something away from the camera,2,8,test
+vid_00_0070,Moving something away from the camera,2,8,test
+vid_00_0010,Moving something away from the camera,2,8,test
+vid_00_0032,Moving something away from the camera,2,8,test
+vid_00_0026,Moving something away from the camera,2,8,test
+vid_00_0053,Moving something away from the camera,2,8,test
+vid_00_0099,Moving something away from the camera,2,8,test
+vid_00_0086,Moving something away from the camera,2,8,test
+vid_00_0035,Moving something away from the camera,2,8,test
+vid_00_0033,Moving something away from the camera,2,8,test
+vid_00_0050,Moving something away from the camera,2,8,val
+vid_00_0056,Moving something away from the camera,2,8,val
+vid_00_0060,Moving something away from the camera,2,8,val
+vid_00_0011,Moving something away from the camera,2,8,val
+vid_00_0073,Moving something away from the camera,2,8,val
+vid_00_0042,Moving something away from the camera,2,8,val
+vid_00_0017,Moving something away from the camera,2,8,val
+vid_00_0087,Moving something away from the camera,2,8,val
+vid_00_0019,Moving something away from the camera,2,8,val
+vid_00_0061,Moving something away from the camera,2,8,val
+vid_00_0018,Moving something away from the camera,2,8,val
+vid_00_0096,Moving something away from the camera,2,8,val
+vid_00_0007,Moving something away from the camera,2,8,val
+vid_00_0000,Moving something away from the camera,2,8,val
+vid_00_0005,Moving something away from the camera,2,8,val
+vid_00_0055,Moving something away from the camera,2,8,train
+vid_00_0044,Moving something away from the camera,2,8,train
+vid_00_0062,Moving something away from the camera,2,8,train
+vid_00_0039,Moving something away from the camera,2,8,train
+vid_00_0098,Moving something away from the camera,2,8,train
+vid_00_0071,Moving something away from the camera,2,8,train
+vid_00_0079,Moving something away from the camera,2,8,train
+vid_00_0067,Moving something away from the camera,2,8,train
+vid_00_0064,Moving something away from the camera,2,8,train
+vid_00_0029,Moving something away from the camera,2,8,train
+vid_00_0058,Moving something away from the camera,2,8,train
+vid_00_0023,Moving something away from the camera,2,8,train
+vid_00_0021,Moving something away from the camera,2,8,train
+vid_00_0077,Moving something away from the camera,2,8,train
+vid_00_0078,Moving something away from the camera,2,8,train
+vid_00_0076,Moving something away from the camera,2,8,train
+vid_00_0027,Moving something away from the camera,2,8,train
+vid_00_0080,Moving something away from the camera,2,8,train
+vid_00_0074,Moving something away from the camera,2,8,train
+vid_00_0002,Moving something away from the camera,2,8,train
+vid_00_0090,Moving something away from the camera,2,8,train
+vid_00_0049,Moving something away from the camera,2,8,train
+vid_00_0015,Moving something away from the camera,2,8,train
+vid_00_0047,Moving something away from the camera,2,8,train
+vid_00_0016,Moving something away from the camera,2,8,train
+vid_00_0097,Moving something away from the camera,2,8,train
+vid_00_0057,Moving something away from the camera,2,8,train
+vid_00_0068,Moving something away from the camera,2,8,train
+vid_00_0059,Moving something away from the camera,2,8,train
+vid_00_0030,Moving something away from the camera,2,8,train
+vid_00_0006,Moving something away from the camera,2,8,train
+vid_00_0024,Moving something away from the camera,2,8,train
+vid_00_0094,Moving something away from the camera,2,8,train
+vid_00_0004,Moving something away from the camera,2,8,train
+vid_00_0091,Moving something away from the camera,2,8,train
+vid_00_0013,Moving something away from the camera,2,8,train
+vid_00_0040,Moving something away from the camera,2,8,train
+vid_00_0034,Moving something away from the camera,2,8,train
+vid_00_0085,Moving something away from the camera,2,8,train
+vid_00_0008,Moving something away from the camera,2,8,train
+vid_00_0083,Moving something away from the camera,2,8,train
+vid_00_0088,Moving something away from the camera,2,8,train
+vid_00_0084,Moving something away from the camera,2,8,train
+vid_00_0036,Moving something away from the camera,2,8,train
+vid_00_0043,Moving something away from the camera,2,8,train
+vid_00_0009,Moving something away from the camera,2,8,train
+vid_00_0045,Moving something away from the camera,2,8,train
+vid_00_0041,Moving something away from the camera,2,8,train
+vid_00_0051,Moving something away from the camera,2,8,train
+vid_00_0075,Moving something away from the camera,2,8,train
+vid_00_0093,Moving something away from the camera,2,8,train
+vid_00_0081,Moving something away from the camera,2,8,train
+vid_00_0038,Moving something away from the camera,2,8,train
+vid_00_0065,Moving something away from the camera,2,8,train
+vid_00_0020,Moving something away from the camera,2,8,train
+vid_00_0012,Moving something away from the camera,2,8,train
+vid_00_0001,Moving something away from the camera,2,8,train
+vid_00_0072,Moving something away from the camera,2,8,train
+vid_00_0095,Moving something away from the camera,2,8,train
+vid_00_0092,Moving something away from the camera,2,8,train
+vid_00_0003,Moving something away from the camera,2,8,train
+vid_00_0037,Moving something away from the camera,2,8,train
+vid_00_0028,Moving something away from the camera,2,8,train
+vid_00_0048,Moving something away from the camera,2,8,train
+vid_00_0022,Moving something away from the camera,2,8,train
+vid_00_0014,Moving something away from the camera,2,8,train
+vid_00_0089,Moving something away from the camera,2,8,train
+vid_00_0069,Moving something away from the camera,2,8,train
+vid_00_0066,Moving something away from the camera,2,8,train
+vid_00_0052,Moving something away from the camera,2,8,train
+vid_01_0081,Moving something towards the camera,3,8,test
+vid_01_0059,Moving something towards the camera,3,8,test
+vid_01_0006,Moving something towards the camera,3,8,test
+vid_01_0063,Moving something towards the camera,3,8,test
+vid_01_0025,Moving something towards the camera,3,8,test
+vid_01_0072,Moving something towards the camera,3,8,test
+vid_01_0093,Moving something towards the camera,3,8,test
+vid_01_0095,Moving something towards the camera,3,8,test
+vid_01_0068,Moving something towards the camera,3,8,test
+vid_01_0087,Moving something towards the camera,3,8,test
+vid_01_0029,Moving something towards the camera,3,8,test
+vid_01_0060,Moving something towards the camera,3,8,test
+vid_01_0055,Moving something towards the camera,3,8,test
+vid_01_0064,Moving something towards the camera,3,8,test
+vid_01_0005,Moving something towards the camera,3,8,test
+vid_01_0094,Moving something towards the camera,3,8,val
+vid_01_0078,Moving something towards the camera,3,8,val
+vid_01_0049,Moving something towards the camera,3,8,val
+vid_01_0000,Moving something towards the camera,3,8,val
+vid_01_0058,Moving something towards the camera,3,8,val
+vid_01_0067,Moving something towards the camera,3,8,val
+vid_01_0028,Moving something towards the camera,3,8,val
+vid_01_0057,Moving something towards the camera,3,8,val
+vid_01_0092,Moving something towards the camera,3,8,val
+vid_01_0080,Moving something towards the camera,3,8,val
+vid_01_0088,Moving something towards the camera,3,8,val
+vid_01_0076,Moving something towards the camera,3,8,val
+vid_01_0071,Moving something towards the camera,3,8,val
+vid_01_0030,Moving something towards the camera,3,8,val
+vid_01_0035,Moving something towards the camera,3,8,val
+vid_01_0065,Moving something towards the camera,3,8,train
+vid_01_0026,Moving something towards the camera,3,8,train
+vid_01_0051,Moving something towards the camera,3,8,train
+vid_01_0073,Moving something towards the camera,3,8,train
+vid_01_0077,Moving something towards the camera,3,8,train
+vid_01_0090,Moving something towards the camera,3,8,train
+vid_01_0086,Moving something towards the camera,3,8,train
+vid_01_0097,Moving something towards the camera,3,8,train
+vid_01_0075,Moving something towards the camera,3,8,train
+vid_01_0070,Moving something towards the camera,3,8,train
+vid_01_0013,Moving something towards the camera,3,8,train
+vid_01_0023,Moving something towards the camera,3,8,train
+vid_01_0031,Moving something towards the camera,3,8,train
+vid_01_0003,Moving something towards the camera,3,8,train
+vid_01_0098,Moving something towards the camera,3,8,train
+vid_01_0037,Moving something towards the camera,3,8,train
+vid_01_0016,Moving something towards the camera,3,8,train
+vid_01_0069,Moving something towards the camera,3,8,train
+vid_01_0056,Moving something towards the camera,3,8,train
+vid_01_0085,Moving something towards the camera,3,8,train
+vid_01_0046,Moving something towards the camera,3,8,train
+vid_01_0066,Moving something towards the camera,3,8,train
+vid_01_0082,Moving something towards the camera,3,8,train
+vid_01_0042,Moving something towards the camera,3,8,train
+vid_01_0033,Moving something towards the camera,3,8,train
+vid_01_0047,Moving something towards the camera,3,8,train
+vid_01_0044,Moving something towards the camera,3,8,train
+vid_01_0024,Moving something towards the camera,3,8,train
+vid_01_0050,Moving something towards the camera,3,8,train
+vid_01_0020,Moving something towards the camera,3,8,train
+vid_01_0021,Moving something towards the camera,3,8,train
+vid_01_0048,Moving something towards the camera,3,8,train
+vid_01_0089,Moving something towards the camera,3,8,train
+vid_01_0011,Moving something towards the camera,3,8,train
+vid_01_0074,Moving something towards the camera,3,8,train
+vid_01_0012,Moving something towards the camera,3,8,train
+vid_01_0040,Moving something towards the camera,3,8,train
+vid_01_0045,Moving something towards the camera,3,8,train
+vid_01_0096,Moving something towards the camera,3,8,train
+vid_01_0041,Moving something towards the camera,3,8,train
+vid_01_0022,Moving something towards the camera,3,8,train
+vid_01_0084,Moving something towards the camera,3,8,train
+vid_01_0007,Moving something towards the camera,3,8,train
+vid_01_0018,Moving something towards the camera,3,8,train
+vid_01_0052,Moving something towards the camera,3,8,train
+vid_01_0091,Moving something towards the camera,3,8,train
+vid_01_0054,Moving something towards the camera,3,8,train
+vid_01_0027,Moving something towards the camera,3,8,train
+vid_01_0019,Moving something towards the camera,3,8,train
+vid_01_0099,Moving something towards the camera,3,8,train
+vid_01_0017,Moving something towards the camera,3,8,train
+vid_01_0008,Moving something towards the camera,3,8,train
+vid_01_0079,Moving something towards the camera,3,8,train
+vid_01_0004,Moving something towards the camera,3,8,train
+vid_01_0083,Moving something towards the camera,3,8,train
+vid_01_0039,Moving something towards the camera,3,8,train
+vid_01_0015,Moving something towards the camera,3,8,train
+vid_01_0036,Moving something towards the camera,3,8,train
+vid_01_0014,Moving something towards the camera,3,8,train
+vid_01_0001,Moving something towards the camera,3,8,train
+vid_01_0061,Moving something towards the camera,3,8,train
+vid_01_0009,Moving something towards the camera,3,8,train
+vid_01_0002,Moving something towards the camera,3,8,train
+vid_01_0043,Moving something towards the camera,3,8,train
+vid_01_0038,Moving something towards the camera,3,8,train
+vid_01_0010,Moving something towards the camera,3,8,train
+vid_01_0032,Moving something towards the camera,3,8,train
+vid_01_0062,Moving something towards the camera,3,8,train
+vid_01_0053,Moving something towards the camera,3,8,train
+vid_01_0034,Moving something towards the camera,3,8,train
+vid_06_0071,Opening something,4,8,test
+vid_06_0085,Opening something,4,8,test
+vid_06_0030,Opening something,4,8,test
+vid_06_0073,Opening something,4,8,test
+vid_06_0086,Opening something,4,8,test
+vid_06_0041,Opening something,4,8,test
+vid_06_0036,Opening something,4,8,test
+vid_06_0054,Opening something,4,8,test
+vid_06_0089,Opening something,4,8,test
+vid_06_0026,Opening something,4,8,test
+vid_06_0064,Opening something,4,8,test
+vid_06_0047,Opening something,4,8,test
+vid_06_0078,Opening something,4,8,test
+vid_06_0048,Opening something,4,8,test
+vid_06_0065,Opening something,4,8,test
+vid_06_0001,Opening something,4,8,val
+vid_06_0016,Opening something,4,8,val
+vid_06_0027,Opening something,4,8,val
+vid_06_0062,Opening something,4,8,val
+vid_06_0052,Opening something,4,8,val
+vid_06_0084,Opening something,4,8,val
+vid_06_0098,Opening something,4,8,val
+vid_06_0053,Opening something,4,8,val
+vid_06_0000,Opening something,4,8,val
+vid_06_0077,Opening something,4,8,val
+vid_06_0097,Opening something,4,8,val
+vid_06_0032,Opening something,4,8,val
+vid_06_0034,Opening something,4,8,val
+vid_06_0082,Opening something,4,8,val
+vid_06_0031,Opening something,4,8,val
+vid_06_0002,Opening something,4,8,train
+vid_06_0012,Opening something,4,8,train
+vid_06_0010,Opening something,4,8,train
+vid_06_0033,Opening something,4,8,train
+vid_06_0044,Opening something,4,8,train
+vid_06_0095,Opening something,4,8,train
+vid_06_0035,Opening something,4,8,train
+vid_06_0023,Opening something,4,8,train
+vid_06_0090,Opening something,4,8,train
+vid_06_0018,Opening something,4,8,train
+vid_06_0092,Opening something,4,8,train
+vid_06_0020,Opening something,4,8,train
+vid_06_0039,Opening something,4,8,train
+vid_06_0015,Opening something,4,8,train
+vid_06_0079,Opening something,4,8,train
+vid_06_0007,Opening something,4,8,train
+vid_06_0013,Opening something,4,8,train
+vid_06_0063,Opening something,4,8,train
+vid_06_0072,Opening something,4,8,train
+vid_06_0024,Opening something,4,8,train
+vid_06_0076,Opening something,4,8,train
+vid_06_0025,Opening something,4,8,train
+vid_06_0094,Opening something,4,8,train
+vid_06_0021,Opening something,4,8,train
+vid_06_0057,Opening something,4,8,train
+vid_06_0088,Opening something,4,8,train
+vid_06_0022,Opening something,4,8,train
+vid_06_0038,Opening something,4,8,train
+vid_06_0083,Opening something,4,8,train
+vid_06_0069,Opening something,4,8,train
+vid_06_0093,Opening something,4,8,train
+vid_06_0045,Opening something,4,8,train
+vid_06_0049,Opening something,4,8,train
+vid_06_0056,Opening something,4,8,train
+vid_06_0043,Opening something,4,8,train
+vid_06_0028,Opening something,4,8,train
+vid_06_0055,Opening something,4,8,train
+vid_06_0014,Opening something,4,8,train
+vid_06_0058,Opening something,4,8,train
+vid_06_0099,Opening something,4,8,train
+vid_06_0059,Opening something,4,8,train
+vid_06_0060,Opening something,4,8,train
+vid_06_0091,Opening something,4,8,train
+vid_06_0046,Opening something,4,8,train
+vid_06_0061,Opening something,4,8,train
+vid_06_0050,Opening something,4,8,train
+vid_06_0011,Opening something,4,8,train
+vid_06_0042,Opening something,4,8,train
+vid_06_0067,Opening something,4,8,train
+vid_06_0037,Opening something,4,8,train
+vid_06_0070,Opening something,4,8,train
+vid_06_0017,Opening something,4,8,train
+vid_06_0087,Opening something,4,8,train
+vid_06_0006,Opening something,4,8,train
+vid_06_0080,Opening something,4,8,train
+vid_06_0040,Opening something,4,8,train
+vid_06_0008,Opening something,4,8,train
+vid_06_0003,Opening something,4,8,train
+vid_06_0004,Opening something,4,8,train
+vid_06_0068,Opening something,4,8,train
+vid_06_0074,Opening something,4,8,train
+vid_06_0019,Opening something,4,8,train
+vid_06_0066,Opening something,4,8,train
+vid_06_0081,Opening something,4,8,train
+vid_06_0029,Opening something,4,8,train
+vid_06_0096,Opening something,4,8,train
+vid_06_0075,Opening something,4,8,train
+vid_06_0005,Opening something,4,8,train
+vid_06_0051,Opening something,4,8,train
+vid_06_0009,Opening something,4,8,train
+vid_04_0042,Picking something up,5,8,test
+vid_04_0074,Picking something up,5,8,test
+vid_04_0011,Picking something up,5,8,test
+vid_04_0064,Picking something up,5,8,test
+vid_04_0087,Picking something up,5,8,test
+vid_04_0081,Picking something up,5,8,test
+vid_04_0071,Picking something up,5,8,test
+vid_04_0017,Picking something up,5,8,test
+vid_04_0031,Picking something up,5,8,test
+vid_04_0088,Picking something up,5,8,test
+vid_04_0010,Picking something up,5,8,test
+vid_04_0028,Picking something up,5,8,test
+vid_04_0080,Picking something up,5,8,test
+vid_04_0082,Picking something up,5,8,test
+vid_04_0063,Picking something up,5,8,test
+vid_04_0067,Picking something up,5,8,val
+vid_04_0039,Picking something up,5,8,val
+vid_04_0035,Picking something up,5,8,val
+vid_04_0027,Picking something up,5,8,val
+vid_04_0076,Picking something up,5,8,val
+vid_04_0020,Picking something up,5,8,val
+vid_04_0085,Picking something up,5,8,val
+vid_04_0019,Picking something up,5,8,val
+vid_04_0077,Picking something up,5,8,val
+vid_04_0090,Picking something up,5,8,val
+vid_04_0060,Picking something up,5,8,val
+vid_04_0079,Picking something up,5,8,val
+vid_04_0012,Picking something up,5,8,val
+vid_04_0051,Picking something up,5,8,val
+vid_04_0036,Picking something up,5,8,val
+vid_04_0009,Picking something up,5,8,train
+vid_04_0059,Picking something up,5,8,train
+vid_04_0057,Picking something up,5,8,train
+vid_04_0052,Picking something up,5,8,train
+vid_04_0048,Picking something up,5,8,train
+vid_04_0062,Picking something up,5,8,train
+vid_04_0018,Picking something up,5,8,train
+vid_04_0022,Picking something up,5,8,train
+vid_04_0038,Picking something up,5,8,train
+vid_04_0026,Picking something up,5,8,train
+vid_04_0007,Picking something up,5,8,train
+vid_04_0068,Picking something up,5,8,train
+vid_04_0083,Picking something up,5,8,train
+vid_04_0097,Picking something up,5,8,train
+vid_04_0044,Picking something up,5,8,train
+vid_04_0014,Picking something up,5,8,train
+vid_04_0041,Picking something up,5,8,train
+vid_04_0075,Picking something up,5,8,train
+vid_04_0016,Picking something up,5,8,train
+vid_04_0034,Picking something up,5,8,train
+vid_04_0092,Picking something up,5,8,train
+vid_04_0024,Picking something up,5,8,train
+vid_04_0037,Picking something up,5,8,train
+vid_04_0023,Picking something up,5,8,train
+vid_04_0006,Picking something up,5,8,train
+vid_04_0021,Picking something up,5,8,train
+vid_04_0098,Picking something up,5,8,train
+vid_04_0002,Picking something up,5,8,train
+vid_04_0095,Picking something up,5,8,train
+vid_04_0046,Picking something up,5,8,train
+vid_04_0086,Picking something up,5,8,train
+vid_04_0089,Picking something up,5,8,train
+vid_04_0015,Picking something up,5,8,train
+vid_04_0025,Picking something up,5,8,train
+vid_04_0093,Picking something up,5,8,train
+vid_04_0096,Picking something up,5,8,train
+vid_04_0047,Picking something up,5,8,train
+vid_04_0004,Picking something up,5,8,train
+vid_04_0094,Picking something up,5,8,train
+vid_04_0056,Picking something up,5,8,train
+vid_04_0099,Picking something up,5,8,train
+vid_04_0091,Picking something up,5,8,train
+vid_04_0066,Picking something up,5,8,train
+vid_04_0030,Picking something up,5,8,train
+vid_04_0029,Picking something up,5,8,train
+vid_04_0054,Picking something up,5,8,train
+vid_04_0072,Picking something up,5,8,train
+vid_04_0040,Picking something up,5,8,train
+vid_04_0001,Picking something up,5,8,train
+vid_04_0069,Picking something up,5,8,train
+vid_04_0061,Picking something up,5,8,train
+vid_04_0033,Picking something up,5,8,train
+vid_04_0000,Picking something up,5,8,train
+vid_04_0013,Picking something up,5,8,train
+vid_04_0003,Picking something up,5,8,train
+vid_04_0084,Picking something up,5,8,train
+vid_04_0053,Picking something up,5,8,train
+vid_04_0005,Picking something up,5,8,train
+vid_04_0078,Picking something up,5,8,train
+vid_04_0050,Picking something up,5,8,train
+vid_04_0049,Picking something up,5,8,train
+vid_04_0065,Picking something up,5,8,train
+vid_04_0032,Picking something up,5,8,train
+vid_04_0043,Picking something up,5,8,train
+vid_04_0073,Picking something up,5,8,train
+vid_04_0058,Picking something up,5,8,train
+vid_04_0070,Picking something up,5,8,train
+vid_04_0055,Picking something up,5,8,train
+vid_04_0008,Picking something up,5,8,train
+vid_04_0045,Picking something up,5,8,train
+vid_02_0045,Pushing something from left to right,6,8,test
+vid_02_0059,Pushing something from left to right,6,8,test
+vid_02_0052,Pushing something from left to right,6,8,test
+vid_02_0033,Pushing something from left to right,6,8,test
+vid_02_0051,Pushing something from left to right,6,8,test
+vid_02_0050,Pushing something from left to right,6,8,test
+vid_02_0092,Pushing something from left to right,6,8,test
+vid_02_0029,Pushing something from left to right,6,8,test
+vid_02_0078,Pushing something from left to right,6,8,test
+vid_02_0034,Pushing something from left to right,6,8,test
+vid_02_0095,Pushing something from left to right,6,8,test
+vid_02_0005,Pushing something from left to right,6,8,test
+vid_02_0002,Pushing something from left to right,6,8,test
+vid_02_0004,Pushing something from left to right,6,8,test
+vid_02_0032,Pushing something from left to right,6,8,test
+vid_02_0069,Pushing something from left to right,6,8,val
+vid_02_0030,Pushing something from left to right,6,8,val
+vid_02_0047,Pushing something from left to right,6,8,val
+vid_02_0042,Pushing something from left to right,6,8,val
+vid_02_0049,Pushing something from left to right,6,8,val
+vid_02_0087,Pushing something from left to right,6,8,val
+vid_02_0026,Pushing something from left to right,6,8,val
+vid_02_0048,Pushing something from left to right,6,8,val
+vid_02_0057,Pushing something from left to right,6,8,val
+vid_02_0075,Pushing something from left to right,6,8,val
+vid_02_0086,Pushing something from left to right,6,8,val
+vid_02_0046,Pushing something from left to right,6,8,val
+vid_02_0010,Pushing something from left to right,6,8,val
+vid_02_0039,Pushing something from left to right,6,8,val
+vid_02_0044,Pushing something from left to right,6,8,val
+vid_02_0061,Pushing something from left to right,6,8,train
+vid_02_0089,Pushing something from left to right,6,8,train
+vid_02_0074,Pushing something from left to right,6,8,train
+vid_02_0014,Pushing something from left to right,6,8,train
+vid_02_0035,Pushing something from left to right,6,8,train
+vid_02_0067,Pushing something from left to right,6,8,train
+vid_02_0031,Pushing something from left to right,6,8,train
+vid_02_0066,Pushing something from left to right,6,8,train
+vid_02_0062,Pushing something from left to right,6,8,train
+vid_02_0090,Pushing something from left to right,6,8,train
+vid_02_0073,Pushing something from left to right,6,8,train
+vid_02_0006,Pushing something from left to right,6,8,train
+vid_02_0023,Pushing something from left to right,6,8,train
+vid_02_0001,Pushing something from left to right,6,8,train
+vid_02_0077,Pushing something from left to right,6,8,train
+vid_02_0093,Pushing something from left to right,6,8,train
+vid_02_0025,Pushing something from left to right,6,8,train
+vid_02_0099,Pushing something from left to right,6,8,train
+vid_02_0011,Pushing something from left to right,6,8,train
+vid_02_0076,Pushing something from left to right,6,8,train
+vid_02_0058,Pushing something from left to right,6,8,train
+vid_02_0022,Pushing something from left to right,6,8,train
+vid_02_0072,Pushing something from left to right,6,8,train
+vid_02_0098,Pushing something from left to right,6,8,train
+vid_02_0018,Pushing something from left to right,6,8,train
+vid_02_0036,Pushing something from left to right,6,8,train
+vid_02_0056,Pushing something from left to right,6,8,train
+vid_02_0000,Pushing something from left to right,6,8,train
+vid_02_0041,Pushing something from left to right,6,8,train
+vid_02_0094,Pushing something from left to right,6,8,train
+vid_02_0017,Pushing something from left to right,6,8,train
+vid_02_0015,Pushing something from left to right,6,8,train
+vid_02_0053,Pushing something from left to right,6,8,train
+vid_02_0012,Pushing something from left to right,6,8,train
+vid_02_0079,Pushing something from left to right,6,8,train
+vid_02_0043,Pushing something from left to right,6,8,train
+vid_02_0037,Pushing something from left to right,6,8,train
+vid_02_0007,Pushing something from left to right,6,8,train
+vid_02_0080,Pushing something from left to right,6,8,train
+vid_02_0020,Pushing something from left to right,6,8,train
+vid_02_0085,Pushing something from left to right,6,8,train
+vid_02_0097,Pushing something from left to right,6,8,train
+vid_02_0008,Pushing something from left to right,6,8,train
+vid_02_0054,Pushing something from left to right,6,8,train
+vid_02_0009,Pushing something from left to right,6,8,train
+vid_02_0003,Pushing something from left to right,6,8,train
+vid_02_0082,Pushing something from left to right,6,8,train
+vid_02_0060,Pushing something from left to right,6,8,train
+vid_02_0088,Pushing something from left to right,6,8,train
+vid_02_0081,Pushing something from left to right,6,8,train
+vid_02_0096,Pushing something from left to right,6,8,train
+vid_02_0065,Pushing something from left to right,6,8,train
+vid_02_0027,Pushing something from left to right,6,8,train
+vid_02_0028,Pushing something from left to right,6,8,train
+vid_02_0083,Pushing something from left to right,6,8,train
+vid_02_0063,Pushing something from left to right,6,8,train
+vid_02_0013,Pushing something from left to right,6,8,train
+vid_02_0084,Pushing something from left to right,6,8,train
+vid_02_0019,Pushing something from left to right,6,8,train
+vid_02_0021,Pushing something from left to right,6,8,train
+vid_02_0055,Pushing something from left to right,6,8,train
+vid_02_0024,Pushing something from left to right,6,8,train
+vid_02_0064,Pushing something from left to right,6,8,train
+vid_02_0038,Pushing something from left to right,6,8,train
+vid_02_0068,Pushing something from left to right,6,8,train
+vid_02_0091,Pushing something from left to right,6,8,train
+vid_02_0071,Pushing something from left to right,6,8,train
+vid_02_0016,Pushing something from left to right,6,8,train
+vid_02_0040,Pushing something from left to right,6,8,train
+vid_02_0070,Pushing something from left to right,6,8,train
+vid_03_0032,Pushing something from right to left,7,8,test
+vid_03_0053,Pushing something from right to left,7,8,test
+vid_03_0040,Pushing something from right to left,7,8,test
+vid_03_0059,Pushing something from right to left,7,8,test
+vid_03_0029,Pushing something from right to left,7,8,test
+vid_03_0018,Pushing something from right to left,7,8,test
+vid_03_0042,Pushing something from right to left,7,8,test
+vid_03_0021,Pushing something from right to left,7,8,test
+vid_03_0022,Pushing something from right to left,7,8,test
+vid_03_0094,Pushing something from right to left,7,8,test
+vid_03_0043,Pushing something from right to left,7,8,test
+vid_03_0067,Pushing something from right to left,7,8,test
+vid_03_0007,Pushing something from right to left,7,8,test
+vid_03_0046,Pushing something from right to left,7,8,test
+vid_03_0011,Pushing something from right to left,7,8,test
+vid_03_0093,Pushing something from right to left,7,8,val
+vid_03_0084,Pushing something from right to left,7,8,val
+vid_03_0082,Pushing something from right to left,7,8,val
+vid_03_0072,Pushing something from right to left,7,8,val
+vid_03_0056,Pushing something from right to left,7,8,val
+vid_03_0062,Pushing something from right to left,7,8,val
+vid_03_0025,Pushing something from right to left,7,8,val
+vid_03_0049,Pushing something from right to left,7,8,val
+vid_03_0030,Pushing something from right to left,7,8,val
+vid_03_0066,Pushing something from right to left,7,8,val
+vid_03_0015,Pushing something from right to left,7,8,val
+vid_03_0002,Pushing something from right to left,7,8,val
+vid_03_0083,Pushing something from right to left,7,8,val
+vid_03_0010,Pushing something from right to left,7,8,val
+vid_03_0050,Pushing something from right to left,7,8,val
+vid_03_0013,Pushing something from right to left,7,8,train
+vid_03_0033,Pushing something from right to left,7,8,train
+vid_03_0023,Pushing something from right to left,7,8,train
+vid_03_0076,Pushing something from right to left,7,8,train
+vid_03_0004,Pushing something from right to left,7,8,train
+vid_03_0088,Pushing something from right to left,7,8,train
+vid_03_0086,Pushing something from right to left,7,8,train
+vid_03_0079,Pushing something from right to left,7,8,train
+vid_03_0000,Pushing something from right to left,7,8,train
+vid_03_0009,Pushing something from right to left,7,8,train
+vid_03_0091,Pushing something from right to left,7,8,train
+vid_03_0001,Pushing something from right to left,7,8,train
+vid_03_0089,Pushing something from right to left,7,8,train
+vid_03_0074,Pushing something from right to left,7,8,train
+vid_03_0024,Pushing something from right to left,7,8,train
+vid_03_0071,Pushing something from right to left,7,8,train
+vid_03_0078,Pushing something from right to left,7,8,train
+vid_03_0098,Pushing something from right to left,7,8,train
+vid_03_0055,Pushing something from right to left,7,8,train
+vid_03_0039,Pushing something from right to left,7,8,train
+vid_03_0027,Pushing something from right to left,7,8,train
+vid_03_0037,Pushing something from right to left,7,8,train
+vid_03_0061,Pushing something from right to left,7,8,train
+vid_03_0057,Pushing something from right to left,7,8,train
+vid_03_0096,Pushing something from right to left,7,8,train
+vid_03_0075,Pushing something from right to left,7,8,train
+vid_03_0063,Pushing something from right to left,7,8,train
+vid_03_0020,Pushing something from right to left,7,8,train
+vid_03_0060,Pushing something from right to left,7,8,train
+vid_03_0038,Pushing something from right to left,7,8,train
+vid_03_0068,Pushing something from right to left,7,8,train
+vid_03_0016,Pushing something from right to left,7,8,train
+vid_03_0085,Pushing something from right to left,7,8,train
+vid_03_0099,Pushing something from right to left,7,8,train
+vid_03_0026,Pushing something from right to left,7,8,train
+vid_03_0097,Pushing something from right to left,7,8,train
+vid_03_0092,Pushing something from right to left,7,8,train
+vid_03_0081,Pushing something from right to left,7,8,train
+vid_03_0034,Pushing something from right to left,7,8,train
+vid_03_0045,Pushing something from right to left,7,8,train
+vid_03_0095,Pushing something from right to left,7,8,train
+vid_03_0048,Pushing something from right to left,7,8,train
+vid_03_0054,Pushing something from right to left,7,8,train
+vid_03_0012,Pushing something from right to left,7,8,train
+vid_03_0017,Pushing something from right to left,7,8,train
+vid_03_0031,Pushing something from right to left,7,8,train
+vid_03_0003,Pushing something from right to left,7,8,train
+vid_03_0051,Pushing something from right to left,7,8,train
+vid_03_0047,Pushing something from right to left,7,8,train
+vid_03_0073,Pushing something from right to left,7,8,train
+vid_03_0036,Pushing something from right to left,7,8,train
+vid_03_0077,Pushing something from right to left,7,8,train
+vid_03_0028,Pushing something from right to left,7,8,train
+vid_03_0064,Pushing something from right to left,7,8,train
+vid_03_0069,Pushing something from right to left,7,8,train
+vid_03_0080,Pushing something from right to left,7,8,train
+vid_03_0090,Pushing something from right to left,7,8,train
+vid_03_0058,Pushing something from right to left,7,8,train
+vid_03_0019,Pushing something from right to left,7,8,train
+vid_03_0035,Pushing something from right to left,7,8,train
+vid_03_0005,Pushing something from right to left,7,8,train
+vid_03_0087,Pushing something from right to left,7,8,train
+vid_03_0006,Pushing something from right to left,7,8,train
+vid_03_0065,Pushing something from right to left,7,8,train
+vid_03_0070,Pushing something from right to left,7,8,train
+vid_03_0041,Pushing something from right to left,7,8,train
+vid_03_0014,Pushing something from right to left,7,8,train
+vid_03_0052,Pushing something from right to left,7,8,train
+vid_03_0044,Pushing something from right to left,7,8,train
+vid_03_0008,Pushing something from right to left,7,8,train
+vid_05_0032,Putting something down,8,8,test
+vid_05_0022,Putting something down,8,8,test
+vid_05_0006,Putting something down,8,8,test
+vid_05_0064,Putting something down,8,8,test
+vid_05_0002,Putting something down,8,8,test
+vid_05_0050,Putting something down,8,8,test
+vid_05_0014,Putting something down,8,8,test
+vid_05_0001,Putting something down,8,8,test
+vid_05_0030,Putting something down,8,8,test
+vid_05_0016,Putting something down,8,8,test
+vid_05_0085,Putting something down,8,8,test
+vid_05_0058,Putting something down,8,8,test
+vid_05_0052,Putting something down,8,8,test
+vid_05_0035,Putting something down,8,8,test
+vid_05_0078,Putting something down,8,8,test
+vid_05_0082,Putting something down,8,8,val
+vid_05_0048,Putting something down,8,8,val
+vid_05_0004,Putting something down,8,8,val
+vid_05_0003,Putting something down,8,8,val
+vid_05_0072,Putting something down,8,8,val
+vid_05_0045,Putting something down,8,8,val
+vid_05_0097,Putting something down,8,8,val
+vid_05_0099,Putting something down,8,8,val
+vid_05_0020,Putting something down,8,8,val
+vid_05_0015,Putting something down,8,8,val
+vid_05_0075,Putting something down,8,8,val
+vid_05_0021,Putting something down,8,8,val
+vid_05_0018,Putting something down,8,8,val
+vid_05_0079,Putting something down,8,8,val
+vid_05_0038,Putting something down,8,8,val
+vid_05_0074,Putting something down,8,8,train
+vid_05_0070,Putting something down,8,8,train
+vid_05_0009,Putting something down,8,8,train
+vid_05_0023,Putting something down,8,8,train
+vid_05_0005,Putting something down,8,8,train
+vid_05_0084,Putting something down,8,8,train
+vid_05_0041,Putting something down,8,8,train
+vid_05_0036,Putting something down,8,8,train
+vid_05_0049,Putting something down,8,8,train
+vid_05_0061,Putting something down,8,8,train
+vid_05_0047,Putting something down,8,8,train
+vid_05_0033,Putting something down,8,8,train
+vid_05_0027,Putting something down,8,8,train
+vid_05_0095,Putting something down,8,8,train
+vid_05_0053,Putting something down,8,8,train
+vid_05_0080,Putting something down,8,8,train
+vid_05_0051,Putting something down,8,8,train
+vid_05_0093,Putting something down,8,8,train
+vid_05_0066,Putting something down,8,8,train
+vid_05_0090,Putting something down,8,8,train
+vid_05_0026,Putting something down,8,8,train
+vid_05_0007,Putting something down,8,8,train
+vid_05_0059,Putting something down,8,8,train
+vid_05_0067,Putting something down,8,8,train
+vid_05_0065,Putting something down,8,8,train
+vid_05_0039,Putting something down,8,8,train
+vid_05_0062,Putting something down,8,8,train
+vid_05_0073,Putting something down,8,8,train
+vid_05_0069,Putting something down,8,8,train
+vid_05_0037,Putting something down,8,8,train
+vid_05_0096,Putting something down,8,8,train
+vid_05_0057,Putting something down,8,8,train
+vid_05_0017,Putting something down,8,8,train
+vid_05_0056,Putting something down,8,8,train
+vid_05_0025,Putting something down,8,8,train
+vid_05_0013,Putting something down,8,8,train
+vid_05_0087,Putting something down,8,8,train
+vid_05_0098,Putting something down,8,8,train
+vid_05_0043,Putting something down,8,8,train
+vid_05_0029,Putting something down,8,8,train
+vid_05_0000,Putting something down,8,8,train
+vid_05_0055,Putting something down,8,8,train
+vid_05_0076,Putting something down,8,8,train
+vid_05_0077,Putting something down,8,8,train
+vid_05_0011,Putting something down,8,8,train
+vid_05_0054,Putting something down,8,8,train
+vid_05_0092,Putting something down,8,8,train
+vid_05_0008,Putting something down,8,8,train
+vid_05_0024,Putting something down,8,8,train
+vid_05_0094,Putting something down,8,8,train
+vid_05_0089,Putting something down,8,8,train
+vid_05_0083,Putting something down,8,8,train
+vid_05_0012,Putting something down,8,8,train
+vid_05_0044,Putting something down,8,8,train
+vid_05_0019,Putting something down,8,8,train
+vid_05_0091,Putting something down,8,8,train
+vid_05_0071,Putting something down,8,8,train
+vid_05_0086,Putting something down,8,8,train
+vid_05_0028,Putting something down,8,8,train
+vid_05_0040,Putting something down,8,8,train
+vid_05_0068,Putting something down,8,8,train
+vid_05_0010,Putting something down,8,8,train
+vid_05_0042,Putting something down,8,8,train
+vid_05_0060,Putting something down,8,8,train
+vid_05_0088,Putting something down,8,8,train
+vid_05_0031,Putting something down,8,8,train
+vid_05_0081,Putting something down,8,8,train
+vid_05_0046,Putting something down,8,8,train
+vid_05_0034,Putting something down,8,8,train
+vid_05_0063,Putting something down,8,8,train
+vid_18_0045,Putting something into something,9,8,test
+vid_18_0002,Putting something into something,9,8,test
+vid_18_0042,Putting something into something,9,8,test
+vid_18_0084,Putting something into something,9,8,test
+vid_18_0098,Putting something into something,9,8,test
+vid_18_0005,Putting something into something,9,8,test
+vid_18_0083,Putting something into something,9,8,test
+vid_18_0074,Putting something into something,9,8,test
+vid_18_0030,Putting something into something,9,8,test
+vid_18_0018,Putting something into something,9,8,test
+vid_18_0088,Putting something into something,9,8,test
+vid_18_0019,Putting something into something,9,8,test
+vid_18_0048,Putting something into something,9,8,test
+vid_18_0008,Putting something into something,9,8,test
+vid_18_0086,Putting something into something,9,8,test
+vid_18_0010,Putting something into something,9,8,val
+vid_18_0034,Putting something into something,9,8,val
+vid_18_0078,Putting something into something,9,8,val
+vid_18_0036,Putting something into something,9,8,val
+vid_18_0009,Putting something into something,9,8,val
+vid_18_0087,Putting something into something,9,8,val
+vid_18_0063,Putting something into something,9,8,val
+vid_18_0092,Putting something into something,9,8,val
+vid_18_0096,Putting something into something,9,8,val
+vid_18_0016,Putting something into something,9,8,val
+vid_18_0015,Putting something into something,9,8,val
+vid_18_0055,Putting something into something,9,8,val
+vid_18_0025,Putting something into something,9,8,val
+vid_18_0017,Putting something into something,9,8,val
+vid_18_0071,Putting something into something,9,8,val
+vid_18_0013,Putting something into something,9,8,train
+vid_18_0062,Putting something into something,9,8,train
+vid_18_0039,Putting something into something,9,8,train
+vid_18_0041,Putting something into something,9,8,train
+vid_18_0040,Putting something into something,9,8,train
+vid_18_0028,Putting something into something,9,8,train
+vid_18_0072,Putting something into something,9,8,train
+vid_18_0054,Putting something into something,9,8,train
+vid_18_0053,Putting something into something,9,8,train
+vid_18_0082,Putting something into something,9,8,train
+vid_18_0095,Putting something into something,9,8,train
+vid_18_0007,Putting something into something,9,8,train
+vid_18_0023,Putting something into something,9,8,train
+vid_18_0012,Putting something into something,9,8,train
+vid_18_0026,Putting something into something,9,8,train
+vid_18_0027,Putting something into something,9,8,train
+vid_18_0085,Putting something into something,9,8,train
+vid_18_0001,Putting something into something,9,8,train
+vid_18_0094,Putting something into something,9,8,train
+vid_18_0081,Putting something into something,9,8,train
+vid_18_0011,Putting something into something,9,8,train
+vid_18_0089,Putting something into something,9,8,train
+vid_18_0037,Putting something into something,9,8,train
+vid_18_0076,Putting something into something,9,8,train
+vid_18_0065,Putting something into something,9,8,train
+vid_18_0069,Putting something into something,9,8,train
+vid_18_0073,Putting something into something,9,8,train
+vid_18_0091,Putting something into something,9,8,train
+vid_18_0052,Putting something into something,9,8,train
+vid_18_0006,Putting something into something,9,8,train
+vid_18_0066,Putting something into something,9,8,train
+vid_18_0058,Putting something into something,9,8,train
+vid_18_0079,Putting something into something,9,8,train
+vid_18_0060,Putting something into something,9,8,train
+vid_18_0021,Putting something into something,9,8,train
+vid_18_0056,Putting something into something,9,8,train
+vid_18_0077,Putting something into something,9,8,train
+vid_18_0024,Putting something into something,9,8,train
+vid_18_0057,Putting something into something,9,8,train
+vid_18_0047,Putting something into something,9,8,train
+vid_18_0038,Putting something into something,9,8,train
+vid_18_0044,Putting something into something,9,8,train
+vid_18_0022,Putting something into something,9,8,train
+vid_18_0061,Putting something into something,9,8,train
+vid_18_0004,Putting something into something,9,8,train
+vid_18_0033,Putting something into something,9,8,train
+vid_18_0068,Putting something into something,9,8,train
+vid_18_0003,Putting something into something,9,8,train
+vid_18_0014,Putting something into something,9,8,train
+vid_18_0000,Putting something into something,9,8,train
+vid_18_0051,Putting something into something,9,8,train
+vid_18_0035,Putting something into something,9,8,train
+vid_18_0049,Putting something into something,9,8,train
+vid_18_0046,Putting something into something,9,8,train
+vid_18_0075,Putting something into something,9,8,train
+vid_18_0043,Putting something into something,9,8,train
+vid_18_0080,Putting something into something,9,8,train
+vid_18_0067,Putting something into something,9,8,train
+vid_18_0090,Putting something into something,9,8,train
+vid_18_0059,Putting something into something,9,8,train
+vid_18_0093,Putting something into something,9,8,train
+vid_18_0050,Putting something into something,9,8,train
+vid_18_0032,Putting something into something,9,8,train
+vid_18_0097,Putting something into something,9,8,train
+vid_18_0029,Putting something into something,9,8,train
+vid_18_0099,Putting something into something,9,8,train
+vid_18_0020,Putting something into something,9,8,train
+vid_18_0070,Putting something into something,9,8,train
+vid_18_0064,Putting something into something,9,8,train
+vid_18_0031,Putting something into something,9,8,train
+vid_10_0041,Putting something on top of something,10,8,test
+vid_10_0032,Putting something on top of something,10,8,test
+vid_10_0071,Putting something on top of something,10,8,test
+vid_10_0040,Putting something on top of something,10,8,test
+vid_10_0070,Putting something on top of something,10,8,test
+vid_10_0028,Putting something on top of something,10,8,test
+vid_10_0094,Putting something on top of something,10,8,test
+vid_10_0088,Putting something on top of something,10,8,test
+vid_10_0072,Putting something on top of something,10,8,test
+vid_10_0003,Putting something on top of something,10,8,test
+vid_10_0075,Putting something on top of something,10,8,test
+vid_10_0014,Putting something on top of something,10,8,test
+vid_10_0068,Putting something on top of something,10,8,test
+vid_10_0026,Putting something on top of something,10,8,test
+vid_10_0022,Putting something on top of something,10,8,test
+vid_10_0043,Putting something on top of something,10,8,val
+vid_10_0016,Putting something on top of something,10,8,val
+vid_10_0037,Putting something on top of something,10,8,val
+vid_10_0059,Putting something on top of something,10,8,val
+vid_10_0031,Putting something on top of something,10,8,val
+vid_10_0024,Putting something on top of something,10,8,val
+vid_10_0002,Putting something on top of something,10,8,val
+vid_10_0039,Putting something on top of something,10,8,val
+vid_10_0018,Putting something on top of something,10,8,val
+vid_10_0082,Putting something on top of something,10,8,val
+vid_10_0081,Putting something on top of something,10,8,val
+vid_10_0060,Putting something on top of something,10,8,val
+vid_10_0098,Putting something on top of something,10,8,val
+vid_10_0019,Putting something on top of something,10,8,val
+vid_10_0051,Putting something on top of something,10,8,val
+vid_10_0067,Putting something on top of something,10,8,train
+vid_10_0089,Putting something on top of something,10,8,train
+vid_10_0064,Putting something on top of something,10,8,train
+vid_10_0007,Putting something on top of something,10,8,train
+vid_10_0010,Putting something on top of something,10,8,train
+vid_10_0074,Putting something on top of something,10,8,train
+vid_10_0073,Putting something on top of something,10,8,train
+vid_10_0078,Putting something on top of something,10,8,train
+vid_10_0085,Putting something on top of something,10,8,train
+vid_10_0013,Putting something on top of something,10,8,train
+vid_10_0084,Putting something on top of something,10,8,train
+vid_10_0012,Putting something on top of something,10,8,train
+vid_10_0079,Putting something on top of something,10,8,train
+vid_10_0038,Putting something on top of something,10,8,train
+vid_10_0066,Putting something on top of something,10,8,train
+vid_10_0055,Putting something on top of something,10,8,train
+vid_10_0057,Putting something on top of something,10,8,train
+vid_10_0036,Putting something on top of something,10,8,train
+vid_10_0027,Putting something on top of something,10,8,train
+vid_10_0087,Putting something on top of something,10,8,train
+vid_10_0054,Putting something on top of something,10,8,train
+vid_10_0076,Putting something on top of something,10,8,train
+vid_10_0005,Putting something on top of something,10,8,train
+vid_10_0091,Putting something on top of something,10,8,train
+vid_10_0096,Putting something on top of something,10,8,train
+vid_10_0045,Putting something on top of something,10,8,train
+vid_10_0058,Putting something on top of something,10,8,train
+vid_10_0042,Putting something on top of something,10,8,train
+vid_10_0033,Putting something on top of something,10,8,train
+vid_10_0025,Putting something on top of something,10,8,train
+vid_10_0009,Putting something on top of something,10,8,train
+vid_10_0077,Putting something on top of something,10,8,train
+vid_10_0099,Putting something on top of something,10,8,train
+vid_10_0046,Putting something on top of something,10,8,train
+vid_10_0050,Putting something on top of something,10,8,train
+vid_10_0011,Putting something on top of something,10,8,train
+vid_10_0048,Putting something on top of something,10,8,train
+vid_10_0083,Putting something on top of something,10,8,train
+vid_10_0015,Putting something on top of something,10,8,train
+vid_10_0053,Putting something on top of something,10,8,train
+vid_10_0063,Putting something on top of something,10,8,train
+vid_10_0062,Putting something on top of something,10,8,train
+vid_10_0035,Putting something on top of something,10,8,train
+vid_10_0029,Putting something on top of something,10,8,train
+vid_10_0095,Putting something on top of something,10,8,train
+vid_10_0021,Putting something on top of something,10,8,train
+vid_10_0090,Putting something on top of something,10,8,train
+vid_10_0008,Putting something on top of something,10,8,train
+vid_10_0030,Putting something on top of something,10,8,train
+vid_10_0001,Putting something on top of something,10,8,train
+vid_10_0086,Putting something on top of something,10,8,train
+vid_10_0049,Putting something on top of something,10,8,train
+vid_10_0069,Putting something on top of something,10,8,train
+vid_10_0097,Putting something on top of something,10,8,train
+vid_10_0000,Putting something on top of something,10,8,train
+vid_10_0080,Putting something on top of something,10,8,train
+vid_10_0056,Putting something on top of something,10,8,train
+vid_10_0044,Putting something on top of something,10,8,train
+vid_10_0023,Putting something on top of something,10,8,train
+vid_10_0093,Putting something on top of something,10,8,train
+vid_10_0020,Putting something on top of something,10,8,train
+vid_10_0017,Putting something on top of something,10,8,train
+vid_10_0004,Putting something on top of something,10,8,train
+vid_10_0052,Putting something on top of something,10,8,train
+vid_10_0047,Putting something on top of something,10,8,train
+vid_10_0061,Putting something on top of something,10,8,train
+vid_10_0065,Putting something on top of something,10,8,train
+vid_10_0092,Putting something on top of something,10,8,train
+vid_10_0006,Putting something on top of something,10,8,train
+vid_10_0034,Putting something on top of something,10,8,train
+vid_16_0071,Rotating something clockwise,11,8,test
+vid_16_0047,Rotating something clockwise,11,8,test
+vid_16_0018,Rotating something clockwise,11,8,test
+vid_16_0008,Rotating something clockwise,11,8,test
+vid_16_0073,Rotating something clockwise,11,8,test
+vid_16_0000,Rotating something clockwise,11,8,test
+vid_16_0013,Rotating something clockwise,11,8,test
+vid_16_0012,Rotating something clockwise,11,8,test
+vid_16_0039,Rotating something clockwise,11,8,test
+vid_16_0090,Rotating something clockwise,11,8,test
+vid_16_0001,Rotating something clockwise,11,8,test
+vid_16_0088,Rotating something clockwise,11,8,test
+vid_16_0031,Rotating something clockwise,11,8,test
+vid_16_0034,Rotating something clockwise,11,8,test
+vid_16_0070,Rotating something clockwise,11,8,test
+vid_16_0054,Rotating something clockwise,11,8,val
+vid_16_0023,Rotating something clockwise,11,8,val
+vid_16_0084,Rotating something clockwise,11,8,val
+vid_16_0036,Rotating something clockwise,11,8,val
+vid_16_0068,Rotating something clockwise,11,8,val
+vid_16_0038,Rotating something clockwise,11,8,val
+vid_16_0098,Rotating something clockwise,11,8,val
+vid_16_0082,Rotating something clockwise,11,8,val
+vid_16_0072,Rotating something clockwise,11,8,val
+vid_16_0099,Rotating something clockwise,11,8,val
+vid_16_0010,Rotating something clockwise,11,8,val
+vid_16_0074,Rotating something clockwise,11,8,val
+vid_16_0059,Rotating something clockwise,11,8,val
+vid_16_0045,Rotating something clockwise,11,8,val
+vid_16_0076,Rotating something clockwise,11,8,val
+vid_16_0032,Rotating something clockwise,11,8,train
+vid_16_0080,Rotating something clockwise,11,8,train
+vid_16_0026,Rotating something clockwise,11,8,train
+vid_16_0062,Rotating something clockwise,11,8,train
+vid_16_0053,Rotating something clockwise,11,8,train
+vid_16_0060,Rotating something clockwise,11,8,train
+vid_16_0075,Rotating something clockwise,11,8,train
+vid_16_0020,Rotating something clockwise,11,8,train
+vid_16_0092,Rotating something clockwise,11,8,train
+vid_16_0077,Rotating something clockwise,11,8,train
+vid_16_0069,Rotating something clockwise,11,8,train
+vid_16_0055,Rotating something clockwise,11,8,train
+vid_16_0081,Rotating something clockwise,11,8,train
+vid_16_0043,Rotating something clockwise,11,8,train
+vid_16_0002,Rotating something clockwise,11,8,train
+vid_16_0005,Rotating something clockwise,11,8,train
+vid_16_0057,Rotating something clockwise,11,8,train
+vid_16_0050,Rotating something clockwise,11,8,train
+vid_16_0037,Rotating something clockwise,11,8,train
+vid_16_0022,Rotating something clockwise,11,8,train
+vid_16_0014,Rotating something clockwise,11,8,train
+vid_16_0030,Rotating something clockwise,11,8,train
+vid_16_0063,Rotating something clockwise,11,8,train
+vid_16_0041,Rotating something clockwise,11,8,train
+vid_16_0094,Rotating something clockwise,11,8,train
+vid_16_0089,Rotating something clockwise,11,8,train
+vid_16_0048,Rotating something clockwise,11,8,train
+vid_16_0009,Rotating something clockwise,11,8,train
+vid_16_0049,Rotating something clockwise,11,8,train
+vid_16_0067,Rotating something clockwise,11,8,train
+vid_16_0015,Rotating something clockwise,11,8,train
+vid_16_0028,Rotating something clockwise,11,8,train
+vid_16_0024,Rotating something clockwise,11,8,train
+vid_16_0052,Rotating something clockwise,11,8,train
+vid_16_0011,Rotating something clockwise,11,8,train
+vid_16_0019,Rotating something clockwise,11,8,train
+vid_16_0035,Rotating something clockwise,11,8,train
+vid_16_0042,Rotating something clockwise,11,8,train
+vid_16_0083,Rotating something clockwise,11,8,train
+vid_16_0051,Rotating something clockwise,11,8,train
+vid_16_0065,Rotating something clockwise,11,8,train
+vid_16_0040,Rotating something clockwise,11,8,train
+vid_16_0096,Rotating something clockwise,11,8,train
+vid_16_0086,Rotating something clockwise,11,8,train
+vid_16_0017,Rotating something clockwise,11,8,train
+vid_16_0085,Rotating something clockwise,11,8,train
+vid_16_0079,Rotating something clockwise,11,8,train
+vid_16_0025,Rotating something clockwise,11,8,train
+vid_16_0056,Rotating something clockwise,11,8,train
+vid_16_0029,Rotating something clockwise,11,8,train
+vid_16_0093,Rotating something clockwise,11,8,train
+vid_16_0006,Rotating something clockwise,11,8,train
+vid_16_0087,Rotating something clockwise,11,8,train
+vid_16_0007,Rotating something clockwise,11,8,train
+vid_16_0033,Rotating something clockwise,11,8,train
+vid_16_0016,Rotating something clockwise,11,8,train
+vid_16_0044,Rotating something clockwise,11,8,train
+vid_16_0021,Rotating something clockwise,11,8,train
+vid_16_0004,Rotating something clockwise,11,8,train
+vid_16_0003,Rotating something clockwise,11,8,train
+vid_16_0097,Rotating something clockwise,11,8,train
+vid_16_0046,Rotating something clockwise,11,8,train
+vid_16_0066,Rotating something clockwise,11,8,train
+vid_16_0095,Rotating something clockwise,11,8,train
+vid_16_0061,Rotating something clockwise,11,8,train
+vid_16_0091,Rotating something clockwise,11,8,train
+vid_16_0064,Rotating something clockwise,11,8,train
+vid_16_0058,Rotating something clockwise,11,8,train
+vid_16_0027,Rotating something clockwise,11,8,train
+vid_16_0078,Rotating something clockwise,11,8,train
+vid_17_0003,Rotating something counter-clockwise,12,8,test
+vid_17_0072,Rotating something counter-clockwise,12,8,test
+vid_17_0058,Rotating something counter-clockwise,12,8,test
+vid_17_0022,Rotating something counter-clockwise,12,8,test
+vid_17_0029,Rotating something counter-clockwise,12,8,test
+vid_17_0039,Rotating something counter-clockwise,12,8,test
+vid_17_0097,Rotating something counter-clockwise,12,8,test
+vid_17_0067,Rotating something counter-clockwise,12,8,test
+vid_17_0030,Rotating something counter-clockwise,12,8,test
+vid_17_0005,Rotating something counter-clockwise,12,8,test
+vid_17_0020,Rotating something counter-clockwise,12,8,test
+vid_17_0050,Rotating something counter-clockwise,12,8,test
+vid_17_0019,Rotating something counter-clockwise,12,8,test
+vid_17_0036,Rotating something counter-clockwise,12,8,test
+vid_17_0055,Rotating something counter-clockwise,12,8,test
+vid_17_0085,Rotating something counter-clockwise,12,8,val
+vid_17_0041,Rotating something counter-clockwise,12,8,val
+vid_17_0016,Rotating something counter-clockwise,12,8,val
+vid_17_0090,Rotating something counter-clockwise,12,8,val
+vid_17_0002,Rotating something counter-clockwise,12,8,val
+vid_17_0032,Rotating something counter-clockwise,12,8,val
+vid_17_0045,Rotating something counter-clockwise,12,8,val
+vid_17_0068,Rotating something counter-clockwise,12,8,val
+vid_17_0006,Rotating something counter-clockwise,12,8,val
+vid_17_0009,Rotating something counter-clockwise,12,8,val
+vid_17_0095,Rotating something counter-clockwise,12,8,val
+vid_17_0047,Rotating something counter-clockwise,12,8,val
+vid_17_0084,Rotating something counter-clockwise,12,8,val
+vid_17_0083,Rotating something counter-clockwise,12,8,val
+vid_17_0094,Rotating something counter-clockwise,12,8,val
+vid_17_0099,Rotating something counter-clockwise,12,8,train
+vid_17_0023,Rotating something counter-clockwise,12,8,train
+vid_17_0077,Rotating something counter-clockwise,12,8,train
+vid_17_0027,Rotating something counter-clockwise,12,8,train
+vid_17_0087,Rotating something counter-clockwise,12,8,train
+vid_17_0086,Rotating something counter-clockwise,12,8,train
+vid_17_0021,Rotating something counter-clockwise,12,8,train
+vid_17_0078,Rotating something counter-clockwise,12,8,train
+vid_17_0089,Rotating something counter-clockwise,12,8,train
+vid_17_0031,Rotating something counter-clockwise,12,8,train
+vid_17_0052,Rotating something counter-clockwise,12,8,train
+vid_17_0096,Rotating something counter-clockwise,12,8,train
+vid_17_0040,Rotating something counter-clockwise,12,8,train
+vid_17_0051,Rotating something counter-clockwise,12,8,train
+vid_17_0075,Rotating something counter-clockwise,12,8,train
+vid_17_0049,Rotating something counter-clockwise,12,8,train
+vid_17_0080,Rotating something counter-clockwise,12,8,train
+vid_17_0081,Rotating something counter-clockwise,12,8,train
+vid_17_0054,Rotating something counter-clockwise,12,8,train
+vid_17_0092,Rotating something counter-clockwise,12,8,train
+vid_17_0013,Rotating something counter-clockwise,12,8,train
+vid_17_0044,Rotating something counter-clockwise,12,8,train
+vid_17_0059,Rotating something counter-clockwise,12,8,train
+vid_17_0015,Rotating something counter-clockwise,12,8,train
+vid_17_0024,Rotating something counter-clockwise,12,8,train
+vid_17_0008,Rotating something counter-clockwise,12,8,train
+vid_17_0060,Rotating something counter-clockwise,12,8,train
+vid_17_0082,Rotating something counter-clockwise,12,8,train
+vid_17_0010,Rotating something counter-clockwise,12,8,train
+vid_17_0065,Rotating something counter-clockwise,12,8,train
+vid_17_0064,Rotating something counter-clockwise,12,8,train
+vid_17_0014,Rotating something counter-clockwise,12,8,train
+vid_17_0000,Rotating something counter-clockwise,12,8,train
+vid_17_0074,Rotating something counter-clockwise,12,8,train
+vid_17_0046,Rotating something counter-clockwise,12,8,train
+vid_17_0001,Rotating something counter-clockwise,12,8,train
+vid_17_0088,Rotating something counter-clockwise,12,8,train
+vid_17_0004,Rotating something counter-clockwise,12,8,train
+vid_17_0098,Rotating something counter-clockwise,12,8,train
+vid_17_0035,Rotating something counter-clockwise,12,8,train
+vid_17_0033,Rotating something counter-clockwise,12,8,train
+vid_17_0012,Rotating something counter-clockwise,12,8,train
+vid_17_0018,Rotating something counter-clockwise,12,8,train
+vid_17_0079,Rotating something counter-clockwise,12,8,train
+vid_17_0034,Rotating something counter-clockwise,12,8,train
+vid_17_0053,Rotating something counter-clockwise,12,8,train
+vid_17_0037,Rotating something counter-clockwise,12,8,train
+vid_17_0066,Rotating something counter-clockwise,12,8,train
+vid_17_0043,Rotating something counter-clockwise,12,8,train
+vid_17_0069,Rotating something counter-clockwise,12,8,train
+vid_17_0011,Rotating something counter-clockwise,12,8,train
+vid_17_0076,Rotating something counter-clockwise,12,8,train
+vid_17_0091,Rotating something counter-clockwise,12,8,train
+vid_17_0070,Rotating something counter-clockwise,12,8,train
+vid_17_0063,Rotating something counter-clockwise,12,8,train
+vid_17_0007,Rotating something counter-clockwise,12,8,train
+vid_17_0025,Rotating something counter-clockwise,12,8,train
+vid_17_0026,Rotating something counter-clockwise,12,8,train
+vid_17_0093,Rotating something counter-clockwise,12,8,train
+vid_17_0073,Rotating something counter-clockwise,12,8,train
+vid_17_0042,Rotating something counter-clockwise,12,8,train
+vid_17_0057,Rotating something counter-clockwise,12,8,train
+vid_17_0028,Rotating something counter-clockwise,12,8,train
+vid_17_0048,Rotating something counter-clockwise,12,8,train
+vid_17_0062,Rotating something counter-clockwise,12,8,train
+vid_17_0061,Rotating something counter-clockwise,12,8,train
+vid_17_0038,Rotating something counter-clockwise,12,8,train
+vid_17_0071,Rotating something counter-clockwise,12,8,train
+vid_17_0056,Rotating something counter-clockwise,12,8,train
+vid_17_0017,Rotating something counter-clockwise,12,8,train
+vid_15_0078,Standing something upright,13,8,test
+vid_15_0055,Standing something upright,13,8,test
+vid_15_0090,Standing something upright,13,8,test
+vid_15_0050,Standing something upright,13,8,test
+vid_15_0003,Standing something upright,13,8,test
+vid_15_0044,Standing something upright,13,8,test
+vid_15_0017,Standing something upright,13,8,test
+vid_15_0047,Standing something upright,13,8,test
+vid_15_0077,Standing something upright,13,8,test
+vid_15_0036,Standing something upright,13,8,test
+vid_15_0018,Standing something upright,13,8,test
+vid_15_0016,Standing something upright,13,8,test
+vid_15_0031,Standing something upright,13,8,test
+vid_15_0046,Standing something upright,13,8,test
+vid_15_0007,Standing something upright,13,8,test
+vid_15_0042,Standing something upright,13,8,val
+vid_15_0037,Standing something upright,13,8,val
+vid_15_0027,Standing something upright,13,8,val
+vid_15_0004,Standing something upright,13,8,val
+vid_15_0085,Standing something upright,13,8,val
+vid_15_0062,Standing something upright,13,8,val
+vid_15_0009,Standing something upright,13,8,val
+vid_15_0033,Standing something upright,13,8,val
+vid_15_0066,Standing something upright,13,8,val
+vid_15_0022,Standing something upright,13,8,val
+vid_15_0074,Standing something upright,13,8,val
+vid_15_0082,Standing something upright,13,8,val
+vid_15_0002,Standing something upright,13,8,val
+vid_15_0092,Standing something upright,13,8,val
+vid_15_0057,Standing something upright,13,8,val
+vid_15_0034,Standing something upright,13,8,train
+vid_15_0098,Standing something upright,13,8,train
+vid_15_0075,Standing something upright,13,8,train
+vid_15_0030,Standing something upright,13,8,train
+vid_15_0056,Standing something upright,13,8,train
+vid_15_0008,Standing something upright,13,8,train
+vid_15_0041,Standing something upright,13,8,train
+vid_15_0061,Standing something upright,13,8,train
+vid_15_0071,Standing something upright,13,8,train
+vid_15_0043,Standing something upright,13,8,train
+vid_15_0035,Standing something upright,13,8,train
+vid_15_0083,Standing something upright,13,8,train
+vid_15_0014,Standing something upright,13,8,train
+vid_15_0072,Standing something upright,13,8,train
+vid_15_0067,Standing something upright,13,8,train
+vid_15_0063,Standing something upright,13,8,train
+vid_15_0015,Standing something upright,13,8,train
+vid_15_0012,Standing something upright,13,8,train
+vid_15_0039,Standing something upright,13,8,train
+vid_15_0093,Standing something upright,13,8,train
+vid_15_0020,Standing something upright,13,8,train
+vid_15_0058,Standing something upright,13,8,train
+vid_15_0088,Standing something upright,13,8,train
+vid_15_0052,Standing something upright,13,8,train
+vid_15_0070,Standing something upright,13,8,train
+vid_15_0000,Standing something upright,13,8,train
+vid_15_0053,Standing something upright,13,8,train
+vid_15_0021,Standing something upright,13,8,train
+vid_15_0097,Standing something upright,13,8,train
+vid_15_0096,Standing something upright,13,8,train
+vid_15_0026,Standing something upright,13,8,train
+vid_15_0013,Standing something upright,13,8,train
+vid_15_0087,Standing something upright,13,8,train
+vid_15_0080,Standing something upright,13,8,train
+vid_15_0024,Standing something upright,13,8,train
+vid_15_0081,Standing something upright,13,8,train
+vid_15_0089,Standing something upright,13,8,train
+vid_15_0091,Standing something upright,13,8,train
+vid_15_0076,Standing something upright,13,8,train
+vid_15_0048,Standing something upright,13,8,train
+vid_15_0006,Standing something upright,13,8,train
+vid_15_0028,Standing something upright,13,8,train
+vid_15_0059,Standing something upright,13,8,train
+vid_15_0073,Standing something upright,13,8,train
+vid_15_0001,Standing something upright,13,8,train
+vid_15_0065,Standing something upright,13,8,train
+vid_15_0029,Standing something upright,13,8,train
+vid_15_0079,Standing something upright,13,8,train
+vid_15_0032,Standing something upright,13,8,train
+vid_15_0005,Standing something upright,13,8,train
+vid_15_0068,Standing something upright,13,8,train
+vid_15_0054,Standing something upright,13,8,train
+vid_15_0040,Standing something upright,13,8,train
+vid_15_0051,Standing something upright,13,8,train
+vid_15_0064,Standing something upright,13,8,train
+vid_15_0086,Standing something upright,13,8,train
+vid_15_0049,Standing something upright,13,8,train
+vid_15_0069,Standing something upright,13,8,train
+vid_15_0060,Standing something upright,13,8,train
+vid_15_0084,Standing something upright,13,8,train
+vid_15_0045,Standing something upright,13,8,train
+vid_15_0099,Standing something upright,13,8,train
+vid_15_0095,Standing something upright,13,8,train
+vid_15_0023,Standing something upright,13,8,train
+vid_15_0010,Standing something upright,13,8,train
+vid_15_0038,Standing something upright,13,8,train
+vid_15_0094,Standing something upright,13,8,train
+vid_15_0019,Standing something upright,13,8,train
+vid_15_0025,Standing something upright,13,8,train
+vid_15_0011,Standing something upright,13,8,train
+vid_11_0096,Taking something off of something,14,8,test
+vid_11_0020,Taking something off of something,14,8,test
+vid_11_0075,Taking something off of something,14,8,test
+vid_11_0022,Taking something off of something,14,8,test
+vid_11_0028,Taking something off of something,14,8,test
+vid_11_0018,Taking something off of something,14,8,test
+vid_11_0064,Taking something off of something,14,8,test
+vid_11_0051,Taking something off of something,14,8,test
+vid_11_0094,Taking something off of something,14,8,test
+vid_11_0007,Taking something off of something,14,8,test
+vid_11_0055,Taking something off of something,14,8,test
+vid_11_0009,Taking something off of something,14,8,test
+vid_11_0092,Taking something off of something,14,8,test
+vid_11_0078,Taking something off of something,14,8,test
+vid_11_0072,Taking something off of something,14,8,test
+vid_11_0041,Taking something off of something,14,8,val
+vid_11_0059,Taking something off of something,14,8,val
+vid_11_0091,Taking something off of something,14,8,val
+vid_11_0010,Taking something off of something,14,8,val
+vid_11_0005,Taking something off of something,14,8,val
+vid_11_0065,Taking something off of something,14,8,val
+vid_11_0098,Taking something off of something,14,8,val
+vid_11_0021,Taking something off of something,14,8,val
+vid_11_0030,Taking something off of something,14,8,val
+vid_11_0076,Taking something off of something,14,8,val
+vid_11_0014,Taking something off of something,14,8,val
+vid_11_0016,Taking something off of something,14,8,val
+vid_11_0034,Taking something off of something,14,8,val
+vid_11_0050,Taking something off of something,14,8,val
+vid_11_0095,Taking something off of something,14,8,val
+vid_11_0015,Taking something off of something,14,8,train
+vid_11_0046,Taking something off of something,14,8,train
+vid_11_0061,Taking something off of something,14,8,train
+vid_11_0088,Taking something off of something,14,8,train
+vid_11_0077,Taking something off of something,14,8,train
+vid_11_0048,Taking something off of something,14,8,train
+vid_11_0054,Taking something off of something,14,8,train
+vid_11_0039,Taking something off of something,14,8,train
+vid_11_0036,Taking something off of something,14,8,train
+vid_11_0044,Taking something off of something,14,8,train
+vid_11_0062,Taking something off of something,14,8,train
+vid_11_0037,Taking something off of something,14,8,train
+vid_11_0080,Taking something off of something,14,8,train
+vid_11_0058,Taking something off of something,14,8,train
+vid_11_0000,Taking something off of something,14,8,train
+vid_11_0063,Taking something off of something,14,8,train
+vid_11_0040,Taking something off of something,14,8,train
+vid_11_0093,Taking something off of something,14,8,train
+vid_11_0035,Taking something off of something,14,8,train
+vid_11_0097,Taking something off of something,14,8,train
+vid_11_0052,Taking something off of something,14,8,train
+vid_11_0067,Taking something off of something,14,8,train
+vid_11_0011,Taking something off of something,14,8,train
+vid_11_0085,Taking something off of something,14,8,train
+vid_11_0033,Taking something off of something,14,8,train
+vid_11_0013,Taking something off of something,14,8,train
+vid_11_0070,Taking something off of something,14,8,train
+vid_11_0004,Taking something off of something,14,8,train
+vid_11_0042,Taking something off of something,14,8,train
+vid_11_0057,Taking something off of something,14,8,train
+vid_11_0086,Taking something off of something,14,8,train
+vid_11_0024,Taking something off of something,14,8,train
+vid_11_0045,Taking something off of something,14,8,train
+vid_11_0068,Taking something off of something,14,8,train
+vid_11_0056,Taking something off of something,14,8,train
+vid_11_0027,Taking something off of something,14,8,train
+vid_11_0025,Taking something off of something,14,8,train
+vid_11_0089,Taking something off of something,14,8,train
+vid_11_0023,Taking something off of something,14,8,train
+vid_11_0031,Taking something off of something,14,8,train
+vid_11_0087,Taking something off of something,14,8,train
+vid_11_0019,Taking something off of something,14,8,train
+vid_11_0003,Taking something off of something,14,8,train
+vid_11_0049,Taking something off of something,14,8,train
+vid_11_0017,Taking something off of something,14,8,train
+vid_11_0099,Taking something off of something,14,8,train
+vid_11_0074,Taking something off of something,14,8,train
+vid_11_0006,Taking something off of something,14,8,train
+vid_11_0081,Taking something off of something,14,8,train
+vid_11_0084,Taking something off of something,14,8,train
+vid_11_0002,Taking something off of something,14,8,train
+vid_11_0026,Taking something off of something,14,8,train
+vid_11_0073,Taking something off of something,14,8,train
+vid_11_0032,Taking something off of something,14,8,train
+vid_11_0082,Taking something off of something,14,8,train
+vid_11_0043,Taking something off of something,14,8,train
+vid_11_0008,Taking something off of something,14,8,train
+vid_11_0079,Taking something off of something,14,8,train
+vid_11_0047,Taking something off of something,14,8,train
+vid_11_0012,Taking something off of something,14,8,train
+vid_11_0029,Taking something off of something,14,8,train
+vid_11_0090,Taking something off of something,14,8,train
+vid_11_0053,Taking something off of something,14,8,train
+vid_11_0069,Taking something off of something,14,8,train
+vid_11_0038,Taking something off of something,14,8,train
+vid_11_0066,Taking something off of something,14,8,train
+vid_11_0083,Taking something off of something,14,8,train
+vid_11_0060,Taking something off of something,14,8,train
+vid_11_0001,Taking something off of something,14,8,train
+vid_11_0071,Taking something off of something,14,8,train
+vid_19_0082,Taking something out of something,15,8,test
+vid_19_0014,Taking something out of something,15,8,test
+vid_19_0091,Taking something out of something,15,8,test
+vid_19_0073,Taking something out of something,15,8,test
+vid_19_0006,Taking something out of something,15,8,test
+vid_19_0031,Taking something out of something,15,8,test
+vid_19_0010,Taking something out of something,15,8,test
+vid_19_0020,Taking something out of something,15,8,test
+vid_19_0092,Taking something out of something,15,8,test
+vid_19_0012,Taking something out of something,15,8,test
+vid_19_0058,Taking something out of something,15,8,test
+vid_19_0059,Taking something out of something,15,8,test
+vid_19_0052,Taking something out of something,15,8,test
+vid_19_0011,Taking something out of something,15,8,test
+vid_19_0009,Taking something out of something,15,8,test
+vid_19_0067,Taking something out of something,15,8,val
+vid_19_0007,Taking something out of something,15,8,val
+vid_19_0034,Taking something out of something,15,8,val
+vid_19_0097,Taking something out of something,15,8,val
+vid_19_0030,Taking something out of something,15,8,val
+vid_19_0027,Taking something out of something,15,8,val
+vid_19_0008,Taking something out of something,15,8,val
+vid_19_0056,Taking something out of something,15,8,val
+vid_19_0070,Taking something out of something,15,8,val
+vid_19_0044,Taking something out of something,15,8,val
+vid_19_0038,Taking something out of something,15,8,val
+vid_19_0004,Taking something out of something,15,8,val
+vid_19_0099,Taking something out of something,15,8,val
+vid_19_0045,Taking something out of something,15,8,val
+vid_19_0083,Taking something out of something,15,8,val
+vid_19_0064,Taking something out of something,15,8,train
+vid_19_0016,Taking something out of something,15,8,train
+vid_19_0043,Taking something out of something,15,8,train
+vid_19_0023,Taking something out of something,15,8,train
+vid_19_0084,Taking something out of something,15,8,train
+vid_19_0090,Taking something out of something,15,8,train
+vid_19_0053,Taking something out of something,15,8,train
+vid_19_0076,Taking something out of something,15,8,train
+vid_19_0049,Taking something out of something,15,8,train
+vid_19_0036,Taking something out of something,15,8,train
+vid_19_0035,Taking something out of something,15,8,train
+vid_19_0051,Taking something out of something,15,8,train
+vid_19_0086,Taking something out of something,15,8,train
+vid_19_0033,Taking something out of something,15,8,train
+vid_19_0080,Taking something out of something,15,8,train
+vid_19_0085,Taking something out of something,15,8,train
+vid_19_0039,Taking something out of something,15,8,train
+vid_19_0003,Taking something out of something,15,8,train
+vid_19_0024,Taking something out of something,15,8,train
+vid_19_0001,Taking something out of something,15,8,train
+vid_19_0060,Taking something out of something,15,8,train
+vid_19_0029,Taking something out of something,15,8,train
+vid_19_0040,Taking something out of something,15,8,train
+vid_19_0000,Taking something out of something,15,8,train
+vid_19_0063,Taking something out of something,15,8,train
+vid_19_0026,Taking something out of something,15,8,train
+vid_19_0079,Taking something out of something,15,8,train
+vid_19_0042,Taking something out of something,15,8,train
+vid_19_0025,Taking something out of something,15,8,train
+vid_19_0071,Taking something out of something,15,8,train
+vid_19_0068,Taking something out of something,15,8,train
+vid_19_0057,Taking something out of something,15,8,train
+vid_19_0015,Taking something out of something,15,8,train
+vid_19_0094,Taking something out of something,15,8,train
+vid_19_0046,Taking something out of something,15,8,train
+vid_19_0089,Taking something out of something,15,8,train
+vid_19_0022,Taking something out of something,15,8,train
+vid_19_0093,Taking something out of something,15,8,train
+vid_19_0054,Taking something out of something,15,8,train
+vid_19_0019,Taking something out of something,15,8,train
+vid_19_0088,Taking something out of something,15,8,train
+vid_19_0078,Taking something out of something,15,8,train
+vid_19_0018,Taking something out of something,15,8,train
+vid_19_0072,Taking something out of something,15,8,train
+vid_19_0017,Taking something out of something,15,8,train
+vid_19_0032,Taking something out of something,15,8,train
+vid_19_0069,Taking something out of something,15,8,train
+vid_19_0062,Taking something out of something,15,8,train
+vid_19_0074,Taking something out of something,15,8,train
+vid_19_0013,Taking something out of something,15,8,train
+vid_19_0050,Taking something out of something,15,8,train
+vid_19_0087,Taking something out of something,15,8,train
+vid_19_0098,Taking something out of something,15,8,train
+vid_19_0096,Taking something out of something,15,8,train
+vid_19_0066,Taking something out of something,15,8,train
+vid_19_0021,Taking something out of something,15,8,train
+vid_19_0095,Taking something out of something,15,8,train
+vid_19_0048,Taking something out of something,15,8,train
+vid_19_0081,Taking something out of something,15,8,train
+vid_19_0055,Taking something out of something,15,8,train
+vid_19_0037,Taking something out of something,15,8,train
+vid_19_0061,Taking something out of something,15,8,train
+vid_19_0041,Taking something out of something,15,8,train
+vid_19_0065,Taking something out of something,15,8,train
+vid_19_0028,Taking something out of something,15,8,train
+vid_19_0002,Taking something out of something,15,8,train
+vid_19_0077,Taking something out of something,15,8,train
+vid_19_0075,Taking something out of something,15,8,train
+vid_19_0047,Taking something out of something,15,8,train
+vid_19_0005,Taking something out of something,15,8,train
+vid_14_0034,Tipping something over,16,8,test
+vid_14_0063,Tipping something over,16,8,test
+vid_14_0041,Tipping something over,16,8,test
+vid_14_0056,Tipping something over,16,8,test
+vid_14_0031,Tipping something over,16,8,test
+vid_14_0092,Tipping something over,16,8,test
+vid_14_0087,Tipping something over,16,8,test
+vid_14_0003,Tipping something over,16,8,test
+vid_14_0000,Tipping something over,16,8,test
+vid_14_0054,Tipping something over,16,8,test
+vid_14_0072,Tipping something over,16,8,test
+vid_14_0079,Tipping something over,16,8,test
+vid_14_0061,Tipping something over,16,8,test
+vid_14_0085,Tipping something over,16,8,test
+vid_14_0011,Tipping something over,16,8,test
+vid_14_0035,Tipping something over,16,8,val
+vid_14_0020,Tipping something over,16,8,val
+vid_14_0097,Tipping something over,16,8,val
+vid_14_0055,Tipping something over,16,8,val
+vid_14_0076,Tipping something over,16,8,val
+vid_14_0059,Tipping something over,16,8,val
+vid_14_0066,Tipping something over,16,8,val
+vid_14_0093,Tipping something over,16,8,val
+vid_14_0002,Tipping something over,16,8,val
+vid_14_0083,Tipping something over,16,8,val
+vid_14_0042,Tipping something over,16,8,val
+vid_14_0058,Tipping something over,16,8,val
+vid_14_0071,Tipping something over,16,8,val
+vid_14_0019,Tipping something over,16,8,val
+vid_14_0044,Tipping something over,16,8,val
+vid_14_0084,Tipping something over,16,8,train
+vid_14_0029,Tipping something over,16,8,train
+vid_14_0081,Tipping something over,16,8,train
+vid_14_0089,Tipping something over,16,8,train
+vid_14_0018,Tipping something over,16,8,train
+vid_14_0050,Tipping something over,16,8,train
+vid_14_0096,Tipping something over,16,8,train
+vid_14_0021,Tipping something over,16,8,train
+vid_14_0040,Tipping something over,16,8,train
+vid_14_0069,Tipping something over,16,8,train
+vid_14_0065,Tipping something over,16,8,train
+vid_14_0032,Tipping something over,16,8,train
+vid_14_0030,Tipping something over,16,8,train
+vid_14_0006,Tipping something over,16,8,train
+vid_14_0075,Tipping something over,16,8,train
+vid_14_0049,Tipping something over,16,8,train
+vid_14_0016,Tipping something over,16,8,train
+vid_14_0080,Tipping something over,16,8,train
+vid_14_0014,Tipping something over,16,8,train
+vid_14_0077,Tipping something over,16,8,train
+vid_14_0090,Tipping something over,16,8,train
+vid_14_0052,Tipping something over,16,8,train
+vid_14_0008,Tipping something over,16,8,train
+vid_14_0028,Tipping something over,16,8,train
+vid_14_0095,Tipping something over,16,8,train
+vid_14_0010,Tipping something over,16,8,train
+vid_14_0067,Tipping something over,16,8,train
+vid_14_0043,Tipping something over,16,8,train
+vid_14_0073,Tipping something over,16,8,train
+vid_14_0015,Tipping something over,16,8,train
+vid_14_0046,Tipping something over,16,8,train
+vid_14_0068,Tipping something over,16,8,train
+vid_14_0064,Tipping something over,16,8,train
+vid_14_0022,Tipping something over,16,8,train
+vid_14_0039,Tipping something over,16,8,train
+vid_14_0037,Tipping something over,16,8,train
+vid_14_0023,Tipping something over,16,8,train
+vid_14_0004,Tipping something over,16,8,train
+vid_14_0038,Tipping something over,16,8,train
+vid_14_0017,Tipping something over,16,8,train
+vid_14_0012,Tipping something over,16,8,train
+vid_14_0007,Tipping something over,16,8,train
+vid_14_0047,Tipping something over,16,8,train
+vid_14_0048,Tipping something over,16,8,train
+vid_14_0070,Tipping something over,16,8,train
+vid_14_0086,Tipping something over,16,8,train
+vid_14_0009,Tipping something over,16,8,train
+vid_14_0060,Tipping something over,16,8,train
+vid_14_0027,Tipping something over,16,8,train
+vid_14_0062,Tipping something over,16,8,train
+vid_14_0001,Tipping something over,16,8,train
+vid_14_0013,Tipping something over,16,8,train
+vid_14_0099,Tipping something over,16,8,train
+vid_14_0088,Tipping something over,16,8,train
+vid_14_0053,Tipping something over,16,8,train
+vid_14_0078,Tipping something over,16,8,train
+vid_14_0091,Tipping something over,16,8,train
+vid_14_0033,Tipping something over,16,8,train
+vid_14_0036,Tipping something over,16,8,train
+vid_14_0045,Tipping something over,16,8,train
+vid_14_0051,Tipping something over,16,8,train
+vid_14_0057,Tipping something over,16,8,train
+vid_14_0024,Tipping something over,16,8,train
+vid_14_0005,Tipping something over,16,8,train
+vid_14_0098,Tipping something over,16,8,train
+vid_14_0082,Tipping something over,16,8,train
+vid_14_0094,Tipping something over,16,8,train
+vid_14_0026,Tipping something over,16,8,train
+vid_14_0025,Tipping something over,16,8,train
+vid_14_0074,Tipping something over,16,8,train
+vid_08_0092,Turning the camera left while filming something,17,8,test
+vid_08_0026,Turning the camera left while filming something,17,8,test
+vid_08_0045,Turning the camera left while filming something,17,8,test
+vid_08_0096,Turning the camera left while filming something,17,8,test
+vid_08_0041,Turning the camera left while filming something,17,8,test
+vid_08_0004,Turning the camera left while filming something,17,8,test
+vid_08_0085,Turning the camera left while filming something,17,8,test
+vid_08_0029,Turning the camera left while filming something,17,8,test
+vid_08_0037,Turning the camera left while filming something,17,8,test
+vid_08_0031,Turning the camera left while filming something,17,8,test
+vid_08_0076,Turning the camera left while filming something,17,8,test
+vid_08_0052,Turning the camera left while filming something,17,8,test
+vid_08_0054,Turning the camera left while filming something,17,8,test
+vid_08_0056,Turning the camera left while filming something,17,8,test
+vid_08_0086,Turning the camera left while filming something,17,8,test
+vid_08_0064,Turning the camera left while filming something,17,8,val
+vid_08_0088,Turning the camera left while filming something,17,8,val
+vid_08_0075,Turning the camera left while filming something,17,8,val
+vid_08_0084,Turning the camera left while filming something,17,8,val
+vid_08_0035,Turning the camera left while filming something,17,8,val
+vid_08_0072,Turning the camera left while filming something,17,8,val
+vid_08_0063,Turning the camera left while filming something,17,8,val
+vid_08_0044,Turning the camera left while filming something,17,8,val
+vid_08_0051,Turning the camera left while filming something,17,8,val
+vid_08_0027,Turning the camera left while filming something,17,8,val
+vid_08_0030,Turning the camera left while filming something,17,8,val
+vid_08_0082,Turning the camera left while filming something,17,8,val
+vid_08_0007,Turning the camera left while filming something,17,8,val
+vid_08_0006,Turning the camera left while filming something,17,8,val
+vid_08_0094,Turning the camera left while filming something,17,8,val
+vid_08_0015,Turning the camera left while filming something,17,8,train
+vid_08_0060,Turning the camera left while filming something,17,8,train
+vid_08_0009,Turning the camera left while filming something,17,8,train
+vid_08_0089,Turning the camera left while filming something,17,8,train
+vid_08_0016,Turning the camera left while filming something,17,8,train
+vid_08_0023,Turning the camera left while filming something,17,8,train
+vid_08_0050,Turning the camera left while filming something,17,8,train
+vid_08_0053,Turning the camera left while filming something,17,8,train
+vid_08_0069,Turning the camera left while filming something,17,8,train
+vid_08_0046,Turning the camera left while filming something,17,8,train
+vid_08_0073,Turning the camera left while filming something,17,8,train
+vid_08_0003,Turning the camera left while filming something,17,8,train
+vid_08_0059,Turning the camera left while filming something,17,8,train
+vid_08_0065,Turning the camera left while filming something,17,8,train
+vid_08_0019,Turning the camera left while filming something,17,8,train
+vid_08_0057,Turning the camera left while filming something,17,8,train
+vid_08_0080,Turning the camera left while filming something,17,8,train
+vid_08_0033,Turning the camera left while filming something,17,8,train
+vid_08_0061,Turning the camera left while filming something,17,8,train
+vid_08_0077,Turning the camera left while filming something,17,8,train
+vid_08_0066,Turning the camera left while filming something,17,8,train
+vid_08_0034,Turning the camera left while filming something,17,8,train
+vid_08_0018,Turning the camera left while filming something,17,8,train
+vid_08_0099,Turning the camera left while filming something,17,8,train
+vid_08_0070,Turning the camera left while filming something,17,8,train
+vid_08_0049,Turning the camera left while filming something,17,8,train
+vid_08_0000,Turning the camera left while filming something,17,8,train
+vid_08_0025,Turning the camera left while filming something,17,8,train
+vid_08_0042,Turning the camera left while filming something,17,8,train
+vid_08_0008,Turning the camera left while filming something,17,8,train
+vid_08_0036,Turning the camera left while filming something,17,8,train
+vid_08_0021,Turning the camera left while filming something,17,8,train
+vid_08_0055,Turning the camera left while filming something,17,8,train
+vid_08_0013,Turning the camera left while filming something,17,8,train
+vid_08_0078,Turning the camera left while filming something,17,8,train
+vid_08_0097,Turning the camera left while filming something,17,8,train
+vid_08_0032,Turning the camera left while filming something,17,8,train
+vid_08_0071,Turning the camera left while filming something,17,8,train
+vid_08_0098,Turning the camera left while filming something,17,8,train
+vid_08_0024,Turning the camera left while filming something,17,8,train
+vid_08_0081,Turning the camera left while filming something,17,8,train
+vid_08_0011,Turning the camera left while filming something,17,8,train
+vid_08_0039,Turning the camera left while filming something,17,8,train
+vid_08_0040,Turning the camera left while filming something,17,8,train
+vid_08_0005,Turning the camera left while filming something,17,8,train
+vid_08_0047,Turning the camera left while filming something,17,8,train
+vid_08_0012,Turning the camera left while filming something,17,8,train
+vid_08_0014,Turning the camera left while filming something,17,8,train
+vid_08_0067,Turning the camera left while filming something,17,8,train
+vid_08_0022,Turning the camera left while filming something,17,8,train
+vid_08_0043,Turning the camera left while filming something,17,8,train
+vid_08_0074,Turning the camera left while filming something,17,8,train
+vid_08_0020,Turning the camera left while filming something,17,8,train
+vid_08_0093,Turning the camera left while filming something,17,8,train
+vid_08_0068,Turning the camera left while filming something,17,8,train
+vid_08_0090,Turning the camera left while filming something,17,8,train
+vid_08_0048,Turning the camera left while filming something,17,8,train
+vid_08_0062,Turning the camera left while filming something,17,8,train
+vid_08_0001,Turning the camera left while filming something,17,8,train
+vid_08_0079,Turning the camera left while filming something,17,8,train
+vid_08_0087,Turning the camera left while filming something,17,8,train
+vid_08_0095,Turning the camera left while filming something,17,8,train
+vid_08_0091,Turning the camera left while filming something,17,8,train
+vid_08_0038,Turning the camera left while filming something,17,8,train
+vid_08_0017,Turning the camera left while filming something,17,8,train
+vid_08_0002,Turning the camera left while filming something,17,8,train
+vid_08_0058,Turning the camera left while filming something,17,8,train
+vid_08_0083,Turning the camera left while filming something,17,8,train
+vid_08_0010,Turning the camera left while filming something,17,8,train
+vid_08_0028,Turning the camera left while filming something,17,8,train
+vid_09_0027,Turning the camera right while filming something,18,8,test
+vid_09_0088,Turning the camera right while filming something,18,8,test
+vid_09_0009,Turning the camera right while filming something,18,8,test
+vid_09_0094,Turning the camera right while filming something,18,8,test
+vid_09_0018,Turning the camera right while filming something,18,8,test
+vid_09_0079,Turning the camera right while filming something,18,8,test
+vid_09_0015,Turning the camera right while filming something,18,8,test
+vid_09_0034,Turning the camera right while filming something,18,8,test
+vid_09_0055,Turning the camera right while filming something,18,8,test
+vid_09_0040,Turning the camera right while filming something,18,8,test
+vid_09_0003,Turning the camera right while filming something,18,8,test
+vid_09_0070,Turning the camera right while filming something,18,8,test
+vid_09_0069,Turning the camera right while filming something,18,8,test
+vid_09_0062,Turning the camera right while filming something,18,8,test
+vid_09_0004,Turning the camera right while filming something,18,8,test
+vid_09_0048,Turning the camera right while filming something,18,8,val
+vid_09_0000,Turning the camera right while filming something,18,8,val
+vid_09_0067,Turning the camera right while filming something,18,8,val
+vid_09_0058,Turning the camera right while filming something,18,8,val
+vid_09_0077,Turning the camera right while filming something,18,8,val
+vid_09_0093,Turning the camera right while filming something,18,8,val
+vid_09_0075,Turning the camera right while filming something,18,8,val
+vid_09_0025,Turning the camera right while filming something,18,8,val
+vid_09_0010,Turning the camera right while filming something,18,8,val
+vid_09_0051,Turning the camera right while filming something,18,8,val
+vid_09_0026,Turning the camera right while filming something,18,8,val
+vid_09_0022,Turning the camera right while filming something,18,8,val
+vid_09_0017,Turning the camera right while filming something,18,8,val
+vid_09_0080,Turning the camera right while filming something,18,8,val
+vid_09_0054,Turning the camera right while filming something,18,8,val
+vid_09_0092,Turning the camera right while filming something,18,8,train
+vid_09_0091,Turning the camera right while filming something,18,8,train
+vid_09_0047,Turning the camera right while filming something,18,8,train
+vid_09_0044,Turning the camera right while filming something,18,8,train
+vid_09_0089,Turning the camera right while filming something,18,8,train
+vid_09_0098,Turning the camera right while filming something,18,8,train
+vid_09_0043,Turning the camera right while filming something,18,8,train
+vid_09_0064,Turning the camera right while filming something,18,8,train
+vid_09_0082,Turning the camera right while filming something,18,8,train
+vid_09_0068,Turning the camera right while filming something,18,8,train
+vid_09_0097,Turning the camera right while filming something,18,8,train
+vid_09_0050,Turning the camera right while filming something,18,8,train
+vid_09_0095,Turning the camera right while filming something,18,8,train
+vid_09_0084,Turning the camera right while filming something,18,8,train
+vid_09_0024,Turning the camera right while filming something,18,8,train
+vid_09_0087,Turning the camera right while filming something,18,8,train
+vid_09_0031,Turning the camera right while filming something,18,8,train
+vid_09_0020,Turning the camera right while filming something,18,8,train
+vid_09_0032,Turning the camera right while filming something,18,8,train
+vid_09_0007,Turning the camera right while filming something,18,8,train
+vid_09_0041,Turning the camera right while filming something,18,8,train
+vid_09_0066,Turning the camera right while filming something,18,8,train
+vid_09_0012,Turning the camera right while filming something,18,8,train
+vid_09_0056,Turning the camera right while filming something,18,8,train
+vid_09_0046,Turning the camera right while filming something,18,8,train
+vid_09_0074,Turning the camera right while filming something,18,8,train
+vid_09_0053,Turning the camera right while filming something,18,8,train
+vid_09_0078,Turning the camera right while filming something,18,8,train
+vid_09_0057,Turning the camera right while filming something,18,8,train
+vid_09_0045,Turning the camera right while filming something,18,8,train
+vid_09_0063,Turning the camera right while filming something,18,8,train
+vid_09_0014,Turning the camera right while filming something,18,8,train
+vid_09_0060,Turning the camera right while filming something,18,8,train
+vid_09_0008,Turning the camera right while filming something,18,8,train
+vid_09_0035,Turning the camera right while filming something,18,8,train
+vid_09_0083,Turning the camera right while filming something,18,8,train
+vid_09_0037,Turning the camera right while filming something,18,8,train
+vid_09_0028,Turning the camera right while filming something,18,8,train
+vid_09_0002,Turning the camera right while filming something,18,8,train
+vid_09_0076,Turning the camera right while filming something,18,8,train
+vid_09_0038,Turning the camera right while filming something,18,8,train
+vid_09_0013,Turning the camera right while filming something,18,8,train
+vid_09_0072,Turning the camera right while filming something,18,8,train
+vid_09_0006,Turning the camera right while filming something,18,8,train
+vid_09_0071,Turning the camera right while filming something,18,8,train
+vid_09_0065,Turning the camera right while filming something,18,8,train
+vid_09_0086,Turning the camera right while filming something,18,8,train
+vid_09_0099,Turning the camera right while filming something,18,8,train
+vid_09_0016,Turning the camera right while filming something,18,8,train
+vid_09_0021,Turning the camera right while filming something,18,8,train
+vid_09_0052,Turning the camera right while filming something,18,8,train
+vid_09_0001,Turning the camera right while filming something,18,8,train
+vid_09_0081,Turning the camera right while filming something,18,8,train
+vid_09_0030,Turning the camera right while filming something,18,8,train
+vid_09_0090,Turning the camera right while filming something,18,8,train
+vid_09_0049,Turning the camera right while filming something,18,8,train
+vid_09_0096,Turning the camera right while filming something,18,8,train
+vid_09_0023,Turning the camera right while filming something,18,8,train
+vid_09_0085,Turning the camera right while filming something,18,8,train
+vid_09_0011,Turning the camera right while filming something,18,8,train
+vid_09_0005,Turning the camera right while filming something,18,8,train
+vid_09_0042,Turning the camera right while filming something,18,8,train
+vid_09_0059,Turning the camera right while filming something,18,8,train
+vid_09_0061,Turning the camera right while filming something,18,8,train
+vid_09_0029,Turning the camera right while filming something,18,8,train
+vid_09_0033,Turning the camera right while filming something,18,8,train
+vid_09_0019,Turning the camera right while filming something,18,8,train
+vid_09_0073,Turning the camera right while filming something,18,8,train
+vid_09_0036,Turning the camera right while filming something,18,8,train
+vid_09_0039,Turning the camera right while filming something,18,8,train
+vid_12_0010,Uncovering something,19,8,test
+vid_12_0038,Uncovering something,19,8,test
+vid_12_0044,Uncovering something,19,8,test
+vid_12_0054,Uncovering something,19,8,test
+vid_12_0049,Uncovering something,19,8,test
+vid_12_0060,Uncovering something,19,8,test
+vid_12_0052,Uncovering something,19,8,test
+vid_12_0061,Uncovering something,19,8,test
+vid_12_0097,Uncovering something,19,8,test
+vid_12_0001,Uncovering something,19,8,test
+vid_12_0072,Uncovering something,19,8,test
+vid_12_0039,Uncovering something,19,8,test
+vid_12_0085,Uncovering something,19,8,test
+vid_12_0028,Uncovering something,19,8,test
+vid_12_0032,Uncovering something,19,8,test
+vid_12_0050,Uncovering something,19,8,val
+vid_12_0073,Uncovering something,19,8,val
+vid_12_0092,Uncovering something,19,8,val
+vid_12_0046,Uncovering something,19,8,val
+vid_12_0048,Uncovering something,19,8,val
+vid_12_0066,Uncovering something,19,8,val
+vid_12_0074,Uncovering something,19,8,val
+vid_12_0099,Uncovering something,19,8,val
+vid_12_0069,Uncovering something,19,8,val
+vid_12_0009,Uncovering something,19,8,val
+vid_12_0083,Uncovering something,19,8,val
+vid_12_0057,Uncovering something,19,8,val
+vid_12_0015,Uncovering something,19,8,val
+vid_12_0035,Uncovering something,19,8,val
+vid_12_0036,Uncovering something,19,8,val
+vid_12_0082,Uncovering something,19,8,train
+vid_12_0012,Uncovering something,19,8,train
+vid_12_0093,Uncovering something,19,8,train
+vid_12_0065,Uncovering something,19,8,train
+vid_12_0017,Uncovering something,19,8,train
+vid_12_0031,Uncovering something,19,8,train
+vid_12_0002,Uncovering something,19,8,train
+vid_12_0020,Uncovering something,19,8,train
+vid_12_0068,Uncovering something,19,8,train
+vid_12_0007,Uncovering something,19,8,train
+vid_12_0013,Uncovering something,19,8,train
+vid_12_0025,Uncovering something,19,8,train
+vid_12_0004,Uncovering something,19,8,train
+vid_12_0079,Uncovering something,19,8,train
+vid_12_0029,Uncovering something,19,8,train
+vid_12_0006,Uncovering something,19,8,train
+vid_12_0058,Uncovering something,19,8,train
+vid_12_0096,Uncovering something,19,8,train
+vid_12_0053,Uncovering something,19,8,train
+vid_12_0019,Uncovering something,19,8,train
+vid_12_0005,Uncovering something,19,8,train
+vid_12_0024,Uncovering something,19,8,train
+vid_12_0067,Uncovering something,19,8,train
+vid_12_0081,Uncovering something,19,8,train
+vid_12_0030,Uncovering something,19,8,train
+vid_12_0098,Uncovering something,19,8,train
+vid_12_0034,Uncovering something,19,8,train
+vid_12_0075,Uncovering something,19,8,train
+vid_12_0078,Uncovering something,19,8,train
+vid_12_0087,Uncovering something,19,8,train
+vid_12_0014,Uncovering something,19,8,train
+vid_12_0090,Uncovering something,19,8,train
+vid_12_0026,Uncovering something,19,8,train
+vid_12_0033,Uncovering something,19,8,train
+vid_12_0077,Uncovering something,19,8,train
+vid_12_0047,Uncovering something,19,8,train
+vid_12_0040,Uncovering something,19,8,train
+vid_12_0056,Uncovering something,19,8,train
+vid_12_0076,Uncovering something,19,8,train
+vid_12_0070,Uncovering something,19,8,train
+vid_12_0094,Uncovering something,19,8,train
+vid_12_0086,Uncovering something,19,8,train
+vid_12_0016,Uncovering something,19,8,train
+vid_12_0018,Uncovering something,19,8,train
+vid_12_0055,Uncovering something,19,8,train
+vid_12_0091,Uncovering something,19,8,train
+vid_12_0043,Uncovering something,19,8,train
+vid_12_0022,Uncovering something,19,8,train
+vid_12_0011,Uncovering something,19,8,train
+vid_12_0064,Uncovering something,19,8,train
+vid_12_0000,Uncovering something,19,8,train
+vid_12_0080,Uncovering something,19,8,train
+vid_12_0084,Uncovering something,19,8,train
+vid_12_0021,Uncovering something,19,8,train
+vid_12_0042,Uncovering something,19,8,train
+vid_12_0059,Uncovering something,19,8,train
+vid_12_0051,Uncovering something,19,8,train
+vid_12_0008,Uncovering something,19,8,train
+vid_12_0089,Uncovering something,19,8,train
+vid_12_0045,Uncovering something,19,8,train
+vid_12_0062,Uncovering something,19,8,train
+vid_12_0003,Uncovering something,19,8,train
+vid_12_0088,Uncovering something,19,8,train
+vid_12_0095,Uncovering something,19,8,train
+vid_12_0037,Uncovering something,19,8,train
+vid_12_0041,Uncovering something,19,8,train
+vid_12_0027,Uncovering something,19,8,train
+vid_12_0071,Uncovering something,19,8,train
+vid_12_0023,Uncovering something,19,8,train
+vid_12_0063,Uncovering something,19,8,train

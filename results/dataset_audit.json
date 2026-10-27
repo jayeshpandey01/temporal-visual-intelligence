@@ -1,0 +1,424 @@
+{
+  "dataset_root": "data",
+  "classes": {
+    "Closing something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 6,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Covering something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Moving something away from the camera": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 8,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Moving something towards the camera": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Opening something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Picking something up": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Pushing something from left to right": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Pushing something from right to left": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Putting something down": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Putting something into something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 5,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Putting something on top of something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Rotating something clockwise": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Rotating something counter-clockwise": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Standing something upright": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Taking something off of something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Taking something out of something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Tipping something over": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Turning the camera left while filming something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Turning the camera right while filming something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    },
+    "Uncovering something": {
+      "n_sequences": 100,
+      "frames_per_seq": {
+        "min": 8,
+        "max": 8,
+        "mean": 8.0,
+        "std": 0.0
+      },
+      "duplicate_frames_sampled": 0,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
+    }
+  },
+  "global": {
+    "total_sequences": 2000,
+    "total_classes": 20,
+    "class_imbalance_ratio": 1.0,
+    "frames_per_seq_global": {
+      "min": 8,
+      "max": 8,
+      "mean": 8.0
+    }
+  },
+  "checks": {
+    "1_missing_frame_continuity": "PASS",
+    "2_duplicate_frame_mse": "PASS",
+    "3_natural_ordering": "PASS",
+    "4_image_decode_health": "PASS",
+    "5_dimension_consistency": "PASS",
+    "6_label_integrity": "PASS",
+    "7_class_imbalance_ratio": "PASS"
+  }
+}
