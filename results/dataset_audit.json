@@ -400,16 +400,36 @@
           ]
         ]
       }
+    },
+    "tier2_real": {
+      "n_sequences": 3,
+      "frames_per_seq": {
+        "min": 60,
+        "max": 90,
+        "mean": 70.0,
+        "std": 14.142135623730951
+      },
+      "duplicate_frames_sampled": 1,
+      "index_gaps_sampled": 0,
+      "dimensions": {
+        "consistent": true,
+        "dimensions_found": [
+          [
+            224,
+            224
+          ]
+        ]
+      }
     }
   },
   "global": {
-    "total_sequences": 2000,
-    "total_classes": 20,
-    "class_imbalance_ratio": 1.0,
+    "total_sequences": 2003,
+    "total_classes": 21,
+    "class_imbalance_ratio": 33.333333333333336,
     "frames_per_seq_global": {
       "min": 8,
-      "max": 8,
-      "mean": 8.0
+      "max": 90,
+      "mean": 8.092860708936595
     }
   },
   "checks": {
@@ -419,6 +439,6 @@
     "4_image_decode_health": "PASS",
     "5_dimension_consistency": "PASS",
     "6_label_integrity": "PASS",
-    "7_class_imbalance_ratio": "PASS"
+    "7_class_imbalance_ratio": "WARN (33.33x)"
   }
 }
