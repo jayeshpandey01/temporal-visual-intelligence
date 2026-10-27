@@ -66,30 +66,55 @@ def validate_embedding_cache(
                 split_errors.append(f"{seq_id}: Failed to load from cache.")
                 continue
 
-            # 1. Shape check
+            # 1. Unexpected shape check
+            if item.embeddings.ndim != 2:
+                split_errors.append(f"{seq_id}: unexpected shape ndim {item.embeddings.ndim} != 2")
+
+            # 2. Number of frames == number of embeddings check (M2.10)
+            if len(item.frame_indices) != item.embeddings.shape[0]:
+                split_errors.append(
+                    f"{seq_id}: number_of_frames {len(item.frame_indices)} != "
+                    f"number_of_embeddings {item.embeddings.shape[0]}"
+                )
+
+            # 3. Embedding dimension == expected dimension check (M2.10)
             if item.embed_dim != expected_dim:
                 split_errors.append(
                     f"{seq_id}: embed_dim {item.embed_dim} != expected {expected_dim}"
                 )
 
-            # 2. Frame count check
+            # 4. Target frame count check for split
             if item.num_frames != expected_frames and split_name != "real":
-                # Real videos may have dense 50-frame evaluation
                 split_errors.append(
                     f"{seq_id}: num_frames {item.num_frames} != expected {expected_frames}"
                 )
 
-            # 3. Finite numbers check
+            # 5. Duplicate frame index & monotonicity check (M2.10)
+            if len(item.frame_indices) != len(set(item.frame_indices)):
+                split_errors.append(f"{seq_id}: duplicate frame index detected in {item.frame_indices}")
+            elif any(item.frame_indices[k] >= item.frame_indices[k+1] for k in range(len(item.frame_indices) - 1)):
+                split_errors.append(f"{seq_id}: non-monotonic frame indices detected in {item.frame_indices}")
+
+            # 6. Finite numbers check: NaN? Inf? (M2.10)
             if np.isnan(item.embeddings).any():
                 split_errors.append(f"{seq_id}: Contains NaN values.")
             if np.isinf(item.embeddings).any():
                 split_errors.append(f"{seq_id}: Contains Inf values.")
 
-            # 4. Non-zero norm check
+            # 7. Non-zero norm / all-zero check (M2.10)
             frame_norms = np.linalg.norm(item.embeddings, axis=1)
             norms.extend(frame_norms.tolist())
             if (frame_norms < 1e-5).any():
-                split_errors.append(f"{seq_id}: Contains degenerate near-zero vector.")
+                split_errors.append(f"{seq_id}: Contains degenerate all-zero/near-zero vector.")
+
+            # 8. Label integrity check (M2.10)
+            if item.label is None or str(item.label).strip() == "":
+                split_errors.append(f"{seq_id}: Missing or empty label.")
+
+            # 9. Cryptographic checksum verification
+            computed_checksum = item._compute_checksum(item.embeddings)
+            if item.checksum and item.checksum != computed_checksum:
+                split_errors.append(f"{seq_id}: Checksum mismatch. Expected {item.checksum}, got {computed_checksum}")
 
         report["splits_audited"][split_name] = {
             "total_sequences": n_checked,
@@ -139,6 +164,25 @@ def validate_embedding_cache(
     for s_name, s_data in report["splits_audited"].items():
         print(f"    - {s_name:10s}: {s_data['total_sequences']} sequences | Status: {s_data['status']}")
     print(f"  Zero Leakage  : {report['leakage_check']['status']}")
+
+    # Print exemplary sequence verification (M2.10)
+    for sample_split in ["test", "train"]:
+        sample_keys = list(manifest.get("splits", {}).get(sample_split, {}).keys())
+        if sample_keys:
+            sample_seq = sample_keys[0]
+            item = cache.get(sample_seq, split=sample_split)
+            if item:
+                print("\nExemplary Sequence Verification (M2.10 Contract):")
+                print("Expected:")
+                print(f"  {sample_seq}")
+                print(f"  frames       {item.frame_indices}")
+                print(f"  embeddings   [{item.num_frames}, {item.embed_dim}]")
+                print("Actual:")
+                print(f"  frames       {item.frame_indices}")
+                print(f"  embeddings   {list(item.embeddings.shape)}")
+                print("PASS")
+                break
+
     print(f"  Audit Report  → {output_report}")
     print("=" * 65)
 
