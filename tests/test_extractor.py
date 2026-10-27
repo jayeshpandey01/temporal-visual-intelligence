@@ -131,3 +131,4 @@ def test_extractor_rejection_empty_sequence(dummy_extractor_and_cache):
             frame_paths=[],
             label="action"
         )
+
