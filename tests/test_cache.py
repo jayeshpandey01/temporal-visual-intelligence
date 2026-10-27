@@ -109,3 +109,4 @@ def test_cache_manifest_synchronization(populated_cache):
     assert summary["splits"]["val"]["count"] == 2
     assert summary["splits"]["test"]["count"] == 2
     assert populated_cache.manifest_path.exists()
+
