@@ -76,6 +76,7 @@ def run_corruption_experiment(
     device: torch.device,
     corruption_fraction: float = 0.25,
     batch_size: int = 32,
+    seed: int = 42,
 ) -> Dict[str, Any]:
     """
     Compare baseline and temporal model robustness under frame corruption.
@@ -106,10 +107,18 @@ def run_corruption_experiment(
         # Corrupted performance
         for corrupt_mode in CORRUPTION_MODES:
             all_preds, all_labels = [], []
+            # Persistent generator per corruption mode to preserve entropy across batches
+            gen = torch.Generator(device='cpu')
+            gen.manual_seed(seed)
+
             with torch.no_grad():
                 for embeddings, labels in DataLoader(dataset, batch_size=batch_size, shuffle=False):
                     embeddings = embeddings.to(device)
-                    corrupted = apply_corruption(embeddings, corrupt_mode, corruption_fraction)
+                    corrupted = apply_corruption(
+                        embeddings, corrupt_mode,
+                        fraction=corruption_fraction,
+                        generator=gen
+                    )
                     logits = model(corrupted)
                     preds = logits.argmax(dim=-1)
                     all_preds.extend(preds.cpu().numpy())

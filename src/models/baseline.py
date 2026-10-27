@@ -15,7 +15,7 @@ the SAME optimizer, LR, weight decay, and seeds.
 
 import torch
 import torch.nn as nn
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 
 class SingleFrameMLP(nn.Module):
@@ -32,11 +32,13 @@ class SingleFrameMLP(nn.Module):
         hidden_dim: int = 256,
         num_classes: int = 20,
         dropout: float = 0.1,
+        anchor_mode: str = 'middle',
     ):
         super().__init__()
         self.embed_dim = embed_dim
         self.hidden_dim = hidden_dim
         self.num_classes = num_classes
+        self.anchor_mode = anchor_mode
 
         self.classifier = nn.Sequential(
             nn.Linear(embed_dim, hidden_dim),
@@ -54,19 +56,28 @@ class SingleFrameMLP(nn.Module):
                 if module.bias is not None:
                     nn.init.zeros_(module.bias)
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(self, x: torch.Tensor, anchor: Optional[str] = None) -> torch.Tensor:
         """
         Args:
             x: [B, D] — single frame embedding, OR
-               [B, T, D] — sequence (random frame during train, middle frame during eval)
+               [B, T, D] — sequence (random frame during train, anchor frame during eval)
+            anchor: optional override ('first' | 'middle' | 'last' | 'random')
         Returns:
             logits: [B, C]
         """
         if x.dim() == 3:
-            if self.training:
+            active_anchor = anchor or self.anchor_mode
+            if self.training and anchor is None:
                 t_idx = torch.randint(0, x.shape[1], (1,)).item()
                 x = x[:, t_idx, :]
-            else:
+            elif active_anchor == 'first':
+                x = x[:, 0, :]
+            elif active_anchor == 'last':
+                x = x[:, -1, :]
+            elif active_anchor == 'random':
+                t_idx = torch.randint(0, x.shape[1], (1,)).item()
+                x = x[:, t_idx, :]
+            else:  # 'middle' (default)
                 mid = x.shape[1] // 2
                 x = x[:, mid, :]
         return self.classifier(x)

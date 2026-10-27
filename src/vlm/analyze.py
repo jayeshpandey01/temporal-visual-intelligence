@@ -112,11 +112,26 @@ class GeminiVLM:
         self.model = genai.GenerativeModel(model)
         self.model_name = model
 
-    def query(self, frames: List[Image.Image], prompt: str) -> str:
-        """Send frames + prompt to Gemini, return text response."""
+    def query(self, frames: List[Image.Image], prompt: str, max_retries: int = 3) -> str:
+        """Send frames + prompt to Gemini, return text response with retry & safety handling."""
         content = frames + [prompt]
-        response = self.model.generate_content(content)
-        return response.text
+        for attempt in range(max_retries):
+            try:
+                response = self.model.generate_content(content)
+                try:
+                    return response.text
+                except (ValueError, AttributeError):
+                    if hasattr(response, 'candidates') and response.candidates:
+                        candidate = response.candidates[0]
+                        parts = getattr(candidate.content, 'parts', [])
+                        text_parts = [getattr(p, 'text', '') for p in parts if hasattr(p, 'text')]
+                        return "".join(text_parts)
+                    return ""
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise e
+                time.sleep(2 ** attempt)
+        return ""
 
 
 class OpenAIVLM:
@@ -136,7 +151,7 @@ class OpenAIVLM:
         self.client = OpenAI(api_key=api_key)
         self.model_name = model
 
-    def query(self, frames: List[Image.Image], prompt: str) -> str:
+    def query(self, frames: List[Image.Image], prompt: str, max_retries: int = 3) -> str:
         content = [{"type": "text", "text": prompt}]
         for frame in frames:
             b64 = pil_to_base64(frame)
@@ -145,12 +160,19 @@ class OpenAIVLM:
                 "image_url": {"url": f"data:image/jpeg;base64,{b64}", "detail": "low"},
             })
 
-        response = self.client.chat.completions.create(
-            model=self.model_name,
-            messages=[{"role": "user", "content": content}],
-            max_tokens=512,
-        )
-        return response.choices[0].message.content
+        for attempt in range(max_retries):
+            try:
+                response = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=[{"role": "user", "content": content}],
+                    max_tokens=512,
+                )
+                return response.choices[0].message.content or ""
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise e
+                time.sleep(2 ** attempt)
+        return ""
 
 
 def get_vlm_backend(config: Dict[str, Any]):

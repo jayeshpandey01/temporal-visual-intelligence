@@ -5,6 +5,11 @@ Tests model architectures, perturbations, metrics, and data structures.
 
 import os
 import sys
+from pathlib import Path
+
+# Add project root to sys.path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import yaml
 import pytest
 import numpy as np
@@ -34,10 +39,17 @@ def test_baseline_mlp_forward():
     out_2d = model(x_2d)
     assert out_2d.shape == (B, C)
 
-    # Test with 3D tensor [B, T, D] (should use middle frame)
+    # Test with 3D tensor [B, T, D] (should use middle frame by default in eval)
     x_3d = torch.randn(B, T, D)
+    model.eval()
     out_3d = model(x_3d)
     assert out_3d.shape == (B, C)
+
+    # Test anchor sensitivity modes
+    out_first = model(x_3d, anchor='first')
+    out_last = model(x_3d, anchor='last')
+    assert out_first.shape == (B, C)
+    assert out_last.shape == (B, C)
 
 
 def test_multiframe_meanpool_forward():
