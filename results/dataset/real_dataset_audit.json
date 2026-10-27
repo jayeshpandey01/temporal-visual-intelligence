@@ -2,7 +2,7 @@
   "dataset_root": "data/real_data",
   "classes": {
     "BMW_M4": {
-      "n_sequences": 10,
+      "n_sequences": 5,
       "frames_per_seq": {
         "min": 8,
         "max": 8,
@@ -22,14 +22,14 @@
       }
     },
     "Horse_running": {
-      "n_sequences": 10,
+      "n_sequences": 5,
       "frames_per_seq": {
         "min": 8,
         "max": 8,
         "mean": 8.0,
         "std": 0.0
       },
-      "duplicate_frames_sampled": 1,
+      "duplicate_frames_sampled": 0,
       "index_gaps_sampled": 0,
       "dimensions": {
         "consistent": true,
@@ -43,7 +43,7 @@
     }
   },
   "global": {
-    "total_sequences": 20,
+    "total_sequences": 10,
     "total_classes": 2,
     "class_imbalance_ratio": 1.0,
     "frames_per_seq_global": {

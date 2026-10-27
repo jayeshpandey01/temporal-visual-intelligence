@@ -402,12 +402,12 @@
       }
     },
     "tier2_real": {
-      "n_sequences": 3,
+      "n_sequences": 5,
       "frames_per_seq": {
-        "min": 60,
+        "min": 50,
         "max": 90,
-        "mean": 70.0,
-        "std": 14.142135623730951
+        "mean": 62.0,
+        "std": 14.696938456699069
       },
       "duplicate_frames_sampled": 1,
       "index_gaps_sampled": 0,
@@ -423,13 +423,13 @@
     }
   },
   "global": {
-    "total_sequences": 2003,
+    "total_sequences": 2005,
     "total_classes": 21,
-    "class_imbalance_ratio": 33.333333333333336,
+    "class_imbalance_ratio": 20.0,
     "frames_per_seq_global": {
       "min": 8,
       "max": 90,
-      "mean": 8.092860708936595
+      "mean": 8.134663341645885
     }
   },
   "checks": {
@@ -439,6 +439,6 @@
     "4_image_decode_health": "PASS",
     "5_dimension_consistency": "PASS",
     "6_label_integrity": "PASS",
-    "7_class_imbalance_ratio": "WARN (33.33x)"
+    "7_class_imbalance_ratio": "WARN (20.00x)"
   }
 }

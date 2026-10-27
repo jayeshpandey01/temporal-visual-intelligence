@@ -2,34 +2,24 @@
   "seed": 42,
   "train": [
     "BMW_M4_clip_0001",
-    "BMW_M4_clip_0002",
+    "BMW_M4_clip_0003",
     "BMW_M4_clip_0005",
-    "BMW_M4_clip_0006",
-    "BMW_M4_clip_0007",
-    "BMW_M4_clip_0010",
     "Horse_running_clip_0001",
     "Horse_running_clip_0003",
-    "Horse_running_clip_0004",
-    "Horse_running_clip_0005",
-    "Horse_running_clip_0008",
-    "Horse_running_clip_0010"
+    "Horse_running_clip_0004"
   ],
   "val": [
-    "BMW_M4_clip_0003",
-    "BMW_M4_clip_0009",
-    "Horse_running_clip_0006",
-    "Horse_running_clip_0007"
+    "BMW_M4_clip_0002",
+    "Horse_running_clip_0005"
   ],
   "test": [
     "BMW_M4_clip_0004",
-    "BMW_M4_clip_0008",
-    "Horse_running_clip_0002",
-    "Horse_running_clip_0009"
+    "Horse_running_clip_0002"
   ],
   "counts": {
-    "train": 12,
-    "val": 4,
-    "test": 4,
-    "total": 20
+    "train": 6,
+    "val": 2,
+    "test": 2,
+    "total": 10
   }
 }
