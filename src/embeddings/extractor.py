@@ -11,7 +11,7 @@ import os
 import json
 import hashlib
 from pathlib import Path
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any, List, Union
 
 import numpy as np
 import torch
@@ -23,6 +23,7 @@ from tqdm import tqdm
 from src.embeddings.contract import SequenceInput, SequenceEmbeddingOutput
 from src.embeddings.cache import EmbeddingCache
 from src.data.transforms import build_dinov2_transform, IMAGENET_MEAN, IMAGENET_STD, PREPROCESSING_VERSION
+from src.data.sampling import uniform_sample
 
 
 # ---------------------------------------------------------------------------
@@ -126,22 +127,37 @@ class EmbeddingExtractor:
         self.cache = EmbeddingCache(self.output_dir)
         self.transform = build_dinov2_transform(crop_size=224, direct_resize=True)
 
-    @torch.no_grad()
     def extract_frame_batch(self, frames: List[torch.Tensor]) -> np.ndarray:
-        """Extract embeddings for a batch of frame tensors."""
-        batch = torch.stack(frames).to(self.device)  # [B, C, H, W]
-        embeddings = self.model(batch)
+        """
+        Extract embeddings for a batch of frame tensors under torch.inference_mode().
+        Guarantees zero gradients, zero DAG tracking, and releases intermediate GPU memory.
+        """
+        with torch.inference_mode():
+            batch = torch.stack(frames).to(self.device)  # [B, C, H, W]
+            embeddings = self.model(batch)
 
-        # Handle different output types
-        if isinstance(embeddings, dict):
-            embeddings = embeddings.get('x_norm_clstoken', embeddings.get('last_hidden_state'))
-        if embeddings.dim() == 3:
-            embeddings = embeddings[:, 0, :]  # CLS token
+            # Handle different output types
+            if isinstance(embeddings, dict):
+                embeddings = embeddings.get('x_norm_clstoken', embeddings.get('last_hidden_state'))
+            if embeddings.dim() == 3:
+                embeddings = embeddings[:, 0, :]  # CLS token
 
-        return embeddings.cpu().numpy()
+            result = embeddings.cpu().numpy()
 
-    @torch.no_grad()
-    def extract_sequence(self, seq_input: SequenceInput) -> SequenceEmbeddingOutput:
+        # Step 8: Release GPU memory appropriately
+        del batch
+        del embeddings
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        return result
+
+    def extract_sequence(
+        self,
+        seq_input: SequenceInput,
+        split: Optional[str] = None,
+        save_to_cache: bool = False
+    ) -> SequenceEmbeddingOutput:
         """
         Extract embeddings for an immutable SequenceInput contract instance.
         """
@@ -152,7 +168,7 @@ class EmbeddingExtractor:
 
         embs = self.extract_frame_batch(frame_tensors)
 
-        return SequenceEmbeddingOutput(
+        seq_out = SequenceEmbeddingOutput(
             sequence_id=seq_input.sequence_id,
             frame_indices=seq_input.frame_indices,
             embeddings=embs,
@@ -160,6 +176,79 @@ class EmbeddingExtractor:
             encoder_version=self.encoder_name,
             preprocessing_version="v1_imagenet_224x224_center"
         )
+        if save_to_cache and split:
+            self.cache.put(seq_out, split=split, save_manifest=True)
+        return seq_out
+
+    def extract_single_sequence(
+        self,
+        sequence_id: str,
+        frame_paths: List[Union[str, Path]],
+        label: str,
+        target_frames: int = 8,
+        split: str = "train",
+        save_to_cache: bool = True
+    ) -> SequenceEmbeddingOutput:
+        """
+        M2.7: Full 8-step deterministic extraction lifecycle for a single sequence.
+
+        1. Load encoder (assert frozen and eval mode).
+        2. Load one sequence (frame_paths).
+        3. Apply deterministic frame sampling (uniform floor sampling).
+        4. Transform frames (official DINOv2 / ImageNet transform).
+        5. Run inference with torch.inference_mode() (no gradients, no optimizer, no training).
+        6. Store embeddings (EmbeddingCache).
+        7. Record metadata (SequenceEmbeddingOutput contract + manifest).
+        8. Release GPU memory appropriately.
+        """
+        # Step 1: Verify frozen encoder in eval mode
+        assert not self.model.training, "Encoder must be in eval() mode (M2.5)"
+        for param in self.model.parameters():
+            assert not param.requires_grad, "Encoder parameters must be frozen (requires_grad=False) (M2.6)"
+
+        # Step 2: Load one sequence
+        if not frame_paths:
+            raise ValueError(f"No frames provided for sequence {sequence_id}")
+
+        # Step 3: Apply deterministic frame sampling (M2.2, M2.3)
+        sample_indices = uniform_sample(len(frame_paths), target_frames)
+        sampled_paths = [frame_paths[i] for i in sample_indices]
+
+        # Step 4: Transform frames (M2.4)
+        frame_tensors = []
+        for fp in sampled_paths:
+            img = Image.open(fp).convert("RGB")
+            frame_tensors.append(self.transform(img))
+
+        # Step 5: Run inference without gradient computation (M2.7)
+        with torch.inference_mode():
+            batch = torch.stack(frame_tensors).to(self.device)
+            raw_out = self.model(batch)
+            if isinstance(raw_out, dict):
+                raw_out = raw_out.get('x_norm_clstoken', raw_out.get('last_hidden_state'))
+            if raw_out.dim() == 3:
+                raw_out = raw_out[:, 0, :]
+            embeddings = raw_out.cpu().numpy()
+
+        # Step 6 & 7: Store embeddings and record metadata
+        seq_out = SequenceEmbeddingOutput(
+            sequence_id=sequence_id,
+            frame_indices=sample_indices,
+            embeddings=embeddings,
+            label=label,
+            encoder_version=self.encoder_name,
+            preprocessing_version="v1_imagenet_224x224_center"
+        )
+        if save_to_cache:
+            self.cache.put(seq_out, split=split, save_manifest=True)
+
+        # Step 8: Release GPU memory appropriately
+        del batch
+        del raw_out
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        return seq_out
 
     def extract(
         self,
@@ -249,6 +338,12 @@ class EmbeddingExtractor:
                 'n_frames': int(sequence_embeddings.shape[0]),
                 'embed_dim': int(sequence_embeddings.shape[1]),
             })
+
+            if torch.cuda.is_available() and idx % 20 == 0:
+                torch.cuda.empty_cache()
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
         self.cache.save_manifest()
         print(f"  Done. Extracted {len(metadata_entries)} sequences.")
