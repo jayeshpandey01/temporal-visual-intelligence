@@ -1,6 +1,6 @@
 # Canonical Experimental Ablation Summary
 
-Generated on 2026-10-27 21:56:43 UTC across multi-seed runs.
+Generated on 2026-10-27 22:02:06 UTC across multi-seed runs.
 
 | Architecture | Observed Frames (K) | Temporal Order | Corruption | Accuracy (Mean ± Std) | Macro-F1 (Mean ± Std) | Seeds |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -17,7 +17,7 @@ Outputs:
 import os
 import json
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 import numpy as np
 import matplotlib
@@ -76,6 +76,113 @@ def temporal_variance(embeddings: np.ndarray) -> float:
     """Mean squared distance from the sequence mean embedding."""
     mean_emb = embeddings.mean(axis=0)
     return float(np.mean(np.sum((embeddings - mean_emb) ** 2, axis=1)))
+
+
+def plot_sequence_similarity_curve(
+    embeddings: np.ndarray,
+    sequence_id: str,
+    frame_indices: Optional[List[int]] = None,
+    output_path: Optional[Union[str, Path]] = None,
+    title: Optional[str] = None,
+    color: str = "#1f77b4"
+) -> Tuple[np.ndarray, Optional[Path]]:
+    """
+    M2.11: Compute adjacent cosine similarity S_t = cos(E_t, E_{t+1}) and plot
+    the transition curve:
+        Similarity
+        1.0 ┤ ●──●
+            │
+        0.9 ┤       ●
+            │
+        0.8 ┤          ●
+            │
+        0.7 ┤
+            └────────────────
+               1   2   3   4
+                  transition
+    """
+    s_t = consecutive_cosine_similarity(embeddings)
+    n_transitions = len(s_t)
+    x = np.arange(1, n_transitions + 1)
+
+    out_p = None
+    if output_path is not None:
+        out_p = Path(output_path)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        fig, ax = plt.subplots(figsize=(8, 4.5))
+        ax.plot(x, s_t, marker='o', markersize=8, color=color, linewidth=2.5, label=f"S_t: {sequence_id}")
+        ax.axhline(0.9, color='gray', linestyle='--', alpha=0.6, label='High visual stability (0.90)')
+        ax.set_xlabel('Transition Step (t -> t+1)', fontsize=11)
+        ax.set_ylabel('Adjacent Cosine Similarity S_t', fontsize=11)
+        plot_title = title or f"Representation Sanity Check (M2.11): {sequence_id}"
+        ax.set_title(plot_title, fontsize=12, pad=10)
+        ax.set_xticks(x)
+        if frame_indices and len(frame_indices) == len(embeddings):
+            labels = [f"F{frame_indices[i]}→F{frame_indices[i+1]}" for i in range(n_transitions)]
+            ax.set_xticklabels(labels, rotation=25, ha='right', fontsize=9)
+        else:
+            labels = [f"F{i+1}→F{i+2}" for i in range(n_transitions)]
+            ax.set_xticklabels(labels, fontsize=9)
+        ax.set_ylim(min(0.5, float(np.min(s_t)) - 0.05), 1.02)
+        ax.grid(True, linestyle=":", alpha=0.6)
+        ax.legend(loc="lower left", fontsize=9)
+        plt.tight_layout()
+        plt.savefig(out_p, dpi=180, bbox_inches='tight')
+        plt.close()
+
+    return s_t, out_p
+
+
+def plot_representative_sanity_comparisons(
+    cache_root: Union[str, Path] = "embeddings",
+    output_path: Union[str, Path] = "results/representation/similarity_plots/representative_sanity_curves.png"
+) -> Path:
+    """
+    M2.11: Multi-panel comparative visualization of adjacent cosine similarity curves
+    across diverse visual dynamics: High-speed drift, biological locomotion, and synthetic actions.
+    """
+    from src.embeddings.cache import EmbeddingCache
+    cache = EmbeddingCache(cache_root)
+
+    fig, axes = plt.subplots(2, 2, figsize=(14, 9))
+    axes = axes.flatten()
+
+    candidates = [
+        ("bmw_m4_drift_50", "real", "Vehicular High-Speed Drift (50 Frames)", "#1f77b4"),
+        ("horse_running_gallop_50", "real", "Biological Locomotion Gallop (50 Frames)", "#2ca02c"),
+        ("vid_00_0001", "train", "Synthetic Directional Action (8 Frames)", "#ff7f0e"),
+        ("vid_07_0001", "train", "Paired Inverse Action (8 Frames)", "#d62728")
+    ]
+
+    for idx, (seq_id, split, label_title, color) in enumerate(candidates):
+        ax = axes[idx]
+        item = cache.get(seq_id, split=split)
+        if item is None:
+            # Fallback to synthetic if real not present
+            all_seqs = list(cache.manifest["splits"].get(split, {}).keys())
+            if all_seqs:
+                item = cache.get(all_seqs[0], split=split)
+                label_title = f"{split.capitalize()} Sequence: {item.sequence_id}"
+
+        if item is not None:
+            s_t = consecutive_cosine_similarity(item.embeddings)
+            x = np.arange(1, len(s_t) + 1)
+            ax.plot(x, s_t, marker='o' if len(x) <= 15 else None, color=color, linewidth=2, label=f"Mean S_t: {float(np.mean(s_t)):.4f}")
+            ax.axhline(0.90, color='gray', linestyle='--', alpha=0.5, label='High stability threshold (0.90)')
+            ax.set_title(label_title, fontsize=11, fontweight='bold')
+            ax.set_xlabel("Transition Step (t -> t+1)", fontsize=10)
+            ax.set_ylabel("Cosine Similarity S_t", fontsize=10)
+            ax.grid(True, linestyle=":", alpha=0.5)
+            ax.set_ylim(min(0.5, float(np.min(s_t)) - 0.05), 1.01)
+            ax.legend(loc="lower left", fontsize=9)
+
+    plt.suptitle("M2.11: Temporal Representation Sanity Checks — Adjacent Cosine Similarity Profiles", fontsize=14, y=0.99)
+    plt.tight_layout()
+    out_p = Path(output_path)
+    out_p.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(out_p, dpi=180, bbox_inches='tight')
+    plt.close()
+    return out_p
 
 
 def plot_similarity_trajectories(

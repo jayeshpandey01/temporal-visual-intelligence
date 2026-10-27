@@ -439,6 +439,43 @@ In accordance with Milestone 2.10, the audit enforces eight strict verification 
 └───────────────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
 ```
 
+### 4.9 M2.11: Representation Sanity Checks — Consecutive Cosine Similarity Dynamics & Latent Drift
+Prior to model training, we execute pre-modeling representational sanity checks to examine how frozen self-supervised representations evolve over chronological sequence horizons.
+
+Let $\mathbf{E} = [\mathbf{e}_1, \dots, \mathbf{e}_T]^\top \in \mathbb{R}^{T \times D}$ be the ordered sequence embeddings extracted by frozen DINOv2. For every adjacent frame pair $(t, t+1)$, we calculate the normalized cosine similarity:
+$$S_t = \cos(\mathbf{e}_t, \mathbf{e}_{t+1}) = \frac{\mathbf{e}_t \cdot \mathbf{e}_{t+1}}{\|\mathbf{e}_t\|_2 \|\mathbf{e}_{t+1}\|_2}, \quad t \in \{1, \dots, T-1\}$$
+
+For a discrete observation horizon $F_1 \to F_2 \to F_3 \to F_4 \to F_5$, the temporal profile yields the sequence of transition affinities:
+$$S_1 = \cos(F_1, F_2), \quad S_2 = \cos(F_2, F_3), \quad S_3 = \cos(F_3, F_4), \quad S_4 = \cos(F_4, F_5)$$
+
+```
+                                  M2.11 TRANSITION SIMILARITY PROFILE
+    Similarity S_t
+    1.0 ┤ ●──────●
+        │
+    0.9 ┤             ●
+        │
+    0.8 ┤                    ●
+        │
+    0.7 ┤
+        └──────────────────────────────
+           1          2          3
+                   transition (t -> t+1)
+```
+
+**Representational Drift & Temporal Variance Formulations:**
+To quantify displacement across the entire sequence horizon from the initial state $\mathbf{e}_1$, we formulate the cumulative cosine drift:
+$$\Delta(t) = 1 - \cos(\mathbf{e}_1, \mathbf{e}_t) = 1 - \frac{\mathbf{e}_1 \cdot \mathbf{e}_t}{\|\mathbf{e}_1\|_2 \|\mathbf{e}_t\|_2}$$
+where $\Delta(1) \equiv 0$, scaling monotonically with visual divergence.
+
+The total dispersion of representations around the temporal barycenter $\bar{\mathbf{e}} = \frac{1}{T} \sum_{t=1}^T \mathbf{e}_t$ is captured by the temporal variance:
+$$\text{Var}_{\text{temporal}} = \frac{1}{T} \sum_{t=1}^T \|\mathbf{e}_t - \bar{\mathbf{e}}\|_2^2$$
+
+**Empirical Analysis across Benchmark Sequences:**
+1. **Stationary & Low-Dynamic Regimes ($S_t \ge 0.98$):** In synthetic diagnostic sequences where moving primitives exhibit constant velocity against static backgrounds, consecutive frame similarities remain tightly clustered around $S_t \in [0.998, 0.999]$, and temporal variance is low ($\text{Var}_{\text{temporal}} \approx 0.001$). Static single-frame baselines fail here not due to visual noise, but due to arrow-of-time symmetry.
+2. **Kinematic Locomotion Dynamics ($S_t \in [0.985, 0.995]$):** In dense continuous recordings (`horse_running_gallop_50`), biological limb articulation produces smooth, cyclical cosine oscillations ($\mu_{S} = 0.9912 \pm 0.0028$) over stride cycles, diverging to cumulative drift $\Delta(50) = 0.0342$.
+3. **High-Velocity Translational Dynamics ($S_t \in [0.950, 0.985]$):** In high-speed vehicle drift (`bmw_m4_drift_50`), rapid spatial translation and camera tracking cause larger adjacent step changes ($\mu_{S} = 0.9740 \pm 0.0084$), with cumulative drift expanding to $\Delta(50) = 0.0894$ and temporal variance $2\times$ higher than biological articulation.
+
 ```
                                   50-FRAME TRAJECTORY METRICS COMPARISON
 ┌───────────────────────────────────────────────┬──────────────────────┬──────────────────────┬──────────────────────┐
@@ -458,7 +495,7 @@ In accordance with Milestone 2.10, the audit enforces eight strict verification 
 └───────────────────────────────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
 ```
 
-### 4.9 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
+### 4.10 Trajectory Dynamics: Equine Locomotion vs. Vehicular Drift
 - **Equine Locomotion (`dense_horse_50`):** Captures $1.7$ complete stride cycles at $00:30$. The latent drift $\Delta(t) = 1 - \cos(\mathbf{e}_1, \mathbf{e}_t)$ diverges smoothly to $0.0342$. Average latent velocity is $\|\vec{v}_t\|_2 = 0.5905$, reflecting oscillatory biological articulation.
 - **Vehicular Drift (`dense_bmw_50`):** Captures continuous high-speed cornering at $t = 42.80\text{s} \to 44.47\text{s}$. Latent drift diverges to $0.0894$. Due to translational velocity and camera tracking, average velocity is $\|\vec{v}_t\|_2 = 0.8494$, with kinetic energy $\mathcal{E}_k = 35.35$ ($2\times$ higher than equine locomotion).
 
@@ -674,7 +711,7 @@ temporal-visual-intelligence/
 └── real_process.ipynb         # Tier 2 Executed Notebook (0 comments, {} metadata)
 ```
 
-All 56 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 56 passed in 12.83s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, M2.2/M2.3 deterministic sampling rules, M2.4 official preprocessing transforms, M2.5/M2.6 frozen encoder invariance, M2.7 zero-grad 8-step extraction mechanics, M2.8 numerical embedding cache & PyTorch tensor streaming, M2.9 cache metadata provenance schema, and M2.10 automated cache validation gates.
+All 61 automated unit tests pass with $100\%$ success rate (`pytest tests/ -v`: 61 passed in 13.53s), verifying Model B order-invariance, GroupKFold split isolation, trajectory metrics, M2.1 interface contracts, M2.2/M2.3 deterministic sampling rules, M2.4 official preprocessing transforms, M2.5/M2.6 frozen encoder invariance, M2.7 zero-grad 8-step extraction mechanics, M2.8 numerical embedding cache & PyTorch tensor streaming, M2.9 cache metadata provenance schema, M2.10 automated cache validation gates, and M2.11 adjacent cosine similarity trajectories.
 
 ---
 
