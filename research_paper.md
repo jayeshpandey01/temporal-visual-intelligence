@@ -185,14 +185,38 @@ To establish rigorous scientific fidelity, we implement two sampling regimes:
   This guarantees endpoint preservation ($i_0 = 0, i_{N-1} = L-1$), strict monotonicity, and zero onset/offset bias. For example, $L=12, N=4 \implies [0, 3, 7, 11]$ (F1, F4, F8, F12) and $L=16, N=8 \implies [0, 2, 4, 6, 8, 10, 12, 15]$.
 - **Deterministic Evaluation Rule (M2.3):** Stochastic jittering (Wang et al., 2016) is confined strictly to training data augmentation. Validation and test splits must never use stochastic sampling, ensuring that Baseline MLP, Mean-Pooling, and Temporal GRU evaluate identical observation manifolds.
 
-### 4.3 Preprocessing & Frozen Encoder Design Rationale (M2.4, M2.5, M2.6)
-Each sampled frame $\mathbf{x}_t$ is preprocessed according to official DINOv2 specifications:
-$$\mathbf{x}_t \xrightarrow{\text{Resize}} 224 \times 224 \xrightarrow{\text{CenterCrop}} 224 \times 224 \xrightarrow{\text{Normalize}} \frac{\mathbf{x}_t - \boldsymbol{\mu}}{\boldsymbol{\sigma}}$$
-where $\boldsymbol{\mu} = [0.485, 0.456, 0.406]$ and $\boldsymbol{\sigma} = [0.229, 0.224, 0.225]$.
+### 4.3 Preprocessing Pipeline & The Principle of Exact Parameter Invariance (M2.4, M2.5, M2.6)
+The image preprocessing pipeline is identical across all comparative models. Following the strict mandate of M2.4 (*"Do not invent preprocessing parameters simply because they are common elsewhere"*), we adopt the exact official DINOv2 evaluation transform (Oquab et al., 2024):
+
+```
+Raw Image File (Container / Disk)
+       ↓
+RGB Conversion (Strict 3-channel verification; eliminates alpha channels / grayscale)
+       ↓
+Bicubic Resize (Antialiased shortest-edge scaling to 256px or direct 224px)
+       ↓
+Center Crop (224 × 224 spatial crop; preserves physical aspect ratio and optical flow)
+       ↓
+ToTensor (Converts uint8 [0, 255] to float32 [0.0, 1.0])
+       ↓
+ImageNet Normalization: x' = (x - mu) / sigma
+       ↓
+Input Tensor: [3, 224, 224] Float32
+```
+
+Where normalization parameters are strictly inherited from the official DINOv2 LVD-142M pretraining specification:
+$$\boldsymbol{\mu} = [0.485, 0.456, 0.406], \quad \boldsymbol{\sigma} = [0.229, 0.224, 0.225]$$
+
+**Why Invented Preprocessing Parameters Corrupt Representations:**
+In Vision Transformers (ViTs), input patches $\mathbf{x}_p \in \mathbb{R}^{P^2 C}$ ($P=14, C=3, P^2 C = 588$) are linearly projected into the model dimension $D=384$ via patch embedding weights $\mathbf{W}_{\text{patch}} \in \mathbb{R}^{384 \times 588}$:
+$$\mathbf{z}_p = \mathbf{W}_{\text{patch}} \mathbf{x}_p + \mathbf{b}_{\text{patch}}$$
+If an experimenter "invents" custom normalization parameters (e.g., standard zero-centering $[0.5, 0.5, 0.5]$ or omitted scaling), the input distribution shifts outside the pretraining support of $\mathbf{W}_{\text{patch}}$. This induces saturation or dead activations in subsequent LayerNorm and GELU multi-head attention layers, artificially inflating the representation noise floor and masking temporal signals.
+
+Furthermore, aspect-ratio-preserving center crops prevent **anamorphic compression**, which would otherwise artificially distort the directional velocity angle $\theta = \arctan(v_y / v_x)$ of moving objects.
 
 The vision encoder weights $\theta_{\text{enc}}$ are held permanently frozen:
 $$\mathbf{e}_t = \phi(\mathbf{x}_t; \theta_{\text{enc}}) \in \mathbb{R}^{384}, \quad \nabla_{\theta_{\text{enc}}} \mathcal{L} = \mathbf{0}$$
-If the vision backbone were fine-tuned alongside the temporal model, performance gains could stem from domain adaptation or spatial representation refinement rather than temporal reasoning. Freezing the encoder preserves it as the experimental constant.
+If the vision backbone were fine-tuned alongside the temporal model, performance gains could stem from domain adaptation or spatial representation refinement rather than temporal reasoning. Freezing the encoder preserves it as the experimental constant. All 35 automated unit tests verify exact normalization values, inverse denormalization fidelity, and tensor integrity (`tests/test_transforms.py`).
 
 ### 4.4 Automated Cache Validation & Integrity Audit (M2.8, M2.9, M2.10)
 Our automated validator (`src/embeddings/validate.py`) executes automated integrity checks across all cached sequences:

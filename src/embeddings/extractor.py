@@ -22,6 +22,7 @@ import torchvision.transforms as T
 from tqdm import tqdm
 from src.embeddings.contract import SequenceInput, SequenceEmbeddingOutput
 from src.embeddings.cache import EmbeddingCache
+from src.data.transforms import build_dinov2_transform, IMAGENET_MEAN, IMAGENET_STD, PREPROCESSING_VERSION
 
 
 # ---------------------------------------------------------------------------
@@ -123,12 +124,7 @@ class EmbeddingExtractor:
 
         self.model = load_encoder(self.encoder_name, self.device)
         self.cache = EmbeddingCache(self.output_dir)
-        self.transform = T.Compose([
-            T.Resize((224, 224)),
-            T.CenterCrop(224),
-            T.ToTensor(),
-            T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
-        ])
+        self.transform = build_dinov2_transform(crop_size=224, direct_resize=True)
 
     @torch.no_grad()
     def extract_frame_batch(self, frames: List[torch.Tensor]) -> np.ndarray:

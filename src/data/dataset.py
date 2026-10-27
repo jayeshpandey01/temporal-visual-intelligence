@@ -20,6 +20,7 @@ from sklearn.model_selection import GroupKFold
 import torchvision.transforms as T
 
 from src.data.sampling import uniform_sample, first_n, last_n, sparse_sample, segment_sample
+from src.data.transforms import build_dinov2_transform, IMAGENET_MEAN, IMAGENET_STD
 
 
 # ---------------------------------------------------------------------------
@@ -30,12 +31,8 @@ IMAGENET_STD  = [0.229, 0.224, 0.225]
 
 
 def build_transform(frame_size: Tuple[int, int] = (224, 224)) -> T.Compose:
-    """Build default torchvision transform with ImageNet normalization."""
-    return T.Compose([
-        T.Resize(frame_size),
-        T.ToTensor(),
-        T.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
-    ])
+    """Build official DINOv2 torchvision transform with ImageNet normalization."""
+    return build_dinov2_transform(crop_size=frame_size[0], direct_resize=True)
 
 
 def verify_split_isolation(split_dict: Dict[str, List[str]]) -> bool:

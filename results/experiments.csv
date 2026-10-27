@@ -35,3 +35,4 @@ gru_noise_s44,ssv2,gru,8,canonical,gaussian_noise,44,0.7400,0.7340,Gaussian nois
 gru_drop_s42,ssv2,gru,8,canonical,frame_drop,42,0.6700,0.6620,50pct random zero-mask
 gru_drop_s43,ssv2,gru,8,canonical,frame_drop,43,0.7050,0.6980,50pct random zero-mask
 gru_drop_s44,ssv2,gru,8,canonical,frame_drop,44,0.6850,0.6790,50pct random zero-mask
+
