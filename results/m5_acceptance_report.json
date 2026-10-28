@@ -1,0 +1,166 @@
+{
+  "milestone": "M5",
+  "status": "NOT CERTIFIED",
+  "total_criteria": 26,
+  "passed_criteria": 7,
+  "compliance_rate_pct": 26.9,
+  "timestamp": "2026-10-29T01:50:45.795023",
+  "criteria": {
+    "stable_sequence_ids": {
+      "category": "Data",
+      "description": "Every M5 sequence has a stable ID (verified across all 300 test sequences).",
+      "passed": true,
+      "details": "Verified N = 300 stable test sequence IDs in split_manifest.json."
+    },
+    "zero_contamination": {
+      "category": "Data",
+      "description": "No train/test contamination (Group-aware zero leakage verified).",
+      "passed": true,
+      "details": "Intersection counts: train\u2229test = 0, val\u2229test = 0."
+    },
+    "m4_predictions_frozen": {
+      "category": "Data",
+      "description": "M4 predictions are frozen in experiments/m4_final/.",
+      "passed": true,
+      "details": "Verified cryptographic freeze manifest at manifest.json."
+    },
+    "cohorts_reproducible": {
+      "category": "Data",
+      "description": "Five cohorts present; exact counts remain subject to prediction-source reconciliation.",
+      "passed": true,
+      "details": "Stored cohort table partitions 300 test sequences, including 97 in Cohort C; prediction provenance remains under reconciliation."
+    },
+    "taxonomy_pre_registered": {
+      "category": "Annotation",
+      "description": "Temporal taxonomy T1-T8 documented with independent semantic validation.",
+      "passed": false,
+      "details": "The taxonomy is documented, but saved annotations are heuristic and independent semantic validation is unavailable."
+    },
+    "vlm_annotations_generated": {
+      "category": "Annotation",
+      "description": "Assessment VLM experiment executed and documented.",
+      "passed": false,
+      "details": "The saved annotations are offline heuristics, not VLM outputs; no live VLM result is evidenced."
+    },
+    "human_validation_performed": {
+      "category": "Annotation",
+      "description": "Independent human validation on N=127 sequences with Cohen's kappa.",
+      "passed": false,
+      "details": "Not established: verifier copies candidate annotations and applies deterministic rules; independent blinded annotator records are unavailable."
+    },
+    "disagreements_recorded": {
+      "category": "Annotation",
+      "description": "Independent annotator disagreements and rationales documented.",
+      "passed": false,
+      "details": "Current disagreement records are rule-generated and must not be presented as independent human adjudication."
+    },
+    "temporal_ablation": {
+      "category": "Experiments",
+      "description": "Temporal ablation evaluated across 6 controlled conditions.",
+      "passed": true,
+      "details": "Canonical, Early rem., Transition rem., Late rem., Reversal, Shuffle evaluated."
+    },
+    "frame_removal_analysis": {
+      "category": "Experiments",
+      "description": "Equal-length controlled frame removal at T=6 (early, transition, late).",
+      "passed": true,
+      "details": "Transition removal drop = -5.78 pp vs early -6.78 pp."
+    },
+    "reverse_order_eval": {
+      "category": "Experiments",
+      "description": "Arrow-of-time temporal reversal changes model accuracy.",
+      "passed": false,
+      "details": "Historical artifacts report varying reversal differences; current checkpoint recomputation reports an 18.89 pp drop, requiring protocol reconciliation."
+    },
+    "shuffle_eval": {
+      "category": "Experiments",
+      "description": "Chronological order destruction via permutation changes model accuracy.",
+      "passed": false,
+      "details": "Historical artifacts report varying shuffle differences; current checkpoint recomputation reports an 11.56 pp drop, requiring protocol reconciliation."
+    },
+    "critical_frame_analysis": {
+      "category": "Experiments",
+      "description": "Critical-frame analysis validated against independent semantic labels.",
+      "passed": false,
+      "details": "An analysis artifact exists, but category labels are heuristic and prediction provenance remains under reconciliation."
+    },
+    "confidence_analysis": {
+      "category": "Experiments",
+      "description": "Predictive confidence summarized; calibration evaluated with valid targets.",
+      "passed": false,
+      "details": "Stored confidence values are descriptive; confidence thresholds alone do not establish calibration."
+    },
+    "counterfactual_ordering": {
+      "category": "Experiments",
+      "description": "Counterfactual order interventions are paired with fixed visual content.",
+      "passed": false,
+      "details": "Operators are implemented, but aggregate values and annotation provenance require validation."
+    },
+    "explain_temporal_rescues": {
+      "category": "Scientific Analysis",
+      "description": "Describe rescue cases using validated, paired results.",
+      "passed": false,
+      "details": "Stored information decomposition differs across aggregate and cohort artifacts; no single order-share value is established."
+    },
+    "explain_temporal_regressions": {
+      "category": "Scientific Analysis",
+      "description": "Describe temporal regressions from reconciled paired evidence.",
+      "passed": false,
+      "details": "A descriptive artifact exists; explanatory claims require source-level validation."
+    },
+    "identify_dominant_phenomena": {
+      "category": "Scientific Analysis",
+      "description": "Identify dominant temporal phenomena using independent annotations.",
+      "passed": false,
+      "details": "Current category counts use offline heuristics and class-taxonomy priors; independent annotation evidence is unavailable."
+    },
+    "estimate_minimum_context": {
+      "category": "Scientific Analysis",
+      "description": "Estimate minimum useful temporal context from reconciled prediction data.",
+      "passed": false,
+      "details": "Stored summary is not reconciled with the currently reported progressive horizon results."
+    },
+    "real_world_comparison": {
+      "category": "Scientific Analysis",
+      "description": "Representation trajectories inspected on a small number of continuous clips (not labeled transfer evaluation).",
+      "passed": false,
+      "details": "Descriptive clip inspection is present; there is no labeled real-world action classification evaluation, and physical frequency/transfer claims are not established."
+    },
+    "quantify_uncertainty": {
+      "category": "Scientific Analysis",
+      "description": "Quantify uncertainty with validated paired bootstrap intervals across multi-seed runs.",
+      "passed": false,
+      "details": "Some intervals are stored, but exact paired inputs and analysis protocols conflict across artifacts."
+    },
+    "one_command_analysis": {
+      "category": "Reproducibility",
+      "description": "M5 compilation runner completes in a clean checkout.",
+      "passed": false,
+      "details": "Runner exists, but a current clean-checkout execution was not performed during this release review."
+    },
+    "fixed_seeds": {
+      "category": "Reproducibility",
+      "description": "Fixed deterministic random seeds [42, 43, 44] recorded in results.",
+      "passed": true,
+      "details": "All model checkpoints and evaluation runs execute with explicit seeds [42, 43, 44]."
+    },
+    "saved_manifests": {
+      "category": "Reproducibility",
+      "description": "M5 deliverables are present and scientifically reconciled.",
+      "passed": false,
+      "details": "Files are present, but VLM/human provenance and several metrics are not reconciled."
+    },
+    "unit_tests": {
+      "category": "Reproducibility",
+      "description": "Current M5 test battery passes in the release checkout.",
+      "passed": false,
+      "details": "Test files exist, but the current suite was not executed during this review."
+    },
+    "notebook_executes_cleanly": {
+      "category": "Reproducibility",
+      "description": "Research notebook executes successfully in the release environment.",
+      "passed": false,
+      "details": "A notebook exists, but clean-environment execution has not been verified."
+    }
+  }
+}

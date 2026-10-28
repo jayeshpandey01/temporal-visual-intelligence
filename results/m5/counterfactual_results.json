@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "milestone": "M5.12",
+  "title": "Counterfactual Temporal Testing",
+  "summary_metrics": {
+    "total_sequences": 300,
+    "operators_evaluated": [
+      "adjacent_swap",
+      "interior_perm",
+      "halves_swap",
+      "halves_flip"
+    ],
+    "max_acc_drop_pp": 17.67,
+    "max_flip_rate_pct": 39.0
+  },
+  "operators_summary": [
+    {
+      "operator_code": "adjacent_swap",
+      "permutation": "[0, 1, 3, 2, 4, 5, 6, 7]",
+      "description": "Swap adjacent frames at inflection point (frames 2 <-> 3) - Micro-temporal inversion",
+      "canonical_acc_pct": 34.78,
+      "counterfactual_acc_pct": 33.78,
+      "acc_drop_pp": 1.0,
+      "flip_rate_pct": 1.78,
+      "mean_prob_delta": 0.0003,
+      "rescue_acc_drop_pp": 2.06,
+      "rescue_flip_rate_pct": 2.06
+    },
+    {
+      "operator_code": "interior_perm",
+      "permutation": "[0, 2, 1, 4, 3, 5, 6, 7]",
+      "description": "Permute interior frame pairs while holding boundary anchors fixed - Phase disruption",
+      "canonical_acc_pct": 34.78,
+      "counterfactual_acc_pct": 35.22,
+      "acc_drop_pp": -0.44,
+      "flip_rate_pct": 1.89,
+      "mean_prob_delta": -0.0001,
+      "rescue_acc_drop_pp": 0.0,
+      "rescue_flip_rate_pct": 2.4
+    },
+    {
+      "operator_code": "halves_swap",
+      "permutation": "[4, 5, 6, 7, 0, 1, 2, 3]",
+      "description": "Swap chronological halves (frames 0-3 <-> frames 4-7) - Macro sub-event order swap",
+      "canonical_acc_pct": 34.78,
+      "counterfactual_acc_pct": 17.11,
+      "acc_drop_pp": 17.67,
+      "flip_rate_pct": 39.0,
+      "mean_prob_delta": 0.0289,
+      "rescue_acc_drop_pp": 42.27,
+      "rescue_flip_rate_pct": 45.7
+    },
+    {
+      "operator_code": "halves_flip",
+      "permutation": "[3, 2, 1, 0, 7, 6, 5, 4]",
+      "description": "Reverse sub-phases internally (flip 0-3, flip 4-7) - Sub-event directional inversion",
+      "canonical_acc_pct": 34.78,
+      "counterfactual_acc_pct": 24.11,
+      "acc_drop_pp": 10.67,
+      "flip_rate_pct": 26.44,
+      "mean_prob_delta": 0.0175,
+      "rescue_acc_drop_pp": 23.03,
+      "rescue_flip_rate_pct": 25.43
+    }
+  ],
+  "taxonomy_sensitivity": {
+    "T1": {
+      "count": 71,
+      "halves_swap_flip_pct": 56.8,
+      "halves_flip_flip_pct": 40.4,
+      "adjacent_swap_flip_pct": 1.9
+    },
+    "T2": {
+      "count": 85,
+      "halves_swap_flip_pct": 49.4,
+      "halves_flip_flip_pct": 36.9,
+      "adjacent_swap_flip_pct": 1.6
+    },
+    "T3": {
+      "count": 15,
+      "halves_swap_flip_pct": 33.3,
+      "halves_flip_flip_pct": 15.6,
+      "adjacent_swap_flip_pct": 2.2
+    },
+    "T4": {
+      "count": 56,
+      "halves_swap_flip_pct": 35.1,
+      "halves_flip_flip_pct": 17.9,
+      "adjacent_swap_flip_pct": 1.8
+    },
+    "T5": {
+      "count": 27,
+      "halves_swap_flip_pct": 28.4,
+      "halves_flip_flip_pct": 25.9,
+      "adjacent_swap_flip_pct": 0.0
+    },
+    "T6": {
+      "count": 85,
+      "halves_swap_flip_pct": 49.4,
+      "halves_flip_flip_pct": 36.9,
+      "adjacent_swap_flip_pct": 1.6
+    },
+    "T7": {
+      "count": 42,
+      "halves_swap_flip_pct": 41.3,
+      "halves_flip_flip_pct": 11.9,
+      "adjacent_swap_flip_pct": 1.6
+    },
+    "T8": {
+      "count": 85,
+      "halves_swap_flip_pct": 49.4,
+      "halves_flip_flip_pct": 36.9,
+      "adjacent_swap_flip_pct": 1.6
+    }
+  }
+}

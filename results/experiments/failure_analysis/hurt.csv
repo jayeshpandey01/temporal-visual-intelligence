@@ -1,0 +1,5 @@
+sequence_id,video_id,ground_truth,class_name,y_baseline,conf_baseline,correct_baseline,y_meanpool,conf_meanpool,correct_meanpool,y_gru,conf_gru,correct_gru,delta_obs,delta_order,delta_total,quadrant_ac
+vid_05_0002,vid_05_0002,8,Turning the camera left while filming something,8,0.0612,True,13,0.0558,False,16,0.189,False,-1,0,-1,B_baseline_only
+vid_05_0022,vid_05_0022,8,Turning the camera left while filming something,8,0.0615,True,13,0.057,False,5,0.1117,False,-1,0,-1,B_baseline_only
+vid_05_0030,vid_05_0030,8,Turning the camera left while filming something,8,0.0605,True,14,0.0581,False,3,0.1336,False,-1,0,-1,B_baseline_only
+vid_05_0050,vid_05_0050,8,Turning the camera left while filming something,8,0.0614,True,13,0.0564,False,3,0.154,False,-1,0,-1,B_baseline_only

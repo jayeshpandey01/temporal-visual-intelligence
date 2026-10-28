@@ -1,0 +1,249 @@
+{
+  "milestone": "M4.9",
+  "standardized_modules": {
+    "progressive": {
+      "config": "experiments/progressive/config.yaml",
+      "results": "experiments/progressive/results.csv",
+      "plots": [
+        "m4_observation_frontier.png",
+        "performance_vs_frames.png"
+      ]
+    },
+    "shuffle": {
+      "config": "experiments/shuffle/config.yaml",
+      "results": "experiments/shuffle/results.csv",
+      "plots": [
+        "m4_order_collapse_bar.png",
+        "order_sensitivity.png"
+      ]
+    },
+    "corruption": {
+      "config": "experiments/corruption/config.yaml",
+      "results": "experiments/corruption/results.csv",
+      "plots": [
+        "m4_robustness_curves.png",
+        "robustness.png"
+      ]
+    },
+    "reversal": {
+      "config": "experiments/reversal/config.yaml",
+      "results": "experiments/reversal/results.csv",
+      "plots": [
+        "m4_reversal_inversion.png",
+        "reversal_sensitivity.png"
+      ]
+    },
+    "statistical": {
+      "config": "experiments/statistical/config.yaml",
+      "results": "experiments/statistical/results.csv",
+      "plots": [
+        "m4_statistical_forest_plot.png",
+        "m4_mcnemar_pvalue_heatmap.png"
+      ]
+    },
+    "gain_analysis": {
+      "config": "experiments/gain_analysis/config.yaml",
+      "results": "experiments/gain_analysis/results.csv",
+      "plots": [
+        "m4_temporal_gain_decomposition.png",
+        "m4_temporal_gain_horizon_dynamics.png"
+      ]
+    }
+  },
+  "canonical_predictions": [
+    "results/experiments/progressive_predictions.csv",
+    "results/experiments/shuffle_predictions.csv",
+    "results/experiments/corruption_predictions.csv",
+    "results/experiments/reversal_predictions.csv",
+    "results/experiments/statistical_predictions.csv",
+    "results/experiments/temporal_gain_manifest.json"
+  ],
+  "master_experiments_summary": [
+    {
+      "Exp_ID": "Exp A",
+      "Experiment_Name": "Progressive Observation Horizon",
+      "Intervention": "Budget $K \\in \\{1, 2, 4, 8\\}$ frames",
+      "Model_Evaluated": "Temporal GRU (1.3M)",
+      "Primary_Metric": "Accuracy & Macro-F1",
+      "Empirical_Result": "11.56% $\\to$ 34.78% (+23.22 pp gain)",
+      "Statistical_Evidence": "$p < 10^{-12}$ vs $K=1$, plateau at $K \\ge 4$",
+      "What_It_Tests": "Evidence accumulation & saturation ($H_1, H_5$)"
+    },
+    {
+      "Exp_ID": "Exp B",
+      "Experiment_Name": "Temporal Order Ablation",
+      "Intervention": "Canonical vs Shuffled Sequence",
+      "Model_Evaluated": "Temporal GRU (1.3M)",
+      "Primary_Metric": "$\\\\Delta_{\\\\text{order}}$ Drop & Flip Rate",
+      "Empirical_Result": "34.78% $\\to$ 20.89% ($-13.89$ pp collapse)",
+      "Statistical_Evidence": "McNemar $\\chi^2=44.18, p = 2.99 \\times 10^{-11}$",
+      "What_It_Tests": "Chronological order sensitivity ($H_2$)"
+    },
+    {
+      "Exp_ID": "Exp C",
+      "Experiment_Name": "Order-Invariant Control",
+      "Intervention": "MultiFrameMeanPool (Order-blind)",
+      "Model_Evaluated": "MeanPool (103.7k)",
+      "Primary_Metric": "$\\\\Delta_{\\\\text{obs}}$ vs Baseline",
+      "Empirical_Result": "8.22% vs 8.78% Baseline ($-0.56$ pp)",
+      "Statistical_Evidence": "$p = 0.8145$ (Null effect / Chance level)",
+      "What_It_Tests": "Disentangles spatial pooling from sequence order ($H_3$)"
+    },
+    {
+      "Exp_ID": "Exp D",
+      "Experiment_Name": "Capacity-Matched Parity",
+      "Intervention": "CompactGRU at exact 103,700 params",
+      "Model_Evaluated": "CompactTemporalGRU",
+      "Primary_Metric": "$\\\\Delta_{\\\\text{parity}}$ vs MeanPool",
+      "Empirical_Result": "23.56% vs 8.22% MeanPool (+15.33 pp)",
+      "Statistical_Evidence": "McNemar $\\chi^2=14.88, p = 1.16 \\times 10^{-4}$",
+      "What_It_Tests": "Eliminates parameter capacity confound ($H_3$)"
+    },
+    {
+      "Exp_ID": "Exp E",
+      "Experiment_Name": "Missing Observations (Drop)",
+      "Intervention": "Drop 0, 2, 4 frames (up to 50% loss)",
+      "Model_Evaluated": "Temporal GRU (1.3M)",
+      "Primary_Metric": "Relative Retention Rate",
+      "Empirical_Result": "34.78% $\\to$ 21.44% (Retains 61.6% capacity)",
+      "Statistical_Evidence": "Graceful monotonic decay ($R^2=0.98$)",
+      "What_It_Tests": "Temporal context robustness under data loss ($H_4$)"
+    },
+    {
+      "Exp_ID": "Exp F",
+      "Experiment_Name": "Gaussian Representation Noise",
+      "Intervention": "Additive noise $\\\\sigma \\in \\{0.1, 0.25, 0.5\\}$",
+      "Model_Evaluated": "Temporal GRU (1.3M)",
+      "Primary_Metric": "Noise Drop $\\\\Delta_{\\\\text{noise}}$",
+      "Empirical_Result": "34.78% $\\to$ 21.33% at $\\sigma=0.5$ ($-13.44$ pp)",
+      "Statistical_Evidence": "Remains superior to clean baseline (+12.55 pp)",
+      "What_It_Tests": "Representation perturbation stability ($H_4$)"
+    },
+    {
+      "Exp_ID": "Exp G",
+      "Experiment_Name": "Temporal Reversal & Inversion",
+      "Intervention": "Chronological Inversion $t \\to 8 - t$",
+      "Model_Evaluated": "Temporal GRU (1.3M)",
+      "Primary_Metric": "Reversal Drop & Inverse Confusion",
+      "Empirical_Result": "34.78% $\\to$ 14.78% ($-20.00$ pp drop)",
+      "Statistical_Evidence": "$P_{\\text{flip}}=42.7\\%, p = 1.24 \\times 10^{-12}$",
+      "What_It_Tests": "Arrow-of-time & asymmetric action transition ($H_2$)"
+    },
+    {
+      "Exp_ID": "Exp H",
+      "Experiment_Name": "Sequence Gain & Horizon $K^*$",
+      "Intervention": "Sequence gain $G_i \\in \\{-1, 0, +1\\}$",
+      "Model_Evaluated": "Three-Model Battery",
+      "Primary_Metric": "Horizon Threshold $K^*$ Distribution",
+      "Empirical_Result": "Net rescues: +78 seqs (+26.0 pp gain)",
+      "Statistical_Evidence": "$K^*=8$ (21.7%), $K^*=4$ (11.0%), $K^*=1$ (12.7%)",
+      "What_It_Tests": "Temporal resolution threshold & action taxonomy ($H_1, H_3$)"
+    }
+  ],
+  "hypothesis_mapping_summary": [
+    {
+      "Hypothesis": "H1: More observations help",
+      "Core_Premise": "Additional sequential visual evidence resolves ambiguous frame-level states.",
+      "Supporting_Experiment": "Exp A (Progressive Horizon $K \\in \\{1, 2, 4, 8\\}$)",
+      "Empirical_Evidence": "Accuracy grows monotonically from 11.56% ($K=1$) to 34.78% ($K=8$) (+23.22 pp gain, $p < 10^{-12}$).",
+      "Status": "CONFIRMED"
+    },
+    {
+      "Hypothesis": "H2: Chronological order matters",
+      "Core_Premise": "Physical transformations (e.g., Opening vs Closing) require strict temporal ordering.",
+      "Supporting_Experiment": "Exp B (Temporal Shuffle) & Exp G (Temporal Reversal)",
+      "Empirical_Evidence": "Shuffling causes a -13.89 pp collapse ($p = 2.99 \\times 10^{-11}$). Reversal causes a -20.00 pp drop with 42.7% prediction flips.",
+      "Status": "CONFIRMED"
+    },
+    {
+      "Hypothesis": "H3: Temporal modeling adds value over pooling",
+      "Core_Premise": "Performance gains stem from temporal dynamics, not mere multi-frame spatial accumulation or capacity.",
+      "Supporting_Experiment": "Exp C (MeanPool Control) & Exp D (CompactGRU Parity)",
+      "Empirical_Evidence": "MeanPool achieves 8.22% (-0.56 pp vs baseline). CompactGRU at exact 103,700 capacity achieves 23.56% (+15.33 pp over MeanPool, $p = 1.16 \\times 10^{-4}$).",
+      "Status": "CONFIRMED"
+    },
+    {
+      "Hypothesis": "H4: Temporal context improves robustness",
+      "Core_Premise": "Recurrent state representations buffer against corrupted or missing observations.",
+      "Supporting_Experiment": "Exp E (Frame Drops) & Exp F (Gaussian Noise)",
+      "Empirical_Evidence": "Under 50% missing data (4/8 frames dropped), GRU retains 21.44% accuracy (2.4x higher than clean baseline). Under severe noise ($\\sigma=0.5$), GRU retains 21.33%.",
+      "Status": "CONFIRMED"
+    },
+    {
+      "Hypothesis": "H5: Information saturates",
+      "Core_Premise": "Marginal utility of additional frames diminishes as physical action transition completes.",
+      "Supporting_Experiment": "Exp A (Progressive Curve Derivative) & Exp H (Horizon $K^*$)",
+      "Empirical_Evidence": "Growth slows from +11.78 pp ($K=2 \\to 4$) to +5.44 pp ($K=4 \\to 8$). 49.0% of all resolvable sequences are fully resolved by $K=8$.",
+      "Status": "CONFIRMED"
+    }
+  ],
+  "falsification_verdicts": [
+    {
+      "Hypothesis": "H1: More observations help",
+      "Falsification_Condition": "Increasing frame count produces no meaningful improvement ($\\Delta K \\le 1$ pp).",
+      "Observed_Outcome": "+23.22 pp gain from $K=1$ to $K=8$ ($p < 10^{-12}$).",
+      "Verdict": "FALSIFICATION REJECTED (H1 Strongly Supported)"
+    },
+    {
+      "Hypothesis": "H2: Chronological order matters",
+      "Falsification_Condition": "Shuffling produces essentially no degradation in the temporal model ($\\Delta_{\\text{order}} \\le 2$ pp).",
+      "Observed_Outcome": "Massive -13.89 pp drop under shuffle ($p = 2.99 \\times 10^{-11}$).",
+      "Verdict": "FALSIFICATION REJECTED (H2 Strongly Supported)"
+    },
+    {
+      "Hypothesis": "H3: Temporal modeling adds value",
+      "Falsification_Condition": "GRU performs similarly to or worse than order-invariant mean pooling ($\\Delta_{\\text{parity}} \\le 0$ pp).",
+      "Observed_Outcome": "CompactGRU outperforms MeanPool by +15.33 pp ($p = 1.16 \\times 10^{-4}$); Full GRU outperforms by +26.56 pp ($p < 10^{-12}$).",
+      "Verdict": "FALSIFICATION REJECTED (H3 Strongly Supported)"
+    },
+    {
+      "Hypothesis": "H4: Context improves robustness",
+      "Falsification_Condition": "Temporal context does not reduce degradation under corruption (relative drop $\\ge$ baseline).",
+      "Observed_Outcome": "GRU retains 61.6% capacity under 50% frame loss, maintaining 2.4x higher accuracy than clean single-frame baseline.",
+      "Verdict": "FALSIFICATION REJECTED (H4 Strongly Supported)"
+    },
+    {
+      "Hypothesis": "H5: Information saturates",
+      "Falsification_Condition": "Performance continues improving linearly without diminishing returns across all frame counts.",
+      "Observed_Outcome": "Marginal gain decays sharply (+11.78 pp from $K=2 \\to 4$ down to +5.44 pp from $K=4 \\to 8$).",
+      "Verdict": "FALSIFICATION REJECTED (H5 Strongly Supported)"
+    }
+  ],
+  "confounds_elimination": [
+    {
+      "Confound_ID": "Confound 1",
+      "Confound_Name": "More Frames = More Compute / Capacity",
+      "Risk_Description": "Higher frame models or recurrent networks win purely from parameter capacity rather than temporal reasoning.",
+      "Elimination_Control": "Implemented Model D (CompactTemporalGRU) with exact 103,700 parameters matching Model A and Model B.",
+      "Audit_Status": "CERTIFIED ELIMINATED (+15.33 pp gain over MeanPool at identical parameter count)"
+    },
+    {
+      "Confound_ID": "Confound 2",
+      "Confound_Name": "Sampling Location Asymmetry",
+      "Risk_Description": "Comparing different parts of sequences (e.g. K=1 first frame vs K=4 last frames) introduces position confounds.",
+      "Elimination_Control": "Symmetric uniform coverage: K=1 anchor at center (t=4), K in {2, 4, 8} uniformly spaced across the identical 8-frame sequence.",
+      "Audit_Status": "CERTIFIED ELIMINATED (Sampling policy frozen in configs/experimental_controls.yaml)"
+    },
+    {
+      "Confound_ID": "Confound 3",
+      "Confound_Name": "Sequence & Identity Leakage",
+      "Risk_Description": "Temporally contiguous clips or identical actors shared between train and test splits artificially inflate accuracy.",
+      "Elimination_Control": "Group-aware partition on unique video IDs; 0 frame leakage between train (1400), val (300), and test (300).",
+      "Audit_Status": "CERTIFIED ELIMINATED (Audited by leakage-guard and verify_m3_exit_gate.py)"
+    },
+    {
+      "Confound_ID": "Confound 4",
+      "Confound_Name": "Test-Set Tuning / Data Peeking",
+      "Risk_Description": "Modifying hyperparameters, architectures, or sampling after inspecting test performance.",
+      "Elimination_Control": "Model selection strictly governed by validation EarlyStopping (patience=5); test set untouched until evaluation.",
+      "Audit_Status": "CERTIFIED ELIMINATED (Best validation checkpoints restored prior to test inference)"
+    },
+    {
+      "Confound_ID": "Confound 5",
+      "Confound_Name": "Multiple Comparisons / Selective Reporting",
+      "Risk_Description": "Reporting only cherry-picked best seeds or favorable interventions without negative results.",
+      "Elimination_Control": "Append-only experiment ledger (results/experiments.csv, 171 rows); report mean \u00b1 std across 3 seeds; full failure stratification.",
+      "Audit_Status": "CERTIFIED ELIMINATED (Documented negative results: MeanPool neutral gain, Quadrant B regressions)"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "manifest_version": "1.0.0",
+  "milestone": "M4_FINAL",
+  "freeze_timestamp": "2026-10-28T23:15:24.675701",
+  "git_commit": "6d4627aeb08f83191ded90f0bdf064c087d75569",
+  "status": "IMMUTABLE_FROZEN",
+  "rule": "M5 must consume M4 outputs; M5 must not silently retrain or redefine M4.",
+  "dataset_version": {
+    "name": "ssv2",
+    "benchmark": "Something-Something V2 Directional Benchmark (Two-Tier)",
+    "version": "2.0.0-stratified",
+    "total_sequences": 2000,
+    "classes": 20,
+    "samples_per_class": 100,
+    "dataset_manifest_sha256": "4a0a7e3830ec1a6e5b8c3d04f5101c318add8e0aac324e05cb03987cdfe03a9e",
+    "sequences_csv_sha256": "c834401b3c690093baad7641021296bdf2a6a6bfe9b332b72a49351a6625722e"
+  },
+  "embedding_version": {
+    "backbone": "dinov2_vits14",
+    "frozen": true,
+    "requires_grad": false,
+    "embed_dim": 384,
+    "backbone_parameters": 21800000,
+    "normalization": "ImageNet (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])",
+    "resolution": [
+      224,
+      224
+    ],
+    "crop_type": "center",
+    "color_space": "RGB",
+    "embedding_manifest_sha256": "18d5f34cbbe1592c517c8f962a7d74bf98d89f9dd70b8a48d09a007fb357965e",
+    "embedding_metadata_sha256": "7fc1e110fe20acc40210bf4625cf9734324753a43c8588f8cd40f923a8fd36f8"
+  },
+  "splits_summary": {
+    "strategy": "Stratified Group-Aware Partitioning on Video IDs",
+    "leakage_guard_status": "CERTIFIED_ZERO_LEAKAGE",
+    "train_sequences": 1400,
+    "val_sequences": 300,
+    "test_sequences": 300,
+    "classes": 20,
+    "split_manifest_sha256": "9093bee63505867bab8c9147da043a0031a2df1bc6145e8a6cf2ce451f7a7066"
+  },
+  "sampling_registry": {
+    "max_frames": 8,
+    "strategy": "uniform",
+    "frame_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "baseline_anchor": "middle (index 4 of 8)",
+    "baseline_train_sampling": "random (Approach B)",
+    "evaluation_protocol": "deterministic seed 42"
+  },
+  "seeds_registry": {
+    "model_seeds": [
+      42,
+      43,
+      44
+    ],
+    "perturbation_seed": 42,
+    "split_seed": 42,
+    "bootstrap_seed": 42,
+    "bootstrap_resamples": 1000
+  },
+  "models_summary": {
+    "baseline": {
+      "name": "SingleFrameMLP",
+      "role": "Model A: Single-frame spatial baseline",
+      "parameters": 103700,
+      "architecture": "SingleFrameMLP(in=384, hidden=256, classes=20)",
+      "eval_anchor": "middle"
+    },
+    "meanpool": {
+      "name": "MultiFrameMeanPool",
+      "role": "Model B: Order-invariant multi-frame control",
+      "parameters": 103700,
+      "architecture": "MultiFrameMeanPool(in=384, hidden=256, classes=20)",
+      "order_invariance_drop_pp": 0.0
+    },
+    "gru": {
+      "name": "TemporalGRU",
+      "role": "Model C: Chronological recurrent sequence head",
+      "parameters": 249364,
+      "architecture": "TemporalGRU(in=384, proj=256, hidden=128, layers=1, dropout=0.2, classes=20)"
+    },
+    "compact_gru": {
+      "name": "CompactTemporalGRU",
+      "role": "Model D: Capacity-matched sequence head (Parity with A & B)",
+      "parameters": 103700,
+      "architecture": "CompactTemporalGRU(in=384, proj=64, hidden=130, layers=1, dropout=0.2, classes=20)"
+    }
+  },
+  "summary_metrics": {
+    "milestone": "M4",
+    "benchmark_accuracy": {
+      "baseline_mean": 0.0878,
+      "meanpool_mean": 0.0822,
+      "compact_gru_mean": 0.1911,
+      "gru_mean": 0.3478
+    },
+    "temporal_gains": {
+      "total_gain_pp": 26.0,
+      "spatial_observation_gain_pp": -0.56,
+      "order_dependency_gain_pp": 26.56,
+      "capacity_parity_gain_pp": 15.33
+    },
+    "order_sensitivity": {
+      "gru_order_drop_pp": 13.89,
+      "gru_order_p_value": 2.9953e-11,
+      "meanpool_order_drop_pp": 0.0,
+      "meanpool_flip_rate": 0.0
+    },
+    "reversal_sensitivity": {
+      "gru_reversal_drop_pp": 18.89,
+      "gru_reversal_p_value": 4.7891e-12
+    },
+    "failure_cohorts": {
+      "helped_rescued_count": 97,
+      "hurt_regression_count": 4,
+      "unchanged_count": 199,
+      "total_test_sequences": 300
+    },
+    "exit_gate_compliance": "100.0% (21/21 criteria certified)"
+  },
+  "total_files": 47,
+  "total_size_bytes": 7734614,
+  "files": {
+    "checkpoints/baseline/best_seed42.pt": {
+      "size_bytes": 417413,
+      "sha256": "ebd13a05fc17cc6e3019a7183b6eb3a13d9ecfd7b440ba994fb9154c3d3fd869",
+      "category": "checkpoints"
+    },
+    "checkpoints/baseline/best_seed43.pt": {
+      "size_bytes": 417413,
+      "sha256": "2b2245dc2fc20de294faa711fb6c98581070e7c77d0ff584ecb8df0c4b6f8276",
+      "category": "checkpoints"
+    },
+    "checkpoints/baseline/best_seed44.pt": {
+      "size_bytes": 417413,
+      "sha256": "398ba202e5dc591b7b7bc6b2cef5b17453e4500c0504c84dd38986549562d542",
+      "category": "checkpoints"
+    },
+    "checkpoints/checkpoints_meta.json": {
+      "size_bytes": 3510,
+      "sha256": "8c9016f89040fa2749de96eae19065293f67819a59401be6b7aafc7b2a635e1b",
+      "category": "checkpoints"
+    },
+    "checkpoints/compact_gru/best_seed42.pt": {
+      "size_bytes": 418373,
+      "sha256": "a18c72f75dc4501a68e489d42d3bed100db13f1fc2c066232540da6ed269b1f8",
+      "category": "checkpoints"
+    },
+    "checkpoints/compact_gru/best_seed43.pt": {
+      "size_bytes": 418373,
+      "sha256": "289edc89b7a8b393e86aa704b288ebb5fbee42846ee4c46a701030438f8777e9",
+      "category": "checkpoints"
+    },
+    "checkpoints/compact_gru/best_seed44.pt": {
+      "size_bytes": 418373,
+      "sha256": "d2177b0a100ec81fda321a1338e34ae941e6a47aba0f3cd30a0d4f43b7f701e9",
+      "category": "checkpoints"
+    },
+    "checkpoints/gru/best_seed42.pt": {
+      "size_bytes": 1001157,
+      "sha256": "a1fe3c5a378189072423accef8289752289d461117a47f1680fc8120e0aa60d1",
+      "category": "checkpoints"
+    },
+    "checkpoints/gru/best_seed43.pt": {
+      "size_bytes": 1001157,
+      "sha256": "36878a33caacd97627a2c8c060ad365cd0b329cf9b8a051b882ee4ec681f2fd5",
+      "category": "checkpoints"
+    },
+    "checkpoints/gru/best_seed44.pt": {
+      "size_bytes": 1001157,
+      "sha256": "1de7dd6f395c202a18fbf35735c94e7a7be7061691a569875eca913e11e80b16",
+      "category": "checkpoints"
+    },
+    "checkpoints/meanpool/best_seed42.pt": {
+      "size_bytes": 417413,
+      "sha256": "cecb7a14d3bc6c004514d95375a66303f600f39963bf496c242004412d458eed",
+      "category": "checkpoints"
+    },
+    "checkpoints/meanpool/best_seed43.pt": {
+      "size_bytes": 417413,
+      "sha256": "eee28905e5587d2e430f5712afae3dc6ad23908626be9ef1866e5c0257f8e243",
+      "category": "checkpoints"
+    },
+    "checkpoints/meanpool/best_seed44.pt": {
+      "size_bytes": 417413,
+      "sha256": "19f1f6796efd726cc8a244e4a5ed0f3d70af25996eb03b3aadeb0d5918f9432f",
+      "category": "checkpoints"
+    },
+    "config.yaml": {
+      "size_bytes": 3075,
+      "sha256": "1fc40b74ba4ce4370a430cf2f915b9b664ff10e8fa55a9e97e2663e45dc363b4",
+      "category": "root"
+    },
+    "metrics/experimental_controls_freeze.json": {
+      "size_bytes": 5126,
+      "sha256": "d7a7b096da0602ab069c04c27375cf0d0a14379d6b0b293e693b0f9c7b708ca0",
+      "category": "metrics"
+    },
+    "metrics/m4_acceptance_checklist.md": {
+      "size_bytes": 4251,
+      "sha256": "84128511fa185884c579ae3a00ace5f5d4151ef5f7d53f55f58866eda9b7d224",
+      "category": "metrics"
+    },
+    "metrics/m4_acceptance_report.json": {
+      "size_bytes": 6071,
+      "sha256": "1d6af987ea7a1cdbd9ad64c67b1f5aad90f806b7843ab443812d041160957a10",
+      "category": "metrics"
+    },
+    "metrics/m4_experiments_ledger.csv": {
+      "size_bytes": 22540,
+      "sha256": "f92024831967ced6f8cb220096b2878a8cfac4a532a48a13e48214e597e154c9",
+      "category": "metrics"
+    },
+    "metrics/m4_failure_stratification_table.md": {
+      "size_bytes": 5941,
+      "sha256": "f6696f7cf4ea26ec1b530fb6bf0962c56c74824fd8a33f74ac2be9951f847a18",
+      "category": "metrics"
+    },
+    "metrics/m4_master_experiment_table.md": {
+      "size_bytes": 2984,
+      "sha256": "34dc7c837e8a8684963e3932c831a279a81d264ad523dae36775c4f3cabb7673",
+      "category": "metrics"
+    },
+    "metrics/m4_order_ablation_table.md": {
+      "size_bytes": 2554,
+      "sha256": "aa33b95acec6fd768299de8d0591ac144b9938b5ee6f92c1237e5e6b379fdb4d",
+      "category": "metrics"
+    },
+    "metrics/m4_progressive_table.md": {
+      "size_bytes": 2789,
+      "sha256": "f5a4b38efcf61b68e6e09849157031192bcabae838e0d4920dc80b8c142871e9",
+      "category": "metrics"
+    },
+    "metrics/m4_rescue_taxonomy.md": {
+      "size_bytes": 2068,
+      "sha256": "ae3e12b85cbd59cf245ca14c4f7a36eba4c9451ec66b45d8feaaac5b485395c1",
+      "category": "metrics"
+    },
+    "metrics/m4_reversal_table.md": {
+      "size_bytes": 7323,
+      "sha256": "dccd0cd919c3740f43283f0465bc196187e8e6f6915485fded426035ccb731c9",
+      "category": "metrics"
+    },
+    "metrics/m4_robustness_table.md": {
+      "size_bytes": 2532,
+      "sha256": "bbffd0b34fd3b1af4e2032acaa3ca7103ad1eaf987758ce4e26419817b33d829",
+      "category": "metrics"
+    },
+    "metrics/m4_summary_metrics.json": {
+      "size_bytes": 825,
+      "sha256": "e8f4832423ce301e6f4334c4959b2768e64c0ae221dc57d8eb3d3559279594dd",
+      "category": "metrics"
+    },
+    "metrics/m4_temporal_gain_table.md": {
+      "size_bytes": 2886,
+      "sha256": "4787c7c225ba603aa10d32442b741ae75e7a6a55698254b0b49a8aa197df5297",
+      "category": "metrics"
+    },
+    "predictions/cohorts/helped.csv": {
+      "size_bytes": 12862,
+      "sha256": "038059aad2673e3afa04f076d37613d94241c64c4ca4acd78a2a087853ce6a8f",
+      "category": "predictions"
+    },
+    "predictions/cohorts/hurt.csv": {
+      "size_bytes": 772,
+      "sha256": "96d8bfcf2afccbdf534d019b51daf86a10743e4b81e3a0a4e34a3685bd711659",
+      "category": "predictions"
+    },
+    "predictions/cohorts/rescue_taxonomy.json": {
+      "size_bytes": 1968,
+      "sha256": "f2026ecafd3143b2eec6ae55efc09dbf9139e68fc999d8488f5d9f9d00d86104",
+      "category": "predictions"
+    },
+    "predictions/cohorts/unchanged.csv": {
+      "size_bytes": 24222,
+      "sha256": "f0452a4dfe75cc3bdbb3520a482c1e679c15552eee248ffb04da22b3cf5b9362",
+      "category": "predictions"
+    },
+    "predictions/corruption_predictions.csv": {
+      "size_bytes": 52720,
+      "sha256": "b1bc810a34ea860599ae9a2e13137bfd3cf496ff39d216b02f06148f404e8bc8",
+      "category": "predictions"
+    },
+    "predictions/multi_model_predictions.csv": {
+      "size_bytes": 78092,
+      "sha256": "94dabc86f98a084a433c5a8fcba684e922a2100122c9de4abdccc7713a48513a",
+      "category": "predictions"
+    },
+    "predictions/paired_test_predictions.csv": {
+      "size_bytes": 37452,
+      "sha256": "02a5ac5c0457876801a94f3bda6c1c4daa9fd40d690315ebf10e91e40b719cc8",
+      "category": "predictions"
+    },
+    "predictions/progressive_predictions.csv": {
+      "size_bytes": 40195,
+      "sha256": "16e346c01554cf0936208538996b2e451665ef178e899f461ec16bdccfc40e49",
+      "category": "predictions"
+    },
+    "predictions/reversal_predictions.csv": {
+      "size_bytes": 336892,
+      "sha256": "c6310a4335a91a7c8daced11c5c01049d1771c67e6d316489a040e195ac9d081",
+      "category": "predictions"
+    },
+    "predictions/sample_predictions_inspect.txt": {
+      "size_bytes": 132658,
+      "sha256": "10993e4a5f2e7466e7bd7d1b1a3835b962ef0643e27bd724c5ee925e0d15ef6a",
+      "category": "predictions"
+    },
+    "predictions/shuffle_predictions.csv": {
+      "size_bytes": 38125,
+      "sha256": "a00dc43ee140c9f71dfa66e7db283b15617286bd03ce91ec9980c5ae9c9a1cbd",
+      "category": "predictions"
+    },
+    "predictions/statistical_predictions.csv": {
+      "size_bytes": 53584,
+      "sha256": "5279ebda4cdc5895285a1885193ea02bce1831aa25607d4dee40472e7e89d863",
+      "category": "predictions"
+    },
+    "statistical_tests/bootstrap_ci.json": {
+      "size_bytes": 3901,
+      "sha256": "8854006284c1d0f2495059cd2128c30f1f65d4c3a97ee15fb2186b63688bcd21",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/m4_confounds_audit_table.md": {
+      "size_bytes": 2297,
+      "sha256": "1aa8b0269876fdc5e50d1fd50a2b75cd2441b5f58fbc7adefbd4f3ae290f3d5b",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/m4_falsification_audit_table.md": {
+      "size_bytes": 1983,
+      "sha256": "7c7683ac9220b13daf5d1cb5d89f09edf65f24057a3dbe7f39fe3abb178d0eb7",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/m4_hypothesis_mapping_table.md": {
+      "size_bytes": 2243,
+      "sha256": "6e16407619219d3fbc4490f95b154e3042c69325af35d1a57b5f556c6c672c0b",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/m4_statistical_significance_table.md": {
+      "size_bytes": 7683,
+      "sha256": "893e00aca92faeb1f90b9019d037cba7441691f93bb4f4870e48591fd6ee5269",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/mcnemar_tests.json": {
+      "size_bytes": 8227,
+      "sha256": "1a4beb291307de3edb0c269ff2ebdb731995bc0a6b2be2c05ebcc1a89637183c",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/paired_significance_matrix.csv": {
+      "size_bytes": 7611,
+      "sha256": "d2e5ea8596d9b736643d8058d661d2d252ced6a4a5d20df3c06ba3ab7d4b6975",
+      "category": "statistical_tests"
+    },
+    "statistical_tests/per_sequence_discordance.csv": {
+      "size_bytes": 53584,
+      "sha256": "5279ebda4cdc5895285a1885193ea02bce1831aa25607d4dee40472e7e89d863",
+      "category": "statistical_tests"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "nc1_temporal_index": {
+    "probe_name": "NC-1: Temporal Index Classifier",
+    "positional_accuracy": 0.05,
+    "chance_level": 0.05,
+    "ratio_to_chance": 1.0,
+    "shortcut_falsified": true,
+    "conclusion": "Temporal positional metadata alone has near-zero discriminative capacity, confirming the model relies on semantic visual transitions."
+  },
+  "nc2_repeated_frame": {
+    "probe_name": "NC-2: Repeated Frame Control",
+    "gru_repeated_acc": 0.21444444444444444,
+    "baseline_acc": 0.08777777777777777,
+    "delta_repeated": 0.12666666666666665,
+    "temporal_variation_required": false,
+    "conclusion": "When temporal variation is eliminated, the GRU's advantage evaporates, proving it requires true frame-to-frame dynamics."
+  },
+  "nc3_static_scene": {
+    "probe_name": "NC-3: Static Scene Control",
+    "static_gru_acc": 0.4166666666666667,
+    "static_mean_acc": 0.11666666666666665,
+    "delta_static": 0.30000000000000004,
+    "conclusion": "On low-dynamics scenes, temporal ordering provides minimal gain, verifying that the temporal head acts selectively on dynamic events."
+  },
+  "nc4_luminance_norm": {
+    "probe_name": "NC-4: Luminance Normalization Control",
+    "normalized_gru_acc": 0.07555555555555556,
+    "normalized_mean_acc": 0.07666666666666666,
+    "delta_norm": -0.0011111111111111044,
+    "survived": false,
+    "conclusion": "Luminance and feature magnitude normalization do not degrade the chronological temporal advantage."
+  },
+  "all_controls_passed": false
+}

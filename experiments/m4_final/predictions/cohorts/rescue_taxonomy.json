@@ -1,0 +1,97 @@
+{
+  "total_sequences": 300,
+  "quadrant_counts": {
+    "quadrant_a_both_correct": 16,
+    "quadrant_b_meanpool_correct_gru_fail": 14,
+    "quadrant_c_temporal_rescues": 92,
+    "quadrant_d_both_failed": 178
+  },
+  "rescue_rate_overall": 30.67,
+  "directional_rescues_count": 17,
+  "directional_rescues_percentage": 18.48,
+  "top_rescued_classes": [
+    [
+      "Taking something out of something",
+      {
+        "rescued": 13,
+        "total": 15,
+        "rescue_rate": 86.67
+      }
+    ],
+    [
+      "Taking something off of something",
+      {
+        "rescued": 11,
+        "total": 15,
+        "rescue_rate": 73.33
+      }
+    ],
+    [
+      "Putting something on top of something",
+      {
+        "rescued": 11,
+        "total": 15,
+        "rescue_rate": 73.33
+      }
+    ],
+    [
+      "Turning the camera left while filming something",
+      {
+        "rescued": 11,
+        "total": 15,
+        "rescue_rate": 73.33
+      }
+    ],
+    [
+      "Moving something towards the camera",
+      {
+        "rescued": 10,
+        "total": 15,
+        "rescue_rate": 66.67
+      }
+    ]
+  ],
+  "least_rescued_classes": [
+    [
+      "Opening something",
+      {
+        "rescued": 1,
+        "total": 15,
+        "rescue_rate": 6.67
+      }
+    ],
+    [
+      "Pushing something from left to right",
+      {
+        "rescued": 1,
+        "total": 15,
+        "rescue_rate": 6.67
+      }
+    ],
+    [
+      "Rotating something counter-clockwise",
+      {
+        "rescued": 0,
+        "total": 15,
+        "rescue_rate": 0.0
+      }
+    ],
+    [
+      "Uncovering something",
+      {
+        "rescued": 0,
+        "total": 15,
+        "rescue_rate": 0.0
+      }
+    ],
+    [
+      "Covering something",
+      {
+        "rescued": 0,
+        "total": 15,
+        "rescue_rate": 0.0
+      }
+    ]
+  ],
+  "interpretation": "Of 92 temporal rescues, 18.5% belong to direction-dependent action classes where symmetric spatial aggregation is mathematically ambiguous."
+}

@@ -1,0 +1,170 @@
+# =============================================================================
+# Milestone M4.1 — Frozen Experimental Controls Specification
+# Immutable specification of the 9 experimental controls for Milestone M4.
+# Fundamental Rule: Change exactly ONE experimental variable at a time.
+# =============================================================================
+
+version: "1.0.0"
+milestone: "M4.1"
+freeze_timestamp: "2026-10-28T19:25:00+05:30"
+canonical_rule: "Change exactly one experimental variable at a time."
+
+# -----------------------------------------------------------------------------
+# Control 1: Dataset
+# -----------------------------------------------------------------------------
+dataset:
+  name: "ssv2"
+  full_name: "Something-Something V2 Directional Benchmark (Two-Tier Architecture)"
+  version: "2.0.0-stratified"
+  total_sequences: 2000
+  class_count: 20
+  samples_per_class: 100
+  manifest_path: "data/metadata/dataset_manifest.json"
+  sequences_csv: "data/metadata/sequences.csv"
+  root: "data/"
+
+# -----------------------------------------------------------------------------
+# Control 2: Visual Encoder
+# -----------------------------------------------------------------------------
+encoder:
+  name: "dinov2_vits14"
+  freeze: true                      # MUST ALWAYS BE TRUE — frozen representation backbone
+  embed_dim: 384
+  backbone_parameters: 21800000     # 21.8M params
+  requires_grad: false
+  eval_mode: true
+  embeddings_dir: "embeddings/"
+  manifest_path: "embeddings/manifest.json"
+  metadata_path: "embeddings/metadata.json"
+
+# -----------------------------------------------------------------------------
+# Control 3: Preprocessing Pipeline
+# -----------------------------------------------------------------------------
+preprocessing:
+  version: "v1_imagenet_224x224_center"
+  resolution: [224, 224]
+  color_space: "RGB"
+  normalization:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  crop_type: "center"
+  base_frames: 8
+  base_sampling: "uniform"
+
+# -----------------------------------------------------------------------------
+# Control 4, 5, 6: Train, Validation, and Test Splits
+# -----------------------------------------------------------------------------
+splits:
+  manifest_path: "data/metadata/split_manifest.json"
+  partition_method: "Stratified Group-Aware Partitioning on Video IDs"
+  leakage_guard_status: "CERTIFIED_ZERO_LEAKAGE"
+  train:
+    count: 1400
+    per_class: 70
+    split_ratio: 0.70
+  validation:
+    count: 300
+    per_class: 15
+    split_ratio: 0.15
+  test:
+    count: 300
+    per_class: 15
+    split_ratio: 0.15
+
+# -----------------------------------------------------------------------------
+# Control 7: Model Architectures & Checkpoints
+# -----------------------------------------------------------------------------
+models:
+  baseline:
+    name: "SingleFrameMLP"
+    role: "Model A: Single-frame spatial baseline"
+    approach: "B"                   # Random train sampling, middle-frame eval
+    eval_anchor: "middle"           # Frame index 4 of 8
+    expected_parameters: 103700
+    checkpoints:
+      seed42: "results/checkpoints/baseline/best_seed42.pt"
+      seed43: "results/checkpoints/baseline/best_seed43.pt"
+      seed44: "results/checkpoints/baseline/best_seed44.pt"
+
+  meanpool:
+    name: "MultiFrameMeanPool"
+    role: "Model B: Order-invariant multi-frame diagnostic control"
+    expected_parameters: 103700     # Exactly matched with Model A
+    checkpoints:
+      seed42: "results/checkpoints/meanpool/best_seed42.pt"
+      seed43: "results/checkpoints/meanpool/best_seed43.pt"
+      seed44: "results/checkpoints/meanpool/best_seed44.pt"
+
+  gru:
+    name: "TemporalGRU"
+    role: "Model C: Chronological recurrent sequence head"
+    hidden_dim: 128
+    projection_dim: 256
+    num_layers: 1
+    dropout: 0.2
+    expected_parameters: 249364
+    checkpoints:
+      seed42: "results/checkpoints/gru/best_seed42.pt"
+      seed43: "results/checkpoints/gru/best_seed43.pt"
+      seed44: "results/checkpoints/gru/best_seed44.pt"
+
+# -----------------------------------------------------------------------------
+# Control 8: Evaluation Metrics
+# -----------------------------------------------------------------------------
+metrics:
+  primary:
+    - "accuracy"
+    - "macro_f1"
+  diagnostic:
+    - "per_class_f1"
+  statistical:
+    - "mcnemar_test"
+    - "bootstrap_ci_95"
+  bootstrap:
+    n_resamples: 1000
+    confidence_level: 0.95
+    seed: 42
+
+# -----------------------------------------------------------------------------
+# Control 9: Random Seeds
+# -----------------------------------------------------------------------------
+seeds:
+  model_seeds: [42, 43, 44]
+  perturbation_seed: 42             # Fixed across model seeds for paired McNemar testing
+
+# -----------------------------------------------------------------------------
+# Allowable Single-Variable Interventions (M4.2 - M4.5)
+# -----------------------------------------------------------------------------
+allowable_interventions:
+  progressive:
+    variable: "frame_count"
+    allowed_values: [1, 2, 3, 4, 6, 8]
+    fixed_conditions:
+      order: "canonical"
+      corruption: "none"
+      corruption_fraction: 0.0
+
+  order:
+    variable: "order"
+    allowed_values: ["canonical", "shuffled", "repeated"]
+    fixed_conditions:
+      frame_count: 8
+      corruption: "none"
+      corruption_fraction: 0.0
+
+  corruption:
+    variable: "corruption"
+    allowed_values: ["none", "zero_mask", "gaussian_noise", "mean_replace"]
+    fixed_conditions:
+      frame_count: 8
+      order: "canonical"
+    corruption_fraction: 0.25
+
+  reversal:
+    variable: "order"
+    allowed_values: ["canonical", "reversed"]
+    fixed_conditions:
+      frame_count: 8
+      corruption: "none"
+      corruption_fraction: 0.0
+

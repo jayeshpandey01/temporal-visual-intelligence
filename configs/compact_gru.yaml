@@ -1,0 +1,48 @@
+# Capacity-Matched Compact GRU Sequence Model Configuration (Model D, Milestone 4)
+# Exactly 103,700 parameters matching Model A and Model B
+dataset:
+  name: ssv2
+  root: data/
+  subset_classes: 20
+  n_per_class: 100
+  val_split: 0.15
+  test_split: 0.15
+  seed: 42
+
+sequence:
+  max_frames: 8
+  sampling: uniform
+  frame_size: [224, 224]
+
+encoder:
+  name: dinov2_vits14
+  freeze: true
+  embed_dim: 384
+
+temporal:
+  model: compact_gru
+  projection_dim: 64
+  hidden_dim: 130
+  num_layers: 1
+  dropout: 0.2
+
+training:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  epochs: 30
+  batch_size: 32
+  gradient_clip: 1.0
+  scheduler: cosine
+  seeds: [42, 43, 44]
+  patience: 5
+  early_stopping:
+    monitor: "val_accuracy"
+    mode: "max"
+    min_delta: 0.0001
+    restore_best_weights: true
+
+paths:
+  embeddings: embeddings/
+  checkpoints: results/checkpoints/compact_gru/
+  experiments_csv: results/experiments.csv
+

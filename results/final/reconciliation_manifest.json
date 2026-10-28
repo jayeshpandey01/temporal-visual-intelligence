@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-10-28T22:16:18.358831Z",
+  "records": [
+    {
+      "finding_id": "F1",
+      "headline_finding": "Model C Canonical Accuracy (K=8)",
+      "claimed_reference": "34.78 \u00b1 1.10%",
+      "remeasured_result": "34.78 \u00b1 1.10%",
+      "reconciliation_status": "RECOMPUTED"
+    },
+    {
+      "finding_id": "F2",
+      "headline_finding": "Model B MeanPool Accuracy (K=8)",
+      "claimed_reference": "8.22 \u00b1 1.26%",
+      "remeasured_result": "8.22 \u00b1 1.26%",
+      "reconciliation_status": "RECOMPUTED"
+    },
+    {
+      "finding_id": "F3",
+      "headline_finding": "Model A SingleFrame Baseline Accuracy",
+      "claimed_reference": "8.78 \u00b1 3.28%",
+      "remeasured_result": "8.78 \u00b1 3.28%",
+      "reconciliation_status": "RECOMPUTED"
+    },
+    {
+      "finding_id": "F4",
+      "headline_finding": "Capacity-Matched Parity Gain (Model D vs Model B)",
+      "claimed_reference": "Checkpoint means differ from M4 summary (parity protocol to reconcile)",
+      "remeasured_result": "+15.33 pp",
+      "reconciliation_status": "RECOMPUTED"
+    },
+    {
+      "finding_id": "F5",
+      "headline_finding": "Temporal Order Destruction Drop (OrderDrop under shuffle)",
+      "claimed_reference": "Historical M4 artifacts report 13.89 pp",
+      "remeasured_result": "14.11 pp",
+      "reconciliation_status": "DIFFERS FROM CLAIM"
+    },
+    {
+      "finding_id": "F6",
+      "headline_finding": "Observation Horizon Scaling: K=1 to K=8",
+      "claimed_reference": "Historical M4 artifacts report 11.56% to 34.78% (+23.22 pp)",
+      "remeasured_result": "11.56% to 34.78% (+23.22 pp)",
+      "reconciliation_status": "RECOMPUTED"
+    }
+  ]
+}

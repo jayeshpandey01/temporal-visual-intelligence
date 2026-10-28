@@ -276,6 +276,14 @@ class TemporalSequenceDataset(Dataset):
     def __len__(self) -> int:
         return len(self.samples)
 
+    def get_sequence_id(self, idx: int) -> str:
+        """Get sequence identifier for sample index."""
+        return self.samples[idx][0]
+
+    def get_all_sequence_ids(self) -> List[str]:
+        """Get list of all sequence identifiers in dataset."""
+        return [s[0] for s in self.samples]
+
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
         video_id, all_frames, label = self.samples[idx]
 
@@ -350,9 +358,9 @@ class EmbeddingSequenceDataset(Dataset):
             if entry['split'] == split
         ]
 
-    def _apply_perturbation(self, embeddings: np.ndarray) -> np.ndarray:
-        """Apply temporal perturbation to embedding sequence."""
-        rng = np.random.RandomState(self.perturbation_seed)
+    def _apply_perturbation(self, embeddings: np.ndarray, seq_idx: int = 0) -> np.ndarray:
+        """Apply temporal perturbation to embedding sequence with sequence-dependent seed."""
+        rng = np.random.RandomState(self.perturbation_seed + seq_idx)
         T = len(embeddings)
 
         if self.perturbation == 'canonical':
@@ -383,17 +391,27 @@ class EmbeddingSequenceDataset(Dataset):
         return embeddings
 
     def _select_frames(self, embeddings: np.ndarray, n: int) -> np.ndarray:
-        """Select n frames uniformly from the sequence (for progressive eval)."""
+        """Select n frames uniformly from the sequence using M2.2 floor formula."""
         T = len(embeddings)
-        if T <= n:
+        if T == n:
+            return embeddings
+        if T < n:
             # Pad with last frame
             pad = np.stack([embeddings[-1]] * (n - T))
             return np.concatenate([embeddings, pad], axis=0)
-        indices = np.linspace(0, T - 1, n, dtype=int)
+        indices = uniform_sample(T, n)
         return embeddings[indices]
 
     def __len__(self) -> int:
         return len(self.samples)
+
+    def get_sequence_id(self, idx: int) -> str:
+        """Get sequence identifier for sample index."""
+        return self.samples[idx][0]
+
+    def get_all_sequence_ids(self) -> List[str]:
+        """Get list of all sequence identifiers in dataset."""
+        return [s[0] for s in self.samples]
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
         sequence_id, label = self.samples[idx]
@@ -403,6 +421,6 @@ class EmbeddingSequenceDataset(Dataset):
         # Select frames
         embeddings = self._select_frames(embeddings, self.max_frames)
         # Apply perturbation
-        embeddings = self._apply_perturbation(embeddings)
+        embeddings = self._apply_perturbation(embeddings, seq_idx=idx)
 
         return torch.from_numpy(embeddings).float(), label  # [T, D], int

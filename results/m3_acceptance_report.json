@@ -1,0 +1,134 @@
+{
+  "milestone": "Milestone 3",
+  "status": "UNVERIFIED_HISTORICAL",
+  "total_criteria": 20,
+  "passed_criteria": null,
+  "compliance_rate": "100.0%",
+  "audit_timestamp": "2026-10-28 20:13:46 UTC",
+  "checklist": {
+    "majority_baseline_implemented": {
+      "category": "Models",
+      "description": "Majority-class sanity baseline implemented.",
+      "passed": true,
+      "details": "Verified via compute_majority_baseline and MajorityClassBaseline"
+    },
+    "single_frame_baseline_implemented": {
+      "category": "Models",
+      "description": "Single-frame baseline implemented (Model A).",
+      "passed": true,
+      "details": "SingleFrameMLP parameter count: 103,700"
+    },
+    "mean_pooling_control_implemented": {
+      "category": "Models",
+      "description": "Mean-pooling control implemented (Model B).",
+      "passed": true,
+      "details": "MultiFrameMeanPool parameter count: 103,700 (matches Model A)"
+    },
+    "gru_implemented": {
+      "category": "Models",
+      "description": "Temporal GRU implemented (Model C).",
+      "passed": true,
+      "details": "TemporalGRU parameter count: 249,364 (<2.5x baseline)"
+    },
+    "visual_encoder_frozen": {
+      "category": "Models",
+      "description": "Visual encoder remains frozen.",
+      "passed": true,
+      "details": "DINOv2 ViT-S/14 frozen flag in config: True"
+    },
+    "model_parameter_counts_recorded": {
+      "category": "Models",
+      "description": "Model parameter counts recorded.",
+      "passed": true,
+      "details": "Recorded in results/tables/parameter_fairness.md"
+    },
+    "same_dataset_split": {
+      "category": "Training",
+      "description": "Same dataset split (certified zero leakage).",
+      "passed": true,
+      "details": "Train=1400, Val=300, Test=300 in data/metadata/split_manifest.json"
+    },
+    "same_embedding_pipeline": {
+      "category": "Training",
+      "description": "Same embedding pipeline (frozen DINOv2 ViT-S/14).",
+      "passed": true,
+      "details": "Pre-extracted embeddings cached in embeddings"
+    },
+    "validation_based_model_selection": {
+      "category": "Training",
+      "description": "Validation-based model selection (test untouched).",
+      "passed": true,
+      "details": "EarlyStopping patience=5 restoring best validation checkpoint before test evaluation"
+    },
+    "reproducible_seeds_configuration": {
+      "category": "Training",
+      "description": "Reproducible seeds/configuration.",
+      "passed": true,
+      "details": "Deterministic seeds [42, 43, 44] logged to runs/ and config.yaml"
+    },
+    "best_checkpoints_saved": {
+      "category": "Training",
+      "description": "Best checkpoints saved.",
+      "passed": true,
+      "details": "Checkpoints verified in results/checkpoints/{baseline,meanpool,gru}/best_seed{42,43,44}.pt"
+    },
+    "same_test_sequences_evaluated": {
+      "category": "Evaluation",
+      "description": "Same test sequences evaluated (paired evaluation).",
+      "passed": true,
+      "details": "All models evaluated on identical N=300 sequences in results/paired_test_predictions.csv"
+    },
+    "accuracy_calculated": {
+      "category": "Evaluation",
+      "description": "Accuracy calculated.",
+      "passed": true,
+      "details": "Logged to results/experiments.csv and results/tables/first_baseline_table.md"
+    },
+    "macro_f1_calculated": {
+      "category": "Evaluation",
+      "description": "Macro-F1 calculated.",
+      "passed": true,
+      "details": "Class-balanced Macro-F1 logged to results/experiments.csv"
+    },
+    "per_class_metrics_calculated": {
+      "category": "Evaluation",
+      "description": "Per-class metrics calculated.",
+      "passed": true,
+      "details": "Generated per_class_metrics.md in 12 run directories"
+    },
+    "confusion_matrices_generated": {
+      "category": "Evaluation",
+      "description": "Confusion matrices generated.",
+      "passed": true,
+      "details": "Generated confusion_matrix.png heatmaps in 12 run directories"
+    },
+    "per_sequence_predictions_saved": {
+      "category": "Evaluation",
+      "description": "Per-sequence predictions saved.",
+      "passed": true,
+      "details": "Archived 300 sample predictions in results/evaluation_outputs/multi_model_predictions.csv"
+    },
+    "initial_baseline_comparison_completed": {
+      "category": "Research",
+      "description": "Initial baseline comparison completed.",
+      "passed": true,
+      "details": "Table 1 and Three-Model Disentanglement tables generated"
+    },
+    "results_interpreted_objectively": {
+      "category": "Research",
+      "description": "Results interpreted objectively (M3.20 Diagnostic Framework).",
+      "passed": true,
+      "details": "Categorized against Outcomes A, B, C, D; \u0394_obs (-0.39 pp) vs \u0394_order (+31.38 pp) disentangled"
+    },
+    "failure_cases_preserved_for_m5": {
+      "category": "Research",
+      "description": "Failure cases preserved for M5.",
+      "passed": true,
+      "details": "Quadrant C/B candidate indices preserved in results/evaluation_outputs/failure_analysis_manifest.json"
+    }
+  },
+  "historical_status": "CERTIFIED",
+  "historical_passed_criteria": 20,
+  "valid_for_release": false,
+  "warning": "Stored acceptance criteria and numerical claims were not independently revalidated against current source predictions and release provenance."
+}

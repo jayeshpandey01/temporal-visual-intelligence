@@ -1,0 +1,99 @@
+# =============================================================================
+# Milestone M7: Final Release Candidate Experiment Configuration
+# Canonical frozen specification for publication, audit, and demo.
+# =============================================================================
+
+version: "1.0.0-final"
+milestone: "M7"
+status: "RELEASE_CANDIDATE"
+freeze_timestamp: "2026-10-29T01:00:00Z"
+
+dataset:
+  name: "Something-Something V2 Directional Diagnostic Benchmark"
+  root: "data/"
+  metadata: "data/metadata/dataset_manifest.json"
+  split_manifest: "data/metadata/split_manifest.json"
+  total_sequences: 2000
+  subset_classes: 20
+  class_balance: 100 # exactly 100 sequences per class
+  train_count: 1400
+  val_count: 300
+  test_count: 300
+  leakage_guard: "GroupKFold on video_id (Zero Cross-Split Leakage Certified)"
+
+sequence:
+  max_frames: 8
+  frame_size: [224, 224]
+  canonical_sampling: "uniform"
+  tested_samplings: ["uniform", "sparse", "dense", "random", "jittered"]
+
+encoder:
+  name: "dinov2_vits14"
+  freeze: true
+  embed_dim: 384
+  cache_dir: "embeddings/"
+
+temporal:
+  model: "gru"
+  projection_dim: 256
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.2
+
+baseline:
+  approach: "B"
+  eval_anchor: "middle"
+  hidden_dim: 256
+  dropout: 0.1
+
+encoders:
+  primary:
+    name: "dinov2_vits14"
+    freeze: true
+    embed_dim: 384
+    cache_dir: "embeddings/"
+  secondary:
+    name: "clip_vit_b32"
+    freeze: true
+    embed_dim: 512
+    projection_dim: 256
+    cache_dir: "embeddings_clip/"
+
+models:
+  baseline_mlp:
+    name: "Model A (SingleFrameMLP)"
+    parameters: 103700
+    eval_anchor: "middle"
+  mean_pool:
+    name: "Model B (MultiFrameMeanPool)"
+    parameters: 103700
+    order_invariant: true
+  temporal_gru:
+    name: "Model C (TemporalGRU)"
+    parameters: 249364
+    hidden_dim: 128
+    projection_dim: 256
+  compact_gru:
+    name: "Model D (CompactTemporalGRU)"
+    parameters: 103700 # Exact capacity parity with Models A & B
+
+training:
+  optimizer: "AdamW"
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler: "CosineAnnealingLR"
+  batch_size: 32
+  epochs: 30
+  gradient_clip: 1.0
+  seeds: [42, 43, 44]
+  patience: 5
+  early_stopping_monitor: "val_accuracy"
+
+verification:
+  statistical_protocol:
+    fdr_correction: "Benjamini-Hochberg (1995)"
+    alpha: 0.05
+    bootstrap_resamples: 1000
+    paired_test: "McNemar Discordance Test with Continuity Correction"
+  checkpoints_dir: "results/checkpoints/"
+  output_dir: "results/final/"

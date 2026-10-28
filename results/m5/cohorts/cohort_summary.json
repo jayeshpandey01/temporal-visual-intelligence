@@ -1,0 +1,67 @@
+{
+  "milestone": "M5.2",
+  "total_test_sequences": 300,
+  "cohorts": {
+    "cohort_A": {
+      "name": "Cohort A (Normal / Easy)",
+      "description": "Baseline Correct, Temporal Correct",
+      "count": 11,
+      "percentage": "3.67%",
+      "mean_conf_gru": 0.16104545454545455,
+      "mean_conf_baseline": 0.06139090909090909
+    },
+    "cohort_B": {
+      "name": "Cohort B (Temporal Regression)",
+      "description": "Baseline Correct, Temporal Wrong",
+      "count": 4,
+      "percentage": "1.33%",
+      "mean_conf_gru": 0.14707499999999998,
+      "mean_conf_baseline": 0.06115
+    },
+    "cohort_C": {
+      "name": "Cohort C (Temporal Rescue)",
+      "description": "Baseline Wrong, Temporal Correct",
+      "count": 97,
+      "percentage": "32.33%",
+      "mean_conf_gru": 0.3234360824742268,
+      "mean_conf_baseline": 0.06127319587628866
+    },
+    "cohort_D": {
+      "name": "Cohort D (Hard Failure)",
+      "description": "Baseline Wrong, Temporal Wrong",
+      "count": 188,
+      "percentage": "62.67%",
+      "mean_conf_gru": 0.20179521276595744,
+      "mean_conf_baseline": 0.06125053191489361
+    },
+    "cohort_E": {
+      "name": "Cohort E (Order-Sensitive Cases)",
+      "description": "Correct under Canonical, Wrong under Shuffle/Reverse",
+      "count_any": 68,
+      "percentage_any": "22.67%",
+      "count_shuffle_sensitive": 49,
+      "count_reverse_sensitive": 56,
+      "count_repeated_sensitive": 45,
+      "count_strict_both": 37,
+      "overlap_with_cohort_c": 62,
+      "overlap_with_cohort_c_pct": "91.2%"
+    }
+  },
+  "tri_model_cases": {
+    "Case 6: Concordant Hard Failure": 174,
+    "Case 1: Pure Temporal Order Rescue": 81,
+    "Case 4: Spatial Accumulation Sufficient": 16,
+    "Case 5: Observation Only": 14,
+    "Case 2: Order Resolution": 11,
+    "Case 3: Temporal Regression": 4
+  },
+  "files_exported": {
+    "master": "results/m5/cohorts/analysis_cohorts.csv",
+    "cohort_A": "results/m5/cohorts/cohort_A_easy.csv",
+    "cohort_B": "results/m5/cohorts/cohort_B_regression.csv",
+    "cohort_C": "results/m5/cohorts/cohort_C_rescued.csv",
+    "cohort_D": "results/m5/cohorts/cohort_D_hard_failures.csv",
+    "cohort_E": "results/m5/cohorts/cohort_E_order_sensitive.csv",
+    "rescue_cohorts": "results/m5/rescue_cohorts.csv"
+  }
+}

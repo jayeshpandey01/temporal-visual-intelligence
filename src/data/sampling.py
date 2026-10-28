@@ -180,11 +180,44 @@ def pad_or_truncate(
         raise ValueError(f"Unknown pad_mode: {pad_mode}")
 
 
+def dense_sample(total_frames: int, target_frames: int) -> List[int]:
+    """
+    Take the first N frames: [0, 1, ..., N-1] (dense prefix window).
+    Alias for first_n.
+    """
+    return first_n(total_frames, target_frames)
+
+
+def jittered_sample(
+    total_frames: int,
+    target_frames: int,
+    jitter: int = 1,
+    seed: Optional[int] = 42,
+) -> List[int]:
+    """
+    Uniform sampling with ±jitter frame displacement per anchor.
+    Simulates realistic frame-timestamp imprecision while preserving monotonicity.
+    """
+    if total_frames <= 0 or target_frames <= 0:
+        return []
+    base = uniform_sample(total_frames, target_frames)
+    rng = np.random.RandomState(seed) if seed is not None else np.random
+    jittered = []
+    for idx in base:
+        disp = int(rng.randint(-jitter, jitter + 1))
+        new_idx = max(0, min(total_frames - 1, idx + disp))
+        jittered.append(new_idx)
+    # Sort to preserve chronological monotonicity
+    return sorted(jittered)
+
+
 SAMPLING_STRATEGIES: Dict[str, Callable[[int, int], List[int]]] = {
     "uniform": uniform_sample,
+    "dense": dense_sample,
     "first_n": first_n,
     "last_n": last_n,
     "sparse": sparse_sample,
+    "jittered": jittered_sample,
     "segment_center": lambda L, N: segment_sample(L, N, mode="center"),
     "random": random_sample,
 }

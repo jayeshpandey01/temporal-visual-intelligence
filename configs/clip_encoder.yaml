@@ -1,0 +1,12 @@
+# CLIP ViT-B/32 Encoder Configuration for M6.4 Representation Robustness
+encoder:
+  name: clip_vit_b32
+  model_id: openai/clip-vit-base-patch32
+  freeze: true              # NEVER fine-tune — encoder is the constant
+  embed_dim: 512            # CLIP ViT-B/32 output dimension
+  projection_dim: 256       # Project to 256-D (matches DINOv2 projection layer)
+  normalize: true           # L2-normalize CLIP features
+  cache_dir: embeddings_clip/
+  imagenet_mean: [0.48145466, 0.4578275, 0.40821073]
+  imagenet_std: [0.26862954, 0.26130258, 0.27577711]
+

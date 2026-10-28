@@ -1,0 +1,108 @@
+{
+  "baseline": {
+    "mean": 0.08777777777777777,
+    "std": 0.03281071791162978,
+    "accs": [
+      0.05,
+      0.08333333333333333,
+      0.13
+    ],
+    "macro_f1_mean": 0.03271336780474312,
+    "macro_f1_std": 0.02508826668061223,
+    "macro_f1s": [
+      0.0047619047619047615,
+      0.027763759887200885,
+      0.0656144387651237
+    ]
+  },
+  "meanpool": {
+    "mean": 0.08222222222222222,
+    "std": 0.012570787221094181,
+    "accs": [
+      0.1,
+      0.07333333333333333,
+      0.07333333333333333
+    ],
+    "macro_f1_mean": 0.02162270405990696,
+    "macro_f1_std": 0.008951104668162764,
+    "macro_f1s": [
+      0.034007352941176475,
+      0.013161290322580645,
+      0.01769946891596376
+    ]
+  },
+  "gru": {
+    "mean": 0.3477777777777778,
+    "std": 0.010999438818457408,
+    "accs": [
+      0.36,
+      0.3333333333333333,
+      0.35
+    ],
+    "macro_f1_mean": 0.320425677272104,
+    "macro_f1_std": 0.005679553919263653,
+    "macro_f1s": [
+      0.3234721343360819,
+      0.31246619799913716,
+      0.32533869948109306
+    ]
+  },
+  "compact_gru": {
+    "mean": 0.23555555555555555,
+    "std": 0.021998877636914816,
+    "accs": [
+      0.24,
+      0.26,
+      0.20666666666666667
+    ],
+    "macro_f1_mean": 0.1800308926233303,
+    "macro_f1_std": 0.033860599004398244,
+    "macro_f1s": [
+      0.18928245441266014,
+      0.21609438182224955,
+      0.13471584163508124
+    ]
+  },
+  "order_drop": 0.14111111111111113,
+  "reversal_drop": 0.1888888888888889,
+  "k1_accuracy": 0.11555555555555556,
+  "horizon_gain": 0.23222222222222222,
+  "capacity_parity_gain": 0.15333333333333332,
+  "_metadata": {
+    "status": "diagnostic_current_checkpoint_recomputation",
+    "split": "test",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "accuracy_std": "population standard deviation across seeds",
+    "progressive_sampling": "uniform coverage; K=1 uses midpoint anchor",
+    "shuffle_protocol": "persistent torch.Generator seeded at 42 across batches and model seeds",
+    "checkpoint_sha256": {
+      "baseline_seed42": "ebd13a05fc17cc6e3019a7183b6eb3a13d9ecfd7b440ba994fb9154c3d3fd869",
+      "baseline_seed43": "2b2245dc2fc20de294faa711fb6c98581070e7c77d0ff584ecb8df0c4b6f8276",
+      "baseline_seed44": "398ba202e5dc591b7b7bc6b2cef5b17453e4500c0504c84dd38986549562d542",
+      "meanpool_seed42": "cecb7a14d3bc6c004514d95375a66303f600f39963bf496c242004412d458eed",
+      "meanpool_seed43": "eee28905e5587d2e430f5712afae3dc6ad23908626be9ef1866e5c0257f8e243",
+      "meanpool_seed44": "19f1f6796efd726cc8a244e4a5ed0f3d70af25996eb03b3aadeb0d5918f9432f",
+      "gru_seed42": "a1fe3c5a378189072423accef8289752289d461117a47f1680fc8120e0aa60d1",
+      "gru_seed43": "36878a33caacd97627a2c8c060ad365cd0b329cf9b8a051b882ee4ec681f2fd5",
+      "gru_seed44": "1de7dd6f395c202a18fbf35735c94e7a7be7061691a569875eca913e11e80b16",
+      "compact_gru_seed42": "a18c72f75dc4501a68e489d42d3bed100db13f1fc2c066232540da6ed269b1f8",
+      "compact_gru_seed43": "289edc89b7a8b393e86aa704b288ebb5fbee42846ee4c46a701030438f8777e9",
+      "compact_gru_seed44": "d2177b0a100ec81fda321a1338e34ae941e6a47aba0f3cd30a0d4f43b7f701e9"
+    },
+    "config_sha256": "e869fc8e00e25c5527644fd6b2282c14dc166122225c22dce6214fb94070183c",
+    "prediction_artifact_sources": [
+      "results/experiments/progressive/progressive_predictions.csv",
+      "results/experiments/shuffle/order_predictions.csv",
+      "results/experiments/reversal/reversal_predictions.csv"
+    ],
+    "limitations": [
+      "Re-evaluates available checkpoints; does not independently reproduce training.",
+      "Historical statistical significance artifacts are not validated by this script.",
+      "Raw per-example predictions are not regenerated or saved by this diagnostic."
+    ]
+  }
+}

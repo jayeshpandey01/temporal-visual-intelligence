@@ -1,0 +1,2103 @@
+# Sample-Level Multi-Model Evaluation Cards (M3.16)
+# Format: sequence_id -> true -> single -> mean -> gru -> outcome
+
+sequence_id: vid_07_0001
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0589) [WRONG]
+gru:         Moving something away from the camera (ID: 0, conf: 0.3223) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_07_0009
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0582) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1772) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0010
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0564) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.2324) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0015
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0563) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2203) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0041
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0554) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3592) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0042
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0575) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2572) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0050
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0555) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2579) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0055
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0561) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1703) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0056
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0597) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.2983) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0065
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0585) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2046) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0070
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0548) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3268) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0072
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0572) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5101) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0073
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0611) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2349) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0078
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0593) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2506) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_07_0091
+true:        Moving something away from the camera (ID: 0)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0531) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.3428) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0000
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0561) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2297) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0014
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0541) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2443) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0025
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0549) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3304) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0026
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Pushing something from right to left (ID: 3, conf: 0.0529) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1833) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0030
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0602) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0551) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1358) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0032
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0548) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3513) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0035
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0527) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2048) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0040
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0572) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2331) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0042
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0554) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2078) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0051
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0575) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2600) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0062
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0576) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1941) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_13_0067
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0552) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2601) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0071
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0548) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2474) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0087
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0540) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2368) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_13_0092
+true:        Moving something towards the camera (ID: 1)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0602) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0561) [WRONG]
+gru:         Moving something towards the camera (ID: 1, conf: 0.2383) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_00_0010
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0535) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1534) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0025
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0557) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1130) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0026
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0583) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1679) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0031
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0534) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1575) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0032
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0556) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1119) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0033
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0564) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1103) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0035
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0544) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1144) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0046
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0533) [WRONG]
+gru:         Pushing something from left to right (ID: 2, conf: 0.1159) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_00_0053
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0600) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1432) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0054
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0590) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1380) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0063
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0586) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1334) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0070
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0579) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1052) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0082
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0537) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1512) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0086
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0585) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1496) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_00_0099
+true:        Pushing something from left to right (ID: 2)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0540) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1461) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0005
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0543) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2286) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0006
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0551) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1428) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0025
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0579) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1707) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_01_0029
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1548) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0055
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0613) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1442) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0059
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0576) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1915) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0060
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0534) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2042) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0063
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0618) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1640) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_01_0064
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0567) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2132) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0068
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0530) [WRONG]
+gru:         Pushing something from left to right (ID: 2, conf: 0.1115) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0072
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0535) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1184) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0081
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0557) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1449) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0087
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0573) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1777) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0093
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0552) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1760) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_01_0095
+true:        Pushing something from right to left (ID: 3)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0637) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1575) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_06_0026
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0619) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3180) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0030
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0574) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.2408) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_06_0036
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0576) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3758) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0041
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0548) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.3479) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0047
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0574) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2381) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0048
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0569) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2843) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0054
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0594) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3036) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0064
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0548) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.2508) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0065
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0564) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3292) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0071
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0578) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3283) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0073
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0566) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.3809) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_06_0078
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0584) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.3683) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_06_0085
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0567) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.2530) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_06_0086
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0614) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.3362) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_06_0089
+true:        Picking something up (ID: 4)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0554) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.4305) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_04_0010
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0543) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1559) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0011
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0559) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1334) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0017
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0562) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1550) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0028
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Pushing something from right to left (ID: 3, conf: 0.0530) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1513) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0031
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0547) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1236) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0042
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0605) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1905) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0063
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0576) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1391) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0064
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0549) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1212) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0071
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0527) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1527) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0074
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0568) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1336) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0080
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0581) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1514) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0081
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0577) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1436) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_04_0082
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0540) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1549) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0087
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0539) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1054) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_04_0088
+true:        Putting something down (ID: 5)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0540) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1146) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_02_0002
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0594) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2377) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0004
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0564) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1737) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0005
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0549) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1839) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0029
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0611) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2086) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0032
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0569) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1343) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0033
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0591) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1709) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0034
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0595) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2259) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0045
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0598) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1368) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0050
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0560) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1002) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0051
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0572) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1754) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_02_0052
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0590) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1642) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0059
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0551) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2453) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0078
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0589) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1367) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0092
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0587) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1827) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_02_0095
+true:        Opening something (ID: 6)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0567) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1755) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0007
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0547) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1837) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0011
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Pushing something from right to left (ID: 3, conf: 0.0532) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1878) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0018
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0547) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1337) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0021
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0533) [WRONG]
+gru:         Pushing something from left to right (ID: 2, conf: 0.1049) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0022
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0603) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1560) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_03_0029
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0535) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1684) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0032
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0590) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1371) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0040
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0578) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1729) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0042
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1830) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0043
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0545) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1325) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0046
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0597) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1000) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0053
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0582) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1704) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0059
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0575) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1426) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0067
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0588) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1337) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_03_0094
+true:        Closing something (ID: 7)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0548) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1368) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_05_0001
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0547) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1590) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0002
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1890) [WRONG]
+outcome:     TEMPORAL_REGRESSION
+================================================================================
+sequence_id: vid_05_0006
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0572) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1672) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0014
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0602) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1693) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0016
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0581) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1518) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0022
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0570) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1117) [WRONG]
+outcome:     TEMPORAL_REGRESSION
+================================================================================
+sequence_id: vid_05_0030
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [CORRECT]
+mean:        Putting something into something (ID: 14, conf: 0.0581) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1336) [WRONG]
+outcome:     TEMPORAL_REGRESSION
+================================================================================
+sequence_id: vid_05_0032
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [CORRECT]
+mean:        Closing something (ID: 7, conf: 0.0541) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1666) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0035
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [CORRECT]
+mean:        Putting something into something (ID: 14, conf: 0.0572) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1621) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0050
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0564) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1540) [WRONG]
+outcome:     TEMPORAL_REGRESSION
+================================================================================
+sequence_id: vid_05_0052
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0560) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1528) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0058
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0543) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1591) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0064
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0588) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1593) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0078
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [CORRECT]
+mean:        Uncovering something (ID: 13, conf: 0.0573) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1599) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_05_0085
+true:        Turning the camera left while filming something (ID: 8)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [CORRECT]
+mean:        Pushing something from right to left (ID: 3, conf: 0.0534) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1644) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_18_0002
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0548) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4608) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_18_0005
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0621) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0562) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4679) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_18_0008
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0601) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5229) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0018
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0557) [CORRECT]
+gru:         Taking something out of something (ID: 15, conf: 0.4699) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_18_0019
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0583) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4763) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0030
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0573) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4712) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0042
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0617) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5490) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0045
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0579) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4863) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0048
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0578) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4951) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0074
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0580) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5147) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0083
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0600) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4727) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_18_0084
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0598) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5160) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0086
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0553) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4460) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0088
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0565) [CORRECT]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4688) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_18_0098
+true:        Turning the camera right while filming something (ID: 9)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0583) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.4782) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_10_0003
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0548) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3783) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0014
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0575) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.4034) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0022
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0559) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.2906) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_10_0026
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0551) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3293) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0028
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0545) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3628) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0032
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0546) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3354) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0040
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0554) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3897) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0041
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0533) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3730) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0068
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0566) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.2891) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_10_0070
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0527) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3628) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0071
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0562) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.2982) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_10_0072
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0560) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.4480) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0075
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0537) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3899) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_10_0088
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0535) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.3620) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_10_0094
+true:        Putting something on top of something (ID: 10)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0550) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3154) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0000
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0588) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1549) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0001
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0565) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1312) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0008
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0545) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1399) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0012
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0616) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1487) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0013
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0555) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1114) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_16_0018
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0533) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1274) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_16_0031
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0555) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.2373) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0034
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1878) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0039
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0631) [WRONG]
+gru:         Covering something (ID: 12, conf: 0.1585) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_16_0047
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0561) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1048) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_16_0070
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0539) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1857) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0071
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0532) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1316) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0073
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0571) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1600) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0088
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0604) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1436) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_16_0090
+true:        Taking something off of something (ID: 11)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0597) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1402) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_17_0003
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0592) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1611) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0005
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0546) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1902) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0019
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0551) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1245) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0020
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.2128) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0022
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0534) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1640) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0029
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0575) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1246) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0030
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Pushing something from right to left (ID: 3, conf: 0.0546) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1389) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0036
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0584) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1552) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0039
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0536) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1816) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0050
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0643) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1357) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0055
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0592) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1495) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0058
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0585) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1550) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0067
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0548) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1792) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0072
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0594) [WRONG]
+gru:         Taking something off of something (ID: 11, conf: 0.1618) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_17_0097
+true:        Covering something (ID: 12)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0614) [WRONG]
+gru:         Putting something down (ID: 5, conf: 0.1466) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_15_0003
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0572) [CORRECT]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1399) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0007
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0577) [CORRECT]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1499) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0016
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0570) [CORRECT]
+gru:         Putting something down (ID: 5, conf: 0.1150) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0017
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0598) [CORRECT]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1530) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0018
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0591) [CORRECT]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1541) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0031
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0577) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1297) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_15_0036
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0533) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1498) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_15_0044
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0585) [CORRECT]
+gru:         Covering something (ID: 12, conf: 0.1214) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0046
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0612) [CORRECT]
+gru:         Uncovering something (ID: 13, conf: 0.1131) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_15_0047
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0602) [CORRECT]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1553) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0050
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0529) [CORRECT]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1330) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0055
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0570) [CORRECT]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1385) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0077
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0555) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1483) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_15_0078
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0617) [CORRECT]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1658) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_15_0090
+true:        Uncovering something (ID: 13)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0628) [CORRECT]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1771) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_11_0007
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0544) [CORRECT]
+gru:         Putting something into something (ID: 14, conf: 0.4471) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_11_0009
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0552) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.2942) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0018
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0572) [CORRECT]
+gru:         Putting something on top of something (ID: 10, conf: 0.4636) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_11_0020
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0576) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.4735) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0022
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0552) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3957) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0028
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0568) [CORRECT]
+gru:         Putting something into something (ID: 14, conf: 0.5285) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_11_0051
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0545) [CORRECT]
+gru:         Putting something on top of something (ID: 10, conf: 0.3976) [WRONG]
+outcome:     OBSERVATION_RESCUED_ONLY
+================================================================================
+sequence_id: vid_11_0055
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0545) [CORRECT]
+gru:         Putting something into something (ID: 14, conf: 0.4982) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_11_0064
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0562) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3007) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0072
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0556) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.4080) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0075
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0545) [WRONG]
+gru:         Putting something into something (ID: 14, conf: 0.2713) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_11_0078
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0537) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3574) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_11_0092
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0570) [CORRECT]
+gru:         Putting something into something (ID: 14, conf: 0.4109) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_11_0094
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0609) [CORRECT]
+gru:         Putting something into something (ID: 14, conf: 0.5165) [CORRECT]
+outcome:     TEMPORAL_RESCUED
+================================================================================
+sequence_id: vid_11_0096
+true:        Putting something into something (ID: 14)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0586) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.4614) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_19_0006
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0531) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5390) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0009
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0578) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.4900) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0010
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0559) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5160) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0011
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0537) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5284) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0012
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0609) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.4816) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0014
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0556) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5035) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0020
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0537) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.4825) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0031
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0619) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.5163) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_19_0052
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0541) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5348) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0058
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0548) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5023) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0059
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0565) [WRONG]
+gru:         Turning the camera right while filming something (ID: 9, conf: 0.4510) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_19_0073
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0592) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5276) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0082
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0573) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5562) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0091
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0583) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.5555) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_19_0092
+true:        Taking something out of something (ID: 15)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0579) [WRONG]
+gru:         Taking something out of something (ID: 15, conf: 0.4927) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0000
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0573) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1412) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0003
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0533) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1840) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0011
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0574) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2956) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0031
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0601) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0582) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1588) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0034
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0618) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1495) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0041
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0555) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1687) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0054
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0541) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1404) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0056
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0583) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2638) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0061
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0555) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1667) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0063
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0614) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2601) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0072
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0602) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0599) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1543) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0079
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0606) [WRONG]
+gru:         Pushing something from right to left (ID: 3, conf: 0.1702) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_14_0085
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0591) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1784) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0087
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0558) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.1956) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_14_0092
+true:        Rotating something clockwise (ID: 16)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0575) [WRONG]
+gru:         Rotating something clockwise (ID: 16, conf: 0.2003) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_08_0004
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0555) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1163) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0026
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0574) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2018) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0029
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0539) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1807) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0031
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0609) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0529) [WRONG]
+gru:         Pushing something from left to right (ID: 2, conf: 0.1008) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0037
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0545) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1999) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0041
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0573) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1707) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0045
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0622) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0631) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2134) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0052
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0555) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1467) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0054
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0574) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1267) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0056
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0550) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1838) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0076
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0600) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2127) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0085
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0583) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.2052) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0086
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0613) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2153) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0092
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0549) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.1813) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_08_0096
+true:        Rotating something counter-clockwise (ID: 17)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0591) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2288) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0003
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0618) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0578) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2011) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0004
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0557) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1936) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0009
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0582) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1731) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_09_0015
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0617) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0568) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.2077) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0018
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0540) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1742) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0027
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0607) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0552) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1711) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0034
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0536) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1950) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_09_0040
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0566) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1915) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_09_0055
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0616) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0571) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2230) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0062
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0619) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0592) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3066) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0069
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0620) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0614) [WRONG]
+gru:         Closing something (ID: 7, conf: 0.2229) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0070
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0533) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1906) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_09_0079
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0613) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0554) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1736) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_09_0088
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0558) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1954) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_09_0094
+true:        Tipping something over (ID: 18)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0612) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0553) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1882) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0001
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0559) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2452) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0010
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0537) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1437) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0028
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0570) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2444) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0032
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0610) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0594) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.3039) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0038
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0531) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1883) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0039
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0603) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0546) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2824) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0044
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0615) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0559) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2560) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0049
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0605) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0559) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.3210) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0052
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0614) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0552) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.2170) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0054
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0611) [WRONG]
+mean:        Closing something (ID: 7, conf: 0.0550) [WRONG]
+gru:         Picking something up (ID: 4, conf: 0.2807) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0060
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0608) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0564) [WRONG]
+gru:         Standing something upright (ID: 19, conf: 0.1755) [CORRECT]
+outcome:     ORDER_RESCUED
+================================================================================
+sequence_id: vid_12_0061
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0604) [WRONG]
+mean:        Turning the camera right while filming something (ID: 9, conf: 0.0545) [WRONG]
+gru:         Opening something (ID: 6, conf: 0.1847) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0072
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0603) [WRONG]
+mean:        Putting something into something (ID: 14, conf: 0.0527) [WRONG]
+gru:         Putting something on top of something (ID: 10, conf: 0.2907) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0085
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0606) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0562) [WRONG]
+gru:         Turning the camera left while filming something (ID: 8, conf: 0.1351) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================
+sequence_id: vid_12_0097
+true:        Standing something upright (ID: 19)
+single:      Turning the camera left while filming something (ID: 8, conf: 0.0603) [WRONG]
+mean:        Uncovering something (ID: 13, conf: 0.0566) [WRONG]
+gru:         Tipping something over (ID: 18, conf: 0.1693) [WRONG]
+outcome:     CONCORDANT_FAILURE
+================================================================================

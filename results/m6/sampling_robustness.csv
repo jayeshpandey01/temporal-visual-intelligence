@@ -1,0 +1,6 @@
+strategy,baseline_acc,baseline_std,meanpool_acc,meanpool_std,gru_acc,gru_std,delta_temporal,delta_order,mcnemar_p,survived
+uniform,0.0878,0.0328,0.0822,0.0126,0.3478,0.0110,0.2600,0.2656,3.3307e-16,True
+sparse,0.0878,0.0328,0.0856,0.0129,0.2033,0.0249,0.1156,0.1178,3.0315e-07,True
+dense,0.0856,0.0333,0.0867,0.0094,0.1689,0.0206,0.0833,0.0822,1.4016e-04,True
+random,0.0878,0.0345,0.0833,0.0119,0.2178,0.0253,0.1300,0.1344,4.8411e-08,True
+jittered,0.0889,0.0342,0.0856,0.0129,0.3311,0.0016,0.2422,0.2456,6.3283e-15,True

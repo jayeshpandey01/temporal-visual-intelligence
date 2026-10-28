@@ -1,0 +1,21 @@
+class_idx,class_name,primary_phenomenon,secondary_phenomenon,reciprocal_class,reciprocal_idx,expected_reversal_inversion,expected_frame_ambiguity,hypothesis_notes
+0,Closing something,T3_state_transition,T2_directional_motion,Opening something,4,True,High,Transition from open to closed state; reversed video resembles opening.
+1,Covering something,T3_state_transition,T4_object_interaction,Uncovering something,19,True,High,Object occlusion boundary created; reversed video resembles uncovering.
+2,Moving something away from the camera,T2_directional_motion,T1_displacement,Moving something towards the camera,3,True,High,Apparent scale shrinkage; inverts to towards camera under reversal.
+3,Moving something towards the camera,T2_directional_motion,T1_displacement,Moving something away from the camera,2,True,High,Apparent scale growth; inverts to away from camera under reversal.
+4,Opening something,T3_state_transition,T2_directional_motion,Closing something,0,True,High,Transition from closed to open state; reversed video resembles closing.
+5,Picking something up,T1_displacement,T4_object_interaction,Putting something down,8,True,Moderate,Upward vertical displacement following grasp; inverts to putting down.
+6,Pushing something from left to right,T1_displacement,T2_directional_motion,Pushing something from right to left,7,True,High,Horizontal displacement vector dx > 0; inverts to right-to-left under reversal.
+7,Pushing something from right to left,T1_displacement,T2_directional_motion,Pushing something from left to right,6,True,High,Horizontal displacement vector dx < 0; inverts to left-to-right under reversal.
+8,Putting something down,T1_displacement,T4_object_interaction,Picking something up,5,True,Moderate,Downward vertical displacement terminating in contact with surface.
+9,Putting something into something,T4_object_interaction,T5_relative_motion,Taking something out of something,15,True,High,Object containment boundary crossed; inverts to taking out.
+10,Putting something on top of something,T4_object_interaction,T5_relative_motion,Taking something off of something,14,True,High,Object support boundary established; inverts to taking off.
+11,Rotating something clockwise,T2_directional_motion,T1_displacement,Rotating something counter-clockwise,12,True,High,Angular velocity dtheta > 0; inverts to counter-clockwise under reversal.
+12,Rotating something counter-clockwise,T2_directional_motion,T1_displacement,Rotating something clockwise,11,True,High,Angular velocity dtheta < 0; inverts to clockwise under reversal.
+13,Standing something upright,T3_state_transition,T4_object_interaction,Tipping something over,16,True,Moderate,Orientation shift from horizontal to vertical stability; inverts to tipping over.
+14,Taking something off of something,T4_object_interaction,T6_event_order,Putting something on top of something,10,True,High,Support boundary severed; inverts to putting on top.
+15,Taking something out of something,T4_object_interaction,T6_event_order,Putting something into something,9,True,High,Containment boundary exited; inverts to putting into.
+16,Tipping something over,T3_state_transition,T1_displacement,Standing something upright,13,True,Moderate,Loss of vertical stability terminating in prone state; inverts to standing upright.
+17,Turning the camera left while filming something,T5_relative_motion,T2_directional_motion,Turning the camera right while filming something,18,True,High,Camera egomotion induced rightward optical flow; inverts to turning right.
+18,Turning the camera right while filming something,T5_relative_motion,T2_directional_motion,Turning the camera left while filming something,17,True,High,Camera egomotion induced leftward optical flow; inverts to turning left.
+19,Uncovering something,T3_state_transition,T4_object_interaction,Covering something,1,True,High,"Occlusion boundary removed, revealing hidden entity; inverts to covering."

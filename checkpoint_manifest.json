@@ -1,0 +1,91 @@
+{
+  "total_checkpoints": 12,
+  "generated_at": "2026-10-29T01:01:00Z",
+  "checkpoints": {
+    "experiments/m4_final/checkpoints/baseline/best_seed42.pt": {
+      "sha256": "ebd13a05fc17cc6e3019a7183b6eb3a13d9ecfd7b440ba994fb9154c3d3fd869",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "baseline",
+      "seed": 42
+    },
+    "experiments/m4_final/checkpoints/baseline/best_seed43.pt": {
+      "sha256": "2b2245dc2fc20de294faa711fb6c98581070e7c77d0ff584ecb8df0c4b6f8276",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "baseline",
+      "seed": 43
+    },
+    "experiments/m4_final/checkpoints/baseline/best_seed44.pt": {
+      "sha256": "398ba202e5dc591b7b7bc6b2cef5b17453e4500c0504c84dd38986549562d542",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "baseline",
+      "seed": 44
+    },
+    "experiments/m4_final/checkpoints/compact_gru/best_seed42.pt": {
+      "sha256": "a18c72f75dc4501a68e489d42d3bed100db13f1fc2c066232540da6ed269b1f8",
+      "size_bytes": 418373,
+      "num_parameters": 103700,
+      "model_name": "compact_gru",
+      "seed": 42
+    },
+    "experiments/m4_final/checkpoints/compact_gru/best_seed43.pt": {
+      "sha256": "289edc89b7a8b393e86aa704b288ebb5fbee42846ee4c46a701030438f8777e9",
+      "size_bytes": 418373,
+      "num_parameters": 103700,
+      "model_name": "compact_gru",
+      "seed": 43
+    },
+    "experiments/m4_final/checkpoints/compact_gru/best_seed44.pt": {
+      "sha256": "d2177b0a100ec81fda321a1338e34ae941e6a47aba0f3cd30a0d4f43b7f701e9",
+      "size_bytes": 418373,
+      "num_parameters": 103700,
+      "model_name": "compact_gru",
+      "seed": 44
+    },
+    "experiments/m4_final/checkpoints/gru/best_seed42.pt": {
+      "sha256": "a1fe3c5a378189072423accef8289752289d461117a47f1680fc8120e0aa60d1",
+      "size_bytes": 1001157,
+      "num_parameters": 249364,
+      "model_name": "gru",
+      "seed": 42
+    },
+    "experiments/m4_final/checkpoints/gru/best_seed43.pt": {
+      "sha256": "36878a33caacd97627a2c8c060ad365cd0b329cf9b8a051b882ee4ec681f2fd5",
+      "size_bytes": 1001157,
+      "num_parameters": 249364,
+      "model_name": "gru",
+      "seed": 43
+    },
+    "experiments/m4_final/checkpoints/gru/best_seed44.pt": {
+      "sha256": "1de7dd6f395c202a18fbf35735c94e7a7be7061691a569875eca913e11e80b16",
+      "size_bytes": 1001157,
+      "num_parameters": 249364,
+      "model_name": "gru",
+      "seed": 44
+    },
+    "experiments/m4_final/checkpoints/meanpool/best_seed42.pt": {
+      "sha256": "cecb7a14d3bc6c004514d95375a66303f600f39963bf496c242004412d458eed",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "meanpool",
+      "seed": 42
+    },
+    "experiments/m4_final/checkpoints/meanpool/best_seed43.pt": {
+      "sha256": "eee28905e5587d2e430f5712afae3dc6ad23908626be9ef1866e5c0257f8e243",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "meanpool",
+      "seed": 43
+    },
+    "experiments/m4_final/checkpoints/meanpool/best_seed44.pt": {
+      "sha256": "19f1f6796efd726cc8a244e4a5ed0f3d70af25996eb03b3aadeb0d5918f9432f",
+      "size_bytes": 417413,
+      "num_parameters": 103700,
+      "model_name": "meanpool",
+      "seed": 44
+    }
+  },
+  "source_of_truth": "experiments/m4_final/checkpoints (immutable M4 snapshot)"
+}

@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "milestone": "M4.1",
+  "audit_timestamp": "2026-10-28T19:27:55.751078",
+  "git_commit": "84b4001d5da9ceb78556990586cd82015ca63f69",
+  "status": "PASS",
+  "checkpoint_hashes": {
+    "results/checkpoints/baseline/best_seed42.pt": "ebd13a05fc17cc6e3019a7183b6eb3a13d9ecfd7b440ba994fb9154c3d3fd869",
+    "results/checkpoints/baseline/best_seed43.pt": "2b2245dc2fc20de294faa711fb6c98581070e7c77d0ff584ecb8df0c4b6f8276",
+    "results/checkpoints/baseline/best_seed44.pt": "398ba202e5dc591b7b7bc6b2cef5b17453e4500c0504c84dd38986549562d542",
+    "results/checkpoints/meanpool/best_seed42.pt": "cecb7a14d3bc6c004514d95375a66303f600f39963bf496c242004412d458eed",
+    "results/checkpoints/meanpool/best_seed43.pt": "eee28905e5587d2e430f5712afae3dc6ad23908626be9ef1866e5c0257f8e243",
+    "results/checkpoints/meanpool/best_seed44.pt": "19f1f6796efd726cc8a244e4a5ed0f3d70af25996eb03b3aadeb0d5918f9432f",
+    "results/checkpoints/gru/best_seed42.pt": "a1fe3c5a378189072423accef8289752289d461117a47f1680fc8120e0aa60d1",
+    "results/checkpoints/gru/best_seed43.pt": "36878a33caacd97627a2c8c060ad365cd0b329cf9b8a051b882ee4ec681f2fd5",
+    "results/checkpoints/gru/best_seed44.pt": "1de7dd6f395c202a18fbf35735c94e7a7be7061691a569875eca913e11e80b16",
+    "split_manifest": "9093bee63505867bab8c9147da043a0031a2df1bc6145e8a6cf2ce451f7a7066",
+    "embedding_manifest": "18d5f34cbbe1592c517c8f962a7d74bf98d89f9dd70b8a48d09a007fb357965e"
+  },
+  "controls_audit": {
+    "Control 1: Dataset": {
+      "passed": true,
+      "manifest_exists": true,
+      "sequences_csv_exists": true,
+      "sequence_count": 2000,
+      "expected_sequences": 2000,
+      "expected_classes": 20
+    },
+    "Control 2: Visual Encoder": {
+      "passed": true,
+      "frozen": true,
+      "embed_dim": 384,
+      "backbone": "dinov2_vits14",
+      "manifest_exists": true
+    },
+    "Control 3: Preprocessing": {
+      "passed": true,
+      "version": "v1_imagenet_224x224_center",
+      "resolution": [
+        224,
+        224
+      ],
+      "base_frames": 8,
+      "color_space": "RGB"
+    },
+    "Control 4, 5, 6: Splits & Leakage Guard": {
+      "passed": true,
+      "train_count": 1400,
+      "val_count": 300,
+      "test_count": 300,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "leakage_guard_status": "ZERO_LEAKAGE"
+    },
+    "Control 7: Model Checkpoints & Parameters": {
+      "passed": true,
+      "baseline": {
+        "name": "SingleFrameMLP",
+        "expected_parameters": 103700,
+        "checkpoints": {
+          "seed42": {
+            "path": "results/checkpoints/baseline/best_seed42.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          },
+          "seed43": {
+            "path": "results/checkpoints/baseline/best_seed43.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          },
+          "seed44": {
+            "path": "results/checkpoints/baseline/best_seed44.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          }
+        }
+      },
+      "meanpool": {
+        "name": "MultiFrameMeanPool",
+        "expected_parameters": 103700,
+        "checkpoints": {
+          "seed42": {
+            "path": "results/checkpoints/meanpool/best_seed42.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          },
+          "seed43": {
+            "path": "results/checkpoints/meanpool/best_seed43.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          },
+          "seed44": {
+            "path": "results/checkpoints/meanpool/best_seed44.pt",
+            "exists": true,
+            "param_count": 103700,
+            "param_match": true
+          }
+        }
+      },
+      "gru": {
+        "name": "TemporalGRU",
+        "expected_parameters": 249364,
+        "checkpoints": {
+          "seed42": {
+            "path": "results/checkpoints/gru/best_seed42.pt",
+            "exists": true,
+            "param_count": 249364,
+            "param_match": true
+          },
+          "seed43": {
+            "path": "results/checkpoints/gru/best_seed43.pt",
+            "exists": true,
+            "param_count": 249364,
+            "param_match": true
+          },
+          "seed44": {
+            "path": "results/checkpoints/gru/best_seed44.pt",
+            "exists": true,
+            "param_count": 249364,
+            "param_match": true
+          }
+        }
+      }
+    },
+    "Control 8: Evaluation Metrics": {
+      "passed": true,
+      "primary": [
+        "accuracy",
+        "macro_f1"
+      ],
+      "statistical": [
+        "mcnemar_test",
+        "bootstrap_ci_95"
+      ],
+      "bootstrap_resamples": 1000
+    },
+    "Control 9: Random Seeds": {
+      "passed": true,
+      "model_seeds": [
+        42,
+        43,
+        44
+      ],
+      "perturbation_seed": 42,
+      "protocol": "Fixed perturbation seed 42 preserves paired sequence comparison across model seeds"
+    }
+  }
+}

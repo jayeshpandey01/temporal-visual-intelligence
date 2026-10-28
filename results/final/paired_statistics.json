@@ -1,0 +1,138 @@
+{
+  "status": "RECOMPUTED_CORE_FAMILY",
+  "valid_for_inference": true,
+  "family_size": 5,
+  "family_scope": "Five core contrasts with complete per-sequence paired prediction artifacts (H1-H4 and capacity-parity H14).",
+  "inference_unit": "sequence; each sequence's correctness difference is averaged over seeds 42, 43, 44",
+  "uncertainty": "Percentile paired bootstrap over sequences, B=20000; conditional on the saved checkpoints.",
+  "test": "Two-sided Monte Carlo sign-flip permutation over sequence-level paired differences, B=100000; RNG seed 42. Report lower bounds at the Monte Carlo resolution rather than treating zero observed exceedances as p=0.",
+  "multiple_testing": "Benjamini-Hochberg across only this verified five-comparison family (alpha=0.05).",
+  "limitations": [
+    "Intervals and tests condition on the saved model checkpoints and do not capture training-seed variability.",
+    "The family excludes M6 sampling, corruption, CLIP, and cross-validation comparisons because complete paired per-sequence predictions were not available in the audited files.",
+    "This is a reanalysis of saved predictions, not independent training replication."
+  ],
+  "input_sha256": {
+    "results/experiments/progressive/progressive_predictions.csv": "16e346c01554cf0936208538996b2e451665ef178e899f461ec16bdccfc40e49",
+    "results/experiments/shuffle/order_predictions.csv": "a00dc43ee140c9f71dfa66e7db283b15617286bd03ce91ec9980c5ae9c9a1cbd",
+    "results/experiments/reversal/reversal_predictions.csv": "c6310a4335a91a7c8daced11c5c01049d1771c67e6d316489a040e195ac9d081",
+    "results/experiments/statistical_predictions.csv": "5279ebda4cdc5895285a1885193ea02bce1831aa25607d4dee40472e7e89d863"
+  },
+  "comparisons": [
+    {
+      "hypothesis_id": "H1",
+      "comparison": "GRU vs single-frame baseline (K=8)",
+      "n_sequences": 300,
+      "mean_delta_accuracy": 0.26,
+      "delta_pp": 26.0,
+      "bootstrap_ci95": [
+        0.21666666666666667,
+        0.3044444444444444
+      ],
+      "p_sign_flip_two_sided": 9.99990000099999e-06,
+      "permutation_exceedances": 0,
+      "permutation_resolution": 9.99990000099999e-06,
+      "per_seed_mean_delta_accuracy": {
+        "42": 0.31,
+        "43": 0.25,
+        "44": 0.22
+      },
+      "source_delta_column_validated": "delta_Model_C_vs_Model_A",
+      "validation_status": "RECOMPUTED_FROM_PAIRED_PREDICTIONS",
+      "q_bh_verified_family": 9.99990000099999e-06,
+      "reject_bh_0_05": true
+    },
+    {
+      "hypothesis_id": "H2",
+      "comparison": "GRU vs mean-pooling control (K=8)",
+      "n_sequences": 300,
+      "mean_delta_accuracy": 0.26555555555555554,
+      "delta_pp": 26.555555555555554,
+      "bootstrap_ci95": [
+        0.2211111111111111,
+        0.3111111111111111
+      ],
+      "p_sign_flip_two_sided": 9.99990000099999e-06,
+      "permutation_exceedances": 0,
+      "permutation_resolution": 9.99990000099999e-06,
+      "per_seed_mean_delta_accuracy": {
+        "42": 0.26,
+        "43": 0.26,
+        "44": 0.27666666666666667
+      },
+      "source_delta_column_validated": "delta_Model_C_vs_Model_B",
+      "validation_status": "RECOMPUTED_FROM_PAIRED_PREDICTIONS",
+      "q_bh_verified_family": 9.99990000099999e-06,
+      "reject_bh_0_05": true
+    },
+    {
+      "hypothesis_id": "H3",
+      "comparison": "GRU canonical vs shuffled order",
+      "n_sequences": 300,
+      "mean_delta_accuracy": 0.1411111111111111,
+      "delta_pp": 14.11111111111111,
+      "bootstrap_ci95": [
+        0.10777777777777776,
+        0.17555555555555552
+      ],
+      "p_sign_flip_two_sided": 9.99990000099999e-06,
+      "permutation_exceedances": 0,
+      "permutation_resolution": 9.99990000099999e-06,
+      "per_seed_mean_delta_accuracy": {
+        "42": 0.16,
+        "43": 0.11,
+        "44": 0.15333333333333332
+      },
+      "source_delta_column_validated": "delta_Model_C_Can_vs_Shuf",
+      "validation_status": "RECOMPUTED_FROM_PAIRED_PREDICTIONS",
+      "q_bh_verified_family": 9.99990000099999e-06,
+      "reject_bh_0_05": true
+    },
+    {
+      "hypothesis_id": "H4",
+      "comparison": "GRU canonical vs reversed order",
+      "n_sequences": 300,
+      "mean_delta_accuracy": 0.1888888888888889,
+      "delta_pp": 18.888888888888893,
+      "bootstrap_ci95": [
+        0.15111111111111108,
+        0.22888888888888886
+      ],
+      "p_sign_flip_two_sided": 9.99990000099999e-06,
+      "permutation_exceedances": 0,
+      "permutation_resolution": 9.99990000099999e-06,
+      "per_seed_mean_delta_accuracy": {
+        "42": 0.17666666666666667,
+        "43": 0.18666666666666668,
+        "44": 0.20333333333333334
+      },
+      "source_delta_column_validated": "delta_Model_C_Fwd_vs_Rev",
+      "validation_status": "RECOMPUTED_FROM_PAIRED_PREDICTIONS",
+      "q_bh_verified_family": 9.99990000099999e-06,
+      "reject_bh_0_05": true
+    },
+    {
+      "hypothesis_id": "H14",
+      "comparison": "CompactGRU vs mean-pooling control (K=8)",
+      "n_sequences": 300,
+      "mean_delta_accuracy": 0.15333333333333332,
+      "delta_pp": 15.333333333333332,
+      "bootstrap_ci95": [
+        0.12333333333333334,
+        0.18333333333333332
+      ],
+      "p_sign_flip_two_sided": 9.99990000099999e-06,
+      "permutation_exceedances": 0,
+      "permutation_resolution": 9.99990000099999e-06,
+      "per_seed_mean_delta_accuracy": {
+        "42": 0.14,
+        "43": 0.18666666666666668,
+        "44": 0.13333333333333333
+      },
+      "source_delta_column_validated": "delta_Model_D_vs_Model_B",
+      "validation_status": "RECOMPUTED_FROM_PAIRED_PREDICTIONS",
+      "q_bh_verified_family": 9.99990000099999e-06,
+      "reject_bh_0_05": true
+    }
+  ]
+}

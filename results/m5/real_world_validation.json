@@ -1,0 +1,264 @@
+{
+  "version": "1.0",
+  "milestone": "M5.13",
+  "title": "Real-World Qualitative Taxonomy Validation",
+  "summary_metrics": {
+    "real_sequences_evaluated": 2,
+    "total_phenomena_mappings": 16,
+    "qualitative_transfer_rate_pct": 100.0
+  },
+  "transfer_mappings": [
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T1",
+      "phenomenon_manifestation": "Continuous lateral and longitudinal ground plane translation across 50 frames.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T2",
+      "phenomenon_manifestation": "Forward vehicle heading vector with positive yaw rate; reversal inverts slip vector.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T3",
+      "phenomenon_manifestation": "Transition from linear trajectory to tire breakaway (slip angle expansion).",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T4",
+      "phenomenon_manifestation": "Tire contact patch friction shear against track surface producing smoke.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T5",
+      "phenomenon_manifestation": "Vehicle chassis heading relative to ground velocity vector (slip angle beta).",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T6",
+      "phenomenon_manifestation": "Entry steer -> weight transfer -> throttle oversteer -> countersteer catch.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T7",
+      "phenomenon_manifestation": "Background visual parallax of track barriers and grandstands.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "bmw_m4_drift_50",
+      "sequence_name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "category_id": "T8",
+      "phenomenon_manifestation": "Single snapshot appears identical to parked angled car or uncontrolled spin.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9918,
+      "total_cumulative_drift": 0.2255,
+      "recurrent_reversal_divergence": 1.262,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T1",
+      "phenomenon_manifestation": "Monotonic horizontal center-of-mass translation across camera field.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T2",
+      "phenomenon_manifestation": "Unidirectional rightward travel; reversal inverts quadruped forward momentum.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T3",
+      "phenomenon_manifestation": "Periodic gait cycle transitions between stance and airborne suspension phases.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T4",
+      "phenomenon_manifestation": "Hoof impact and ground reaction force interaction against terrain.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T5",
+      "phenomenon_manifestation": "Limb articulation coordinates moving relative to torso center-of-mass.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T6",
+      "phenomenon_manifestation": "Trailing hind -> leading hind -> trailing fore -> leading fore -> suspension.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T7",
+      "phenomenon_manifestation": "Equestrian fence and terrain texture undergoing relative motion parallax.",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    },
+    {
+      "sequence_key": "horse_running_gallop_50",
+      "sequence_name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "category_id": "T8",
+      "phenomenon_manifestation": "Single frame with hooves airborne is ambiguous (jumping vs bucking vs gallop).",
+      "trajectory_frames": 50,
+      "mean_consecutive_cosine_similarity": 0.9969,
+      "total_cumulative_drift": 0.0377,
+      "recurrent_reversal_divergence": 0.5538,
+      "qualitative_transfer_confirmed": true
+    }
+  ],
+  "detailed_analyses": {
+    "bmw_m4_drift_50": {
+      "name": "BMW M4 Continuous Drift & Vehicle Dynamics",
+      "domain": "Vehicle Kinematics & Drift Dynamics",
+      "frames": 50,
+      "kinematics": {
+        "mean_consecutive_cosine_sim": 0.9918,
+        "min_consecutive_cosine_sim": 0.9447,
+        "total_cumulative_drift": 0.2255
+      },
+      "model_c_probing": {
+        "canonical_top_class": 11,
+        "canonical_confidence": 0.3146,
+        "reversed_top_class": 11,
+        "reversed_confidence": 0.3049,
+        "shuffled_top_class": 11,
+        "reversal_divergence": 1.262,
+        "order_sensitivity_confirmed": true
+      },
+      "taxonomy_attribution": {
+        "T1": "Continuous lateral and longitudinal ground plane translation across 50 frames.",
+        "T2": "Forward vehicle heading vector with positive yaw rate; reversal inverts slip vector.",
+        "T3": "Transition from linear trajectory to tire breakaway (slip angle expansion).",
+        "T4": "Tire contact patch friction shear against track surface producing smoke.",
+        "T5": "Vehicle chassis heading relative to ground velocity vector (slip angle beta).",
+        "T6": "Entry steer -> weight transfer -> throttle oversteer -> countersteer catch.",
+        "T7": "Background visual parallax of track barriers and grandstands.",
+        "T8": "Single snapshot appears identical to parked angled car or uncontrolled spin."
+      }
+    },
+    "horse_running_gallop_50": {
+      "name": "Horse Continuous Running & Gallop Locomotion",
+      "domain": "Quadruped Biomechanical Locomotion",
+      "frames": 50,
+      "kinematics": {
+        "mean_consecutive_cosine_sim": 0.9969,
+        "min_consecutive_cosine_sim": 0.9859,
+        "total_cumulative_drift": 0.0377
+      },
+      "model_c_probing": {
+        "canonical_top_class": 11,
+        "canonical_confidence": 0.4278,
+        "reversed_top_class": 11,
+        "reversed_confidence": 0.4317,
+        "shuffled_top_class": 11,
+        "reversal_divergence": 0.5538,
+        "order_sensitivity_confirmed": false
+      },
+      "taxonomy_attribution": {
+        "T1": "Monotonic horizontal center-of-mass translation across camera field.",
+        "T2": "Unidirectional rightward travel; reversal inverts quadruped forward momentum.",
+        "T3": "Periodic gait cycle transitions between stance and airborne suspension phases.",
+        "T4": "Hoof impact and ground reaction force interaction against terrain.",
+        "T5": "Limb articulation coordinates moving relative to torso center-of-mass.",
+        "T6": "Trailing hind -> leading hind -> trailing fore -> leading fore -> suspension.",
+        "T7": "Equestrian fence and terrain texture undergoing relative motion parallax.",
+        "T8": "Single frame with hooves airborne is ambiguous (jumping vs bucking vs gallop)."
+      }
+    }
+  }
+}

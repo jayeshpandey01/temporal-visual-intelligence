@@ -1,0 +1,135 @@
+[
+  {
+    "contrast": "Model C vs Model A (Total Temporal Gain)",
+    "delta_mean": 0.26,
+    "delta_std": 0.0458257569495584,
+    "ci_95_low": 0.2033333333333333,
+    "ci_95_high": 0.3188888888888889
+  },
+  {
+    "contrast": "Model B vs Model A (Observation Accumulation)",
+    "delta_mean": -0.0055555555555555,
+    "delta_std": 0.0534720418467376,
+    "ci_95_low": -0.0499999999999999,
+    "ci_95_high": 0.04
+  },
+  {
+    "contrast": "Model C vs Model B (Order Dependency Gain)",
+    "delta_mean": 0.2655555555555555,
+    "delta_std": 0.0096225044864937,
+    "ci_95_low": 0.2088888888888889,
+    "ci_95_high": 0.3244444444444443
+  },
+  {
+    "contrast": "Model D vs Model B (Capacity Parity)",
+    "delta_mean": 0.1533333333333333,
+    "delta_std": 0.0290593262902711,
+    "ci_95_low": 0.0944444444444444,
+    "ci_95_high": 0.2111111111111111
+  },
+  {
+    "contrast": "Model C vs Model D (Parameter Scaling)",
+    "delta_mean": 0.1122222222222222,
+    "delta_std": 0.035642255405212,
+    "ci_95_low": 0.0555555555555555,
+    "ci_95_high": 0.1711111111111111
+  },
+  {
+    "contrast": "Model C Canonical vs Shuffled",
+    "delta_mean": 0.1411111111111111,
+    "delta_std": 0.0271484260508235,
+    "ci_95_low": 0.0988888888888889,
+    "ci_95_high": 0.1844444444444444
+  },
+  {
+    "contrast": "Model C Canonical vs Repeated Midpoint",
+    "delta_mean": 0.1333333333333333,
+    "delta_std": 0.020275875100994,
+    "ci_95_low": 0.0866666666666666,
+    "ci_95_high": 0.18
+  },
+  {
+    "contrast": "Model D Canonical vs Shuffled",
+    "delta_mean": 0.0266666666666666,
+    "delta_std": 0.0233333333333333,
+    "ci_95_low": 0.0022222222222222,
+    "ci_95_high": 0.0533333333333333
+  },
+  {
+    "contrast": "Model B Canonical vs Shuffled (Control Invariance)",
+    "delta_mean": 0.0,
+    "delta_std": 0.0,
+    "ci_95_low": 0.0,
+    "ci_95_high": 0.0
+  },
+  {
+    "contrast": "Model C Forward vs Reversed",
+    "delta_mean": 0.1888888888888888,
+    "delta_std": 0.0134715062810912,
+    "ci_95_low": 0.1455277777777778,
+    "ci_95_high": 0.2366666666666666
+  },
+  {
+    "contrast": "Model D Forward vs Reversed",
+    "delta_mean": 0.0544444444444444,
+    "delta_std": 0.0401847584889447,
+    "ci_95_low": 0.0222222222222222,
+    "ci_95_high": 0.0866666666666666
+  },
+  {
+    "contrast": "Model B Forward vs Reversed (Direction Invariance)",
+    "delta_mean": 0.0,
+    "delta_std": 0.0,
+    "ci_95_low": 0.0,
+    "ci_95_high": 0.0
+  },
+  {
+    "contrast": "Model C Clean vs 25% Frame Drop",
+    "delta_mean": 0.061111111111111,
+    "delta_std": 0.0189541356769244,
+    "ci_95_low": 0.012138888888889,
+    "ci_95_high": 0.1122222222222222
+  },
+  {
+    "contrast": "Model C Clean vs 50% Frame Drop",
+    "delta_mean": 0.1333333333333333,
+    "delta_std": 0.0288675134594812,
+    "ci_95_low": 0.0733333333333333,
+    "ci_95_high": 0.1933333333333333
+  },
+  {
+    "contrast": "Model C Clean vs Noise sigma=0.25",
+    "delta_mean": 0.2566666666666666,
+    "delta_std": 0.0375647588986154,
+    "ci_95_low": 0.19775,
+    "ci_95_high": 0.3178055555555554
+  },
+  {
+    "contrast": "Model D Clean vs 50% Frame Drop",
+    "delta_mean": 0.0322222222222222,
+    "delta_std": 0.0488004250133283,
+    "ci_95_low": -0.0211111111111111,
+    "ci_95_high": 0.0833611111111109
+  },
+  {
+    "contrast": "Model C Observation Horizon K=2 vs K=1",
+    "delta_mean": 0.0266666666666666,
+    "delta_std": 0.0133333333333333,
+    "ci_95_low": 0.0044444444444444,
+    "ci_95_high": 0.0511111111111111
+  },
+  {
+    "contrast": "Model C Observation Horizon K=4 vs K=2",
+    "delta_mean": 0.0844444444444444,
+    "delta_std": 0.0126197963240006,
+    "ci_95_low": 0.0444444444444444,
+    "ci_95_high": 0.1255555555555555
+  },
+  {
+    "contrast": "Model C Observation Horizon K=8 vs K=4",
+    "delta_mean": 0.1211111111111111,
+    "delta_std": 0.0164429428743874,
+    "ci_95_low": 0.0577777777777777,
+    "ci_95_high": 0.1833333333333333
+  }
+]

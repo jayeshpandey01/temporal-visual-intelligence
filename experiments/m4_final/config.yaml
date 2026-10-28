@@ -1,0 +1,106 @@
+version: 1.0.0
+milestone: M4_FINAL
+freeze_timestamp: '2026-10-28T23:15:24.675701'
+git_commit: 6d4627aeb08f83191ded90f0bdf064c087d75569
+status: IMMUTABLE_FROZEN
+rule: M5 must consume M4 outputs; M5 must not silently retrain or redefine M4.
+dataset:
+  name: ssv2
+  benchmark: Something-Something V2 Directional Benchmark (Two-Tier)
+  version: 2.0.0-stratified
+  total_sequences: 2000
+  classes: 20
+  samples_per_class: 100
+  dataset_manifest_sha256: 4a0a7e3830ec1a6e5b8c3d04f5101c318add8e0aac324e05cb03987cdfe03a9e
+  sequences_csv_sha256: c834401b3c690093baad7641021296bdf2a6a6bfe9b332b72a49351a6625722e
+encoder:
+  backbone: dinov2_vits14
+  frozen: true
+  requires_grad: false
+  embed_dim: 384
+  backbone_parameters: 21800000
+  normalization: ImageNet (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+  resolution:
+  - 224
+  - 224
+  crop_type: center
+  color_space: RGB
+  embedding_manifest_sha256: 18d5f34cbbe1592c517c8f962a7d74bf98d89f9dd70b8a48d09a007fb357965e
+  embedding_metadata_sha256: 7fc1e110fe20acc40210bf4625cf9734324753a43c8588f8cd40f923a8fd36f8
+splits:
+  strategy: Stratified Group-Aware Partitioning on Video IDs
+  leakage_guard_status: CERTIFIED_ZERO_LEAKAGE
+  train_sequences: 1400
+  val_sequences: 300
+  test_sequences: 300
+  classes: 20
+  split_manifest_sha256: 9093bee63505867bab8c9147da043a0031a2df1bc6145e8a6cf2ce451f7a7066
+sampling_registry:
+  max_frames: 8
+  strategy: uniform
+  frame_indices:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  baseline_anchor: middle (index 4 of 8)
+  baseline_train_sampling: random (Approach B)
+  evaluation_protocol: deterministic seed 42
+seeds:
+  model_seeds:
+  - 42
+  - 43
+  - 44
+  perturbation_seed: 42
+  split_seed: 42
+  bootstrap_seed: 42
+  bootstrap_resamples: 1000
+models:
+  baseline:
+    name: SingleFrameMLP
+    role: 'Model A: Single-frame spatial baseline'
+    parameters: 103700
+    architecture: SingleFrameMLP(in=384, hidden=256, classes=20)
+    eval_anchor: middle
+  meanpool:
+    name: MultiFrameMeanPool
+    role: 'Model B: Order-invariant multi-frame control'
+    parameters: 103700
+    architecture: MultiFrameMeanPool(in=384, hidden=256, classes=20)
+    order_invariance_drop_pp: 0.0
+  gru:
+    name: TemporalGRU
+    role: 'Model C: Chronological recurrent sequence head'
+    parameters: 249364
+    architecture: TemporalGRU(in=384, proj=256, hidden=128, layers=1, dropout=0.2,
+      classes=20)
+  compact_gru:
+    name: CompactTemporalGRU
+    role: 'Model D: Capacity-matched sequence head (Parity with A & B)'
+    parameters: 103700
+    architecture: CompactTemporalGRU(in=384, proj=64, hidden=130, layers=1, dropout=0.2,
+      classes=20)
+training:
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler: CosineAnnealingLR (T_max=30)
+  epochs: 30
+  batch_size: 32
+  gradient_clip: 1.0
+  patience: 5
+  early_stopping_monitor: val_accuracy
+  early_stopping_mode: max
+  min_delta: 0.0001
+evaluation_protocol:
+  metrics:
+  - accuracy
+  - macro_f1
+  - per_class_f1
+  bootstrap_resamples: 1000
+  bootstrap_confidence_level: 0.95
+  paired_discordance_test: McNemar paired chi-squared

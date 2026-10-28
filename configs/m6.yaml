@@ -1,0 +1,106 @@
+# =============================================================================
+# M6 — Generalization, Robustness & Scientific Validation
+# Master configuration for all M6 sub-experiments.
+# IMPORTANT: Change values here, not in code.
+# =============================================================================
+
+phase: m6
+base_config: configs/experiment.yaml  # Inherits dataset, encoder, training defaults
+
+seeds: [42, 43, 44]
+
+# M6.1 — Benchmark Generalization
+cross_validation:
+  n_splits: 5
+  group_key: video_id       # GroupKFold on sequence identifiers
+  strategy: group_kfold
+  output_dir: results/m6/crossval
+
+# M6.2 — Temporal Sampling Robustness
+sampling_robustness:
+  strategies:
+    - uniform               # Baseline (M4 standard)
+    - sparse                # Stride-based, low Nyquist
+    - dense                 # First-N frames (dense prefix window)
+    - random                # Random subset (seed-fixed for eval)
+    - jittered              # Uniform ± jitter=1 frame displacement
+  jitter_pixels: 1
+  use_existing_checkpoints: true   # Re-use M4 checkpoints, eval-only
+  output_dir: results/m6/sampling
+
+# M6.3 — Missing / Noisy Observation Robustness
+degradation:
+  missing_rates: [0.0, 0.125, 0.25, 0.375, 0.50, 0.625, 0.75]
+  corruption_types:
+    - frame_omission        # Drop frames entirely, pad with edge
+    - frame_duplication     # Repeat a random frame in place
+    - temporal_jitter       # Displace frame timestamps ±1
+    - feature_corruption    # E'_t = E_t + N(0, sigma^2)
+  noise_sigmas: [0.0, 0.1, 0.3, 0.5, 1.0]
+  models: [meanpool, gru]  # Compare robustness curves
+  output_dir: results/m6/degradation
+
+# M6.4 — Representation Robustness
+representation:
+  encoders:
+    - name: dinov2_vits14
+      embed_dim: 384
+      cache_dir: embeddings/
+    - name: clip_vit_b32
+      embed_dim: 512
+      projection_dim: 256   # Project to shared 256-D for fair comparison
+      cache_dir: embeddings_clip/
+  retrain: true             # Retrain all 3 models under second encoder
+  output_dir: results/m6/representation
+
+# M6.5 — Class Generalization
+class_generalization:
+  n_classes: 20
+  metric: macro_f1
+  output_dir: results/m6/class_generalization
+
+# M6.6 — Negative Controls & Shortcut Probes
+negative_controls:
+  experiments:
+    - name: temporal_index_classifier
+      description: "Train linear classifier on [frame_index/T, seq_length] ONLY — no visual features"
+      expected: "accuracy ≈ chance (5%)"
+    - name: repeated_frame_gru
+      description: "Feed [mid_frame × T] to GRU — no temporal variation"
+      expected: "GRU ≈ MeanPool (Δ ≈ 0)"
+    - name: static_scene_control
+      description: "Evaluate on sequences with temporal_variance < 0.01"
+      expected: "Δ_temporal ≈ 0 on low-variance sequences"
+    - name: brightness_normalized
+      description: "Per-sequence luminance normalization, then re-eval GRU"
+      expected: "Δ_temporal survives normalization"
+  output_dir: results/m6/negative_controls
+
+# M6.7 — Statistical Robustness
+statistical:
+  n_bootstrap: 1000
+  alpha: 0.05
+  fdr_method: benjamini-hochberg
+  effect_size_thresholds:
+    small: 0.2
+    medium: 0.5
+    large: 0.8
+  primary_hypotheses:
+    - "H_crossval: Δ_temporal > 0 on all 5 folds"
+    - "H_sampling: Δ_temporal > 0 for all 5 sampling strategies"
+    - "H_robustness: GRU degrades more slowly than MeanPool under missing data"
+    - "H_representation: Δ_temporal > 0 for CLIP encoder"
+    - "H_shortcut: Temporal index classifier accuracy < 2x chance"
+  output_dir: results/m6/statistics
+
+# M6.8 — Robustness Matrix & Exit Gate
+exit_gate:
+  output_dir: results/m6
+  checklist_output: results/tables/m6_acceptance_checklist.md
+  matrix_output: results/tables/m6_robustness_matrix.md
+
+paths:
+  m6_base: results/m6/
+  figures: results/figures/
+  tables: results/tables/
+  experiments_csv: results/experiments.csv

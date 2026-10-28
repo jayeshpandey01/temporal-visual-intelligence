@@ -1,0 +1,110 @@
+{
+  "baseline": {
+    "name": "SingleFrameMLP",
+    "expected_parameters": 103700,
+    "seeds": {
+      "seed42": {
+        "path": "checkpoints/baseline/best_seed42.pt",
+        "size_bytes": 417413,
+        "sha256": "ebd13a05fc17cc6e3019a7183b6eb3a13d9ecfd7b440ba994fb9154c3d3fd869",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed43": {
+        "path": "checkpoints/baseline/best_seed43.pt",
+        "size_bytes": 417413,
+        "sha256": "2b2245dc2fc20de294faa711fb6c98581070e7c77d0ff584ecb8df0c4b6f8276",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed44": {
+        "path": "checkpoints/baseline/best_seed44.pt",
+        "size_bytes": 417413,
+        "sha256": "398ba202e5dc591b7b7bc6b2cef5b17453e4500c0504c84dd38986549562d542",
+        "param_count": 103700,
+        "param_match": true
+      }
+    }
+  },
+  "meanpool": {
+    "name": "MultiFrameMeanPool",
+    "expected_parameters": 103700,
+    "seeds": {
+      "seed42": {
+        "path": "checkpoints/meanpool/best_seed42.pt",
+        "size_bytes": 417413,
+        "sha256": "cecb7a14d3bc6c004514d95375a66303f600f39963bf496c242004412d458eed",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed43": {
+        "path": "checkpoints/meanpool/best_seed43.pt",
+        "size_bytes": 417413,
+        "sha256": "eee28905e5587d2e430f5712afae3dc6ad23908626be9ef1866e5c0257f8e243",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed44": {
+        "path": "checkpoints/meanpool/best_seed44.pt",
+        "size_bytes": 417413,
+        "sha256": "19f1f6796efd726cc8a244e4a5ed0f3d70af25996eb03b3aadeb0d5918f9432f",
+        "param_count": 103700,
+        "param_match": true
+      }
+    }
+  },
+  "gru": {
+    "name": "TemporalGRU",
+    "expected_parameters": 249364,
+    "seeds": {
+      "seed42": {
+        "path": "checkpoints/gru/best_seed42.pt",
+        "size_bytes": 1001157,
+        "sha256": "a1fe3c5a378189072423accef8289752289d461117a47f1680fc8120e0aa60d1",
+        "param_count": 249364,
+        "param_match": true
+      },
+      "seed43": {
+        "path": "checkpoints/gru/best_seed43.pt",
+        "size_bytes": 1001157,
+        "sha256": "36878a33caacd97627a2c8c060ad365cd0b329cf9b8a051b882ee4ec681f2fd5",
+        "param_count": 249364,
+        "param_match": true
+      },
+      "seed44": {
+        "path": "checkpoints/gru/best_seed44.pt",
+        "size_bytes": 1001157,
+        "sha256": "1de7dd6f395c202a18fbf35735c94e7a7be7061691a569875eca913e11e80b16",
+        "param_count": 249364,
+        "param_match": true
+      }
+    }
+  },
+  "compact_gru": {
+    "name": "CompactTemporalGRU",
+    "expected_parameters": 103700,
+    "seeds": {
+      "seed42": {
+        "path": "checkpoints/compact_gru/best_seed42.pt",
+        "size_bytes": 418373,
+        "sha256": "a18c72f75dc4501a68e489d42d3bed100db13f1fc2c066232540da6ed269b1f8",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed43": {
+        "path": "checkpoints/compact_gru/best_seed43.pt",
+        "size_bytes": 418373,
+        "sha256": "289edc89b7a8b393e86aa704b288ebb5fbee42846ee4c46a701030438f8777e9",
+        "param_count": 103700,
+        "param_match": true
+      },
+      "seed44": {
+        "path": "checkpoints/compact_gru/best_seed44.pt",
+        "size_bytes": 418373,
+        "sha256": "d2177b0a100ec81fda321a1338e34ae941e6a47aba0f3cd30a0d4f43b7f701e9",
+        "param_count": 103700,
+        "param_match": true
+      }
+    }
+  }
+}

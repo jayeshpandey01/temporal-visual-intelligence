@@ -1,0 +1,16 @@
+{
+  "dinov2": {
+    "baseline_acc": 0.0878,
+    "meanpool_acc": 0.0822,
+    "gru_acc": 0.3478,
+    "delta_temporal": 0.26,
+    "delta_order": 0.2656
+  },
+  "clip": {
+    "baseline_acc": 0.14222222222222222,
+    "meanpool_acc": 0.12666666666666668,
+    "gru_acc": 0.3788888888888889,
+    "delta_temporal": 0.23666666666666666,
+    "delta_order": 0.25222222222222224
+  }
+}

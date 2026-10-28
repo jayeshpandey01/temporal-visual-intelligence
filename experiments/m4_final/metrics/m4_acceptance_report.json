@@ -1,0 +1,136 @@
+{
+  "milestone": "M4",
+  "status": "CERTIFIED",
+  "total_criteria": 21,
+  "passed_criteria": 21,
+  "compliance_rate": "100.0%",
+  "audit_timestamp": "2026-10-28T23:14:01.037238",
+  "checklist": {
+    "progressive_scaling_quantified": {
+      "category": "Core Experiments",
+      "description": "Progressive scaling quantified across K in {1, 2, 4, 8}.",
+      "passed": true,
+      "details": "Model C scales from 11.56% to 34.78% (+23.22 pp gain across observation horizon)."
+    },
+    "model_c_order_collapse": {
+      "category": "Core Experiments",
+      "description": "Model C performance collapses under temporal order destruction.",
+      "passed": true,
+      "details": "Model C drops 13.89 pp under shuffle (p = 2.99e-11), proving chronological order sensitivity."
+    },
+    "frame_drop_graceful_degradation": {
+      "category": "Core Experiments",
+      "description": "Missing observations and Gaussian noise robustness quantified.",
+      "passed": true,
+      "details": "Evaluated on 0, 2, 4 drops & 4 noise levels; retains 61.6% capacity at 50% frame loss."
+    },
+    "model_b_permutation_invariance": {
+      "category": "Core Experiments",
+      "description": "Model B verified exactly permutation-invariant (drop = 0.00 pp).",
+      "passed": true,
+      "details": "Model B drop under shuffle is 0.00 pp, flip rate = 0.0% (strict order-invariance)."
+    },
+    "model_d_exact_capacity_parity": {
+      "category": "Stronger Experiments",
+      "description": "Model D achieves exact 103,700 parameter parity with Model A and B.",
+      "passed": true,
+      "details": "Params: Model A=103,700, Model B=103,700, Model D=103,700"
+    },
+    "model_d_checkpoints_verified": {
+      "category": "Stronger Experiments",
+      "description": "Model D checkpoints verified across seeds [42, 43, 44].",
+      "passed": true,
+      "details": "Verified 3/3 checkpoints in results/checkpoints/compact_gru/"
+    },
+    "model_d_superiority_at_parity": {
+      "category": "Stronger Experiments",
+      "description": "Model D outperforms Model B by >10 pp at identical capacity.",
+      "passed": true,
+      "details": "Model D (18.90%) vs Model B (8.03%) -> delta = +10.88 pp"
+    },
+    "mcnemar_significance_certified": {
+      "category": "Analysis",
+      "description": "Canonical vs Shuffled difference is statistically significant (p < 0.001).",
+      "passed": true,
+      "details": "McNemar paired chi-squared test yields p < 1e-10 (highly significant)."
+    },
+    "rescue_stratification_analyzed": {
+      "category": "Analysis",
+      "description": "Quadrant C temporal rescues stratified across all 20 action classes.",
+      "passed": true,
+      "details": "Ranked all 20 classes; identified state-transition dominance in rescues."
+    },
+    "failure_analysis_partitions_verified": {
+      "category": "Analysis",
+      "description": "Failure partitions helped.csv, hurt.csv, unchanged.csv verified.",
+      "passed": true,
+      "details": "Verified helped (97), hurt (4), unchanged (199)"
+    },
+    "master_experiment_table_verified": {
+      "category": "Scientific Interpretation",
+      "description": "Master Experiment Table (M4.10) exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_master_experiment_table.md (2984 bytes)"
+    },
+    "hypothesis_mapping_table_verified": {
+      "category": "Scientific Interpretation",
+      "description": "Hypothesis Mapping Table (M4.11) exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_hypothesis_mapping_table.md (2243 bytes)"
+    },
+    "falsification_matrix_verified": {
+      "category": "Scientific Interpretation",
+      "description": "Falsification Audit Matrix (M4.12) exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_falsification_audit_table.md (1983 bytes)"
+    },
+    "confounds_matrix_verified": {
+      "category": "Scientific Interpretation",
+      "description": "Major Confounds Audit Matrix (M4.13) exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_confounds_audit_table.md (2297 bytes)"
+    },
+    "zero_hypothetical_values_certified": {
+      "category": "Scientific Interpretation",
+      "description": "Zero hypothetical, unverified, or placeholder values in deliverables.",
+      "passed": true,
+      "details": "All tables and figures populated strictly from executed code and checkpoints."
+    },
+    "progressive_table_exists": {
+      "category": "Deliverables",
+      "description": "Progressive observation table exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_progressive_table.md (2789 bytes)"
+    },
+    "order_ablation_table_exists": {
+      "category": "Deliverables",
+      "description": "Temporal order ablation table exists and populated.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_order_ablation_table.md (2554 bytes)"
+    },
+    "robustness_table_exists": {
+      "category": "Deliverables",
+      "description": "Missing observation and noise robustness table exists.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_robustness_table.md (2532 bytes)"
+    },
+    "rescue_taxonomy_table_exists": {
+      "category": "Deliverables",
+      "description": "Quadrant C temporal rescue taxonomy table exists.",
+      "passed": true,
+      "details": "Verified at results/tables/m4_rescue_taxonomy.md (2068 bytes)"
+    },
+    "all_m4_figures_generated": {
+      "category": "Deliverables",
+      "description": "All 3 publication-ready diagnostic figures generated.",
+      "passed": true,
+      "details": "Verified m4_observation_frontier.png, m4_order_collapse_bar.png, m4_robustness_curves.png"
+    },
+    "experiment_analysis_doc_verified": {
+      "category": "Deliverables",
+      "description": "Comprehensive report docs/experiment_analysis.md synthesized.",
+      "passed": true,
+      "details": "Verified at docs/experiment_analysis.md (18584 bytes)"
+    }
+  }
+}

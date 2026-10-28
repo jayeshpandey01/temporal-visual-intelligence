@@ -1,0 +1,57 @@
+{
+  "audit_timestamp": "2026-10-28T21:51:40.598097Z",
+  "all_passed": false,
+  "checks": [
+    {
+      "check": "1. Dataset Integrity",
+      "passed": true,
+      "classes_count": 20,
+      "total_sequences": 2000,
+      "balanced_100_per_class": true,
+      "details": "Verified 20 classes, exactly 100 sequences/class (N=2,000 total sequences)."
+    },
+    {
+      "check": "2. Split Integrity",
+      "passed": true,
+      "train_count": 1400,
+      "val_count": 300,
+      "test_count": 300,
+      "leakage_violations": 0,
+      "details": "Train: 1400, Val: 300, Test: 300. Zero cross-split leakage verified."
+    },
+    {
+      "check": "3. Checkpoint Integrity",
+      "passed": true,
+      "verified_checkpoints": 12,
+      "parity_confirmed": "Model A (103.7k) == Model B (103.7k) == Model D (103.7k)",
+      "details": "Parameter counts checked for 12 checkpoint files; this does not validate hashes or training provenance."
+    },
+    {
+      "check": "4. Evaluation Integrity",
+      "passed": true,
+      "early_stopping_monitor": "val_accuracy",
+      "test_set_isolation": "Not established by inspecting the early-stopping monitor alone.",
+      "details": "Configuration check only: early stopping monitors a validation metric; this is not a full audit of test-set access."
+    },
+    {
+      "check": "5. Intervention Integrity",
+      "passed": true,
+      "frame_conservation": "Tensor-sum equality checked for shuffled and reversed examples.",
+      "details": "This synthetic check is a diagnostic and does not prove the full evaluation pipeline used only the intended intervention."
+    },
+    {
+      "check": "6. Statistical Integrity",
+      "passed": false,
+      "multiple_testing_correction": "Benjamini-Hochberg FDR (alpha=0.05)",
+      "comparisons_tested": 14,
+      "comparisons_survived": null,
+      "details": "Historical comparisons retained for audit only. The generating module hard-codes deltas, p-values, and confidence intervals and does not recompute them from paired prediction inputs."
+    },
+    {
+      "check": "7. Claim Integrity",
+      "passed": false,
+      "manifests_verified": 5,
+      "details": "Required files exist, but their existence does not establish claim traceability or agreement. This check remains failed until claims are recomputed and reconciled."
+    }
+  ]
+}

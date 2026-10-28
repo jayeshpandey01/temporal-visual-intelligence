@@ -1,0 +1,772 @@
+{
+  "version": "1.0",
+  "milestone": "M5.9",
+  "title": "Master Temporal Rescue Taxonomy Synthesis",
+  "summary_metrics": {
+    "total_test_sequences": 300,
+    "total_cohort_c_rescues": 97,
+    "total_taxonomy_categories": 8,
+    "mean_order_info_ratio_pct": 98.43,
+    "mean_k_min_window": 3.75
+  },
+  "master_taxonomy_table": [
+    {
+      "category_id": "T1",
+      "phenomenon_name": "Object Displacement",
+      "rescue_count": 43,
+      "rescue_rate_pct": 44.3,
+      "reversal_sensitive": "Yes (-62.0%)",
+      "delta_acc_reversed_pct": 62.0,
+      "delta_acc_late_removal_pct": 40.3,
+      "critical_frames_span": "Frames 2\u20136 (span 4.7)",
+      "typical_window_span": 4.67,
+      "k_min_window_mean": 4.16,
+      "order_info_ratio_pct": 98.5,
+      "info_bits_gain_order": 2.04,
+      "primary_action_classes": "Moving something towards the camera (10); Standing something upright (7); Rotating something clockwise (6)",
+      "representative_example": "vid_06_0078 (Picking something up, window [6, 6])"
+    },
+    {
+      "category_id": "T2",
+      "phenomenon_name": "Direction of Motion",
+      "rescue_count": 55,
+      "rescue_rate_pct": 56.7,
+      "reversal_sensitive": "Yes (-50.9%)",
+      "delta_acc_reversed_pct": 50.9,
+      "delta_acc_late_removal_pct": 34.5,
+      "critical_frames_span": "Frames 3\u20136 (span 4.4)",
+      "typical_window_span": 4.38,
+      "k_min_window_mean": 3.93,
+      "order_info_ratio_pct": 98.9,
+      "info_bits_gain_order": 2.197,
+      "primary_action_classes": "Moving something towards the camera (10); Putting something on top of something (8); Standing something upright (7)",
+      "representative_example": "vid_11_0028 (Putting something into something, window [4, 4])"
+    },
+    {
+      "category_id": "T3",
+      "phenomenon_name": "State Transition",
+      "rescue_count": 15,
+      "rescue_rate_pct": 15.5,
+      "reversal_sensitive": "Yes (-44.4%)",
+      "delta_acc_reversed_pct": 44.4,
+      "delta_acc_late_removal_pct": 22.2,
+      "critical_frames_span": "Frames 2\u20135 (span 4.3)",
+      "typical_window_span": 4.27,
+      "k_min_window_mean": 3.13,
+      "order_info_ratio_pct": 97.0,
+      "info_bits_gain_order": 1.85,
+      "primary_action_classes": "Standing something upright (7); Tipping something over (5); Opening something (1)",
+      "representative_example": "vid_09_0009 (Tipping something over, window [1, 1])"
+    },
+    {
+      "category_id": "T4",
+      "phenomenon_name": "Object Interaction",
+      "rescue_count": 56,
+      "rescue_rate_pct": 57.7,
+      "reversal_sensitive": "Yes (-31.0%)",
+      "delta_acc_reversed_pct": 31.0,
+      "delta_acc_late_removal_pct": 20.8,
+      "critical_frames_span": "Frames 3\u20136 (span 3.8)",
+      "typical_window_span": 3.75,
+      "k_min_window_mean": 3.52,
+      "order_info_ratio_pct": 97.7,
+      "info_bits_gain_order": 2.48,
+      "primary_action_classes": "Taking something out of something (13); Putting something on top of something (11); Taking something off of something (11)",
+      "representative_example": "vid_19_0010 (Taking something out of something, window [5, 5])"
+    },
+    {
+      "category_id": "T5",
+      "phenomenon_name": "Relative Motion",
+      "rescue_count": 12,
+      "rescue_rate_pct": 12.4,
+      "reversal_sensitive": "Moderate (-11.1%)",
+      "delta_acc_reversed_pct": 11.1,
+      "delta_acc_late_removal_pct": 13.9,
+      "critical_frames_span": "Frames 3\u20136 (span 3.3)",
+      "typical_window_span": 3.33,
+      "k_min_window_mean": 3.08,
+      "order_info_ratio_pct": 100.0,
+      "info_bits_gain_order": 2.763,
+      "primary_action_classes": "Putting something on top of something (8); Putting something into something (4)",
+      "representative_example": "vid_11_0028 (Putting something into something, window [4, 4])"
+    },
+    {
+      "category_id": "T6",
+      "phenomenon_name": "Sub-Event Order",
+      "rescue_count": 55,
+      "rescue_rate_pct": 56.7,
+      "reversal_sensitive": "Yes (-50.9%)",
+      "delta_acc_reversed_pct": 50.9,
+      "delta_acc_late_removal_pct": 34.5,
+      "critical_frames_span": "Frames 3\u20136 (span 4.4)",
+      "typical_window_span": 4.38,
+      "k_min_window_mean": 3.93,
+      "order_info_ratio_pct": 98.9,
+      "info_bits_gain_order": 2.197,
+      "primary_action_classes": "Moving something towards the camera (10); Putting something on top of something (8); Standing something upright (7)",
+      "representative_example": "vid_11_0028 (Putting something into something, window [4, 4])"
+    },
+    {
+      "category_id": "T7",
+      "phenomenon_name": "Static Control",
+      "rescue_count": 42,
+      "rescue_rate_pct": 43.3,
+      "reversal_sensitive": "Yes (-31.7%)",
+      "delta_acc_reversed_pct": 31.7,
+      "delta_acc_late_removal_pct": 23.0,
+      "critical_frames_span": "Frames 2\u20136 (span 4.8)",
+      "typical_window_span": 4.76,
+      "k_min_window_mean": 4.29,
+      "order_info_ratio_pct": 97.5,
+      "info_bits_gain_order": 2.647,
+      "primary_action_classes": "Turning the camera right while filming something (13); Taking something out of something (13); Taking something off of something (11)",
+      "representative_example": "vid_19_0012 (Taking something out of something, window [7, 7])"
+    },
+    {
+      "category_id": "T8",
+      "phenomenon_name": "Single Frame Ambiguity",
+      "rescue_count": 55,
+      "rescue_rate_pct": 56.7,
+      "reversal_sensitive": "Yes (-50.9%)",
+      "delta_acc_reversed_pct": 50.9,
+      "delta_acc_late_removal_pct": 34.5,
+      "critical_frames_span": "Frames 3\u20136 (span 4.4)",
+      "typical_window_span": 4.38,
+      "k_min_window_mean": 3.93,
+      "order_info_ratio_pct": 98.9,
+      "info_bits_gain_order": 2.197,
+      "primary_action_classes": "Moving something towards the camera (10); Putting something on top of something (8); Standing something upright (7)",
+      "representative_example": "vid_11_0028 (Putting something into something, window [4, 4])"
+    }
+  ],
+  "action_phenomenon_attributions": [
+    {
+      "class_name": "Taking something out of something",
+      "rescue_count": 13,
+      "rescue_share_pct": 13.4,
+      "dominant_phenomena": "T4, T7",
+      "k_min_window_mean": 1.69,
+      "order_info_gain_bits_mean": 3.192,
+      "causal_mechanism": "Single-frame appearance captures hand in contact with container interior, creating extreme ambiguity between insertion and extraction. Chronological trajectory resolves the spatial exit vector through the container aperture (T4, T7).",
+      "t1_displacement": false,
+      "t2_directional_motion": false,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": false,
+      "t7_static_appearance": true,
+      "t8_frame_ambiguity": false
+    },
+    {
+      "class_name": "Turning the camera right while filming something",
+      "rescue_count": 13,
+      "rescue_share_pct": 13.4,
+      "dominant_phenomena": "T7",
+      "k_min_window_mean": 5.31,
+      "order_info_gain_bits_mean": 2.942,
+      "causal_mechanism": "Global background visual parallax shifting leftward. Static frame cannot distinguish pan from static scene; coherent cross-frame displacement confirms egocentric camera sweep (T1, T7).",
+      "t1_displacement": false,
+      "t2_directional_motion": false,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": false,
+      "t7_static_appearance": true,
+      "t8_frame_ambiguity": false
+    },
+    {
+      "class_name": "Taking something off of something",
+      "rescue_count": 11,
+      "rescue_share_pct": 11.3,
+      "dominant_phenomena": "T4, T7",
+      "k_min_window_mean": 6.82,
+      "order_info_gain_bits_mean": 1.558,
+      "causal_mechanism": "Static frame shows object resting on top of another surface, indistinguishable from 'Putting something on top of something'. Chronological elevation vector and detachment of support contact points disambiguates the action (T4, T7).",
+      "t1_displacement": false,
+      "t2_directional_motion": false,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": false,
+      "t7_static_appearance": true,
+      "t8_frame_ambiguity": false
+    },
+    {
+      "class_name": "Putting something on top of something",
+      "rescue_count": 11,
+      "rescue_share_pct": 11.3,
+      "dominant_phenomena": "T2, T4, T5, T6, T7, T8",
+      "k_min_window_mean": 3.82,
+      "order_info_gain_bits_mean": 2.656,
+      "causal_mechanism": "Downward velocity vector terminates at resting equilibrium on a supporting substrate. Order preservation is critical to distinguish terminal placement from initial lifting (T2, T4, T5, T6).",
+      "t1_displacement": false,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": true,
+      "t6_event_order": true,
+      "t7_static_appearance": true,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Moving something towards the camera",
+      "rescue_count": 10,
+      "rescue_share_pct": 10.3,
+      "dominant_phenomena": "T1, T2, T6, T8",
+      "k_min_window_mean": 5.3,
+      "order_info_gain_bits_mean": 2.238,
+      "causal_mechanism": "Progressive expansion of object bounding silhouette and looming optical flow field. Reversal completely inverts the flow to 'Moving away from the camera' (T1, T2, T6, T8).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Standing something upright",
+      "rescue_count": 7,
+      "rescue_share_pct": 7.2,
+      "dominant_phenomena": "T1, T2, T3, T4, T6, T8",
+      "k_min_window_mean": 4.0,
+      "order_info_gain_bits_mean": 2.121,
+      "causal_mechanism": "Angular rotation from horizontal orientation (theta approx 0) to vertical stability (theta approx pi/2). Temporal order establishes whether stability is achieved or lost (T1, T2, T3, T4).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": true,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Putting something into something",
+      "rescue_count": 6,
+      "rescue_share_pct": 6.2,
+      "dominant_phenomena": "T2, T4, T5, T6, T7, T8",
+      "k_min_window_mean": 1.5,
+      "order_info_gain_bits_mean": 3.036,
+      "causal_mechanism": "Convergence of object trajectory into interior volume of receiver vessel. Requires relative motion coordinates and sequential entry order (T4, T5, T6).",
+      "t1_displacement": false,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": true,
+      "t6_event_order": true,
+      "t7_static_appearance": true,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Rotating something clockwise",
+      "rescue_count": 6,
+      "rescue_share_pct": 6.2,
+      "dominant_phenomena": "T1, T2, T6, T8",
+      "k_min_window_mean": 5.5,
+      "order_info_gain_bits_mean": 2.077,
+      "causal_mechanism": "Rotational trajectory around optical or object axis with clockwise angular velocity (d theta/dt < 0). Reversal maps directly to counter-clockwise rotation (T1, T2).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Picking something up",
+      "rescue_count": 5,
+      "rescue_share_pct": 5.2,
+      "dominant_phenomena": "T1, T2, T4, T6, T8",
+      "k_min_window_mean": 1.0,
+      "order_info_gain_bits_mean": 2.719,
+      "causal_mechanism": "Ascending vertical velocity vector (dy/dt > 0) following grasp contact. Differentiates from 'Putting something down' by chronological velocity sign (T1, T4).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Tipping something over",
+      "rescue_count": 5,
+      "rescue_share_pct": 5.2,
+      "dominant_phenomena": "T1, T2, T3, T6, T8",
+      "k_min_window_mean": 1.0,
+      "order_info_gain_bits_mean": 1.705,
+      "causal_mechanism": "Angular rotation from vertical equilibrium to unstable fall and resting horizontal state. Direct directional opposite of 'Standing something upright' (T2, T3).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": true,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Pushing something from right to left",
+      "rescue_count": 3,
+      "rescue_share_pct": 3.1,
+      "dominant_phenomena": "T1, T2, T6, T8",
+      "k_min_window_mean": 6.67,
+      "order_info_gain_bits_mean": 1.569,
+      "causal_mechanism": "Monotonic negative lateral translation (dx/dt < 0). Symmetrical counterpart to left-to-right push, strictly requiring chronological sign preservation (T1, T2).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Putting something down",
+      "rescue_count": 2,
+      "rescue_share_pct": 2.1,
+      "dominant_phenomena": "T1, T2, T4, T6, T8",
+      "k_min_window_mean": 5.5,
+      "order_info_gain_bits_mean": 1.491,
+      "causal_mechanism": "Descending vertical velocity vector (dy/dt < 0) terminating at surface contact. Requires contact transition order to confirm placement (T4, T6).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Moving something away from the camera",
+      "rescue_count": 1,
+      "rescue_share_pct": 1.0,
+      "dominant_phenomena": "T1, T2, T6, T8",
+      "k_min_window_mean": 6.0,
+      "order_info_gain_bits_mean": 2.654,
+      "causal_mechanism": "Monotonic contraction of object scale and receding optical flow. Opposite trajectory to 'Moving towards the camera' (T1, T2).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Uncovering something",
+      "rescue_count": 1,
+      "rescue_share_pct": 1.0,
+      "dominant_phenomena": "T1, T2, T3, T4, T6, T8",
+      "k_min_window_mean": 5.0,
+      "order_info_gain_bits_mean": 1.369,
+      "causal_mechanism": "Progressive removal of occluding veil revealing hidden target. Distinct state transition revealing interior features (T3, T4).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": true,
+      "t4_object_interaction": true,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Closing something",
+      "rescue_count": 1,
+      "rescue_share_pct": 1.0,
+      "dominant_phenomena": "T1, T2, T3, T6, T8",
+      "k_min_window_mean": 4.0,
+      "order_info_gain_bits_mean": 1.327,
+      "causal_mechanism": "Inverse topological boundary transition from exposed interior to sealed boundary. Reversal causes direct confusion with 'Opening something' (T3).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": true,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Opening something",
+      "rescue_count": 1,
+      "rescue_share_pct": 1.0,
+      "dominant_phenomena": "T1, T2, T3, T6, T8",
+      "k_min_window_mean": 5.0,
+      "order_info_gain_bits_mean": 1.677,
+      "causal_mechanism": "Discrete topological state boundary transition from sealed exterior to exposed interior. High order sensitivity with localized critical window at boundary rupture (T3).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": true,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    },
+    {
+      "class_name": "Pushing something from left to right",
+      "rescue_count": 1,
+      "rescue_share_pct": 1.0,
+      "dominant_phenomena": "T1, T2, T6, T8",
+      "k_min_window_mean": 4.0,
+      "order_info_gain_bits_mean": 1.18,
+      "causal_mechanism": "Monotonic lateral coordinate translation (dx/dt > 0). Order-invariant pooling loses the sign of displacement, causing confusion with opposite translation or stationary holding (T1, T2).",
+      "t1_displacement": true,
+      "t2_directional_motion": true,
+      "t3_state_transition": false,
+      "t4_object_interaction": false,
+      "t5_relative_motion": false,
+      "t6_event_order": true,
+      "t7_static_appearance": false,
+      "t8_frame_ambiguity": true
+    }
+  ],
+  "qualitative_spotlights": [
+    {
+      "category_id": "T1",
+      "phenomenon_name": "Object Displacement",
+      "sequence_id": "vid_00_0046",
+      "video_id": "vid_00_0046",
+      "ground_truth_class": "Pushing something from left to right",
+      "ground_truth_id": 2,
+      "active_taxonomy_codes": [
+        "T1",
+        "T2",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[1, 4]",
+      "k_min_window": 4,
+      "window_span": 4,
+      "order_info_gain_bits": 1.18,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0612,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0533,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Pushing something from left to right",
+        "confidence": 0.1159,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": true,
+        "confidence": 0.0953
+      },
+      "reversal_experiment": {
+        "reversed_correct": false,
+        "reversal_vulnerable": true
+      },
+      "causal_physical_mechanism": "Monotonic lateral coordinate translation (dx/dt > 0). Order-invariant pooling loses the sign of displacement, causing confusion with opposite translation or stationary holding (T1, T2)."
+    },
+    {
+      "category_id": "T2",
+      "phenomenon_name": "Direction of Motion",
+      "sequence_id": "vid_13_0014",
+      "video_id": "vid_13_0014",
+      "ground_truth_class": "Moving something towards the camera",
+      "ground_truth_id": 1,
+      "active_taxonomy_codes": [
+        "T1",
+        "T2",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[2, 7]",
+      "k_min_window": 4,
+      "window_span": 6,
+      "order_info_gain_bits": 2.198,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0609,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Turning the camera right while filming something",
+        "confidence": 0.0541,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Moving something towards the camera",
+        "confidence": 0.2443,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": false,
+        "confidence": 0.1608
+      },
+      "reversal_experiment": {
+        "reversed_correct": false,
+        "reversal_vulnerable": true
+      },
+      "causal_physical_mechanism": "Progressive expansion of object bounding silhouette and looming optical flow field. Reversal completely inverts the flow to 'Moving away from the camera' (T1, T2, T6, T8)."
+    },
+    {
+      "category_id": "T3",
+      "phenomenon_name": "State Transition",
+      "sequence_id": "vid_02_0051",
+      "video_id": "vid_02_0051",
+      "ground_truth_class": "Opening something",
+      "ground_truth_id": 6,
+      "active_taxonomy_codes": [
+        "T1",
+        "T2",
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[2, 6]",
+      "k_min_window": 5,
+      "window_span": 5,
+      "order_info_gain_bits": 1.677,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0616,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0572,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Opening something",
+        "confidence": 0.1754,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": false,
+        "confidence": 0.1284
+      },
+      "reversal_experiment": {
+        "reversed_correct": false,
+        "reversal_vulnerable": true
+      },
+      "causal_physical_mechanism": "Discrete topological state boundary transition from sealed exterior to exposed interior. High order sensitivity with localized critical window at boundary rupture (T3)."
+    },
+    {
+      "category_id": "T4",
+      "phenomenon_name": "Object Interaction",
+      "sequence_id": "vid_19_0052",
+      "video_id": "vid_19_0052",
+      "ground_truth_class": "Taking something out of something",
+      "ground_truth_id": 15,
+      "active_taxonomy_codes": [
+        "T4",
+        "T7"
+      ],
+      "optimal_window": "[5, 5]",
+      "k_min_window": 1,
+      "window_span": 1,
+      "order_info_gain_bits": 3.315,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0616,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0541,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Taking something out of something",
+        "confidence": 0.5348,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": true,
+        "confidence": 0.4385
+      },
+      "reversal_experiment": {
+        "reversed_correct": true,
+        "reversal_vulnerable": false
+      },
+      "causal_physical_mechanism": "Single-frame appearance captures hand in contact with container interior, creating extreme ambiguity between insertion and extraction. Chronological trajectory resolves the spatial exit vector through the container aperture (T4, T7)."
+    },
+    {
+      "category_id": "T5",
+      "phenomenon_name": "Relative Motion",
+      "sequence_id": "vid_10_0003",
+      "video_id": "vid_10_0003",
+      "ground_truth_class": "Putting something on top of something",
+      "ground_truth_id": 10,
+      "active_taxonomy_codes": [
+        "T2",
+        "T4",
+        "T5",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[3, 5]",
+      "k_min_window": 3,
+      "window_span": 3,
+      "order_info_gain_bits": 2.679,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0609,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Putting something into something",
+        "confidence": 0.0548,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Putting something on top of something",
+        "confidence": 0.3783,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": false,
+        "confidence": 0.2121
+      },
+      "reversal_experiment": {
+        "reversed_correct": true,
+        "reversal_vulnerable": false
+      },
+      "causal_physical_mechanism": "Downward velocity vector terminates at resting equilibrium on a supporting substrate. Order preservation is critical to distinguish terminal placement from initial lifting (T2, T4, T5, T6)."
+    },
+    {
+      "category_id": "T6",
+      "phenomenon_name": "Sub-Event Order",
+      "sequence_id": "vid_12_0032",
+      "video_id": "vid_12_0032",
+      "ground_truth_class": "Standing something upright",
+      "ground_truth_id": 19,
+      "active_taxonomy_codes": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[4, 6]",
+      "k_min_window": 3,
+      "window_span": 3,
+      "order_info_gain_bits": 2.514,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.061,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0594,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Standing something upright",
+        "confidence": 0.3039,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": true,
+        "confidence": 0.1265
+      },
+      "reversal_experiment": {
+        "reversed_correct": false,
+        "reversal_vulnerable": true
+      },
+      "causal_physical_mechanism": "Angular rotation from horizontal orientation (theta approx 0) to vertical stability (theta approx pi/2). Temporal order establishes whether stability is achieved or lost (T1, T2, T3, T4)."
+    },
+    {
+      "category_id": "T7",
+      "phenomenon_name": "Static Control",
+      "sequence_id": "vid_16_0031",
+      "video_id": "vid_16_0031",
+      "ground_truth_class": "Taking something off of something",
+      "ground_truth_id": 11,
+      "active_taxonomy_codes": [
+        "T4",
+        "T7"
+      ],
+      "optimal_window": "[0, 4]",
+      "k_min_window": 4,
+      "window_span": 5,
+      "order_info_gain_bits": 2.068,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.061,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0555,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Taking something off of something",
+        "confidence": 0.2373,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": false,
+        "confidence": 0.14
+      },
+      "reversal_experiment": {
+        "reversed_correct": true,
+        "reversal_vulnerable": false
+      },
+      "causal_physical_mechanism": "Static frame shows object resting on top of another surface, indistinguishable from 'Putting something on top of something'. Chronological elevation vector and detachment of support contact points disambiguates the action (T4, T7)."
+    },
+    {
+      "category_id": "T8",
+      "phenomenon_name": "Single Frame Ambiguity",
+      "sequence_id": "vid_09_0009",
+      "video_id": "vid_09_0009",
+      "ground_truth_class": "Tipping something over",
+      "ground_truth_id": 18,
+      "active_taxonomy_codes": [
+        "T1",
+        "T2",
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "optimal_window": "[1, 1]",
+      "k_min_window": 1,
+      "window_span": 1,
+      "order_info_gain_bits": 1.575,
+      "model_a_single_frame": {
+        "predicted_class": "Turning the camera left while filming something",
+        "confidence": 0.0612,
+        "correct": false
+      },
+      "model_b_mean_pool": {
+        "predicted_class": "Uncovering something",
+        "confidence": 0.0582,
+        "correct": false
+      },
+      "model_c_temporal_gru": {
+        "predicted_class": "Tipping something over",
+        "confidence": 0.1731,
+        "correct": true
+      },
+      "model_d_compact_gru": {
+        "correct": false,
+        "confidence": 0.116
+      },
+      "reversal_experiment": {
+        "reversed_correct": true,
+        "reversal_vulnerable": false
+      },
+      "causal_physical_mechanism": "Angular rotation from vertical equilibrium to unstable fall and resting horizontal state. Direct directional opposite of 'Standing something upright' (T2, T3)."
+    }
+  ]
+}

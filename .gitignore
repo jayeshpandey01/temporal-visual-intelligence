@@ -2,15 +2,33 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+build/
+dist/
+*.egg-info/
 
 # PyTorch checkpoints and heavy arrays
-checkpoints/
-*.pt
-*.pth
 *.npy
 *.npz
 
-# Data directories (raw frames & videos)
+# Keep general checkpoints and feature arrays local
+/checkpoints/
+results/checkpoints/
+*.pt
+*.pth
+
+# Allow frozen M4 evaluation checkpoints for clean-clone reproduction (12 weights, 6.5 MB total)
+!experiments/m4_final/checkpoints/
+!experiments/m4_final/checkpoints/**
+!experiments/m4_final/checkpoints/*/*.pt
+
+# Confidential assessment documents
+docs/Take-Home Assessment.pdf
+
+# Exclude unverified CLIP embeddings pending model term verification
+embeddings_clip/
+
+# Data directories (heavy raw frames & videos)
 data/*/vid_*
 data/real_*
 data/.temp*
@@ -29,10 +47,22 @@ results/.temp*
 
 # OS and IDE files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 
 # Testing and environments
+tests/
 .pytest_cache/
 .coverage
 htmlcov/
@@ -40,5 +70,15 @@ env/
 venv/
 .env
 
-# Antigravity agents
+# Antigravity agents & local scratch
 .agents/
+runs/
+scratch/
+
+# Intermediate experiment tracking runs (keep m4_final tracked for tests)
+experiments/corruption/
+experiments/gain_analysis/
+experiments/progressive/
+experiments/reversal/
+experiments/shuffle/
+experiments/statistical/

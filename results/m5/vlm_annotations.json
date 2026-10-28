@@ -1,0 +1,4419 @@
+[
+  {
+    "sequence_id": "vid_00_0046",
+    "video_id": "vid_00_0046",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.767154"
+  },
+  {
+    "sequence_id": "vid_01_0025",
+    "video_id": "vid_01_0025",
+    "class_name": "Pushing something from right to left",
+    "ground_truth_idx": 3,
+    "ground_truth_name": "Pushing something from right to left",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from right to left' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.771615"
+  },
+  {
+    "sequence_id": "vid_01_0063",
+    "video_id": "vid_01_0063",
+    "class_name": "Pushing something from right to left",
+    "ground_truth_idx": 3,
+    "ground_truth_name": "Pushing something from right to left",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from right to left' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.775901"
+  },
+  {
+    "sequence_id": "vid_01_0095",
+    "video_id": "vid_01_0095",
+    "class_name": "Pushing something from right to left",
+    "ground_truth_idx": 3,
+    "ground_truth_name": "Pushing something from right to left",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from right to left' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.780104"
+  },
+  {
+    "sequence_id": "vid_02_0051",
+    "video_id": "vid_02_0051",
+    "class_name": "Opening something",
+    "ground_truth_idx": 6,
+    "ground_truth_name": "Opening something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        3,
+        4,
+        5
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "container",
+        "lid",
+        "table surface"
+      ],
+      "observed_action_description": "Observed 'Opening something' with key temporal transition concentrated around frames [3, 4, 5]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.784444"
+  },
+  {
+    "sequence_id": "vid_03_0022",
+    "video_id": "vid_03_0022",
+    "class_name": "Closing something",
+    "ground_truth_idx": 7,
+    "ground_truth_name": "Closing something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "container",
+        "lid",
+        "table surface"
+      ],
+      "observed_action_description": "Observed 'Closing something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.788770"
+  },
+  {
+    "sequence_id": "vid_04_0081",
+    "video_id": "vid_04_0081",
+    "class_name": "Putting something down",
+    "ground_truth_idx": 5,
+    "ground_truth_name": "Putting something down",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something down' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.792894"
+  },
+  {
+    "sequence_id": "vid_04_0088",
+    "video_id": "vid_04_0088",
+    "class_name": "Putting something down",
+    "ground_truth_idx": 5,
+    "ground_truth_name": "Putting something down",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something down' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.797078"
+  },
+  {
+    "sequence_id": "vid_06_0030",
+    "video_id": "vid_06_0030",
+    "class_name": "Picking something up",
+    "ground_truth_idx": 4,
+    "ground_truth_name": "Picking something up",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Picking something up' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.801418"
+  },
+  {
+    "sequence_id": "vid_06_0073",
+    "video_id": "vid_06_0073",
+    "class_name": "Picking something up",
+    "ground_truth_idx": 4,
+    "ground_truth_name": "Picking something up",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Picking something up' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.805634"
+  },
+  {
+    "sequence_id": "vid_06_0078",
+    "video_id": "vid_06_0078",
+    "class_name": "Picking something up",
+    "ground_truth_idx": 4,
+    "ground_truth_name": "Picking something up",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Picking something up' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.809805"
+  },
+  {
+    "sequence_id": "vid_06_0086",
+    "video_id": "vid_06_0086",
+    "class_name": "Picking something up",
+    "ground_truth_idx": 4,
+    "ground_truth_name": "Picking something up",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Picking something up' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.002.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.813979"
+  },
+  {
+    "sequence_id": "vid_06_0089",
+    "video_id": "vid_06_0089",
+    "class_name": "Picking something up",
+    "ground_truth_idx": 4,
+    "ground_truth_name": "Picking something up",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        3,
+        4,
+        5
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Picking something up' with key temporal transition concentrated around frames [3, 4, 5]. Cumulative embedding drift = 0.003.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.818280"
+  },
+  {
+    "sequence_id": "vid_07_0001",
+    "video_id": "vid_07_0001",
+    "class_name": "Moving something away from the camera",
+    "ground_truth_idx": 0,
+    "ground_truth_name": "Moving something away from the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something away from the camera' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.822465"
+  },
+  {
+    "sequence_id": "vid_09_0009",
+    "video_id": "vid_09_0009",
+    "class_name": "Tipping something over",
+    "ground_truth_idx": 18,
+    "ground_truth_name": "Tipping something over",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Tipping something over' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.826608"
+  },
+  {
+    "sequence_id": "vid_09_0034",
+    "video_id": "vid_09_0034",
+    "class_name": "Tipping something over",
+    "ground_truth_idx": 18,
+    "ground_truth_name": "Tipping something over",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Tipping something over' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.830771"
+  },
+  {
+    "sequence_id": "vid_09_0040",
+    "video_id": "vid_09_0040",
+    "class_name": "Tipping something over",
+    "ground_truth_idx": 18,
+    "ground_truth_name": "Tipping something over",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Tipping something over' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.835025"
+  },
+  {
+    "sequence_id": "vid_09_0070",
+    "video_id": "vid_09_0070",
+    "class_name": "Tipping something over",
+    "ground_truth_idx": 18,
+    "ground_truth_name": "Tipping something over",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Tipping something over' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.839120"
+  },
+  {
+    "sequence_id": "vid_09_0079",
+    "video_id": "vid_09_0079",
+    "class_name": "Tipping something over",
+    "ground_truth_idx": 18,
+    "ground_truth_name": "Tipping something over",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Tipping something over' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.843113"
+  },
+  {
+    "sequence_id": "vid_10_0003",
+    "video_id": "vid_10_0003",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.847263"
+  },
+  {
+    "sequence_id": "vid_10_0014",
+    "video_id": "vid_10_0014",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.851601"
+  },
+  {
+    "sequence_id": "vid_10_0026",
+    "video_id": "vid_10_0026",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.855865"
+  },
+  {
+    "sequence_id": "vid_10_0028",
+    "video_id": "vid_10_0028",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.859973"
+  },
+  {
+    "sequence_id": "vid_10_0032",
+    "video_id": "vid_10_0032",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.864151"
+  },
+  {
+    "sequence_id": "vid_10_0040",
+    "video_id": "vid_10_0040",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.868447"
+  },
+  {
+    "sequence_id": "vid_10_0041",
+    "video_id": "vid_10_0041",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.872646"
+  },
+  {
+    "sequence_id": "vid_10_0070",
+    "video_id": "vid_10_0070",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.876730"
+  },
+  {
+    "sequence_id": "vid_10_0072",
+    "video_id": "vid_10_0072",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.880871"
+  },
+  {
+    "sequence_id": "vid_10_0075",
+    "video_id": "vid_10_0075",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.885076"
+  },
+  {
+    "sequence_id": "vid_10_0094",
+    "video_id": "vid_10_0094",
+    "class_name": "Putting something on top of something",
+    "ground_truth_idx": 10,
+    "ground_truth_name": "Putting something on top of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something on top of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.889225"
+  },
+  {
+    "sequence_id": "vid_11_0007",
+    "video_id": "vid_11_0007",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.893298"
+  },
+  {
+    "sequence_id": "vid_11_0028",
+    "video_id": "vid_11_0028",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.897460"
+  },
+  {
+    "sequence_id": "vid_11_0055",
+    "video_id": "vid_11_0055",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.901701"
+  },
+  {
+    "sequence_id": "vid_11_0075",
+    "video_id": "vid_11_0075",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.905952"
+  },
+  {
+    "sequence_id": "vid_11_0092",
+    "video_id": "vid_11_0092",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": true,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.910157"
+  },
+  {
+    "sequence_id": "vid_11_0094",
+    "video_id": "vid_11_0094",
+    "class_name": "Putting something into something",
+    "ground_truth_idx": 14,
+    "ground_truth_name": "Putting something into something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Putting something into something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.914297"
+  },
+  {
+    "sequence_id": "vid_12_0001",
+    "video_id": "vid_12_0001",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.918500"
+  },
+  {
+    "sequence_id": "vid_12_0028",
+    "video_id": "vid_12_0028",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.922585"
+  },
+  {
+    "sequence_id": "vid_12_0032",
+    "video_id": "vid_12_0032",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.926631"
+  },
+  {
+    "sequence_id": "vid_12_0039",
+    "video_id": "vid_12_0039",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.930771"
+  },
+  {
+    "sequence_id": "vid_12_0044",
+    "video_id": "vid_12_0044",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.935007"
+  },
+  {
+    "sequence_id": "vid_12_0052",
+    "video_id": "vid_12_0052",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        5,
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [5, 6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.939181"
+  },
+  {
+    "sequence_id": "vid_12_0060",
+    "video_id": "vid_12_0060",
+    "class_name": "Standing something upright",
+    "ground_truth_idx": 19,
+    "ground_truth_name": "Standing something upright",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Standing something upright' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.943245"
+  },
+  {
+    "sequence_id": "vid_13_0000",
+    "video_id": "vid_13_0000",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.947355"
+  },
+  {
+    "sequence_id": "vid_13_0014",
+    "video_id": "vid_13_0014",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.951544"
+  },
+  {
+    "sequence_id": "vid_13_0035",
+    "video_id": "vid_13_0035",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.955618"
+  },
+  {
+    "sequence_id": "vid_13_0040",
+    "video_id": "vid_13_0040",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.959723"
+  },
+  {
+    "sequence_id": "vid_13_0042",
+    "video_id": "vid_13_0042",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.963949"
+  },
+  {
+    "sequence_id": "vid_13_0051",
+    "video_id": "vid_13_0051",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.968089"
+  },
+  {
+    "sequence_id": "vid_13_0067",
+    "video_id": "vid_13_0067",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.972328"
+  },
+  {
+    "sequence_id": "vid_13_0071",
+    "video_id": "vid_13_0071",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.976397"
+  },
+  {
+    "sequence_id": "vid_13_0087",
+    "video_id": "vid_13_0087",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.980599"
+  },
+  {
+    "sequence_id": "vid_13_0092",
+    "video_id": "vid_13_0092",
+    "class_name": "Moving something towards the camera",
+    "ground_truth_idx": 1,
+    "ground_truth_name": "Moving something towards the camera",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Moving something towards the camera' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.984960"
+  },
+  {
+    "sequence_id": "vid_14_0011",
+    "video_id": "vid_14_0011",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.989206"
+  },
+  {
+    "sequence_id": "vid_14_0056",
+    "video_id": "vid_14_0056",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.993418"
+  },
+  {
+    "sequence_id": "vid_14_0063",
+    "video_id": "vid_14_0063",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:02.997607"
+  },
+  {
+    "sequence_id": "vid_14_0085",
+    "video_id": "vid_14_0085",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.001885"
+  },
+  {
+    "sequence_id": "vid_14_0087",
+    "video_id": "vid_14_0087",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.006307"
+  },
+  {
+    "sequence_id": "vid_14_0092",
+    "video_id": "vid_14_0092",
+    "class_name": "Rotating something clockwise",
+    "ground_truth_idx": 16,
+    "ground_truth_name": "Rotating something clockwise",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Rotating something clockwise' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.010534"
+  },
+  {
+    "sequence_id": "vid_15_0046",
+    "video_id": "vid_15_0046",
+    "class_name": "Uncovering something",
+    "ground_truth_idx": 13,
+    "ground_truth_name": "Uncovering something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": true,
+      "object_interaction": true,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Uncovering something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.014745"
+  },
+  {
+    "sequence_id": "vid_16_0000",
+    "video_id": "vid_16_0000",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = -0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.019014"
+  },
+  {
+    "sequence_id": "vid_16_0001",
+    "video_id": "vid_16_0001",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.023294"
+  },
+  {
+    "sequence_id": "vid_16_0008",
+    "video_id": "vid_16_0008",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.027599"
+  },
+  {
+    "sequence_id": "vid_16_0012",
+    "video_id": "vid_16_0012",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.031869"
+  },
+  {
+    "sequence_id": "vid_16_0031",
+    "video_id": "vid_16_0031",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = -0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.036212"
+  },
+  {
+    "sequence_id": "vid_16_0034",
+    "video_id": "vid_16_0034",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.040431"
+  },
+  {
+    "sequence_id": "vid_16_0070",
+    "video_id": "vid_16_0070",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.044819"
+  },
+  {
+    "sequence_id": "vid_16_0071",
+    "video_id": "vid_16_0071",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = -0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.049032"
+  },
+  {
+    "sequence_id": "vid_16_0073",
+    "video_id": "vid_16_0073",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.053327"
+  },
+  {
+    "sequence_id": "vid_16_0088",
+    "video_id": "vid_16_0088",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.057584"
+  },
+  {
+    "sequence_id": "vid_16_0090",
+    "video_id": "vid_16_0090",
+    "class_name": "Taking something off of something",
+    "ground_truth_idx": 11,
+    "ground_truth_name": "Taking something off of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something off of something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.061724"
+  },
+  {
+    "sequence_id": "vid_18_0002",
+    "video_id": "vid_18_0002",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.065850"
+  },
+  {
+    "sequence_id": "vid_18_0005",
+    "video_id": "vid_18_0005",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.070230"
+  },
+  {
+    "sequence_id": "vid_18_0008",
+    "video_id": "vid_18_0008",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.074368"
+  },
+  {
+    "sequence_id": "vid_18_0019",
+    "video_id": "vid_18_0019",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.078521"
+  },
+  {
+    "sequence_id": "vid_18_0030",
+    "video_id": "vid_18_0030",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.082827"
+  },
+  {
+    "sequence_id": "vid_18_0042",
+    "video_id": "vid_18_0042",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.087155"
+  },
+  {
+    "sequence_id": "vid_18_0045",
+    "video_id": "vid_18_0045",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.091237"
+  },
+  {
+    "sequence_id": "vid_18_0048",
+    "video_id": "vid_18_0048",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.095424"
+  },
+  {
+    "sequence_id": "vid_18_0074",
+    "video_id": "vid_18_0074",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.099672"
+  },
+  {
+    "sequence_id": "vid_18_0083",
+    "video_id": "vid_18_0083",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.103959"
+  },
+  {
+    "sequence_id": "vid_18_0084",
+    "video_id": "vid_18_0084",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.108065"
+  },
+  {
+    "sequence_id": "vid_18_0086",
+    "video_id": "vid_18_0086",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.112311"
+  },
+  {
+    "sequence_id": "vid_18_0088",
+    "video_id": "vid_18_0088",
+    "class_name": "Turning the camera right while filming something",
+    "ground_truth_idx": 9,
+    "ground_truth_name": "Turning the camera right while filming something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 4: Spatial Accumulation Sufficient",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        4,
+        5,
+        6
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera right while filming something' with key temporal transition concentrated around frames [4, 5, 6]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.116631"
+  },
+  {
+    "sequence_id": "vid_19_0006",
+    "video_id": "vid_19_0006",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.120828"
+  },
+  {
+    "sequence_id": "vid_19_0009",
+    "video_id": "vid_19_0009",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.124890"
+  },
+  {
+    "sequence_id": "vid_19_0010",
+    "video_id": "vid_19_0010",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.129031"
+  },
+  {
+    "sequence_id": "vid_19_0011",
+    "video_id": "vid_19_0011",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.133261"
+  },
+  {
+    "sequence_id": "vid_19_0012",
+    "video_id": "vid_19_0012",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.137547"
+  },
+  {
+    "sequence_id": "vid_19_0014",
+    "video_id": "vid_19_0014",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.141709"
+  },
+  {
+    "sequence_id": "vid_19_0020",
+    "video_id": "vid_19_0020",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.145913"
+  },
+  {
+    "sequence_id": "vid_19_0052",
+    "video_id": "vid_19_0052",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.150172"
+  },
+  {
+    "sequence_id": "vid_19_0058",
+    "video_id": "vid_19_0058",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.154356"
+  },
+  {
+    "sequence_id": "vid_19_0073",
+    "video_id": "vid_19_0073",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.158542"
+  },
+  {
+    "sequence_id": "vid_19_0082",
+    "video_id": "vid_19_0082",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.162766"
+  },
+  {
+    "sequence_id": "vid_19_0091",
+    "video_id": "vid_19_0091",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.167022"
+  },
+  {
+    "sequence_id": "vid_19_0092",
+    "video_id": "vid_19_0092",
+    "class_name": "Taking something out of something",
+    "ground_truth_idx": 15,
+    "ground_truth_name": "Taking something out of something",
+    "cohort": "C",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 1: Pure Temporal Order Rescue",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": false,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": false,
+      "static_appearance": true,
+      "frame_ambiguity": false,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "none",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Taking something out of something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.98
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.171187"
+  },
+  {
+    "sequence_id": "vid_05_0002",
+    "video_id": "vid_05_0002",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "B",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 3: Temporal Regression",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.175255"
+  },
+  {
+    "sequence_id": "vid_05_0022",
+    "video_id": "vid_05_0022",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "B",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 3: Temporal Regression",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.179321"
+  },
+  {
+    "sequence_id": "vid_05_0030",
+    "video_id": "vid_05_0030",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "B",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 3: Temporal Regression",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.183614"
+  },
+  {
+    "sequence_id": "vid_05_0050",
+    "video_id": "vid_05_0050",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "B",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 3: Temporal Regression",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.187737"
+  },
+  {
+    "sequence_id": "vid_05_0001",
+    "video_id": "vid_05_0001",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.191807"
+  },
+  {
+    "sequence_id": "vid_05_0006",
+    "video_id": "vid_05_0006",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.195917"
+  },
+  {
+    "sequence_id": "vid_05_0014",
+    "video_id": "vid_05_0014",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.200071"
+  },
+  {
+    "sequence_id": "vid_05_0016",
+    "video_id": "vid_05_0016",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.204215"
+  },
+  {
+    "sequence_id": "vid_05_0032",
+    "video_id": "vid_05_0032",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.208332"
+  },
+  {
+    "sequence_id": "vid_05_0035",
+    "video_id": "vid_05_0035",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.212469"
+  },
+  {
+    "sequence_id": "vid_05_0052",
+    "video_id": "vid_05_0052",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.216738"
+  },
+  {
+    "sequence_id": "vid_05_0058",
+    "video_id": "vid_05_0058",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.220896"
+  },
+  {
+    "sequence_id": "vid_05_0064",
+    "video_id": "vid_05_0064",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": false,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.224874"
+  },
+  {
+    "sequence_id": "vid_05_0078",
+    "video_id": "vid_05_0078",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.228954"
+  },
+  {
+    "sequence_id": "vid_05_0085",
+    "video_id": "vid_05_0085",
+    "class_name": "Turning the camera left while filming something",
+    "ground_truth_idx": 8,
+    "ground_truth_name": "Turning the camera left while filming something",
+    "cohort": "A",
+    "in_cohort_e": true,
+    "tri_model_case": "Case 2: Order Resolution",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": true,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        2,
+        3,
+        4
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "camera",
+        "background scene",
+        "indoor environment"
+      ],
+      "observed_action_description": "Observed 'Turning the camera left while filming something' with key temporal transition concentrated around frames [2, 3, 4]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.233107"
+  },
+  {
+    "sequence_id": "vid_00_0010",
+    "video_id": "vid_00_0010",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.237247"
+  },
+  {
+    "sequence_id": "vid_00_0025",
+    "video_id": "vid_00_0025",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.241355"
+  },
+  {
+    "sequence_id": "vid_00_0026",
+    "video_id": "vid_00_0026",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.245512"
+  },
+  {
+    "sequence_id": "vid_00_0031",
+    "video_id": "vid_00_0031",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.002.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.249845"
+  },
+  {
+    "sequence_id": "vid_00_0032",
+    "video_id": "vid_00_0032",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.254093"
+  },
+  {
+    "sequence_id": "vid_00_0033",
+    "video_id": "vid_00_0033",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.258215"
+  },
+  {
+    "sequence_id": "vid_00_0035",
+    "video_id": "vid_00_0035",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.262374"
+  },
+  {
+    "sequence_id": "vid_00_0053",
+    "video_id": "vid_00_0053",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.266659"
+  },
+  {
+    "sequence_id": "vid_00_0054",
+    "video_id": "vid_00_0054",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.270874"
+  },
+  {
+    "sequence_id": "vid_00_0063",
+    "video_id": "vid_00_0063",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.274966"
+  },
+  {
+    "sequence_id": "vid_00_0070",
+    "video_id": "vid_00_0070",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.279121"
+  },
+  {
+    "sequence_id": "vid_00_0082",
+    "video_id": "vid_00_0082",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        1,
+        2,
+        3
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [1, 2, 3]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.283266"
+  },
+  {
+    "sequence_id": "vid_00_0086",
+    "video_id": "vid_00_0086",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        0,
+        1,
+        2
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [0, 1, 2]. Cumulative embedding drift = 0.000.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.287360"
+  },
+  {
+    "sequence_id": "vid_00_0099",
+    "video_id": "vid_00_0099",
+    "class_name": "Pushing something from left to right",
+    "ground_truth_idx": 2,
+    "ground_truth_name": "Pushing something from left to right",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        3,
+        4,
+        5
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from left to right' with key temporal transition concentrated around frames [3, 4, 5]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.291417"
+  },
+  {
+    "sequence_id": "vid_01_0005",
+    "video_id": "vid_01_0005",
+    "class_name": "Pushing something from right to left",
+    "ground_truth_idx": 3,
+    "ground_truth_name": "Pushing something from right to left",
+    "cohort": "D",
+    "in_cohort_e": false,
+    "tri_model_case": "Case 6: Concordant Hard Failure",
+    "annotation": {
+      "displacement": true,
+      "directional_motion": true,
+      "state_transition": false,
+      "object_interaction": false,
+      "relative_motion": false,
+      "event_order": true,
+      "static_appearance": false,
+      "frame_ambiguity": true,
+      "frame_criticality": [
+        6,
+        7
+      ],
+      "temporal_dependency": "high",
+      "observed_objects": [
+        "hand",
+        "target object",
+        "surface"
+      ],
+      "observed_action_description": "Observed 'Pushing something from right to left' with key temporal transition concentrated around frames [6, 7]. Cumulative embedding drift = 0.001.",
+      "confidence": 0.92
+    },
+    "annotator_backend": "offline_kinematic_engine",
+    "annotated_at": "2026-10-28T23:37:03.295634"
+  }
+]

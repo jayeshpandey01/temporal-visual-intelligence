@@ -1,0 +1,116 @@
+{
+  "milestone": "M4.8",
+  "total_test_sequences": 300,
+  "three_way_disentanglement": {
+    "g_total_mean_pp": 26.0,
+    "g_total_std_pp": 3.74,
+    "g_obs_mean_pp": -0.56,
+    "g_obs_std_pp": 4.37,
+    "g_order_mean_pp": 26.56,
+    "g_order_std_pp": 0.79,
+    "g_parity_mean_pp": 15.33,
+    "g_parity_std_pp": 2.37,
+    "g_scale_mean_pp": 11.22,
+    "g_scale_std_pp": 2.91
+  },
+  "horizon_threshold_distribution": {
+    "K*=Inf (Unresolved)": {
+      "count": 153,
+      "percentage": 51.0
+    },
+    "K*=8 (Late)": {
+      "count": 65,
+      "percentage": 21.67
+    },
+    "K*=1 (Instant)": {
+      "count": 38,
+      "percentage": 12.67
+    },
+    "K*=4 (Mid)": {
+      "count": 33,
+      "percentage": 11.0
+    },
+    "K*=2 (Early)": {
+      "count": 11,
+      "percentage": 3.67
+    }
+  },
+  "action_mechanism_gains": [
+    {
+      "action_mechanism": "Container Physics",
+      "total": 30,
+      "baseline_right": 0,
+      "gru_right": 26,
+      "net_gain": 26
+    },
+    {
+      "action_mechanism": "Directional Vector",
+      "total": 60,
+      "baseline_right": 0,
+      "gru_right": 6,
+      "net_gain": 6
+    },
+    {
+      "action_mechanism": "Fine-Grained Manipulation",
+      "total": 105,
+      "baseline_right": 15,
+      "gru_right": 36,
+      "net_gain": 21
+    },
+    {
+      "action_mechanism": "Physical State Transition",
+      "total": 75,
+      "baseline_right": 0,
+      "gru_right": 29,
+      "net_gain": 29
+    },
+    {
+      "action_mechanism": "Rotational Kinematics",
+      "total": 30,
+      "baseline_right": 0,
+      "gru_right": 11,
+      "net_gain": 11
+    }
+  ],
+  "kinematic_velocity_summary": {
+    "overall_mean_velocity": 0.0965,
+    "overall_max_velocity": 0.126,
+    "overall_path_length": 0.6756
+  },
+  "representative_sequences": {
+    "k_star_1_instant": [
+      "vid_06_0036",
+      "vid_06_0073",
+      "vid_06_0085",
+      "vid_06_0089",
+      "vid_03_0007"
+    ],
+    "k_star_2_early": [
+      "vid_06_0030",
+      "vid_06_0064",
+      "vid_06_0078",
+      "vid_06_0086",
+      "vid_16_0031"
+    ],
+    "k_star_4_mid": [
+      "vid_13_0014",
+      "vid_13_0035",
+      "vid_00_0010",
+      "vid_00_0031",
+      "vid_00_0086"
+    ],
+    "k_star_8_late": [
+      "vid_07_0001",
+      "vid_13_0000",
+      "vid_13_0040",
+      "vid_13_0042",
+      "vid_13_0051"
+    ],
+    "temporal_regression": [
+      "vid_05_0002",
+      "vid_05_0022",
+      "vid_05_0030",
+      "vid_05_0050"
+    ]
+  }
+}

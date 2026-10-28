@@ -1,0 +1,17 @@
+sequence_key,sequence_name,domain,category_id,phenomenon_manifestation,trajectory_frames,mean_consecutive_cosine_similarity,total_cumulative_drift,recurrent_reversal_divergence,qualitative_transfer_confirmed
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T1,Continuous lateral and longitudinal ground plane translation across 50 frames.,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T2,Forward vehicle heading vector with positive yaw rate; reversal inverts slip vector.,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T3,Transition from linear trajectory to tire breakaway (slip angle expansion).,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T4,Tire contact patch friction shear against track surface producing smoke.,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T5,Vehicle chassis heading relative to ground velocity vector (slip angle beta).,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T6,Entry steer -> weight transfer -> throttle oversteer -> countersteer catch.,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T7,Background visual parallax of track barriers and grandstands.,50,0.9918,0.2255,1.262,True
+bmw_m4_drift_50,BMW M4 Continuous Drift & Vehicle Dynamics,Vehicle Kinematics & Drift Dynamics,T8,Single snapshot appears identical to parked angled car or uncontrolled spin.,50,0.9918,0.2255,1.262,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T1,Monotonic horizontal center-of-mass translation across camera field.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T2,Unidirectional rightward travel; reversal inverts quadruped forward momentum.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T3,Periodic gait cycle transitions between stance and airborne suspension phases.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T4,Hoof impact and ground reaction force interaction against terrain.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T5,Limb articulation coordinates moving relative to torso center-of-mass.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T6,Trailing hind -> leading hind -> trailing fore -> leading fore -> suspension.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T7,Equestrian fence and terrain texture undergoing relative motion parallax.,50,0.9969,0.0377,0.5538,True
+horse_running_gallop_50,Horse Continuous Running & Gallop Locomotion,Quadruped Biomechanical Locomotion,T8,Single frame with hooves airborne is ambiguous (jumping vs bucking vs gallop).,50,0.9969,0.0377,0.5538,True

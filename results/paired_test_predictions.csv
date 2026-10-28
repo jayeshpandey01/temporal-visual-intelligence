@@ -1,0 +1,301 @@
+sequence_id,video_id,ground_truth,class_name,y_baseline,conf_baseline,correct_baseline,y_meanpool,conf_meanpool,correct_meanpool,y_gru,conf_gru,correct_gru,delta_obs,delta_order,delta_total,quadrant_ac
+vid_07_0001,vid_07_0001,0,Moving something away from the camera,8,0.0612,False,9,0.0589,False,0,0.3223,True,0,1,1,C_temporal_rescued
+vid_07_0009,vid_07_0009,0,Moving something away from the camera,8,0.0607,False,14,0.0582,False,19,0.1772,False,0,0,0,D_both_wrong
+vid_07_0010,vid_07_0010,0,Moving something away from the camera,8,0.0615,False,13,0.0564,False,10,0.2324,False,0,0,0,D_both_wrong
+vid_07_0015,vid_07_0015,0,Moving something away from the camera,8,0.0609,False,13,0.0563,False,1,0.2203,False,0,0,0,D_both_wrong
+vid_07_0041,vid_07_0041,0,Moving something away from the camera,8,0.0613,False,9,0.0554,False,10,0.3592,False,0,0,0,D_both_wrong
+vid_07_0042,vid_07_0042,0,Moving something away from the camera,8,0.0611,False,13,0.0575,False,19,0.2572,False,0,0,0,D_both_wrong
+vid_07_0050,vid_07_0050,0,Moving something away from the camera,8,0.0606,False,13,0.0555,False,1,0.2579,False,0,0,0,D_both_wrong
+vid_07_0055,vid_07_0055,0,Moving something away from the camera,8,0.0611,False,13,0.0561,False,19,0.1703,False,0,0,0,D_both_wrong
+vid_07_0056,vid_07_0056,0,Moving something away from the camera,8,0.0606,False,14,0.0597,False,9,0.2983,False,0,0,0,D_both_wrong
+vid_07_0065,vid_07_0065,0,Moving something away from the camera,8,0.0614,False,13,0.0585,False,19,0.2046,False,0,0,0,D_both_wrong
+vid_07_0070,vid_07_0070,0,Moving something away from the camera,8,0.0611,False,9,0.0548,False,10,0.3268,False,0,0,0,D_both_wrong
+vid_07_0072,vid_07_0072,0,Moving something away from the camera,8,0.0611,False,9,0.0572,False,9,0.5101,False,0,0,0,D_both_wrong
+vid_07_0073,vid_07_0073,0,Moving something away from the camera,8,0.0619,False,13,0.0611,False,1,0.2349,False,0,0,0,D_both_wrong
+vid_07_0078,vid_07_0078,0,Moving something away from the camera,8,0.0614,False,13,0.0593,False,1,0.2506,False,0,0,0,D_both_wrong
+vid_07_0091,vid_07_0091,0,Moving something away from the camera,8,0.0607,False,14,0.0531,False,14,0.3428,False,0,0,0,D_both_wrong
+vid_13_0000,vid_13_0000,1,Moving something towards the camera,8,0.0613,False,13,0.0561,False,1,0.2297,True,0,1,1,C_temporal_rescued
+vid_13_0014,vid_13_0014,1,Moving something towards the camera,8,0.0609,False,9,0.0541,False,1,0.2443,True,0,1,1,C_temporal_rescued
+vid_13_0025,vid_13_0025,1,Moving something towards the camera,8,0.0613,False,9,0.0549,False,10,0.3304,False,0,0,0,D_both_wrong
+vid_13_0026,vid_13_0026,1,Moving something towards the camera,8,0.0604,False,3,0.0529,False,18,0.1833,False,0,0,0,D_both_wrong
+vid_13_0030,vid_13_0030,1,Moving something towards the camera,8,0.0602,False,14,0.0551,False,18,0.1358,False,0,0,0,D_both_wrong
+vid_13_0032,vid_13_0032,1,Moving something towards the camera,8,0.0611,False,9,0.0548,False,10,0.3513,False,0,0,0,D_both_wrong
+vid_13_0035,vid_13_0035,1,Moving something towards the camera,8,0.061,False,13,0.0527,False,1,0.2048,True,0,1,1,C_temporal_rescued
+vid_13_0040,vid_13_0040,1,Moving something towards the camera,8,0.0613,False,13,0.0572,False,1,0.2331,True,0,1,1,C_temporal_rescued
+vid_13_0042,vid_13_0042,1,Moving something towards the camera,8,0.0614,False,13,0.0554,False,1,0.2078,True,0,1,1,C_temporal_rescued
+vid_13_0051,vid_13_0051,1,Moving something towards the camera,8,0.0614,False,13,0.0575,False,1,0.26,True,0,1,1,C_temporal_rescued
+vid_13_0062,vid_13_0062,1,Moving something towards the camera,8,0.0612,False,13,0.0576,False,19,0.1941,False,0,0,0,D_both_wrong
+vid_13_0067,vid_13_0067,1,Moving something towards the camera,8,0.0612,False,13,0.0552,False,1,0.2601,True,0,1,1,C_temporal_rescued
+vid_13_0071,vid_13_0071,1,Moving something towards the camera,8,0.0612,False,13,0.0548,False,1,0.2474,True,0,1,1,C_temporal_rescued
+vid_13_0087,vid_13_0087,1,Moving something towards the camera,8,0.0607,False,13,0.054,False,1,0.2368,True,0,1,1,C_temporal_rescued
+vid_13_0092,vid_13_0092,1,Moving something towards the camera,8,0.0602,False,14,0.0561,False,1,0.2383,True,0,1,1,C_temporal_rescued
+vid_00_0010,vid_00_0010,2,Pushing something from left to right,8,0.0611,False,9,0.0535,False,11,0.1534,False,0,0,0,D_both_wrong
+vid_00_0025,vid_00_0025,2,Pushing something from left to right,8,0.0616,False,13,0.0557,False,5,0.113,False,0,0,0,D_both_wrong
+vid_00_0026,vid_00_0026,2,Pushing something from left to right,8,0.0617,False,13,0.0583,False,7,0.1679,False,0,0,0,D_both_wrong
+vid_00_0031,vid_00_0031,2,Pushing something from left to right,8,0.0611,False,9,0.0534,False,8,0.1575,False,0,0,0,D_both_wrong
+vid_00_0032,vid_00_0032,2,Pushing something from left to right,8,0.0614,False,13,0.0556,False,8,0.1119,False,0,0,0,D_both_wrong
+vid_00_0033,vid_00_0033,2,Pushing something from left to right,8,0.0617,False,13,0.0564,False,5,0.1103,False,0,0,0,D_both_wrong
+vid_00_0035,vid_00_0035,2,Pushing something from left to right,8,0.0613,False,13,0.0544,False,8,0.1144,False,0,0,0,D_both_wrong
+vid_00_0046,vid_00_0046,2,Pushing something from left to right,8,0.0612,False,13,0.0533,False,2,0.1159,True,0,1,1,C_temporal_rescued
+vid_00_0053,vid_00_0053,2,Pushing something from left to right,8,0.0618,False,13,0.06,False,8,0.1432,False,0,0,0,D_both_wrong
+vid_00_0054,vid_00_0054,2,Pushing something from left to right,8,0.0619,False,13,0.059,False,5,0.138,False,0,0,0,D_both_wrong
+vid_00_0063,vid_00_0063,2,Pushing something from left to right,8,0.0616,False,13,0.0586,False,11,0.1334,False,0,0,0,D_both_wrong
+vid_00_0070,vid_00_0070,2,Pushing something from left to right,8,0.0617,False,13,0.0579,False,7,0.1052,False,0,0,0,D_both_wrong
+vid_00_0082,vid_00_0082,2,Pushing something from left to right,8,0.0612,False,13,0.0537,False,8,0.1512,False,0,0,0,D_both_wrong
+vid_00_0086,vid_00_0086,2,Pushing something from left to right,8,0.0615,False,13,0.0585,False,8,0.1496,False,0,0,0,D_both_wrong
+vid_00_0099,vid_00_0099,2,Pushing something from left to right,8,0.0613,False,13,0.054,False,8,0.1461,False,0,0,0,D_both_wrong
+vid_01_0005,vid_01_0005,3,Pushing something from right to left,8,0.0613,False,13,0.0543,False,16,0.2286,False,0,0,0,D_both_wrong
+vid_01_0006,vid_01_0006,3,Pushing something from right to left,8,0.0611,False,13,0.0551,False,8,0.1428,False,0,0,0,D_both_wrong
+vid_01_0025,vid_01_0025,3,Pushing something from right to left,8,0.0614,False,13,0.0579,False,3,0.1707,True,0,1,1,C_temporal_rescued
+vid_01_0029,vid_01_0029,3,Pushing something from right to left,8,0.0612,False,13,0.0558,False,8,0.1548,False,0,0,0,D_both_wrong
+vid_01_0055,vid_01_0055,3,Pushing something from right to left,8,0.062,False,13,0.0613,False,16,0.1442,False,0,0,0,D_both_wrong
+vid_01_0059,vid_01_0059,3,Pushing something from right to left,8,0.0614,False,13,0.0576,False,16,0.1915,False,0,0,0,D_both_wrong
+vid_01_0060,vid_01_0060,3,Pushing something from right to left,8,0.0611,False,7,0.0534,False,16,0.2042,False,0,0,0,D_both_wrong
+vid_01_0063,vid_01_0063,3,Pushing something from right to left,8,0.0614,False,13,0.0618,False,3,0.164,True,0,1,1,C_temporal_rescued
+vid_01_0064,vid_01_0064,3,Pushing something from right to left,8,0.0616,False,13,0.0567,False,16,0.2132,False,0,0,0,D_both_wrong
+vid_01_0068,vid_01_0068,3,Pushing something from right to left,8,0.0609,False,14,0.053,False,2,0.1115,False,0,0,0,D_both_wrong
+vid_01_0072,vid_01_0072,3,Pushing something from right to left,8,0.0612,False,13,0.0535,False,8,0.1184,False,0,0,0,D_both_wrong
+vid_01_0081,vid_01_0081,3,Pushing something from right to left,8,0.0613,False,9,0.0557,False,5,0.1449,False,0,0,0,D_both_wrong
+vid_01_0087,vid_01_0087,3,Pushing something from right to left,8,0.0617,False,13,0.0573,False,8,0.1777,False,0,0,0,D_both_wrong
+vid_01_0093,vid_01_0093,3,Pushing something from right to left,8,0.0615,False,13,0.0552,False,8,0.176,False,0,0,0,D_both_wrong
+vid_01_0095,vid_01_0095,3,Pushing something from right to left,8,0.0619,False,13,0.0637,False,3,0.1575,True,0,1,1,C_temporal_rescued
+vid_06_0026,vid_06_0026,4,Picking something up,8,0.0616,False,13,0.0619,False,19,0.318,False,0,0,0,D_both_wrong
+vid_06_0030,vid_06_0030,4,Picking something up,8,0.0615,False,13,0.0574,False,4,0.2408,True,0,1,1,C_temporal_rescued
+vid_06_0036,vid_06_0036,4,Picking something up,8,0.0604,False,9,0.0576,False,10,0.3758,False,0,0,0,D_both_wrong
+vid_06_0041,vid_06_0041,4,Picking something up,8,0.0608,False,14,0.0548,False,14,0.3479,False,0,0,0,D_both_wrong
+vid_06_0047,vid_06_0047,4,Picking something up,8,0.0615,False,13,0.0574,False,19,0.2381,False,0,0,0,D_both_wrong
+vid_06_0048,vid_06_0048,4,Picking something up,8,0.0613,False,13,0.0569,False,19,0.2843,False,0,0,0,D_both_wrong
+vid_06_0054,vid_06_0054,4,Picking something up,8,0.0606,False,14,0.0594,False,19,0.3036,False,0,0,0,D_both_wrong
+vid_06_0064,vid_06_0064,4,Picking something up,8,0.0604,False,14,0.0548,False,10,0.2508,False,0,0,0,D_both_wrong
+vid_06_0065,vid_06_0065,4,Picking something up,8,0.0617,False,13,0.0564,False,19,0.3292,False,0,0,0,D_both_wrong
+vid_06_0071,vid_06_0071,4,Picking something up,8,0.0613,False,13,0.0578,False,19,0.3283,False,0,0,0,D_both_wrong
+vid_06_0073,vid_06_0073,4,Picking something up,8,0.0619,False,13,0.0566,False,4,0.3809,True,0,1,1,C_temporal_rescued
+vid_06_0078,vid_06_0078,4,Picking something up,8,0.0619,False,13,0.0584,False,4,0.3683,True,0,1,1,C_temporal_rescued
+vid_06_0085,vid_06_0085,4,Picking something up,8,0.0611,False,13,0.0567,False,10,0.253,False,0,0,0,D_both_wrong
+vid_06_0086,vid_06_0086,4,Picking something up,8,0.0607,False,14,0.0614,False,4,0.3362,True,0,1,1,C_temporal_rescued
+vid_06_0089,vid_06_0089,4,Picking something up,8,0.0617,False,13,0.0554,False,4,0.4305,True,0,1,1,C_temporal_rescued
+vid_04_0010,vid_04_0010,5,Putting something down,8,0.0614,False,13,0.0543,False,11,0.1559,False,0,0,0,D_both_wrong
+vid_04_0011,vid_04_0011,5,Putting something down,8,0.0607,False,14,0.0559,False,11,0.1334,False,0,0,0,D_both_wrong
+vid_04_0017,vid_04_0017,5,Putting something down,8,0.0613,False,13,0.0562,False,11,0.155,False,0,0,0,D_both_wrong
+vid_04_0028,vid_04_0028,5,Putting something down,8,0.0611,False,3,0.053,False,11,0.1513,False,0,0,0,D_both_wrong
+vid_04_0031,vid_04_0031,5,Putting something down,8,0.0612,False,13,0.0547,False,8,0.1236,False,0,0,0,D_both_wrong
+vid_04_0042,vid_04_0042,5,Putting something down,8,0.0618,False,13,0.0605,False,11,0.1905,False,0,0,0,D_both_wrong
+vid_04_0063,vid_04_0063,5,Putting something down,8,0.0615,False,13,0.0576,False,8,0.1391,False,0,0,0,D_both_wrong
+vid_04_0064,vid_04_0064,5,Putting something down,8,0.0614,False,13,0.0549,False,8,0.1212,False,0,0,0,D_both_wrong
+vid_04_0071,vid_04_0071,5,Putting something down,8,0.0611,False,14,0.0527,False,11,0.1527,False,0,0,0,D_both_wrong
+vid_04_0074,vid_04_0074,5,Putting something down,8,0.0614,False,13,0.0568,False,3,0.1336,False,0,0,0,D_both_wrong
+vid_04_0080,vid_04_0080,5,Putting something down,8,0.0614,False,13,0.0581,False,11,0.1514,False,0,0,0,D_both_wrong
+vid_04_0081,vid_04_0081,5,Putting something down,8,0.0616,False,13,0.0577,False,5,0.1436,True,0,1,1,C_temporal_rescued
+vid_04_0082,vid_04_0082,5,Putting something down,8,0.061,False,13,0.054,False,7,0.1549,False,0,0,0,D_both_wrong
+vid_04_0087,vid_04_0087,5,Putting something down,8,0.0611,False,13,0.0539,False,18,0.1054,False,0,0,0,D_both_wrong
+vid_04_0088,vid_04_0088,5,Putting something down,8,0.0615,False,13,0.054,False,5,0.1146,True,0,1,1,C_temporal_rescued
+vid_02_0002,vid_02_0002,6,Opening something,8,0.0617,False,13,0.0594,False,19,0.2377,False,0,0,0,D_both_wrong
+vid_02_0004,vid_02_0004,6,Opening something,8,0.0607,False,14,0.0564,False,18,0.1737,False,0,0,0,D_both_wrong
+vid_02_0005,vid_02_0005,6,Opening something,8,0.0614,False,13,0.0549,False,18,0.1839,False,0,0,0,D_both_wrong
+vid_02_0029,vid_02_0029,6,Opening something,8,0.062,False,13,0.0611,False,7,0.2086,False,0,0,0,D_both_wrong
+vid_02_0032,vid_02_0032,6,Opening something,8,0.0614,False,13,0.0569,False,8,0.1343,False,0,0,0,D_both_wrong
+vid_02_0033,vid_02_0033,6,Opening something,8,0.0619,False,13,0.0591,False,7,0.1709,False,0,0,0,D_both_wrong
+vid_02_0034,vid_02_0034,6,Opening something,8,0.0617,False,13,0.0595,False,19,0.2259,False,0,0,0,D_both_wrong
+vid_02_0045,vid_02_0045,6,Opening something,8,0.0617,False,13,0.0598,False,5,0.1368,False,0,0,0,D_both_wrong
+vid_02_0050,vid_02_0050,6,Opening something,8,0.0614,False,13,0.056,False,7,0.1002,False,0,0,0,D_both_wrong
+vid_02_0051,vid_02_0051,6,Opening something,8,0.0616,False,13,0.0572,False,6,0.1754,True,0,1,1,C_temporal_rescued
+vid_02_0052,vid_02_0052,6,Opening something,8,0.0614,False,13,0.059,False,7,0.1642,False,0,0,0,D_both_wrong
+vid_02_0059,vid_02_0059,6,Opening something,8,0.0611,False,7,0.0551,False,19,0.2453,False,0,0,0,D_both_wrong
+vid_02_0078,vid_02_0078,6,Opening something,8,0.0615,False,13,0.0589,False,8,0.1367,False,0,0,0,D_both_wrong
+vid_02_0092,vid_02_0092,6,Opening something,8,0.0618,False,13,0.0587,False,7,0.1827,False,0,0,0,D_both_wrong
+vid_02_0095,vid_02_0095,6,Opening something,8,0.0616,False,13,0.0567,False,7,0.1755,False,0,0,0,D_both_wrong
+vid_03_0007,vid_03_0007,7,Closing something,8,0.0613,False,13,0.0547,False,18,0.1837,False,0,0,0,D_both_wrong
+vid_03_0011,vid_03_0011,7,Closing something,8,0.0612,False,3,0.0532,False,18,0.1878,False,0,0,0,D_both_wrong
+vid_03_0018,vid_03_0018,7,Closing something,8,0.0611,False,13,0.0547,False,18,0.1337,False,0,0,0,D_both_wrong
+vid_03_0021,vid_03_0021,7,Closing something,8,0.0608,False,14,0.0533,False,2,0.1049,False,0,0,0,D_both_wrong
+vid_03_0022,vid_03_0022,7,Closing something,8,0.0617,False,13,0.0603,False,7,0.156,True,0,1,1,C_temporal_rescued
+vid_03_0029,vid_03_0029,7,Closing something,8,0.0613,False,13,0.0535,False,19,0.1684,False,0,0,0,D_both_wrong
+vid_03_0032,vid_03_0032,7,Closing something,8,0.0617,False,13,0.059,False,5,0.1371,False,0,0,0,D_both_wrong
+vid_03_0040,vid_03_0040,7,Closing something,8,0.0614,False,13,0.0578,False,18,0.1729,False,0,0,0,D_both_wrong
+vid_03_0042,vid_03_0042,7,Closing something,8,0.0614,False,13,0.0558,False,19,0.183,False,0,0,0,D_both_wrong
+vid_03_0043,vid_03_0043,7,Closing something,8,0.0612,False,9,0.0545,False,11,0.1325,False,0,0,0,D_both_wrong
+vid_03_0046,vid_03_0046,7,Closing something,8,0.0618,False,13,0.0597,False,5,0.1,False,0,0,0,D_both_wrong
+vid_03_0053,vid_03_0053,7,Closing something,8,0.0616,False,13,0.0582,False,6,0.1704,False,0,0,0,D_both_wrong
+vid_03_0059,vid_03_0059,7,Closing something,8,0.0613,False,13,0.0575,False,8,0.1426,False,0,0,0,D_both_wrong
+vid_03_0067,vid_03_0067,7,Closing something,8,0.0617,False,13,0.0588,False,5,0.1337,False,0,0,0,D_both_wrong
+vid_03_0094,vid_03_0094,7,Closing something,8,0.0612,False,13,0.0548,False,8,0.1368,False,0,0,0,D_both_wrong
+vid_05_0001,vid_05_0001,8,Turning the camera left while filming something,8,0.0612,True,13,0.0547,False,8,0.159,True,-1,1,0,A_both_correct
+vid_05_0002,vid_05_0002,8,Turning the camera left while filming something,8,0.0612,True,13,0.0558,False,16,0.189,False,-1,0,-1,B_baseline_only
+vid_05_0006,vid_05_0006,8,Turning the camera left while filming something,8,0.0616,True,13,0.0572,False,8,0.1672,True,-1,1,0,A_both_correct
+vid_05_0014,vid_05_0014,8,Turning the camera left while filming something,8,0.0618,True,13,0.0602,False,8,0.1693,True,-1,1,0,A_both_correct
+vid_05_0016,vid_05_0016,8,Turning the camera left while filming something,8,0.0615,True,13,0.0581,False,8,0.1518,True,-1,1,0,A_both_correct
+vid_05_0022,vid_05_0022,8,Turning the camera left while filming something,8,0.0615,True,13,0.057,False,5,0.1117,False,-1,0,-1,B_baseline_only
+vid_05_0030,vid_05_0030,8,Turning the camera left while filming something,8,0.0605,True,14,0.0581,False,3,0.1336,False,-1,0,-1,B_baseline_only
+vid_05_0032,vid_05_0032,8,Turning the camera left while filming something,8,0.0615,True,7,0.0541,False,8,0.1666,True,-1,1,0,A_both_correct
+vid_05_0035,vid_05_0035,8,Turning the camera left while filming something,8,0.0608,True,14,0.0572,False,8,0.1621,True,-1,1,0,A_both_correct
+vid_05_0050,vid_05_0050,8,Turning the camera left while filming something,8,0.0614,True,13,0.0564,False,3,0.154,False,-1,0,-1,B_baseline_only
+vid_05_0052,vid_05_0052,8,Turning the camera left while filming something,8,0.0613,True,13,0.056,False,8,0.1528,True,-1,1,0,A_both_correct
+vid_05_0058,vid_05_0058,8,Turning the camera left while filming something,8,0.0612,True,13,0.0543,False,8,0.1591,True,-1,1,0,A_both_correct
+vid_05_0064,vid_05_0064,8,Turning the camera left while filming something,8,0.0616,True,13,0.0588,False,8,0.1593,True,-1,1,0,A_both_correct
+vid_05_0078,vid_05_0078,8,Turning the camera left while filming something,8,0.0616,True,13,0.0573,False,8,0.1599,True,-1,1,0,A_both_correct
+vid_05_0085,vid_05_0085,8,Turning the camera left while filming something,8,0.0612,True,3,0.0534,False,8,0.1644,True,-1,1,0,A_both_correct
+vid_18_0002,vid_18_0002,9,Turning the camera right while filming something,8,0.0619,False,7,0.0548,False,9,0.4608,True,0,1,1,C_temporal_rescued
+vid_18_0005,vid_18_0005,9,Turning the camera right while filming something,8,0.0621,False,7,0.0562,False,9,0.4679,True,0,1,1,C_temporal_rescued
+vid_18_0008,vid_18_0008,9,Turning the camera right while filming something,8,0.0614,False,9,0.0601,True,9,0.5229,True,1,0,1,C_temporal_rescued
+vid_18_0018,vid_18_0018,9,Turning the camera right while filming something,8,0.0615,False,9,0.0557,True,15,0.4699,False,1,-1,0,D_both_wrong
+vid_18_0019,vid_18_0019,9,Turning the camera right while filming something,8,0.0612,False,9,0.0583,True,9,0.4763,True,1,0,1,C_temporal_rescued
+vid_18_0030,vid_18_0030,9,Turning the camera right while filming something,8,0.0615,False,9,0.0573,True,9,0.4712,True,1,0,1,C_temporal_rescued
+vid_18_0042,vid_18_0042,9,Turning the camera right while filming something,8,0.0612,False,9,0.0617,True,9,0.549,True,1,0,1,C_temporal_rescued
+vid_18_0045,vid_18_0045,9,Turning the camera right while filming something,8,0.0613,False,9,0.0579,True,9,0.4863,True,1,0,1,C_temporal_rescued
+vid_18_0048,vid_18_0048,9,Turning the camera right while filming something,8,0.0615,False,9,0.0578,True,9,0.4951,True,1,0,1,C_temporal_rescued
+vid_18_0074,vid_18_0074,9,Turning the camera right while filming something,8,0.0617,False,9,0.058,True,9,0.5147,True,1,0,1,C_temporal_rescued
+vid_18_0083,vid_18_0083,9,Turning the camera right while filming something,8,0.0611,False,14,0.06,False,9,0.4727,True,0,1,1,C_temporal_rescued
+vid_18_0084,vid_18_0084,9,Turning the camera right while filming something,8,0.0615,False,9,0.0598,True,9,0.516,True,1,0,1,C_temporal_rescued
+vid_18_0086,vid_18_0086,9,Turning the camera right while filming something,8,0.0615,False,9,0.0553,True,9,0.446,True,1,0,1,C_temporal_rescued
+vid_18_0088,vid_18_0088,9,Turning the camera right while filming something,8,0.0613,False,9,0.0565,True,9,0.4688,True,1,0,1,C_temporal_rescued
+vid_18_0098,vid_18_0098,9,Turning the camera right while filming something,8,0.0611,False,14,0.0583,False,15,0.4782,False,0,0,0,D_both_wrong
+vid_10_0003,vid_10_0003,10,Putting something on top of something,8,0.0609,False,14,0.0548,False,10,0.3783,True,0,1,1,C_temporal_rescued
+vid_10_0014,vid_10_0014,10,Putting something on top of something,8,0.0608,False,14,0.0575,False,10,0.4034,True,0,1,1,C_temporal_rescued
+vid_10_0022,vid_10_0022,10,Putting something on top of something,8,0.0613,False,13,0.0559,False,14,0.2906,False,0,0,0,D_both_wrong
+vid_10_0026,vid_10_0026,10,Putting something on top of something,8,0.0614,False,13,0.0551,False,10,0.3293,True,0,1,1,C_temporal_rescued
+vid_10_0028,vid_10_0028,10,Putting something on top of something,8,0.0611,False,14,0.0545,False,10,0.3628,True,0,1,1,C_temporal_rescued
+vid_10_0032,vid_10_0032,10,Putting something on top of something,8,0.0613,False,13,0.0546,False,10,0.3354,True,0,1,1,C_temporal_rescued
+vid_10_0040,vid_10_0040,10,Putting something on top of something,8,0.0608,False,14,0.0554,False,10,0.3897,True,0,1,1,C_temporal_rescued
+vid_10_0041,vid_10_0041,10,Putting something on top of something,8,0.0611,False,9,0.0533,False,10,0.373,True,0,1,1,C_temporal_rescued
+vid_10_0068,vid_10_0068,10,Putting something on top of something,8,0.0614,False,13,0.0566,False,14,0.2891,False,0,0,0,D_both_wrong
+vid_10_0070,vid_10_0070,10,Putting something on top of something,8,0.0612,False,14,0.0527,False,10,0.3628,True,0,1,1,C_temporal_rescued
+vid_10_0071,vid_10_0071,10,Putting something on top of something,8,0.0615,False,13,0.0562,False,14,0.2982,False,0,0,0,D_both_wrong
+vid_10_0072,vid_10_0072,10,Putting something on top of something,8,0.061,False,9,0.056,False,10,0.448,True,0,1,1,C_temporal_rescued
+vid_10_0075,vid_10_0075,10,Putting something on top of something,8,0.0613,False,9,0.0537,False,10,0.3899,True,0,1,1,C_temporal_rescued
+vid_10_0088,vid_10_0088,10,Putting something on top of something,8,0.0612,False,13,0.0535,False,14,0.362,False,0,0,0,D_both_wrong
+vid_10_0094,vid_10_0094,10,Putting something on top of something,8,0.0614,False,13,0.055,False,10,0.3154,True,0,1,1,C_temporal_rescued
+vid_16_0000,vid_16_0000,11,Taking something off of something,8,0.0615,False,13,0.0588,False,11,0.1549,True,0,1,1,C_temporal_rescued
+vid_16_0001,vid_16_0001,11,Taking something off of something,8,0.0615,False,13,0.0565,False,11,0.1312,True,0,1,1,C_temporal_rescued
+vid_16_0008,vid_16_0008,11,Taking something off of something,8,0.0609,False,14,0.0545,False,11,0.1399,True,0,1,1,C_temporal_rescued
+vid_16_0012,vid_16_0012,11,Taking something off of something,8,0.0615,False,13,0.0616,False,11,0.1487,True,0,1,1,C_temporal_rescued
+vid_16_0013,vid_16_0013,11,Taking something off of something,8,0.061,False,9,0.0555,False,5,0.1114,False,0,0,0,D_both_wrong
+vid_16_0018,vid_16_0018,11,Taking something off of something,8,0.0611,False,13,0.0533,False,18,0.1274,False,0,0,0,D_both_wrong
+vid_16_0031,vid_16_0031,11,Taking something off of something,8,0.061,False,13,0.0555,False,11,0.2373,True,0,1,1,C_temporal_rescued
+vid_16_0034,vid_16_0034,11,Taking something off of something,8,0.0614,False,13,0.0558,False,11,0.1878,True,0,1,1,C_temporal_rescued
+vid_16_0039,vid_16_0039,11,Taking something off of something,8,0.0618,False,13,0.0631,False,12,0.1585,False,0,0,0,D_both_wrong
+vid_16_0047,vid_16_0047,11,Taking something off of something,8,0.0616,False,13,0.0561,False,8,0.1048,False,0,0,0,D_both_wrong
+vid_16_0070,vid_16_0070,11,Taking something off of something,8,0.0611,False,7,0.0539,False,11,0.1857,True,0,1,1,C_temporal_rescued
+vid_16_0071,vid_16_0071,11,Taking something off of something,8,0.0611,False,13,0.0532,False,11,0.1316,True,0,1,1,C_temporal_rescued
+vid_16_0073,vid_16_0073,11,Taking something off of something,8,0.0615,False,13,0.0571,False,11,0.16,True,0,1,1,C_temporal_rescued
+vid_16_0088,vid_16_0088,11,Taking something off of something,8,0.0619,False,13,0.0604,False,11,0.1436,True,0,1,1,C_temporal_rescued
+vid_16_0090,vid_16_0090,11,Taking something off of something,8,0.0615,False,13,0.0597,False,11,0.1402,True,0,1,1,C_temporal_rescued
+vid_17_0003,vid_17_0003,12,Covering something,8,0.0615,False,13,0.0592,False,11,0.1611,False,0,0,0,D_both_wrong
+vid_17_0005,vid_17_0005,12,Covering something,8,0.0612,False,13,0.0546,False,11,0.1902,False,0,0,0,D_both_wrong
+vid_17_0019,vid_17_0019,12,Covering something,8,0.0614,False,13,0.0551,False,11,0.1245,False,0,0,0,D_both_wrong
+vid_17_0020,vid_17_0020,12,Covering something,8,0.0613,False,13,0.0558,False,11,0.2128,False,0,0,0,D_both_wrong
+vid_17_0022,vid_17_0022,12,Covering something,8,0.0611,False,14,0.0534,False,11,0.164,False,0,0,0,D_both_wrong
+vid_17_0029,vid_17_0029,12,Covering something,8,0.0607,False,14,0.0575,False,8,0.1246,False,0,0,0,D_both_wrong
+vid_17_0030,vid_17_0030,12,Covering something,8,0.0611,False,3,0.0546,False,11,0.1389,False,0,0,0,D_both_wrong
+vid_17_0036,vid_17_0036,12,Covering something,8,0.0617,False,13,0.0584,False,11,0.1552,False,0,0,0,D_both_wrong
+vid_17_0039,vid_17_0039,12,Covering something,8,0.061,False,14,0.0536,False,11,0.1816,False,0,0,0,D_both_wrong
+vid_17_0050,vid_17_0050,12,Covering something,8,0.062,False,13,0.0643,False,3,0.1357,False,0,0,0,D_both_wrong
+vid_17_0055,vid_17_0055,12,Covering something,8,0.0616,False,13,0.0592,False,11,0.1495,False,0,0,0,D_both_wrong
+vid_17_0058,vid_17_0058,12,Covering something,8,0.0615,False,13,0.0585,False,11,0.155,False,0,0,0,D_both_wrong
+vid_17_0067,vid_17_0067,12,Covering something,8,0.061,False,14,0.0548,False,11,0.1792,False,0,0,0,D_both_wrong
+vid_17_0072,vid_17_0072,12,Covering something,8,0.0617,False,13,0.0594,False,11,0.1618,False,0,0,0,D_both_wrong
+vid_17_0097,vid_17_0097,12,Covering something,8,0.062,False,13,0.0614,False,5,0.1466,False,0,0,0,D_both_wrong
+vid_15_0003,vid_15_0003,13,Uncovering something,8,0.0615,False,13,0.0572,True,8,0.1399,False,1,-1,0,D_both_wrong
+vid_15_0007,vid_15_0007,13,Uncovering something,8,0.0613,False,13,0.0577,True,3,0.1499,False,1,-1,0,D_both_wrong
+vid_15_0016,vid_15_0016,13,Uncovering something,8,0.0613,False,13,0.057,True,5,0.115,False,1,-1,0,D_both_wrong
+vid_15_0017,vid_15_0017,13,Uncovering something,8,0.0613,False,13,0.0598,True,3,0.153,False,1,-1,0,D_both_wrong
+vid_15_0018,vid_15_0018,13,Uncovering something,8,0.0605,False,13,0.0591,True,8,0.1541,False,1,-1,0,D_both_wrong
+vid_15_0031,vid_15_0031,13,Uncovering something,8,0.0604,False,14,0.0577,False,8,0.1297,False,0,0,0,D_both_wrong
+vid_15_0036,vid_15_0036,13,Uncovering something,8,0.0606,False,14,0.0533,False,8,0.1498,False,0,0,0,D_both_wrong
+vid_15_0044,vid_15_0044,13,Uncovering something,8,0.0612,False,13,0.0585,True,12,0.1214,False,1,-1,0,D_both_wrong
+vid_15_0046,vid_15_0046,13,Uncovering something,8,0.0617,False,13,0.0612,True,13,0.1131,True,1,0,1,C_temporal_rescued
+vid_15_0047,vid_15_0047,13,Uncovering something,8,0.0616,False,13,0.0602,True,3,0.1553,False,1,-1,0,D_both_wrong
+vid_15_0050,vid_15_0050,13,Uncovering something,8,0.0606,False,13,0.0529,True,8,0.133,False,1,-1,0,D_both_wrong
+vid_15_0055,vid_15_0055,13,Uncovering something,8,0.0613,False,13,0.057,True,3,0.1385,False,1,-1,0,D_both_wrong
+vid_15_0077,vid_15_0077,13,Uncovering something,8,0.0605,False,14,0.0555,False,8,0.1483,False,0,0,0,D_both_wrong
+vid_15_0078,vid_15_0078,13,Uncovering something,8,0.0616,False,13,0.0617,True,3,0.1658,False,1,-1,0,D_both_wrong
+vid_15_0090,vid_15_0090,13,Uncovering something,8,0.0616,False,13,0.0628,True,16,0.1771,False,1,-1,0,D_both_wrong
+vid_11_0007,vid_11_0007,14,Putting something into something,8,0.0609,False,14,0.0544,True,14,0.4471,True,1,0,1,C_temporal_rescued
+vid_11_0009,vid_11_0009,14,Putting something into something,8,0.0615,False,13,0.0552,False,10,0.2942,False,0,0,0,D_both_wrong
+vid_11_0018,vid_11_0018,14,Putting something into something,8,0.0608,False,14,0.0572,True,10,0.4636,False,1,-1,0,D_both_wrong
+vid_11_0020,vid_11_0020,14,Putting something into something,8,0.0609,False,9,0.0576,False,10,0.4735,False,0,0,0,D_both_wrong
+vid_11_0022,vid_11_0022,14,Putting something into something,8,0.0612,False,9,0.0552,False,10,0.3957,False,0,0,0,D_both_wrong
+vid_11_0028,vid_11_0028,14,Putting something into something,8,0.0606,False,14,0.0568,True,14,0.5285,True,1,0,1,C_temporal_rescued
+vid_11_0051,vid_11_0051,14,Putting something into something,8,0.061,False,14,0.0545,True,10,0.3976,False,1,-1,0,D_both_wrong
+vid_11_0055,vid_11_0055,14,Putting something into something,8,0.0608,False,14,0.0545,True,14,0.4982,True,1,0,1,C_temporal_rescued
+vid_11_0064,vid_11_0064,14,Putting something into something,8,0.0615,False,13,0.0562,False,10,0.3007,False,0,0,0,D_both_wrong
+vid_11_0072,vid_11_0072,14,Putting something into something,8,0.0612,False,9,0.0556,False,10,0.408,False,0,0,0,D_both_wrong
+vid_11_0075,vid_11_0075,14,Putting something into something,8,0.0613,False,13,0.0545,False,14,0.2713,True,0,1,1,C_temporal_rescued
+vid_11_0078,vid_11_0078,14,Putting something into something,8,0.0612,False,9,0.0537,False,10,0.3574,False,0,0,0,D_both_wrong
+vid_11_0092,vid_11_0092,14,Putting something into something,8,0.0609,False,14,0.057,True,14,0.4109,True,1,0,1,C_temporal_rescued
+vid_11_0094,vid_11_0094,14,Putting something into something,8,0.0605,False,14,0.0609,True,14,0.5165,True,1,0,1,C_temporal_rescued
+vid_11_0096,vid_11_0096,14,Putting something into something,8,0.061,False,9,0.0586,False,10,0.4614,False,0,0,0,D_both_wrong
+vid_19_0006,vid_19_0006,15,Taking something out of something,8,0.0616,False,13,0.0531,False,15,0.539,True,0,1,1,C_temporal_rescued
+vid_19_0009,vid_19_0009,15,Taking something out of something,8,0.0617,False,9,0.0578,False,15,0.49,True,0,1,1,C_temporal_rescued
+vid_19_0010,vid_19_0010,15,Taking something out of something,8,0.0617,False,9,0.0559,False,15,0.516,True,0,1,1,C_temporal_rescued
+vid_19_0011,vid_19_0011,15,Taking something out of something,8,0.0615,False,9,0.0537,False,15,0.5284,True,0,1,1,C_temporal_rescued
+vid_19_0012,vid_19_0012,15,Taking something out of something,8,0.0612,False,9,0.0609,False,15,0.4816,True,0,1,1,C_temporal_rescued
+vid_19_0014,vid_19_0014,15,Taking something out of something,8,0.0618,False,13,0.0556,False,15,0.5035,True,0,1,1,C_temporal_rescued
+vid_19_0020,vid_19_0020,15,Taking something out of something,8,0.0617,False,9,0.0537,False,15,0.4825,True,0,1,1,C_temporal_rescued
+vid_19_0031,vid_19_0031,15,Taking something out of something,8,0.0611,False,9,0.0619,False,9,0.5163,False,0,0,0,D_both_wrong
+vid_19_0052,vid_19_0052,15,Taking something out of something,8,0.0616,False,13,0.0541,False,15,0.5348,True,0,1,1,C_temporal_rescued
+vid_19_0058,vid_19_0058,15,Taking something out of something,8,0.0618,False,13,0.0548,False,15,0.5023,True,0,1,1,C_temporal_rescued
+vid_19_0059,vid_19_0059,15,Taking something out of something,8,0.0619,False,7,0.0565,False,9,0.451,False,0,0,0,D_both_wrong
+vid_19_0073,vid_19_0073,15,Taking something out of something,8,0.0611,False,14,0.0592,False,15,0.5276,True,0,1,1,C_temporal_rescued
+vid_19_0082,vid_19_0082,15,Taking something out of something,8,0.0612,False,14,0.0573,False,15,0.5562,True,0,1,1,C_temporal_rescued
+vid_19_0091,vid_19_0091,15,Taking something out of something,8,0.0612,False,14,0.0583,False,15,0.5555,True,0,1,1,C_temporal_rescued
+vid_19_0092,vid_19_0092,15,Taking something out of something,8,0.0613,False,9,0.0579,False,15,0.4927,True,0,1,1,C_temporal_rescued
+vid_14_0000,vid_14_0000,16,Rotating something clockwise,8,0.0604,False,9,0.0573,False,8,0.1412,False,0,0,0,D_both_wrong
+vid_14_0003,vid_14_0003,16,Rotating something clockwise,8,0.0609,False,9,0.0533,False,8,0.184,False,0,0,0,D_both_wrong
+vid_14_0011,vid_14_0011,16,Rotating something clockwise,8,0.0608,False,13,0.0574,False,16,0.2956,True,0,1,1,C_temporal_rescued
+vid_14_0031,vid_14_0031,16,Rotating something clockwise,8,0.0601,False,14,0.0582,False,3,0.1588,False,0,0,0,D_both_wrong
+vid_14_0034,vid_14_0034,16,Rotating something clockwise,8,0.0617,False,13,0.0618,False,8,0.1495,False,0,0,0,D_both_wrong
+vid_14_0041,vid_14_0041,16,Rotating something clockwise,8,0.0611,False,13,0.0555,False,8,0.1687,False,0,0,0,D_both_wrong
+vid_14_0054,vid_14_0054,16,Rotating something clockwise,8,0.0611,False,9,0.0541,False,8,0.1404,False,0,0,0,D_both_wrong
+vid_14_0056,vid_14_0056,16,Rotating something clockwise,8,0.0608,False,13,0.0583,False,16,0.2638,True,0,1,1,C_temporal_rescued
+vid_14_0061,vid_14_0061,16,Rotating something clockwise,8,0.0605,False,14,0.0555,False,8,0.1667,False,0,0,0,D_both_wrong
+vid_14_0063,vid_14_0063,16,Rotating something clockwise,8,0.0614,False,13,0.0614,False,16,0.2601,True,0,1,1,C_temporal_rescued
+vid_14_0072,vid_14_0072,16,Rotating something clockwise,8,0.0602,False,14,0.0599,False,8,0.1543,False,0,0,0,D_both_wrong
+vid_14_0079,vid_14_0079,16,Rotating something clockwise,8,0.0614,False,13,0.0606,False,3,0.1702,False,0,0,0,D_both_wrong
+vid_14_0085,vid_14_0085,16,Rotating something clockwise,8,0.0613,False,13,0.0591,False,16,0.1784,True,0,1,1,C_temporal_rescued
+vid_14_0087,vid_14_0087,16,Rotating something clockwise,8,0.061,False,13,0.0558,False,16,0.1956,True,0,1,1,C_temporal_rescued
+vid_14_0092,vid_14_0092,16,Rotating something clockwise,8,0.0613,False,13,0.0575,False,16,0.2003,True,0,1,1,C_temporal_rescued
+vid_08_0004,vid_08_0004,17,Rotating something counter-clockwise,8,0.0607,False,14,0.0555,False,18,0.1163,False,0,0,0,D_both_wrong
+vid_08_0026,vid_08_0026,17,Rotating something counter-clockwise,8,0.0617,False,13,0.0574,False,7,0.2018,False,0,0,0,D_both_wrong
+vid_08_0029,vid_08_0029,17,Rotating something counter-clockwise,8,0.0612,False,9,0.0539,False,18,0.1807,False,0,0,0,D_both_wrong
+vid_08_0031,vid_08_0031,17,Rotating something counter-clockwise,8,0.0609,False,13,0.0529,False,2,0.1008,False,0,0,0,D_both_wrong
+vid_08_0037,vid_08_0037,17,Rotating something counter-clockwise,8,0.0615,False,13,0.0545,False,6,0.1999,False,0,0,0,D_both_wrong
+vid_08_0041,vid_08_0041,17,Rotating something counter-clockwise,8,0.0614,False,13,0.0573,False,18,0.1707,False,0,0,0,D_both_wrong
+vid_08_0045,vid_08_0045,17,Rotating something counter-clockwise,8,0.0622,False,13,0.0631,False,7,0.2134,False,0,0,0,D_both_wrong
+vid_08_0052,vid_08_0052,17,Rotating something counter-clockwise,8,0.0612,False,13,0.0555,False,18,0.1467,False,0,0,0,D_both_wrong
+vid_08_0054,vid_08_0054,17,Rotating something counter-clockwise,8,0.0617,False,13,0.0574,False,7,0.1267,False,0,0,0,D_both_wrong
+vid_08_0056,vid_08_0056,17,Rotating something counter-clockwise,8,0.0615,False,13,0.055,False,6,0.1838,False,0,0,0,D_both_wrong
+vid_08_0076,vid_08_0076,17,Rotating something counter-clockwise,8,0.0619,False,13,0.06,False,19,0.2127,False,0,0,0,D_both_wrong
+vid_08_0085,vid_08_0085,17,Rotating something counter-clockwise,8,0.0605,False,14,0.0583,False,18,0.2052,False,0,0,0,D_both_wrong
+vid_08_0086,vid_08_0086,17,Rotating something counter-clockwise,8,0.062,False,13,0.0613,False,7,0.2153,False,0,0,0,D_both_wrong
+vid_08_0092,vid_08_0092,17,Rotating something counter-clockwise,8,0.0614,False,13,0.0549,False,7,0.1813,False,0,0,0,D_both_wrong
+vid_08_0096,vid_08_0096,17,Rotating something counter-clockwise,8,0.062,False,13,0.0591,False,7,0.2288,False,0,0,0,D_both_wrong
+vid_09_0003,vid_09_0003,18,Tipping something over,8,0.0618,False,13,0.0578,False,7,0.2011,False,0,0,0,D_both_wrong
+vid_09_0004,vid_09_0004,18,Tipping something over,8,0.0612,False,13,0.0557,False,6,0.1936,False,0,0,0,D_both_wrong
+vid_09_0009,vid_09_0009,18,Tipping something over,8,0.0612,False,13,0.0582,False,18,0.1731,True,0,1,1,C_temporal_rescued
+vid_09_0015,vid_09_0015,18,Tipping something over,8,0.0617,False,13,0.0568,False,6,0.2077,False,0,0,0,D_both_wrong
+vid_09_0018,vid_09_0018,18,Tipping something over,8,0.0613,False,13,0.054,False,6,0.1742,False,0,0,0,D_both_wrong
+vid_09_0027,vid_09_0027,18,Tipping something over,8,0.0607,False,9,0.0552,False,6,0.1711,False,0,0,0,D_both_wrong
+vid_09_0034,vid_09_0034,18,Tipping something over,8,0.0608,False,14,0.0536,False,18,0.195,True,0,1,1,C_temporal_rescued
+vid_09_0040,vid_09_0040,18,Tipping something over,8,0.0608,False,14,0.0566,False,18,0.1915,True,0,1,1,C_temporal_rescued
+vid_09_0055,vid_09_0055,18,Tipping something over,8,0.0616,False,13,0.0571,False,19,0.223,False,0,0,0,D_both_wrong
+vid_09_0062,vid_09_0062,18,Tipping something over,8,0.0619,False,13,0.0592,False,19,0.3066,False,0,0,0,D_both_wrong
+vid_09_0069,vid_09_0069,18,Tipping something over,8,0.062,False,13,0.0614,False,7,0.2229,False,0,0,0,D_both_wrong
+vid_09_0070,vid_09_0070,18,Tipping something over,8,0.0612,False,13,0.0533,False,18,0.1906,True,0,1,1,C_temporal_rescued
+vid_09_0079,vid_09_0079,18,Tipping something over,8,0.0613,False,13,0.0554,False,18,0.1736,True,0,1,1,C_temporal_rescued
+vid_09_0088,vid_09_0088,18,Tipping something over,8,0.0612,False,9,0.0558,False,6,0.1954,False,0,0,0,D_both_wrong
+vid_09_0094,vid_09_0094,18,Tipping something over,8,0.0612,False,9,0.0553,False,6,0.1882,False,0,0,0,D_both_wrong
+vid_12_0001,vid_12_0001,19,Standing something upright,8,0.0608,False,13,0.0559,False,19,0.2452,True,0,1,1,C_temporal_rescued
+vid_12_0010,vid_12_0010,19,Standing something upright,8,0.0605,False,13,0.0537,False,8,0.1437,False,0,0,0,D_both_wrong
+vid_12_0028,vid_12_0028,19,Standing something upright,8,0.0615,False,13,0.057,False,19,0.2444,True,0,1,1,C_temporal_rescued
+vid_12_0032,vid_12_0032,19,Standing something upright,8,0.061,False,13,0.0594,False,19,0.3039,True,0,1,1,C_temporal_rescued
+vid_12_0038,vid_12_0038,19,Standing something upright,8,0.0605,False,13,0.0531,False,18,0.1883,False,0,0,0,D_both_wrong
+vid_12_0039,vid_12_0039,19,Standing something upright,8,0.0603,False,9,0.0546,False,19,0.2824,True,0,1,1,C_temporal_rescued
+vid_12_0044,vid_12_0044,19,Standing something upright,8,0.0615,False,13,0.0559,False,19,0.256,True,0,1,1,C_temporal_rescued
+vid_12_0049,vid_12_0049,19,Standing something upright,8,0.0605,False,9,0.0559,False,10,0.321,False,0,0,0,D_both_wrong
+vid_12_0052,vid_12_0052,19,Standing something upright,8,0.0614,False,13,0.0552,False,19,0.217,True,0,1,1,C_temporal_rescued
+vid_12_0054,vid_12_0054,19,Standing something upright,8,0.0611,False,7,0.055,False,4,0.2807,False,0,0,0,D_both_wrong
+vid_12_0060,vid_12_0060,19,Standing something upright,8,0.0608,False,13,0.0564,False,19,0.1755,True,0,1,1,C_temporal_rescued
+vid_12_0061,vid_12_0061,19,Standing something upright,8,0.0604,False,9,0.0545,False,6,0.1847,False,0,0,0,D_both_wrong
+vid_12_0072,vid_12_0072,19,Standing something upright,8,0.0603,False,14,0.0527,False,10,0.2907,False,0,0,0,D_both_wrong
+vid_12_0085,vid_12_0085,19,Standing something upright,8,0.0606,False,13,0.0562,False,8,0.1351,False,0,0,0,D_both_wrong
+vid_12_0097,vid_12_0097,19,Standing something upright,8,0.0603,False,13,0.0566,False,18,0.1693,False,0,0,0,D_both_wrong

@@ -1,0 +1,32 @@
+{
+  "milestone": "M4",
+  "benchmark_accuracy": {
+    "baseline_mean": 0.0878,
+    "meanpool_mean": 0.0822,
+    "compact_gru_mean": 0.1911,
+    "gru_mean": 0.3478
+  },
+  "temporal_gains": {
+    "total_gain_pp": 26.0,
+    "spatial_observation_gain_pp": -0.56,
+    "order_dependency_gain_pp": 26.56,
+    "capacity_parity_gain_pp": 15.33
+  },
+  "order_sensitivity": {
+    "gru_order_drop_pp": 13.89,
+    "gru_order_p_value": 2.9953e-11,
+    "meanpool_order_drop_pp": 0.0,
+    "meanpool_flip_rate": 0.0
+  },
+  "reversal_sensitivity": {
+    "gru_reversal_drop_pp": 18.89,
+    "gru_reversal_p_value": 4.7891e-12
+  },
+  "failure_cohorts": {
+    "helped_rescued_count": 97,
+    "hurt_regression_count": 4,
+    "unchanged_count": 199,
+    "total_test_sequences": 300
+  },
+  "exit_gate_compliance": "100.0% (21/21 criteria certified)"
+}

@@ -1,0 +1,98 @@
+sequence_id,video_id,ground_truth,class_name,y_baseline,conf_baseline,correct_baseline,y_meanpool,conf_meanpool,correct_meanpool,y_gru,conf_gru,correct_gru,delta_obs,delta_order,delta_total,quadrant_ac
+vid_07_0001,vid_07_0001,0,Moving something away from the camera,8,0.0612,False,9,0.0589,False,0,0.3223,True,0,1,1,C_temporal_rescued
+vid_13_0000,vid_13_0000,1,Moving something towards the camera,8,0.0613,False,13,0.0561,False,1,0.2297,True,0,1,1,C_temporal_rescued
+vid_13_0014,vid_13_0014,1,Moving something towards the camera,8,0.0609,False,9,0.0541,False,1,0.2443,True,0,1,1,C_temporal_rescued
+vid_13_0035,vid_13_0035,1,Moving something towards the camera,8,0.061,False,13,0.0527,False,1,0.2048,True,0,1,1,C_temporal_rescued
+vid_13_0040,vid_13_0040,1,Moving something towards the camera,8,0.0613,False,13,0.0572,False,1,0.2331,True,0,1,1,C_temporal_rescued
+vid_13_0042,vid_13_0042,1,Moving something towards the camera,8,0.0614,False,13,0.0554,False,1,0.2078,True,0,1,1,C_temporal_rescued
+vid_13_0051,vid_13_0051,1,Moving something towards the camera,8,0.0614,False,13,0.0575,False,1,0.26,True,0,1,1,C_temporal_rescued
+vid_13_0067,vid_13_0067,1,Moving something towards the camera,8,0.0612,False,13,0.0552,False,1,0.2601,True,0,1,1,C_temporal_rescued
+vid_13_0071,vid_13_0071,1,Moving something towards the camera,8,0.0612,False,13,0.0548,False,1,0.2474,True,0,1,1,C_temporal_rescued
+vid_13_0087,vid_13_0087,1,Moving something towards the camera,8,0.0607,False,13,0.054,False,1,0.2368,True,0,1,1,C_temporal_rescued
+vid_13_0092,vid_13_0092,1,Moving something towards the camera,8,0.0602,False,14,0.0561,False,1,0.2383,True,0,1,1,C_temporal_rescued
+vid_00_0046,vid_00_0046,2,Pushing something from left to right,8,0.0612,False,13,0.0533,False,2,0.1159,True,0,1,1,C_temporal_rescued
+vid_01_0025,vid_01_0025,3,Pushing something from right to left,8,0.0614,False,13,0.0579,False,3,0.1707,True,0,1,1,C_temporal_rescued
+vid_01_0063,vid_01_0063,3,Pushing something from right to left,8,0.0614,False,13,0.0618,False,3,0.164,True,0,1,1,C_temporal_rescued
+vid_01_0095,vid_01_0095,3,Pushing something from right to left,8,0.0619,False,13,0.0637,False,3,0.1575,True,0,1,1,C_temporal_rescued
+vid_06_0030,vid_06_0030,4,Picking something up,8,0.0615,False,13,0.0574,False,4,0.2408,True,0,1,1,C_temporal_rescued
+vid_06_0073,vid_06_0073,4,Picking something up,8,0.0619,False,13,0.0566,False,4,0.3809,True,0,1,1,C_temporal_rescued
+vid_06_0078,vid_06_0078,4,Picking something up,8,0.0619,False,13,0.0584,False,4,0.3683,True,0,1,1,C_temporal_rescued
+vid_06_0086,vid_06_0086,4,Picking something up,8,0.0607,False,14,0.0614,False,4,0.3362,True,0,1,1,C_temporal_rescued
+vid_06_0089,vid_06_0089,4,Picking something up,8,0.0617,False,13,0.0554,False,4,0.4305,True,0,1,1,C_temporal_rescued
+vid_04_0081,vid_04_0081,5,Putting something down,8,0.0616,False,13,0.0577,False,5,0.1436,True,0,1,1,C_temporal_rescued
+vid_04_0088,vid_04_0088,5,Putting something down,8,0.0615,False,13,0.054,False,5,0.1146,True,0,1,1,C_temporal_rescued
+vid_02_0051,vid_02_0051,6,Opening something,8,0.0616,False,13,0.0572,False,6,0.1754,True,0,1,1,C_temporal_rescued
+vid_03_0022,vid_03_0022,7,Closing something,8,0.0617,False,13,0.0603,False,7,0.156,True,0,1,1,C_temporal_rescued
+vid_18_0002,vid_18_0002,9,Turning the camera right while filming something,8,0.0619,False,7,0.0548,False,9,0.4608,True,0,1,1,C_temporal_rescued
+vid_18_0005,vid_18_0005,9,Turning the camera right while filming something,8,0.0621,False,7,0.0562,False,9,0.4679,True,0,1,1,C_temporal_rescued
+vid_18_0008,vid_18_0008,9,Turning the camera right while filming something,8,0.0614,False,9,0.0601,True,9,0.5229,True,1,0,1,C_temporal_rescued
+vid_18_0019,vid_18_0019,9,Turning the camera right while filming something,8,0.0612,False,9,0.0583,True,9,0.4763,True,1,0,1,C_temporal_rescued
+vid_18_0030,vid_18_0030,9,Turning the camera right while filming something,8,0.0615,False,9,0.0573,True,9,0.4712,True,1,0,1,C_temporal_rescued
+vid_18_0042,vid_18_0042,9,Turning the camera right while filming something,8,0.0612,False,9,0.0617,True,9,0.549,True,1,0,1,C_temporal_rescued
+vid_18_0045,vid_18_0045,9,Turning the camera right while filming something,8,0.0613,False,9,0.0579,True,9,0.4863,True,1,0,1,C_temporal_rescued
+vid_18_0048,vid_18_0048,9,Turning the camera right while filming something,8,0.0615,False,9,0.0578,True,9,0.4951,True,1,0,1,C_temporal_rescued
+vid_18_0074,vid_18_0074,9,Turning the camera right while filming something,8,0.0617,False,9,0.058,True,9,0.5147,True,1,0,1,C_temporal_rescued
+vid_18_0083,vid_18_0083,9,Turning the camera right while filming something,8,0.0611,False,14,0.06,False,9,0.4727,True,0,1,1,C_temporal_rescued
+vid_18_0084,vid_18_0084,9,Turning the camera right while filming something,8,0.0615,False,9,0.0598,True,9,0.516,True,1,0,1,C_temporal_rescued
+vid_18_0086,vid_18_0086,9,Turning the camera right while filming something,8,0.0615,False,9,0.0553,True,9,0.446,True,1,0,1,C_temporal_rescued
+vid_18_0088,vid_18_0088,9,Turning the camera right while filming something,8,0.0613,False,9,0.0565,True,9,0.4688,True,1,0,1,C_temporal_rescued
+vid_10_0003,vid_10_0003,10,Putting something on top of something,8,0.0609,False,14,0.0548,False,10,0.3783,True,0,1,1,C_temporal_rescued
+vid_10_0014,vid_10_0014,10,Putting something on top of something,8,0.0608,False,14,0.0575,False,10,0.4034,True,0,1,1,C_temporal_rescued
+vid_10_0026,vid_10_0026,10,Putting something on top of something,8,0.0614,False,13,0.0551,False,10,0.3293,True,0,1,1,C_temporal_rescued
+vid_10_0028,vid_10_0028,10,Putting something on top of something,8,0.0611,False,14,0.0545,False,10,0.3628,True,0,1,1,C_temporal_rescued
+vid_10_0032,vid_10_0032,10,Putting something on top of something,8,0.0613,False,13,0.0546,False,10,0.3354,True,0,1,1,C_temporal_rescued
+vid_10_0040,vid_10_0040,10,Putting something on top of something,8,0.0608,False,14,0.0554,False,10,0.3897,True,0,1,1,C_temporal_rescued
+vid_10_0041,vid_10_0041,10,Putting something on top of something,8,0.0611,False,9,0.0533,False,10,0.373,True,0,1,1,C_temporal_rescued
+vid_10_0070,vid_10_0070,10,Putting something on top of something,8,0.0612,False,14,0.0527,False,10,0.3628,True,0,1,1,C_temporal_rescued
+vid_10_0072,vid_10_0072,10,Putting something on top of something,8,0.061,False,9,0.056,False,10,0.448,True,0,1,1,C_temporal_rescued
+vid_10_0075,vid_10_0075,10,Putting something on top of something,8,0.0613,False,9,0.0537,False,10,0.3899,True,0,1,1,C_temporal_rescued
+vid_10_0094,vid_10_0094,10,Putting something on top of something,8,0.0614,False,13,0.055,False,10,0.3154,True,0,1,1,C_temporal_rescued
+vid_16_0000,vid_16_0000,11,Taking something off of something,8,0.0615,False,13,0.0588,False,11,0.1549,True,0,1,1,C_temporal_rescued
+vid_16_0001,vid_16_0001,11,Taking something off of something,8,0.0615,False,13,0.0565,False,11,0.1312,True,0,1,1,C_temporal_rescued
+vid_16_0008,vid_16_0008,11,Taking something off of something,8,0.0609,False,14,0.0545,False,11,0.1399,True,0,1,1,C_temporal_rescued
+vid_16_0012,vid_16_0012,11,Taking something off of something,8,0.0615,False,13,0.0616,False,11,0.1487,True,0,1,1,C_temporal_rescued
+vid_16_0031,vid_16_0031,11,Taking something off of something,8,0.061,False,13,0.0555,False,11,0.2373,True,0,1,1,C_temporal_rescued
+vid_16_0034,vid_16_0034,11,Taking something off of something,8,0.0614,False,13,0.0558,False,11,0.1878,True,0,1,1,C_temporal_rescued
+vid_16_0070,vid_16_0070,11,Taking something off of something,8,0.0611,False,7,0.0539,False,11,0.1857,True,0,1,1,C_temporal_rescued
+vid_16_0071,vid_16_0071,11,Taking something off of something,8,0.0611,False,13,0.0532,False,11,0.1316,True,0,1,1,C_temporal_rescued
+vid_16_0073,vid_16_0073,11,Taking something off of something,8,0.0615,False,13,0.0571,False,11,0.16,True,0,1,1,C_temporal_rescued
+vid_16_0088,vid_16_0088,11,Taking something off of something,8,0.0619,False,13,0.0604,False,11,0.1436,True,0,1,1,C_temporal_rescued
+vid_16_0090,vid_16_0090,11,Taking something off of something,8,0.0615,False,13,0.0597,False,11,0.1402,True,0,1,1,C_temporal_rescued
+vid_15_0046,vid_15_0046,13,Uncovering something,8,0.0617,False,13,0.0612,True,13,0.1131,True,1,0,1,C_temporal_rescued
+vid_11_0007,vid_11_0007,14,Putting something into something,8,0.0609,False,14,0.0544,True,14,0.4471,True,1,0,1,C_temporal_rescued
+vid_11_0028,vid_11_0028,14,Putting something into something,8,0.0606,False,14,0.0568,True,14,0.5285,True,1,0,1,C_temporal_rescued
+vid_11_0055,vid_11_0055,14,Putting something into something,8,0.0608,False,14,0.0545,True,14,0.4982,True,1,0,1,C_temporal_rescued
+vid_11_0075,vid_11_0075,14,Putting something into something,8,0.0613,False,13,0.0545,False,14,0.2713,True,0,1,1,C_temporal_rescued
+vid_11_0092,vid_11_0092,14,Putting something into something,8,0.0609,False,14,0.057,True,14,0.4109,True,1,0,1,C_temporal_rescued
+vid_11_0094,vid_11_0094,14,Putting something into something,8,0.0605,False,14,0.0609,True,14,0.5165,True,1,0,1,C_temporal_rescued
+vid_19_0006,vid_19_0006,15,Taking something out of something,8,0.0616,False,13,0.0531,False,15,0.539,True,0,1,1,C_temporal_rescued
+vid_19_0009,vid_19_0009,15,Taking something out of something,8,0.0617,False,9,0.0578,False,15,0.49,True,0,1,1,C_temporal_rescued
+vid_19_0010,vid_19_0010,15,Taking something out of something,8,0.0617,False,9,0.0559,False,15,0.516,True,0,1,1,C_temporal_rescued
+vid_19_0011,vid_19_0011,15,Taking something out of something,8,0.0615,False,9,0.0537,False,15,0.5284,True,0,1,1,C_temporal_rescued
+vid_19_0012,vid_19_0012,15,Taking something out of something,8,0.0612,False,9,0.0609,False,15,0.4816,True,0,1,1,C_temporal_rescued
+vid_19_0014,vid_19_0014,15,Taking something out of something,8,0.0618,False,13,0.0556,False,15,0.5035,True,0,1,1,C_temporal_rescued
+vid_19_0020,vid_19_0020,15,Taking something out of something,8,0.0617,False,9,0.0537,False,15,0.4825,True,0,1,1,C_temporal_rescued
+vid_19_0052,vid_19_0052,15,Taking something out of something,8,0.0616,False,13,0.0541,False,15,0.5348,True,0,1,1,C_temporal_rescued
+vid_19_0058,vid_19_0058,15,Taking something out of something,8,0.0618,False,13,0.0548,False,15,0.5023,True,0,1,1,C_temporal_rescued
+vid_19_0073,vid_19_0073,15,Taking something out of something,8,0.0611,False,14,0.0592,False,15,0.5276,True,0,1,1,C_temporal_rescued
+vid_19_0082,vid_19_0082,15,Taking something out of something,8,0.0612,False,14,0.0573,False,15,0.5562,True,0,1,1,C_temporal_rescued
+vid_19_0091,vid_19_0091,15,Taking something out of something,8,0.0612,False,14,0.0583,False,15,0.5555,True,0,1,1,C_temporal_rescued
+vid_19_0092,vid_19_0092,15,Taking something out of something,8,0.0613,False,9,0.0579,False,15,0.4927,True,0,1,1,C_temporal_rescued
+vid_14_0011,vid_14_0011,16,Rotating something clockwise,8,0.0608,False,13,0.0574,False,16,0.2956,True,0,1,1,C_temporal_rescued
+vid_14_0056,vid_14_0056,16,Rotating something clockwise,8,0.0608,False,13,0.0583,False,16,0.2638,True,0,1,1,C_temporal_rescued
+vid_14_0063,vid_14_0063,16,Rotating something clockwise,8,0.0614,False,13,0.0614,False,16,0.2601,True,0,1,1,C_temporal_rescued
+vid_14_0085,vid_14_0085,16,Rotating something clockwise,8,0.0613,False,13,0.0591,False,16,0.1784,True,0,1,1,C_temporal_rescued
+vid_14_0087,vid_14_0087,16,Rotating something clockwise,8,0.061,False,13,0.0558,False,16,0.1956,True,0,1,1,C_temporal_rescued
+vid_14_0092,vid_14_0092,16,Rotating something clockwise,8,0.0613,False,13,0.0575,False,16,0.2003,True,0,1,1,C_temporal_rescued
+vid_09_0009,vid_09_0009,18,Tipping something over,8,0.0612,False,13,0.0582,False,18,0.1731,True,0,1,1,C_temporal_rescued
+vid_09_0034,vid_09_0034,18,Tipping something over,8,0.0608,False,14,0.0536,False,18,0.195,True,0,1,1,C_temporal_rescued
+vid_09_0040,vid_09_0040,18,Tipping something over,8,0.0608,False,14,0.0566,False,18,0.1915,True,0,1,1,C_temporal_rescued
+vid_09_0070,vid_09_0070,18,Tipping something over,8,0.0612,False,13,0.0533,False,18,0.1906,True,0,1,1,C_temporal_rescued
+vid_09_0079,vid_09_0079,18,Tipping something over,8,0.0613,False,13,0.0554,False,18,0.1736,True,0,1,1,C_temporal_rescued
+vid_12_0001,vid_12_0001,19,Standing something upright,8,0.0608,False,13,0.0559,False,19,0.2452,True,0,1,1,C_temporal_rescued
+vid_12_0028,vid_12_0028,19,Standing something upright,8,0.0615,False,13,0.057,False,19,0.2444,True,0,1,1,C_temporal_rescued
+vid_12_0032,vid_12_0032,19,Standing something upright,8,0.061,False,13,0.0594,False,19,0.3039,True,0,1,1,C_temporal_rescued
+vid_12_0039,vid_12_0039,19,Standing something upright,8,0.0603,False,9,0.0546,False,19,0.2824,True,0,1,1,C_temporal_rescued
+vid_12_0044,vid_12_0044,19,Standing something upright,8,0.0615,False,13,0.0559,False,19,0.256,True,0,1,1,C_temporal_rescued
+vid_12_0052,vid_12_0052,19,Standing something upright,8,0.0614,False,13,0.0552,False,19,0.217,True,0,1,1,C_temporal_rescued
+vid_12_0060,vid_12_0060,19,Standing something upright,8,0.0608,False,13,0.0564,False,19,0.1755,True,0,1,1,C_temporal_rescued

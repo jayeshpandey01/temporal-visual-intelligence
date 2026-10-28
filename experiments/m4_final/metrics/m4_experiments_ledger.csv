@@ -1,0 +1,174 @@
+experiment_id,dataset,model,num_frames,order,corruption,seed,accuracy,macro_f1,notes
+baseline_seed42_frames8,ssv2,baseline,8,canonical,none,42,0.05,0.0048,"Approach B: random train, middle eval, 103700 params"
+baseline_seed43_frames8,ssv2,baseline,8,canonical,none,43,0.0833,0.0278,"Approach B: random train, middle eval, 103700 params"
+baseline_seed44_frames8,ssv2,baseline,8,canonical,none,44,0.13,0.0656,"Approach B: random train, middle eval, 103700 params"
+meanpool_seed42_frames8,ssv2,meanpool,8,canonical,none,42,0.1,0.034,"Model B: Order-invariant multi-frame mean-pool, 103700 params"
+meanpool_seed43_frames8,ssv2,meanpool,8,canonical,none,43,0.0733,0.0132,"Model B: Order-invariant multi-frame mean-pool, 103700 params"
+meanpool_seed44_frames8,ssv2,meanpool,8,canonical,none,44,0.0733,0.0177,"Model B: Order-invariant multi-frame mean-pool, 103700 params"
+gru_seed42_frames8,ssv2,gru,8,canonical,none,42,0.36,0.3235,"Model C: Chronological GRU (H=128, proj=256), 249364 params"
+gru_seed43_frames8,ssv2,gru,8,canonical,none,43,0.3333,0.3125,"Model C: Chronological GRU (H=128, proj=256), 249364 params"
+gru_seed44_frames8,ssv2,gru,8,canonical,none,44,0.35,0.3253,"Model C: Chronological GRU (H=128, proj=256), 249364 params"
+compact_gru_20261028_1914_s42,ssv2,compact_gru,8,canonical,none,42,0.24,0.1893,"Model D: Capacity-matched CompactGRU (103,700 params, exact parity)"
+compact_gru_20261028_1914_s43,ssv2,compact_gru,8,canonical,none,43,0.26,0.2161,"Model D: Capacity-matched CompactGRU (103,700 params, exact parity)"
+compact_gru_20261028_1914_s44,ssv2,compact_gru,8,canonical,none,44,0.2067,0.1347,"Model D: Capacity-matched CompactGRU (103,700 params, exact parity)"
+baseline_progressive_k1_s42,ssv2,baseline,1,canonical,none,42,0.05,0.0048,"Progressive sweep K=1, params=103700"
+baseline_progressive_k2_s42,ssv2,baseline,2,canonical,none,42,0.05,0.0048,"Progressive sweep K=2, params=103700"
+baseline_progressive_k4_s42,ssv2,baseline,4,canonical,none,42,0.05,0.0048,"Progressive sweep K=4, params=103700"
+baseline_progressive_k8_s42,ssv2,baseline,8,canonical,none,42,0.05,0.0048,"Progressive sweep K=8, params=103700"
+baseline_progressive_k1_s43,ssv2,baseline,1,canonical,none,43,0.0833,0.0278,"Progressive sweep K=1, params=103700"
+baseline_progressive_k2_s43,ssv2,baseline,2,canonical,none,43,0.0833,0.0284,"Progressive sweep K=2, params=103700"
+baseline_progressive_k4_s43,ssv2,baseline,4,canonical,none,43,0.0833,0.0278,"Progressive sweep K=4, params=103700"
+baseline_progressive_k8_s43,ssv2,baseline,8,canonical,none,43,0.0833,0.0278,"Progressive sweep K=8, params=103700"
+baseline_progressive_k1_s44,ssv2,baseline,1,canonical,none,44,0.13,0.0656,"Progressive sweep K=1, params=103700"
+baseline_progressive_k2_s44,ssv2,baseline,2,canonical,none,44,0.1167,0.0549,"Progressive sweep K=2, params=103700"
+baseline_progressive_k4_s44,ssv2,baseline,4,canonical,none,44,0.13,0.0656,"Progressive sweep K=4, params=103700"
+baseline_progressive_k8_s44,ssv2,baseline,8,canonical,none,44,0.13,0.0656,"Progressive sweep K=8, params=103700"
+meanpool_progressive_k1_s42,ssv2,meanpool,1,canonical,none,42,0.1,0.0343,"Progressive sweep K=1, params=103700"
+meanpool_progressive_k2_s42,ssv2,meanpool,2,canonical,none,42,0.0933,0.0303,"Progressive sweep K=2, params=103700"
+meanpool_progressive_k4_s42,ssv2,meanpool,4,canonical,none,42,0.1,0.0334,"Progressive sweep K=4, params=103700"
+meanpool_progressive_k8_s42,ssv2,meanpool,8,canonical,none,42,0.1,0.034,"Progressive sweep K=8, params=103700"
+meanpool_progressive_k1_s43,ssv2,meanpool,1,canonical,none,43,0.0733,0.0132,"Progressive sweep K=1, params=103700"
+meanpool_progressive_k2_s43,ssv2,meanpool,2,canonical,none,43,0.0733,0.0129,"Progressive sweep K=2, params=103700"
+meanpool_progressive_k4_s43,ssv2,meanpool,4,canonical,none,43,0.08,0.0144,"Progressive sweep K=4, params=103700"
+meanpool_progressive_k8_s43,ssv2,meanpool,8,canonical,none,43,0.0733,0.0132,"Progressive sweep K=8, params=103700"
+meanpool_progressive_k1_s44,ssv2,meanpool,1,canonical,none,44,0.0767,0.019,"Progressive sweep K=1, params=103700"
+meanpool_progressive_k2_s44,ssv2,meanpool,2,canonical,none,44,0.08,0.021,"Progressive sweep K=2, params=103700"
+meanpool_progressive_k4_s44,ssv2,meanpool,4,canonical,none,44,0.08,0.0209,"Progressive sweep K=4, params=103700"
+meanpool_progressive_k8_s44,ssv2,meanpool,8,canonical,none,44,0.0733,0.0177,"Progressive sweep K=8, params=103700"
+compact_gru_progressive_k1_s42,ssv2,compact_gru,1,canonical,none,42,0.0867,0.0286,"Progressive sweep K=1, params=103700"
+compact_gru_progressive_k2_s42,ssv2,compact_gru,2,canonical,none,42,0.1233,0.0539,"Progressive sweep K=2, params=103700"
+compact_gru_progressive_k4_s42,ssv2,compact_gru,4,canonical,none,42,0.0967,0.0437,"Progressive sweep K=4, params=103700"
+compact_gru_progressive_k8_s42,ssv2,compact_gru,8,canonical,none,42,0.24,0.1893,"Progressive sweep K=8, params=103700"
+compact_gru_progressive_k1_s43,ssv2,compact_gru,1,canonical,none,43,0.08,0.017,"Progressive sweep K=1, params=103700"
+compact_gru_progressive_k2_s43,ssv2,compact_gru,2,canonical,none,43,0.0967,0.028,"Progressive sweep K=2, params=103700"
+compact_gru_progressive_k4_s43,ssv2,compact_gru,4,canonical,none,43,0.1033,0.0456,"Progressive sweep K=4, params=103700"
+compact_gru_progressive_k8_s43,ssv2,compact_gru,8,canonical,none,43,0.26,0.2161,"Progressive sweep K=8, params=103700"
+compact_gru_progressive_k1_s44,ssv2,compact_gru,1,canonical,none,44,0.08,0.0238,"Progressive sweep K=1, params=103700"
+compact_gru_progressive_k2_s44,ssv2,compact_gru,2,canonical,none,44,0.09,0.0325,"Progressive sweep K=2, params=103700"
+compact_gru_progressive_k4_s44,ssv2,compact_gru,4,canonical,none,44,0.17,0.1137,"Progressive sweep K=4, params=103700"
+compact_gru_progressive_k8_s44,ssv2,compact_gru,8,canonical,none,44,0.2067,0.1347,"Progressive sweep K=8, params=103700"
+gru_progressive_k1_s42,ssv2,gru,1,canonical,none,42,0.1267,0.0746,"Progressive sweep K=1, params=249364"
+gru_progressive_k2_s42,ssv2,gru,2,canonical,none,42,0.1533,0.0944,"Progressive sweep K=2, params=249364"
+gru_progressive_k4_s42,ssv2,gru,4,canonical,none,42,0.2467,0.2175,"Progressive sweep K=4, params=249364"
+gru_progressive_k8_s42,ssv2,gru,8,canonical,none,42,0.36,0.3235,"Progressive sweep K=8, params=249364"
+gru_progressive_k1_s43,ssv2,gru,1,canonical,none,43,0.11,0.0629,"Progressive sweep K=1, params=249364"
+gru_progressive_k2_s43,ssv2,gru,2,canonical,none,43,0.1233,0.0632,"Progressive sweep K=2, params=249364"
+gru_progressive_k4_s43,ssv2,gru,4,canonical,none,43,0.1933,0.1433,"Progressive sweep K=4, params=249364"
+gru_progressive_k8_s43,ssv2,gru,8,canonical,none,43,0.3333,0.3125,"Progressive sweep K=8, params=249364"
+gru_progressive_k1_s44,ssv2,gru,1,canonical,none,44,0.11,0.0475,"Progressive sweep K=1, params=249364"
+gru_progressive_k2_s44,ssv2,gru,2,canonical,none,44,0.15,0.1013,"Progressive sweep K=2, params=249364"
+gru_progressive_k4_s44,ssv2,gru,4,canonical,none,44,0.24,0.2012,"Progressive sweep K=4, params=249364"
+gru_progressive_k8_s44,ssv2,gru,8,canonical,none,44,0.35,0.3253,"Progressive sweep K=8, params=249364"
+meanpool_order_canonical_s42,ssv2,meanpool,8,canonical,none,42,0.1,0.034,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+meanpool_order_shuffled_s42,ssv2,meanpool,8,shuffled,none,42,0.1,0.034,"Order ablation mode=shuffled, params=103700, P_flip=0.0%"
+meanpool_order_repeated_s42,ssv2,meanpool,8,repeated,none,42,0.1,0.0343,"Order ablation mode=repeated, params=103700, P_flip=3.3%"
+meanpool_order_reversed_s42,ssv2,meanpool,8,reversed,none,42,0.1,0.034,"Order ablation mode=reversed, params=103700, P_flip=0.0%"
+meanpool_order_canonical_s43,ssv2,meanpool,8,canonical,none,43,0.0733,0.0132,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+meanpool_order_shuffled_s43,ssv2,meanpool,8,shuffled,none,43,0.0733,0.0132,"Order ablation mode=shuffled, params=103700, P_flip=0.0%"
+meanpool_order_repeated_s43,ssv2,meanpool,8,repeated,none,43,0.0733,0.0132,"Order ablation mode=repeated, params=103700, P_flip=1.0%"
+meanpool_order_reversed_s43,ssv2,meanpool,8,reversed,none,43,0.0733,0.0132,"Order ablation mode=reversed, params=103700, P_flip=0.0%"
+meanpool_order_canonical_s44,ssv2,meanpool,8,canonical,none,44,0.0733,0.0177,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+meanpool_order_shuffled_s44,ssv2,meanpool,8,shuffled,none,44,0.0733,0.0177,"Order ablation mode=shuffled, params=103700, P_flip=0.0%"
+meanpool_order_repeated_s44,ssv2,meanpool,8,repeated,none,44,0.0767,0.019,"Order ablation mode=repeated, params=103700, P_flip=2.7%"
+meanpool_order_reversed_s44,ssv2,meanpool,8,reversed,none,44,0.0733,0.0177,"Order ablation mode=reversed, params=103700, P_flip=0.0%"
+compact_gru_order_canonical_s42,ssv2,compact_gru,8,canonical,none,42,0.24,0.1893,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+compact_gru_order_shuffled_s42,ssv2,compact_gru,8,shuffled,none,42,0.2233,0.1722,"Order ablation mode=shuffled, params=103700, P_flip=13.7%"
+compact_gru_order_repeated_s42,ssv2,compact_gru,8,repeated,none,42,0.2267,0.1687,"Order ablation mode=repeated, params=103700, P_flip=20.0%"
+compact_gru_order_reversed_s42,ssv2,compact_gru,8,reversed,none,42,0.19,0.1452,"Order ablation mode=reversed, params=103700, P_flip=23.3%"
+compact_gru_order_canonical_s43,ssv2,compact_gru,8,canonical,none,43,0.26,0.2161,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+compact_gru_order_shuffled_s43,ssv2,compact_gru,8,shuffled,none,43,0.2067,0.1548,"Order ablation mode=shuffled, params=103700, P_flip=24.0%"
+compact_gru_order_repeated_s43,ssv2,compact_gru,8,repeated,none,43,0.1933,0.1484,"Order ablation mode=repeated, params=103700, P_flip=31.0%"
+compact_gru_order_reversed_s43,ssv2,compact_gru,8,reversed,none,43,0.1633,0.1261,"Order ablation mode=reversed, params=103700, P_flip=34.0%"
+compact_gru_order_canonical_s44,ssv2,compact_gru,8,canonical,none,44,0.2067,0.1347,"Order ablation mode=canonical, params=103700, P_flip=0.0%"
+compact_gru_order_shuffled_s44,ssv2,compact_gru,8,shuffled,none,44,0.1967,0.1351,"Order ablation mode=shuffled, params=103700, P_flip=9.3%"
+compact_gru_order_repeated_s44,ssv2,compact_gru,8,repeated,none,44,0.2033,0.1436,"Order ablation mode=repeated, params=103700, P_flip=17.0%"
+compact_gru_order_reversed_s44,ssv2,compact_gru,8,reversed,none,44,0.19,0.1286,"Order ablation mode=reversed, params=103700, P_flip=15.7%"
+gru_order_canonical_s42,ssv2,gru,8,canonical,none,42,0.36,0.3235,"Order ablation mode=canonical, params=249364, P_flip=0.0%"
+gru_order_shuffled_s42,ssv2,gru,8,shuffled,none,42,0.2,0.1544,"Order ablation mode=shuffled, params=249364, P_flip=33.7%"
+gru_order_repeated_s42,ssv2,gru,8,repeated,none,42,0.2367,0.1868,"Order ablation mode=repeated, params=249364, P_flip=37.0%"
+gru_order_reversed_s42,ssv2,gru,8,reversed,none,42,0.1833,0.1359,"Order ablation mode=reversed, params=249364, P_flip=40.0%"
+gru_order_canonical_s43,ssv2,gru,8,canonical,none,43,0.3333,0.3125,"Order ablation mode=canonical, params=249364, P_flip=0.0%"
+gru_order_shuffled_s43,ssv2,gru,8,shuffled,none,43,0.2233,0.212,"Order ablation mode=shuffled, params=249364, P_flip=33.3%"
+gru_order_repeated_s43,ssv2,gru,8,repeated,none,43,0.2133,0.1862,"Order ablation mode=repeated, params=249364, P_flip=39.3%"
+gru_order_reversed_s43,ssv2,gru,8,reversed,none,43,0.1467,0.1391,"Order ablation mode=reversed, params=249364, P_flip=42.0%"
+gru_order_canonical_s44,ssv2,gru,8,canonical,none,44,0.35,0.3253,"Order ablation mode=canonical, params=249364, P_flip=0.0%"
+gru_order_shuffled_s44,ssv2,gru,8,shuffled,none,44,0.1967,0.1622,"Order ablation mode=shuffled, params=249364, P_flip=35.3%"
+gru_order_repeated_s44,ssv2,gru,8,repeated,none,44,0.1933,0.1524,"Order ablation mode=repeated, params=249364, P_flip=39.3%"
+gru_order_reversed_s44,ssv2,gru,8,reversed,none,44,0.1467,0.12,"Order ablation mode=reversed, params=249364, P_flip=42.7%"
+meanpool_corruption_none_s42,ssv2,meanpool,8,canonical,none,42,0.1,0.034,Corruption frame drop=0/8 (frac=0.0)
+meanpool_corruption_drop_2of8_s42,ssv2,meanpool,6,canonical,drop_2of8,42,0.1,0.0324,Corruption frame drop=2/8 (frac=0.25)
+meanpool_corruption_drop_4of8_s42,ssv2,meanpool,4,canonical,drop_4of8,42,0.1033,0.0373,Corruption frame drop=4/8 (frac=0.5)
+compact_gru_corruption_none_s42,ssv2,compact_gru,8,canonical,none,42,0.24,0.1893,Corruption frame drop=0/8 (frac=0.0)
+compact_gru_corruption_drop_2of8_s42,ssv2,compact_gru,6,canonical,drop_2of8,42,0.2233,0.1928,Corruption frame drop=2/8 (frac=0.25)
+compact_gru_corruption_drop_4of8_s42,ssv2,compact_gru,4,canonical,drop_4of8,42,0.2,0.1697,Corruption frame drop=4/8 (frac=0.5)
+gru_corruption_none_s42,ssv2,gru,8,canonical,none,42,0.36,0.3235,Corruption frame drop=0/8 (frac=0.0)
+gru_corruption_drop_2of8_s42,ssv2,gru,6,canonical,drop_2of8,42,0.2933,0.2625,Corruption frame drop=2/8 (frac=0.25)
+gru_corruption_drop_4of8_s42,ssv2,gru,4,canonical,drop_4of8,42,0.1933,0.1697,Corruption frame drop=4/8 (frac=0.5)
+meanpool_corruption_none_s42,ssv2,meanpool,8,canonical,none,42,0.1,0.034,Corruption latent gaussian noise sigma=0.0
+meanpool_corruption_noise_sigma0.1_s42,ssv2,meanpool,8,canonical,noise_sigma0.1,42,0.1,0.0369,Corruption latent gaussian noise sigma=0.1
+meanpool_corruption_noise_sigma0.25_s42,ssv2,meanpool,8,canonical,noise_sigma0.25,42,0.1067,0.0431,Corruption latent gaussian noise sigma=0.25
+meanpool_corruption_noise_sigma0.5_s42,ssv2,meanpool,8,canonical,noise_sigma0.5,42,0.0733,0.0366,Corruption latent gaussian noise sigma=0.5
+compact_gru_corruption_none_s42,ssv2,compact_gru,8,canonical,none,42,0.24,0.1893,Corruption latent gaussian noise sigma=0.0
+compact_gru_corruption_noise_sigma0.1_s42,ssv2,compact_gru,8,canonical,noise_sigma0.1,42,0.15,0.1249,Corruption latent gaussian noise sigma=0.1
+compact_gru_corruption_noise_sigma0.25_s42,ssv2,compact_gru,8,canonical,noise_sigma0.25,42,0.1,0.0762,Corruption latent gaussian noise sigma=0.25
+compact_gru_corruption_noise_sigma0.5_s42,ssv2,compact_gru,8,canonical,noise_sigma0.5,42,0.06,0.043,Corruption latent gaussian noise sigma=0.5
+gru_corruption_none_s42,ssv2,gru,8,canonical,none,42,0.36,0.3235,Corruption latent gaussian noise sigma=0.0
+gru_corruption_noise_sigma0.1_s42,ssv2,gru,8,canonical,noise_sigma0.1,42,0.1567,0.1439,Corruption latent gaussian noise sigma=0.1
+gru_corruption_noise_sigma0.25_s42,ssv2,gru,8,canonical,noise_sigma0.25,42,0.06,0.0448,Corruption latent gaussian noise sigma=0.25
+gru_corruption_noise_sigma0.5_s42,ssv2,gru,8,canonical,noise_sigma0.5,42,0.0433,0.0281,Corruption latent gaussian noise sigma=0.5
+meanpool_corruption_none_s43,ssv2,meanpool,8,canonical,none,43,0.0733,0.0132,Corruption frame drop=0/8 (frac=0.0)
+meanpool_corruption_drop_2of8_s43,ssv2,meanpool,6,canonical,drop_2of8,43,0.0733,0.0131,Corruption frame drop=2/8 (frac=0.25)
+meanpool_corruption_drop_4of8_s43,ssv2,meanpool,4,canonical,drop_4of8,43,0.0733,0.0129,Corruption frame drop=4/8 (frac=0.5)
+compact_gru_corruption_none_s43,ssv2,compact_gru,8,canonical,none,43,0.26,0.2161,Corruption frame drop=0/8 (frac=0.0)
+compact_gru_corruption_drop_2of8_s43,ssv2,compact_gru,6,canonical,drop_2of8,43,0.22,0.1846,Corruption frame drop=2/8 (frac=0.25)
+compact_gru_corruption_drop_4of8_s43,ssv2,compact_gru,4,canonical,drop_4of8,43,0.1833,0.1497,Corruption frame drop=4/8 (frac=0.5)
+gru_corruption_none_s43,ssv2,gru,8,canonical,none,43,0.3333,0.3125,Corruption frame drop=0/8 (frac=0.0)
+gru_corruption_drop_2of8_s43,ssv2,gru,6,canonical,drop_2of8,43,0.2567,0.2322,Corruption frame drop=2/8 (frac=0.25)
+gru_corruption_drop_4of8_s43,ssv2,gru,4,canonical,drop_4of8,43,0.2167,0.1963,Corruption frame drop=4/8 (frac=0.5)
+meanpool_corruption_none_s43,ssv2,meanpool,8,canonical,none,43,0.0733,0.0132,Corruption latent gaussian noise sigma=0.0
+meanpool_corruption_noise_sigma0.1_s43,ssv2,meanpool,8,canonical,noise_sigma0.1,43,0.0733,0.0132,Corruption latent gaussian noise sigma=0.1
+meanpool_corruption_noise_sigma0.25_s43,ssv2,meanpool,8,canonical,noise_sigma0.25,43,0.0667,0.0168,Corruption latent gaussian noise sigma=0.25
+meanpool_corruption_noise_sigma0.5_s43,ssv2,meanpool,8,canonical,noise_sigma0.5,43,0.06,0.0271,Corruption latent gaussian noise sigma=0.5
+compact_gru_corruption_none_s43,ssv2,compact_gru,8,canonical,none,43,0.26,0.2161,Corruption latent gaussian noise sigma=0.0
+compact_gru_corruption_noise_sigma0.1_s43,ssv2,compact_gru,8,canonical,noise_sigma0.1,43,0.16,0.139,Corruption latent gaussian noise sigma=0.1
+compact_gru_corruption_noise_sigma0.25_s43,ssv2,compact_gru,8,canonical,noise_sigma0.25,43,0.1033,0.0887,Corruption latent gaussian noise sigma=0.25
+compact_gru_corruption_noise_sigma0.5_s43,ssv2,compact_gru,8,canonical,noise_sigma0.5,43,0.0733,0.0549,Corruption latent gaussian noise sigma=0.5
+gru_corruption_none_s43,ssv2,gru,8,canonical,none,43,0.3333,0.3125,Corruption latent gaussian noise sigma=0.0
+gru_corruption_noise_sigma0.1_s43,ssv2,gru,8,canonical,noise_sigma0.1,43,0.16,0.1533,Corruption latent gaussian noise sigma=0.1
+gru_corruption_noise_sigma0.25_s43,ssv2,gru,8,canonical,noise_sigma0.25,43,0.0967,0.0893,Corruption latent gaussian noise sigma=0.25
+gru_corruption_noise_sigma0.5_s43,ssv2,gru,8,canonical,noise_sigma0.5,43,0.0767,0.0655,Corruption latent gaussian noise sigma=0.5
+meanpool_corruption_none_s44,ssv2,meanpool,8,canonical,none,44,0.0733,0.0177,Corruption frame drop=0/8 (frac=0.0)
+meanpool_corruption_drop_2of8_s44,ssv2,meanpool,6,canonical,drop_2of8,44,0.0767,0.0186,Corruption frame drop=2/8 (frac=0.25)
+meanpool_corruption_drop_4of8_s44,ssv2,meanpool,4,canonical,drop_4of8,44,0.0767,0.017,Corruption frame drop=4/8 (frac=0.5)
+compact_gru_corruption_none_s44,ssv2,compact_gru,8,canonical,none,44,0.2067,0.1347,Corruption frame drop=0/8 (frac=0.0)
+compact_gru_corruption_drop_2of8_s44,ssv2,compact_gru,6,canonical,drop_2of8,44,0.1967,0.1263,Corruption frame drop=2/8 (frac=0.25)
+compact_gru_corruption_drop_4of8_s44,ssv2,compact_gru,4,canonical,drop_4of8,44,0.2267,0.1458,Corruption frame drop=4/8 (frac=0.5)
+gru_corruption_none_s44,ssv2,gru,8,canonical,none,44,0.35,0.3253,Corruption frame drop=0/8 (frac=0.0)
+gru_corruption_drop_2of8_s44,ssv2,gru,6,canonical,drop_2of8,44,0.31,0.284,Corruption frame drop=2/8 (frac=0.25)
+gru_corruption_drop_4of8_s44,ssv2,gru,4,canonical,drop_4of8,44,0.2333,0.2053,Corruption frame drop=4/8 (frac=0.5)
+meanpool_corruption_none_s44,ssv2,meanpool,8,canonical,none,44,0.0733,0.0177,Corruption latent gaussian noise sigma=0.0
+meanpool_corruption_noise_sigma0.1_s44,ssv2,meanpool,8,canonical,noise_sigma0.1,44,0.0767,0.0199,Corruption latent gaussian noise sigma=0.1
+meanpool_corruption_noise_sigma0.25_s44,ssv2,meanpool,8,canonical,noise_sigma0.25,44,0.08,0.0238,Corruption latent gaussian noise sigma=0.25
+meanpool_corruption_noise_sigma0.5_s44,ssv2,meanpool,8,canonical,noise_sigma0.5,44,0.0567,0.0239,Corruption latent gaussian noise sigma=0.5
+compact_gru_corruption_none_s44,ssv2,compact_gru,8,canonical,none,44,0.2067,0.1347,Corruption latent gaussian noise sigma=0.0
+compact_gru_corruption_noise_sigma0.1_s44,ssv2,compact_gru,8,canonical,noise_sigma0.1,44,0.16,0.1107,Corruption latent gaussian noise sigma=0.1
+compact_gru_corruption_noise_sigma0.25_s44,ssv2,compact_gru,8,canonical,noise_sigma0.25,44,0.1067,0.0749,Corruption latent gaussian noise sigma=0.25
+compact_gru_corruption_noise_sigma0.5_s44,ssv2,compact_gru,8,canonical,noise_sigma0.5,44,0.09,0.0624,Corruption latent gaussian noise sigma=0.5
+gru_corruption_none_s44,ssv2,gru,8,canonical,none,44,0.35,0.3253,Corruption latent gaussian noise sigma=0.0
+gru_corruption_noise_sigma0.1_s44,ssv2,gru,8,canonical,noise_sigma0.1,44,0.1933,0.1827,Corruption latent gaussian noise sigma=0.1
+gru_corruption_noise_sigma0.25_s44,ssv2,gru,8,canonical,noise_sigma0.25,44,0.1167,0.0978,Corruption latent gaussian noise sigma=0.25
+gru_corruption_noise_sigma0.5_s44,ssv2,gru,8,canonical,noise_sigma0.5,44,0.08,0.0509,Corruption latent gaussian noise sigma=0.5
+M4.5_reversal_meanpool_seed42,ssv2,meanpool,8,reversed,none,42,0.1,0.0340073529411764,"ReversalDrop=+0.0000, P_flip=0.0000, P_inv=0.0467 (0.9x chance), McNemar_p=1.00e+00"
+M4.5_reversal_meanpool_seed43,ssv2,meanpool,8,reversed,none,43,0.0733333333333333,0.0131612903225806,"ReversalDrop=+0.0000, P_flip=0.0000, P_inv=0.0467 (0.9x chance), McNemar_p=1.00e+00"
+M4.5_reversal_meanpool_seed44,ssv2,meanpool,8,reversed,none,44,0.0733333333333333,0.0176994689159637,"ReversalDrop=+0.0000, P_flip=0.0000, P_inv=0.0500 (1.0x chance), McNemar_p=1.00e+00"
+M4.5_reversal_compact_gru_seed42,ssv2,compact_gru,8,reversed,none,42,0.19,0.1451831961595412,"ReversalDrop=+0.0500, P_flip=0.2333, P_inv=0.0300 (0.6x chance), McNemar_p=9.33e-03"
+M4.5_reversal_compact_gru_seed43,ssv2,compact_gru,8,reversed,none,43,0.1633333333333333,0.1260507963852773,"ReversalDrop=+0.0967, P_flip=0.3400, P_inv=0.0500 (1.0x chance), McNemar_p=2.21e-06"
+M4.5_reversal_compact_gru_seed44,ssv2,compact_gru,8,reversed,none,44,0.19,0.1285504990855608,"ReversalDrop=+0.0167, P_flip=0.1567, P_inv=0.0267 (0.5x chance), McNemar_p=2.67e-01"
+M4.5_reversal_gru_seed42,ssv2,gru,8,reversed,none,42,0.1833333333333333,0.1359218070420549,"ReversalDrop=+0.1767, P_flip=0.4000, P_inv=0.0467 (0.9x chance), McNemar_p=1.29e-11"
+M4.5_reversal_gru_seed43,ssv2,gru,8,reversed,none,43,0.1466666666666666,0.1390803366386327,"ReversalDrop=+0.1867, P_flip=0.4200, P_inv=0.0300 (0.6x chance), McNemar_p=1.24e-12"
+M4.5_reversal_gru_seed44,ssv2,gru,8,reversed,none,44,0.1466666666666666,0.1200189834400604,"ReversalDrop=+0.2033, P_flip=0.4267, P_inv=0.0167 (0.3x chance), McNemar_p=2.30e-13"
+M4.6_statistical_analysis_battery,ssv2,statistical_battery,8,canonical,none,42,0.3478,0.3204,"Battery completed: 18 paired contrasts, B=2000, Section 7.D CERTIFIED_ROBUST"
+M4.7_failure_stratification,ssv2,stratification_battery,8,canonical,none,42,0.3478,0.3204,"Stratification: Quad A=11, B=4, C=97, D=188, NetRescues=+93"
+M4.8_temporal_gain_analysis,ssv2,temporal_gain_battery,8,canonical,none,42,0.3478,0.3204,"Temporal Gain Analysis: G_total=+26.0pp, G_obs=-0.6pp, G_order=+26.6pp, G_parity=+15.3pp, K*=[38, 11, 33, 65, 153]"
+M4.9_experiment_tracking_structure,ssv2,tracking_battery,8,canonical,none,42,0.3478,0.3204,"Experiment Tracking Structure: 6 standardized modules in experiments/, Master Table (M4.10), Hypotheses H1-H5 (M4.11), Falsification Audit (M4.12), Confounds Elimination (M4.13)"
+M4.15_final_experimental_synthesis,ssv2,causal_synthesis_battery,8,canonical,none,42,0.3478,0.3204,"Final Synthesis: helped.csv (97), hurt.csv (4), unchanged.csv (199), docs/experiment_analysis.md, M4 Exit Gate Certified"

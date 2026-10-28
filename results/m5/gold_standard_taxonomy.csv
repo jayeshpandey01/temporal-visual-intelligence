@@ -1,0 +1,128 @@
+sequence_id,video_id,class_name,cohort,displacement,directional_motion,state_transition,object_interaction,relative_motion,event_order,static_appearance,frame_ambiguity,frame_criticality,temporal_dependency
+vid_00_0046,vid_00_0046,Pushing something from left to right,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_01_0025,vid_01_0025,Pushing something from right to left,C,True,True,False,False,False,True,False,True,"[5, 6, 7]",high
+vid_01_0063,vid_01_0063,Pushing something from right to left,C,True,True,False,False,False,True,False,True,"[5, 6, 7]",high
+vid_01_0095,vid_01_0095,Pushing something from right to left,C,True,True,False,False,False,True,False,True,"[5, 6, 7]",high
+vid_02_0051,vid_02_0051,Opening something,C,True,True,True,False,False,True,False,True,"[3, 4, 5]",high
+vid_03_0022,vid_03_0022,Closing something,C,True,True,True,False,False,True,False,True,"[4, 5, 6]",high
+vid_04_0081,vid_04_0081,Putting something down,C,True,True,False,True,False,True,False,True,"[0, 1, 2]",high
+vid_04_0088,vid_04_0088,Putting something down,C,True,True,False,True,False,True,False,True,"[5, 6, 7]",high
+vid_06_0030,vid_06_0030,Picking something up,C,True,True,False,True,False,True,False,True,"[6, 7]",high
+vid_06_0073,vid_06_0073,Picking something up,C,True,True,False,True,False,True,False,True,"[0, 1, 2]",high
+vid_06_0078,vid_06_0078,Picking something up,C,True,True,False,True,False,True,False,True,"[0, 1, 2]",high
+vid_06_0086,vid_06_0086,Picking something up,C,True,True,False,True,False,True,False,True,"[0, 1, 2]",high
+vid_06_0089,vid_06_0089,Picking something up,C,True,True,False,True,False,True,False,True,"[3, 4, 5]",high
+vid_07_0001,vid_07_0001,Moving something away from the camera,C,True,True,False,False,False,True,False,True,"[2, 3, 4]",high
+vid_09_0009,vid_09_0009,Tipping something over,C,True,True,True,False,False,True,False,True,"[5, 6, 7]",high
+vid_09_0034,vid_09_0034,Tipping something over,C,True,True,True,False,False,True,False,True,"[4, 5, 6]",high
+vid_09_0040,vid_09_0040,Tipping something over,C,True,True,True,False,False,True,False,True,"[0, 1, 2]",high
+vid_09_0070,vid_09_0070,Tipping something over,C,True,True,True,False,False,True,False,True,"[0, 1, 2]",high
+vid_09_0079,vid_09_0079,Tipping something over,C,True,True,True,False,False,True,False,True,"[5, 6, 7]",high
+vid_10_0003,vid_10_0003,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[5, 6, 7]",high
+vid_10_0014,vid_10_0014,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[5, 6, 7]",high
+vid_10_0026,vid_10_0026,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[6, 7]",high
+vid_10_0028,vid_10_0028,Putting something on top of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_10_0032,vid_10_0032,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[5, 6, 7]",high
+vid_10_0040,vid_10_0040,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[5, 6, 7]",high
+vid_10_0041,vid_10_0041,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[6, 7]",high
+vid_10_0070,vid_10_0070,Putting something on top of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_10_0072,vid_10_0072,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[5, 6, 7]",high
+vid_10_0075,vid_10_0075,Putting something on top of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_10_0094,vid_10_0094,Putting something on top of something,C,False,True,False,True,True,True,False,True,"[6, 7]",high
+vid_11_0007,vid_11_0007,Putting something into something,C,False,False,False,True,False,False,True,False,"[0, 1, 2]",none
+vid_11_0028,vid_11_0028,Putting something into something,C,False,True,False,True,True,True,False,True,"[1, 2, 3]",high
+vid_11_0055,vid_11_0055,Putting something into something,C,False,True,False,True,True,True,False,True,"[1, 2, 3]",high
+vid_11_0075,vid_11_0075,Putting something into something,C,False,True,False,True,True,True,False,True,"[1, 2, 3]",high
+vid_11_0092,vid_11_0092,Putting something into something,C,False,True,False,True,True,True,False,True,"[0, 1, 2]",high
+vid_11_0094,vid_11_0094,Putting something into something,C,False,False,False,True,False,False,True,False,"[0, 1, 2]",none
+vid_12_0001,vid_12_0001,Standing something upright,C,True,True,True,True,False,True,False,True,"[4, 5, 6]",high
+vid_12_0028,vid_12_0028,Standing something upright,C,True,True,True,True,False,True,False,True,"[5, 6, 7]",high
+vid_12_0032,vid_12_0032,Standing something upright,C,True,True,True,True,False,True,False,True,"[5, 6, 7]",high
+vid_12_0039,vid_12_0039,Standing something upright,C,True,True,True,True,False,True,False,True,"[4, 5, 6]",high
+vid_12_0044,vid_12_0044,Standing something upright,C,True,True,True,True,False,True,False,True,"[5, 6, 7]",high
+vid_12_0052,vid_12_0052,Standing something upright,C,True,True,True,True,False,True,False,True,"[5, 6, 7]",high
+vid_12_0060,vid_12_0060,Standing something upright,C,True,True,True,True,False,True,False,True,"[4, 5, 6]",high
+vid_13_0000,vid_13_0000,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_13_0014,vid_13_0014,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_13_0035,vid_13_0035,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_13_0040,vid_13_0040,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_13_0042,vid_13_0042,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_13_0051,vid_13_0051,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_13_0067,vid_13_0067,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_13_0071,vid_13_0071,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[2, 3, 4]",high
+vid_13_0087,vid_13_0087,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_13_0092,vid_13_0092,Moving something towards the camera,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_14_0011,vid_14_0011,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[6, 7]",high
+vid_14_0056,vid_14_0056,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[6, 7]",high
+vid_14_0063,vid_14_0063,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[6, 7]",high
+vid_14_0085,vid_14_0085,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[6, 7]",high
+vid_14_0087,vid_14_0087,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_14_0092,vid_14_0092,Rotating something clockwise,C,True,True,False,False,False,True,False,True,"[6, 7]",high
+vid_15_0046,vid_15_0046,Uncovering something,C,True,True,True,True,False,True,False,True,"[0, 1, 2]",high
+vid_16_0000,vid_16_0000,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0001,vid_16_0001,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0008,vid_16_0008,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0012,vid_16_0012,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0031,vid_16_0031,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0034,vid_16_0034,Taking something off of something,C,False,False,False,True,False,False,True,False,"[0, 1, 2]",none
+vid_16_0070,vid_16_0070,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0071,vid_16_0071,Taking something off of something,C,False,False,False,True,False,False,True,False,"[0, 1, 2]",none
+vid_16_0073,vid_16_0073,Taking something off of something,C,False,False,False,True,False,False,True,False,"[0, 1, 2]",none
+vid_16_0088,vid_16_0088,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_16_0090,vid_16_0090,Taking something off of something,C,False,False,False,True,False,False,True,False,"[6, 7]",none
+vid_18_0002,vid_18_0002,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0005,vid_18_0005,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0008,vid_18_0008,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0019,vid_18_0019,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0030,vid_18_0030,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0042,vid_18_0042,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[6, 7]",none
+vid_18_0045,vid_18_0045,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[6, 7]",none
+vid_18_0048,vid_18_0048,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0074,vid_18_0074,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[6, 7]",none
+vid_18_0083,vid_18_0083,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0084,vid_18_0084,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_18_0086,vid_18_0086,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[6, 7]",none
+vid_18_0088,vid_18_0088,Turning the camera right while filming something,C,False,False,False,False,False,False,True,False,"[4, 5, 6]",none
+vid_19_0006,vid_19_0006,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0009,vid_19_0009,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0010,vid_19_0010,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0011,vid_19_0011,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0012,vid_19_0012,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0014,vid_19_0014,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0020,vid_19_0020,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0052,vid_19_0052,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0058,vid_19_0058,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0073,vid_19_0073,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0082,vid_19_0082,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0091,vid_19_0091,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_19_0092,vid_19_0092,Taking something out of something,C,False,False,False,True,False,False,True,False,"[2, 3, 4]",none
+vid_05_0002,vid_05_0002,Turning the camera left while filming something,B,True,True,False,False,True,True,False,True,"[6, 7]",high
+vid_05_0022,vid_05_0022,Turning the camera left while filming something,B,True,True,False,False,True,True,False,True,"[6, 7]",high
+vid_05_0030,vid_05_0030,Turning the camera left while filming something,B,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0050,vid_05_0050,Turning the camera left while filming something,B,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0001,vid_05_0001,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[6, 7]",high
+vid_05_0006,vid_05_0006,Turning the camera left while filming something,A,False,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0014,vid_05_0014,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0016,vid_05_0016,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[6, 7]",high
+vid_05_0032,vid_05_0032,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0035,vid_05_0035,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0052,vid_05_0052,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[6, 7]",high
+vid_05_0058,vid_05_0058,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0064,vid_05_0064,Turning the camera left while filming something,A,False,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0078,vid_05_0078,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_05_0085,vid_05_0085,Turning the camera left while filming something,A,True,True,False,False,True,True,False,True,"[2, 3, 4]",high
+vid_00_0010,vid_00_0010,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0025,vid_00_0025,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0026,vid_00_0026,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0031,vid_00_0031,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0032,vid_00_0032,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0033,vid_00_0033,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0035,vid_00_0035,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0053,vid_00_0053,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0054,vid_00_0054,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0063,vid_00_0063,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0070,vid_00_0070,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0082,vid_00_0082,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[1, 2, 3]",high
+vid_00_0086,vid_00_0086,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[0, 1, 2]",high
+vid_00_0099,vid_00_0099,Pushing something from left to right,D,True,True,False,False,False,True,False,True,"[3, 4, 5]",high
+vid_01_0005,vid_01_0005,Pushing something from right to left,D,True,True,False,False,False,True,False,True,"[6, 7]",high

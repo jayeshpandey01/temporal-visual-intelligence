@@ -1,0 +1,47 @@
+# Single-Frame Baseline Model Configuration (Model A, M3.21)
+dataset:
+  name: ssv2
+  root: data/
+  subset_classes: 20
+  n_per_class: 100
+  val_split: 0.15
+  test_split: 0.15
+  seed: 42
+
+sequence:
+  max_frames: 8
+  sampling: uniform
+  frame_size: [224, 224]
+
+encoder:
+  name: dinov2_vits14
+  freeze: true
+  embed_dim: 384
+
+baseline:
+  approach: "B"
+  train_sampling: "random"
+  eval_anchor: "middle"
+  hidden_dim: 256
+  dropout: 0.1
+
+training:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  epochs: 30
+  batch_size: 32
+  gradient_clip: 1.0
+  scheduler: cosine
+  seeds: [42, 43, 44]
+  patience: 5
+  early_stopping:
+    monitor: "val_accuracy"
+    mode: "max"
+    min_delta: 0.0001
+    restore_best_weights: true
+
+paths:
+  embeddings: embeddings/
+  checkpoints: results/checkpoints/baseline/
+  experiments_csv: results/experiments.csv
+

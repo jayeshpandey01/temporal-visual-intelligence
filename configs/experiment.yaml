@@ -3,6 +3,8 @@
 # All experiments are config-driven. Change values here, not in code.
 # =============================================================================
 
+experimental_controls: configs/experimental_controls.yaml
+
 dataset:
   name: ssv2              # ssv2 | ucf101 | hmdb51
   root: data/
@@ -24,10 +26,18 @@ encoder:
 
 temporal:
   model: gru              # gru | transformer | mlp (baseline)
-  hidden_dim: 256
+  projection_dim: 256     # Input projection dimension (M3.9)
+  hidden_dim: 128         # GRU hidden dimension (M3.9 lightweight baseline)
   num_layers: 1
-  dropout: 0.1
+  dropout: 0.2            # Regularization for small dataset regime
   num_heads: 4            # For transformer only
+
+baseline:
+  approach: "B"           # Primary reported strategy: Approach B (M3.3)
+  train_sampling: "random" # random (Approach B: per-sample) | fixed (Approach A)
+  eval_anchor: "middle"   # middle (t=4) | first (t=0) | last (t=7) | int index
+  hidden_dim: 256         # Matches Model B & Model C projection layer (103,700 params)
+  dropout: 0.1
 
 training:
   lr: 1.0e-3
@@ -38,6 +48,11 @@ training:
   scheduler: cosine       # cosine | step | none
   seeds: [42, 43, 44]
   patience: 5             # Early stopping patience
+  early_stopping:
+    monitor: "val_accuracy" # val_accuracy | val_loss | val_macro_f1
+    mode: "max"             # max | min | auto
+    min_delta: 0.0001
+    restore_best_weights: true
 
 evaluation:
   metrics: [accuracy, macro_f1, per_class_f1]
