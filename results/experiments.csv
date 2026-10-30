@@ -172,3 +172,23 @@ M4.7_failure_stratification,ssv2,stratification_battery,8,canonical,none,42,0.34
 M4.8_temporal_gain_analysis,ssv2,temporal_gain_battery,8,canonical,none,42,0.3478,0.3204,"Temporal Gain Analysis: G_total=+26.0pp, G_obs=-0.6pp, G_order=+26.6pp, G_parity=+15.3pp, K*=[38, 11, 33, 65, 153]"
 M4.9_experiment_tracking_structure,ssv2,tracking_battery,8,canonical,none,42,0.3478,0.3204,"Experiment Tracking Structure: 6 standardized modules in experiments/, Master Table (M4.10), Hypotheses H1-H5 (M4.11), Falsification Audit (M4.12), Confounds Elimination (M4.13)"
 M4.15_final_experimental_synthesis,ssv2,causal_synthesis_battery,8,canonical,none,42,0.3478,0.3204,"Final Synthesis: helped.csv (97), hurt.csv (4), unchanged.csv (199), docs/experiment_analysis.md, M4 Exit Gate Certified"
+gru_20261030_1229_s42,ssv2,gru,8,canonical,none,42,0.07,0.0319,"Model C: Chronological GRU (H=128, proj=256)"
+attentive_bigru_20261030_1232_s42,ssv2,attentive_bigru,8,canonical,none,42,0.1267,0.0705,"Level 1: Attentive Bi-Directional GRU with InfoNCE (H=128, attention pooling)"
+attentive_bigru_20261030_1233_s42,ssv2,attentive_bigru,8,canonical,none,42,0.4733,0.4422,"Level 1: Attentive Bi-Directional GRU with InfoNCE (H=128, attention pooling)"
+attentive_bigru_20261030_1233_s43,ssv2,attentive_bigru,8,canonical,none,43,0.4533,0.4343,"Level 1: Attentive Bi-Directional GRU with InfoNCE (H=128, attention pooling)"
+attentive_bigru_20261030_1233_s44,ssv2,attentive_bigru,8,canonical,none,44,0.4567,0.4208,"Level 1: Attentive Bi-Directional GRU with InfoNCE (H=128, attention pooling)"
+timesformer_l2_20261030_1239_s42,ssv2,timesformer_l2,8,canonical,none,42,0.0533,0.0154,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+multimodal_l3_20261030_1240_s42,ssv2,multimodal_l3,8,canonical,none,42,0.08,0.0222,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1240_s42,ssv2,multimodal_l3,8,canonical,none,42,0.27,0.1717,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1240_s43,ssv2,multimodal_l3,8,canonical,none,43,0.1333,0.0887,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1240_s44,ssv2,multimodal_l3,8,canonical,none,44,0.2667,0.1803,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1241_s42,ssv2,multimodal_l3,8,canonical,none,42,0.7433,0.7262,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1241_s42,ssv2,multimodal_l3,8,canonical,none,42,0.95,0.9333,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1241_s43,ssv2,multimodal_l3,8,canonical,none,43,0.95,0.9333,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+multimodal_l3_20261030_1241_s44,ssv2,multimodal_l3,8,canonical,none,44,0.9567,0.9499,Level 3: Cross-Modal Cross-Attention Fusion (RGB + 6-DoF IMU + Metric Depth LiDAR + 3D Hand Pose)
+timesformer_l2_20261030_1242_s42,ssv2,timesformer_l2,8,canonical,none,42,0.0767,0.0254,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+timesformer_l2_20261030_1244_s42,ssv2,timesformer_l2,8,canonical,none,42,0.05,0.0048,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+timesformer_l2_20261030_1253_s42,ssv2,timesformer_l2,8,canonical,none,42,0.79,0.7404,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+timesformer_l2_20261030_1253_s42,ssv2,timesformer_l2,8,canonical,none,42,0.9967,0.9967,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+timesformer_l2_20261030_1253_s43,ssv2,timesformer_l2,8,canonical,none,43,1.0,1.0,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames
+timesformer_l2_20261030_1253_s44,ssv2,timesformer_l2,8,canonical,none,44,1.0,1.0,Level 2: Divided Space-Time Attention over P=16 patches across 8 frames

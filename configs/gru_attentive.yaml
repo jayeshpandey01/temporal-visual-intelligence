@@ -1,0 +1,51 @@
+# Level 1 Upgrade: Attentive Bi-Directional GRU with Contrastive Directional Head
+dataset:
+  name: ssv2
+  root: data/
+  subset_classes: 20
+  n_per_class: 100
+  val_split: 0.15
+  test_split: 0.15
+  seed: 42
+
+sequence:
+  max_frames: 8
+  sampling: uniform
+  frame_size: [224, 224]
+
+encoder:
+  name: dinov2_vits14
+  freeze: true
+  embed_dim: 384
+
+temporal:
+  model: attentive_bigru
+  projection_dim: 256
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.2
+  pooling: attention
+  bidirectional: true
+  proj_head_dim: 128
+
+training:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  epochs: 30
+  batch_size: 32
+  gradient_clip: 1.0
+  scheduler: cosine
+  seeds: [42, 43, 44]
+  patience: 8
+  lambda_contra: 0.3
+  early_stopping:
+    monitor: "val_accuracy"
+    mode: "max"
+    min_delta: 0.0001
+    restore_best_weights: true
+
+paths:
+  embeddings: embeddings/
+  checkpoints: results/checkpoints/gru_attentive/
+  experiments_csv: results/experiments.csv
+

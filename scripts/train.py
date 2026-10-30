@@ -31,7 +31,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.data.dataset import EmbeddingSequenceDataset
 from src.models.baseline import SingleFrameMLP, MajorityClassBaseline, build_baseline
 from src.models.temporal import build_temporal_model
-from src.training import build_optimizer, build_criterion, EarlyStopping, RunTracker, build_run_config
+from src.training import (
+    build_optimizer,
+    build_criterion,
+    EarlyStopping,
+    RunTracker,
+    build_run_config,
+    CombinedClassificationLoss,
+)
 from src.evaluation.metrics import compute_metrics, aggregate_across_seeds, analyze_directional_confusion
 
 # Load benchmark class names if manifest is available
@@ -58,14 +65,26 @@ def train_epoch(model, loader, optimizer, criterion, device, grad_clip=1.0):
     model.train()
     total_loss = 0.0
     all_preds, all_labels = [], []
+    is_combined = isinstance(criterion, CombinedClassificationLoss)
 
     for embeddings, labels in loader:
         embeddings = embeddings.to(device)
         labels = labels.to(device)
 
         optimizer.zero_grad()
-        logits = model(embeddings)
-        loss = criterion(logits, labels)
+        if is_combined and hasattr(model, 'contrastive_proj'):
+            logits, feat = model(embeddings, return_features=True)
+            # Reversal sequence contrast
+            rev_embeddings = torch.flip(embeddings, dims=[1])
+            _, rev_feat = model(rev_embeddings, return_features=True)
+            loss, _ = criterion(logits, labels, features=feat, reversed_features=rev_feat)
+        else:
+            logits = model(embeddings)
+            if is_combined:
+                loss, _ = criterion(logits, labels)
+            else:
+                loss = criterion(logits, labels)
+
         loss.backward()
 
         # Gradient clipping (research.md: important for GRU stability)
@@ -87,12 +106,16 @@ def evaluate(model, loader, criterion, device, return_probs=False):
     total_loss = 0.0
     all_preds, all_labels = [], []
     all_probs = []
+    is_combined = isinstance(criterion, CombinedClassificationLoss)
 
     for embeddings, labels in loader:
         embeddings = embeddings.to(device)
         labels = labels.to(device)
         logits = model(embeddings)
-        loss = criterion(logits, labels)
+        if is_combined:
+            loss = criterion.ce(logits, labels)
+        else:
+            loss = criterion(logits, labels)
         total_loss += loss.item()
         probs = torch.softmax(logits, dim=-1)
         preds = logits.argmax(dim=-1)
@@ -150,7 +173,16 @@ def train_one_seed(model, config, seed, device, checkpoint_dir, model_type='base
 
     model = model.to(device)
     optimizer, scheduler = build_optimizer(model, config)
-    criterion = build_criterion(config, train_ds)
+    base_criterion = build_criterion(config, train_ds)
+    lambda_contra = float(config.get('training', {}).get('lambda_contra', 0.0))
+    if lambda_contra > 0.0 and hasattr(model, 'contrastive_proj'):
+        criterion = CombinedClassificationLoss(
+            ce_criterion=base_criterion,
+            lambda_contra=lambda_contra,
+            temperature=float(config.get('training', {}).get('temperature', 0.07)),
+        )
+    else:
+        criterion = base_criterion
 
     # Initialize reproducible RunTracker (M3.13)
     num_frames = config['sequence']['max_frames']
@@ -278,6 +310,9 @@ def run_training(config, model_type, seeds, checkpoint_dir):
             notes = f"Model C: Chronological GRU (H={h_dim}, proj={p_dim})"
         elif model_type == 'compact_gru':
             notes = "Model D: Capacity-matched CompactGRU (103,700 params, exact parity)"
+        elif model_type in ('attentive_bigru', 'attentive_gru', 'bi_gru'):
+            h_dim = config['temporal']['hidden_dim']
+            notes = f"Level 1: Attentive Bi-Directional GRU with InfoNCE (H={h_dim}, attention pooling)"
         else:
             notes = ''
 
@@ -313,7 +348,7 @@ def run_training(config, model_type, seeds, checkpoint_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', default='configs/experiment.yaml')
-    parser.add_argument('--model', choices=['baseline', 'meanpool', 'gru', 'transformer'], required=True)
+    parser.add_argument('--model', choices=['baseline', 'meanpool', 'gru', 'compact_gru', 'transformer', 'attentive_bigru', 'attentive_gru'], required=True)
     parser.add_argument('--baseline-approach', choices=['A', 'B'], default=None,
                         help='M3.3 single-frame baseline approach: A (fixed frame) or B (random train frame)')
     parser.add_argument('--seeds', nargs='+', type=int, default=[42, 43, 44])

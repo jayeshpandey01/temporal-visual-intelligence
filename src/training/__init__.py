@@ -15,6 +15,8 @@ from src.training.losses import (
     build_criterion,
     compute_class_weights,
     audit_class_distribution,
+    DirectionalContrastiveLoss,
+    CombinedClassificationLoss,
 )
 from src.training.early_stopping import EarlyStopping
 from src.training.reproducibility import RunTracker, build_run_config
@@ -24,6 +26,8 @@ __all__ = [
     "build_criterion",
     "compute_class_weights",
     "audit_class_distribution",
+    "DirectionalContrastiveLoss",
+    "CombinedClassificationLoss",
     "EarlyStopping",
     "RunTracker",
     "build_run_config",

@@ -13,7 +13,16 @@ from src.models.baseline import (
 from src.models.temporal import (
     TemporalGRU,
     TemporalTransformer,
+    TemporalAttentionPooling,
+    AttentiveBiGRU,
     build_temporal_model,
+)
+from src.models.timesformer import TimeSformerModel
+from src.models.multimodal_fusion import (
+    CrossModalCrossAttentionFusion,
+    IMUEncoder,
+    DepthLiDAREncoder,
+    HandPoseEncoder,
 )
 
 __all__ = [
@@ -24,6 +33,13 @@ __all__ = [
     "MajorityClassBaseline",
     "TemporalGRU",
     "TemporalTransformer",
+    "TemporalAttentionPooling",
+    "AttentiveBiGRU",
+    "TimeSformerModel",
+    "CrossModalCrossAttentionFusion",
+    "IMUEncoder",
+    "DepthLiDAREncoder",
+    "HandPoseEncoder",
     "build_baseline",
     "build_temporal_model",
     "evaluate_anchor_sweep",

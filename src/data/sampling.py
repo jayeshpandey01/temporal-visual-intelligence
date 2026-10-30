@@ -211,6 +211,22 @@ def jittered_sample(
     return sorted(jittered)
 
 
+from src.data.adaptive_sampler import adaptive_feature_drift_sample, compute_latent_velocities
+
+
+def adaptive_sample(total_frames: int, target_frames: int) -> List[int]:
+    """
+    Default adaptive sampler proxy using linear-quadratic kinetic velocity envelope
+    when raw embeddings are not yet extracted.
+    """
+    if total_frames <= 0 or target_frames <= 0:
+        return []
+    # Build a bell-shaped transition proxy: peak kinetic velocity at 40%-60% of timeline
+    t = np.linspace(-2.0, 2.0, total_frames)
+    proxy_embs = np.exp(-t**2).reshape(-1, 1)
+    return adaptive_feature_drift_sample(proxy_embs, target_frames=target_frames)
+
+
 SAMPLING_STRATEGIES: Dict[str, Callable[[int, int], List[int]]] = {
     "uniform": uniform_sample,
     "dense": dense_sample,
@@ -220,6 +236,7 @@ SAMPLING_STRATEGIES: Dict[str, Callable[[int, int], List[int]]] = {
     "jittered": jittered_sample,
     "segment_center": lambda L, N: segment_sample(L, N, mode="center"),
     "random": random_sample,
+    "adaptive": adaptive_sample,
 }
 
 
